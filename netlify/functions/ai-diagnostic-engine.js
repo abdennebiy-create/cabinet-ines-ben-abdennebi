@@ -89,6 +89,24 @@ const FALLBACK_PROFILES = {
         { empathy: "محور الأمعاء والدماغ يتفاعل بقوة مع التوتر عبر العصب المبهم مسبباً تقلصات معوية.", q: "كيف يؤثر التوتر وضغوط الحياة على جهازك الهضمي؟", opts: ["⚡ أي توتر أو ضغط يسبب لي تقلصات أو مغصاً فورياً", "⏳ أتناول طعامي بسرعة وتحت ضغط الوقت في العمل", "😴 الانزعاج الهضمي والانتفاخ يؤثران سلباً على نومي", "🧘 لا أشعر بتأثير التوتر، المشكلة تبدو مرتبطة بنوعية الطعام فقط"] },
         { empathy: "بروتوكول إعادة تأهيل الجهاز الهضمي والـ FODMAP العلمي يعيد ترميم بطانة الأمعاء وتوازن الميكروبيوم.", q: "ما هي أولويتك القصوى عند بدء المتابعة في العيادة؟", opts: ["🌿 بطن مريح وخفيف طوال اليوم بدون انتفاخات", "🍎 إعادة تنويع الأطعمة في غذائي دون خوف من الأزمات", "⚡ استعادة النشاط والطاقة بعد الوجبات بدون خمول", "🛡️ تشخيص دقيق وخطة علاجية تغذوية واضحة ومستدامة"] }
       ]
+    },
+    senior: {
+      headline: "بروتوكول الحفاظ على القوة والنشاط لكبار السن",
+      realities: [
+        "الحفاظ على الكتلة العضلية (الوقاية من ضمور العضلات) هو مفتاح الشيخوخة النشطة.",
+        "نقص الشهية الطبيعي يتطلب وجبات أكثر غنى بالمواد المغذية دون إثقال الهضم.",
+        "الترطيب المستهدف والمغذيات الواقية تعزز النشاط اليومي ومرونة المفاصل."
+      ],
+      timeline: {
+        days_14: "تحسن الحركة اليومية والهضم بعد الوجبات.",
+        day_30: "استعادة القوة العضلية، نوم أكثر عمقاً وهضم منتظم.",
+        day_90: "استعادة الحيوية بالكامل، تقوية المناعة والحفاظ الدائم على الاستقلالية."
+      },
+      steps: [
+        { empathy: "الحفاظ على القوة البدنية يضمن حياة نشطة ومستقلة لكبار السن.", q: "ما هو الهدف الأهم لصحتهم ونشاطهم اليوم؟", opts: ["💪 الحفاظ على الكتلة العضلية والقوة البدنية", "⚡ استعادة الطاقة والنشاط طوال اليوم", "🌿 تحسين الهضم وانتظام العبور المعوي", "🩺 ضبط المؤشرات الحيوية (الضغط، السكر، الكوليسترول)"] },
+        { empathy: "تراجع الشعور بالعطش وبطء الهضم يضعفان النشاط البدني العام.", q: "ما هي الصعوبة الأكثر وضوحاً في روتينهم؟", opts: ["🍲 قلة كمية الطعام في الوجبات لنقص الشهية", "💧 قلة شرب الماء والسوائل خلال اليوم", "😴 خمول ونعاس شديد بعد تناول الطعام", "🚶 صعوبة أو ثقل خفيف أثناء المشي والحركة"] },
+        { empathy: "تعديلات غذائية بسيطة وشهية تعيد بناء الحيوية اليومية بامتياز.", q: "ما الذي تنتظره بشكل أساسي من هذه المتابعة السريرية؟", opts: ["📋 برنامج سهل ومرن دون حرمان أو تعقيد", "🛡️ نصائح غذائية آمنة تتوافق مع الأدوية اليومية", "🍏 استعادة متعة تناول وجبات صحية وشهية", "🤝 خطة غذائية متوازنة بالتنسيق مع الطبيب المعالج"] }
+      ]
     }
   },
   fr: {
@@ -162,6 +180,24 @@ const FALLBACK_PROFILES = {
         { empathy: "Les ballonnements et spasmes intestinaux ne sont pas une fatalité: ils signalent une dysbiose ou une fermentation excessive.", q: "Quels symptômes digestifs perturbent le plus votre quotidien ?", opts: ["🎈 Ventre plat le matin, ballonné et douloureux le soir", "🔄 Alternance constipation / selles molles et inconfort (IBS)", "🔥 Reflux gastrique, acidité ou digestion très lente", "🍞 Réaction inflammatoire après le pain, produits laitiers ou crudités"] },
         { empathy: "L'axe intestin-cerveau réagit intensément au stress via le nerf vague, provoquant des spasmes.", q: "Comment le stress et votre rythme de vie influencent-ils votre ventre ?", opts: ["⚡ Le stress déclenche immédiatement des crampes ou urgences", "⏳ Je mange trop vite sous pression au travail", "😴 Mon inconfort digestif perturbe la qualité de mon sommeil", "🧘 Pas d'impact direct du stress, le problème est purement alimentaire"] },
         { empathy: "Le protocole de réhabilitation digestive (FODMAP clinique) répare la muqueuse et rééquilibre le microbiote.", q: "Quel résultat attendez-vous en priorité de votre prise en charge ?", opts: ["🌿 Un ventre plat et apaisé du matin au soir sans douleur", "🍎 Réintroduire une grande variété d'aliments en toute sécurité", "⚡ Retrouver mon énergie sans sensation de lourdeur après les repas", "🛡️ Un diagnostic clair et un protocole clinique structuré"] }
+      ]
+    },
+    senior: {
+      headline: "Préservation de la Force & Vitalité du Senior",
+      realities: [
+        "Le maintien de la masse musculaire (prévention de la sarcopénie) est la clé d'un bien-vieillir actif.",
+        "La baisse d'appétit naturelle nécessite de densifier les apports nutritionnels sans alourdir la digestion.",
+        "Une hydratation ciblée et des nutriments protecteurs renforcent le tonus et la souplesse articulaire."
+      ],
+      timeline: {
+        days_14: "Meilleur confort après les repas et élan physique retrouvé en matinée.",
+        day_30: "Regain de force musculaire, sommeil plus réparateur et digestion fluide.",
+        day_90: "Vitalité restaurée, immunité renforcée et préservation durable de l'autonomie."
+      },
+      steps: [
+        { empathy: "Préserver sa force et son tonus permet de vivre une retraite active et épanouie.", q: "Quel est l'objectif prioritaire pour sa forme aujourd'hui ?", opts: ["💪 Préserver la force physique et la masse musculaire", "⚡ Retrouver une énergie constante en journée", "🌿 Améliorer le confort digestif et le transit", "🩺 Réguler des paramètres (tension, sucre, cholestérol)"] },
+        { empathy: "La baisse de sensibilité à la soif et la digestion lourde affaiblissent le tonus physique.", q: "Quelles difficultés observez-vous le plus ?", opts: ["🍲 Assiettes de plus en plus petites par manque d'appétit", "💧 Hydratation insuffisante en journée (oublie de boire)", "😴 Pesanteur et somnolence marquée après le repas", "🚶 Légère baisse d'entrain lors des déplacements"] },
+        { empathy: "Des ajustements simples et savoureux redonnent un très beau dynamisme quotidien.", q: "Qu'attendez-vous principalement de son suivi clinique ?", opts: ["📋 Un programme agréable et facile à suivre sans privation", "🛡️ Des conseils protecteurs adaptés à ses traitements", "🍏 Redécouvrir le plaisir de manger équilibré", "🤝 Un accompagnement doux en accord avec son médecin"] }
       ]
     }
   }
