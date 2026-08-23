@@ -3160,7 +3160,24 @@
           throw new Error(`Server responded with ${response.status}`);
         }
         
-        // Success path: Store in Netlify dashboard and show confirmation popup
+        // Success path: Store in Netlify dashboard, then trigger background WhatsApp notification
+        try {
+          const dossierVal = form.elements['dossier_patient_ia'] ? form.elements['dossier_patient_ia'].value : '';
+          await fetch("/api/notify-booking", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              nom: nomVal,
+              telephone: telVal,
+              date: dateVal,
+              creneau: creneauVal,
+              dossier: dossierVal
+            })
+          });
+        } catch (waError) {
+          console.warn("Failed to trigger background WhatsApp notification:", waError);
+        }
+
         alert(alertMsg);
         form.reset();
         closeModal('bookingModal');
