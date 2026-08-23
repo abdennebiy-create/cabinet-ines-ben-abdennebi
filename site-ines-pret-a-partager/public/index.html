@@ -3160,9 +3160,8 @@
           throw new Error(`Server responded with ${response.status}`);
         }
         
-        // Success path: Store in Netlify dashboard AND open WhatsApp to notify Inès
+        // Success path: Store in Netlify dashboard and show confirmation popup
         alert(alertMsg);
-        window.open(waUrl, '_blank');
         form.reset();
         closeModal('bookingModal');
       } catch (err) {
