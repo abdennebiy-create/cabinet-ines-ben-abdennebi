@@ -3132,6 +3132,23 @@
       };
       const alertMsg = successMessages[currentLang] || successMessages.fr;
 
+      const nomVal = form.elements['nom'] ? form.elements['nom'].value : '';
+      const telVal = form.elements['telephone'] ? form.elements['telephone'].value : '';
+      const dateVal = form.elements['date_souhaitee'] ? form.elements['date_souhaitee'].value : '';
+      const creneauVal = form.elements['creneau'] ? form.elements['creneau'].value : '';
+      
+      let fallbackMsg = `Bonjour Cabinet de Nutrition Inès Ben Abdennebi, je souhaite prendre rendez-vous :\n- Nom : ${nomVal}\n- Tél : ${telVal}\n- Date : ${dateVal}\n- Créneau : ${creneauVal}`;
+      if (currentLang === 'ar') {
+        fallbackMsg = `مرحباً عيادة التغذية إيناس بن عبد النبي، أود حجز موعد :\n- الاسم : ${nomVal}\n- الهاتف : ${telVal}\n- التاريخ : ${dateVal}\n- الوقت : ${creneauVal}`;
+      } else if (currentLang === 'en') {
+        fallbackMsg = `Hello Inès Ben Abdennebi Nutrition Clinic, I would like to book an appointment :\n- Name : ${nomVal}\n- Phone : ${telVal}\n- Date : ${dateVal}\n- Slot : ${creneauVal}`;
+      } else if (currentLang === 'es') {
+        fallbackMsg = `Hola Clínica de Nutrición Inès Ben Abdennebi, deseo reservar una cita :\n- Nombre : ${nomVal}\n- Tel : ${telVal}\n- Fecha : ${dateVal}\n- Turno : ${creneauVal}`;
+      }
+      
+      const phone = "21622841841";
+      const waUrl = `https://wa.me/${phone}?text=${encodeURIComponent(fallbackMsg)}`;
+
       try {
         const formData = new FormData(form);
         const response = await fetch("/", {
@@ -3142,27 +3159,14 @@
         if (!response.ok) {
           throw new Error(`Server responded with ${response.status}`);
         }
+        
+        // Success path: Store in Netlify dashboard AND open WhatsApp to notify Inès
         alert(alertMsg);
+        window.open(waUrl, '_blank');
         form.reset();
         closeModal('bookingModal');
       } catch (err) {
         console.warn("Netlify form submission error, triggering WhatsApp fallback:", err);
-        const nomVal = form.elements['nom'] ? form.elements['nom'].value : '';
-        const telVal = form.elements['telephone'] ? form.elements['telephone'].value : '';
-        const dateVal = form.elements['date_souhaitee'] ? form.elements['date_souhaitee'].value : '';
-        const creneauVal = form.elements['creneau'] ? form.elements['creneau'].value : '';
-        
-        let fallbackMsg = `Bonjour Cabinet de Nutrition Inès Ben Abdennebi, je souhaite prendre rendez-vous :\n- Nom : ${nomVal}\n- Tél : ${telVal}\n- Date : ${dateVal}\n- Créneau : ${creneauVal}`;
-        if (currentLang === 'ar') {
-          fallbackMsg = `مرحباً عيادة التغذية إيناس بن عبد النبي، أود حجز موعد :\n- الاسم : ${nomVal}\n- الهاتف : ${telVal}\n- التاريخ : ${dateVal}\n- الوقت : ${creneauVal}`;
-        } else if (currentLang === 'en') {
-          fallbackMsg = `Hello Inès Ben Abdennebi Nutrition Clinic, I would like to book an appointment :\n- Name : ${nomVal}\n- Phone : ${telVal}\n- Date : ${dateVal}\n- Slot : ${creneauVal}`;
-        } else if (currentLang === 'es') {
-          fallbackMsg = `Hola Clínica de Nutrición Inès Ben Abdennebi, deseo reservar una cita :\n- Nombre : ${nomVal}\n- Tel : ${telVal}\n- Fecha : ${dateVal}\n- Turno : ${creneauVal}`;
-        }
-        
-        const phone = "21622841841";
-        const waUrl = `https://wa.me/${phone}?text=${encodeURIComponent(fallbackMsg)}`;
         
         const redirectAlerts = {
           fr: "Transmission de votre demande par WhatsApp...",
