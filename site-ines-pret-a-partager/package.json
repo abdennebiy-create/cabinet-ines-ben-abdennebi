@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "node netlify/functions/local-dev.js 2>/dev/null || python3 server.py",
     "start": "python3 server.py"
-   "dependencies": {
+  },
+  "dependencies": {
     "@google/genai": "^0.1.2"
   }
+}
