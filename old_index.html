@@ -3323,19 +3323,6 @@
         if (this.state.isLoading) return;
         this.state.isLoading = true;
 
-        if (this.state.turn === 1) {
-          let selLower = (optionText || '').toLowerCase();
-          if (selLower.includes('enfant') || selLower.includes('ado') || selLower.includes('pédiatrique') || selLower.includes('طفل') || selLower.includes('أطفال') || selLower.includes('child') || selLower.includes('pediatric') || selLower.includes('niño') || selLower.includes('pediátric')) {
-            this.state.track = 'pediatric';
-          } else if (selLower.includes('médical') || selLower.includes('sopk') || selLower.includes('diabète') || selLower.includes('maladie') || selLower.includes('طبي') || selLower.includes('متابعة طبية') || selLower.includes('medical') || selLower.includes('parent') || selLower.includes('والد') || selLower.includes('enfermedad')) {
-            this.state.track = 'medical';
-          } else if (selLower.includes('digestif') || selLower.includes('côlon') || selLower.includes('ballonnement') || selLower.includes('هضم') || selLower.includes('قولون') || selLower.includes('انتفاخ') || selLower.includes('digestive') || selLower.includes('bloating') || selLower.includes('ibs') || selLower.includes('hinchazón') || selLower.includes('colon')) {
-            this.state.track = 'digestive';
-          } else {
-            this.state.track = 'weight';
-          }
-        }
-
         // Interactive visual tap feedback
         if (cardEl) {
           cardEl.classList.add('selected-tap');
@@ -3836,38 +3823,38 @@
         let insight = "Bienvenue au Cabinet de Nutrition Inès Ben Abdennebi. Établissons ensemble votre bilan personnalisé.";
         let q = "Pour qui souhaitez-vous établir ce diagnostic nutritionnel ?";
         let opts = [
-          "⚖️ Perte de Poids (Homme, Femme, Âge...)",
-          "🩺 Suivi Médical (Diabète, SOPK, Maladies, ou pour un parent...)",
+          "⚖️ Perte de Poids & Rééquilibrage Alimentaire",
+          "🩺 Suivi Médical (SOPK, Diabète, Thyroïde, Cholestérol...)",
           "🌿 Confort Digestif (Ballonnements, Côlon Irritable)",
-          "🧒 Mon Enfant (Nutrition Pédiatrique & Adolescent)"
+          "🧒 Nutrition Pédiatrique (Enfant & Adolescent)"
         ];
 
         if (lang === 'ar') {
           insight = "مرحباً بكم في عيادة التغذية إيناس بن عبد النبي. دعنا نحدد تقييمك الغذائي بدقة.";
-          q = "لمن تريد إجراء هذا التقييم الغذائي المخصص؟";
+          q = "ما هو الهدف الأساسي من هذا التقييم الغذائي؟";
           opts = [
-            "⚖️ خسارة الوزن (رجل، امرأة، سن...)",
-            "🩺 متابعة طبية (سكري، تكيس مبايض، أمراض، أو لأحد الوالدين...)",
+            "⚖️ خسارة الوزن وإعادة التوازن الغذائي",
+            "🩺 متابعة طبية (تكيس مبايض، سكري، غدة درقية، كوليسترول...)",
             "🌿 راحة الجهاز الهضمي (انتفاخ، قولون عصبي)",
-            "🧒 طفلي (تغذية الأطفال والمراهقين)"
+            "🧒 تغذية الأطفال والمراهقين"
           ];
         } else if (lang === 'en') {
           insight = "Welcome to Cabinet de Nutrition Inès Ben Abdennebi. Let's establish your personalized diagnostic.";
-          q = "Who is this nutritional diagnostic for?";
+          q = "What is the primary goal of this nutritional assessment?";
           opts = [
-            "⚖️ Weight Loss (Man, Woman, Age...)",
-            "🩺 Medical Follow-up (Diabetes, PCOS, Illness, or for a parent...)",
+            "⚖️ Weight Loss & Balanced Nutrition",
+            "🩺 Medical Follow-up (PCOS, Diabetes, Thyroid, Cholesterol...)",
             "🌿 Digestive Comfort (Bloating, IBS)",
-            "🧒 My Child (Pediatric Nutrition & Teens)"
+            "🧒 Pediatric Nutrition (Children & Teens)"
           ];
         } else if (lang === 'es') {
           insight = "Bienvenido al Gabinete de Nutrición Inès Ben Abdennebi. Establezcamos su evaluación personalizada.";
-          q = "¿Para quién desea establecer este diagnóstico nutricional?";
+          q = "¿Cuál es el objetivo principal de este diagnóstico nutricional?";
           opts = [
-            "⚖️ Pérdida de Peso (Hombre, Mujer, Edad...)",
-            "🩺 Seguimiento Médico (Diabetes, SOP, Enfermedad, o para un padre...)",
+            "⚖️ Pérdida de Peso y Reequilibrio Nutricional",
+            "🩺 Seguimiento Médico (SOP, Diabetes, Tiroides, Colesterol...)",
             "🌿 Confort Digestivo (Hinchazón, Colon Irritable)",
-            "🧒 Mi Hijo/a (Nutrición Pediátrica y Adolescentes)"
+            "🧒 Nutrición Pediátrica (Niños y Adolescentes)"
           ];
         }
 
