@@ -715,6 +715,68 @@
       }
     }
 
+    /* Team Section */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .team-card {
+      padding: 3rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      position: relative;
+    }
+
+    .team-role {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--accent-mauve);
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .team-name {
+      font-size: 1.6rem;
+      color: var(--text-dark-rose);
+      margin-bottom: 1.25rem;
+    }
+
+    .team-bio {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      flex-grow: 1;
+      font-style: italic;
+    }
+
+    .team-langs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(232, 198, 200, 0.4);
+    }
+
+    .lang-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-pill);
+      background: rgba(232, 198, 200, 0.25);
+      border: 1px solid rgba(232, 198, 200, 0.5);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-dark-rose);
+    }
+
     /* Section 8: Cabinet Radès & Contact Card */
     .contact-card-box {
       padding: 3.5rem;
@@ -1776,6 +1838,7 @@
         <li><a href="javascript:void(0)" onclick="revealQuiz(); closeMobileMenu();" data-i18n="nav_diagnostic">Bilan 60s</a></li>
         <li><a href="#manifeste" onclick="closeMobileMenu()" data-i18n="nav_manifeste">L'Approche</a></li>
         <li><a href="#services" onclick="closeMobileMenu()" data-i18n="nav_services">Programmes</a></li>
+        <li><a href="#team" onclick="closeMobileMenu()" data-i18n="nav_team">L'Équipe</a></li>
         <li><a href="javascript:void(0)" onclick="toggleAIDrawer(); closeMobileMenu();" data-i18n="nav_faq">FAQ</a></li>
         <li><a href="#contact" onclick="closeMobileMenu()" data-i18n="nav_contact">Contact</a></li>
         <li class="mobile-nav-actions" style="display: none; flex-direction: column; gap: 0.85rem; padding-top: 0.85rem; border-top: 1px solid rgba(232, 198, 200, 0.5); margin-top: 0.5rem;">
@@ -1810,6 +1873,7 @@
     <div class="dot-item" onclick="revealQuiz()" title="Bilan"></div>
     <div class="dot-item" onclick="scrollToSection('manifeste')" title="L'Approche"></div>
     <div class="dot-item" onclick="scrollToSection('services')" title="Programmes"></div>
+    <div class="dot-item" onclick="scrollToSection('team')" title="L'Équipe"></div>
     <div class="dot-item" onclick="scrollToSection('contact')" title="Contact"></div>
   </div>
 
@@ -1932,8 +1996,8 @@
           <!-- Subtle Glow Effect in the background of the card -->
           <div style="position: absolute; top: -10%; right: -10%; width: 150px; height: 150px; background: rgba(232, 198, 200, 0.6); filter: blur(40px); border-radius: 50%; pointer-events: none;"></div>
 
-          <div style="font-family: 'Cinzel', serif; font-size: 0.8rem; font-weight: 700; color: #10b981; letter-spacing: 0.15em; margin-bottom: 1.5rem; position: relative; z-index: 2;" data-i18n="m_new_badge">NOTRE MÉTHODE SUR-MESURE</div>
-          <h3 style="font-size: 1.6rem; margin-bottom: 2rem; color: var(--text-dark-rose); position: relative; z-index: 2;" data-i18n="m_new_title">Le Rééquilibrage Naturel</h3>
+          <div style="font-family: 'Cinzel', serif; font-size: 0.8rem; font-weight: 700; color: #10b981; letter-spacing: 0.15em; margin-bottom: 1.5rem; position: relative; z-index: 2;" data-i18n="m_new_badge">NOTRE EXPERTISE CLINIQUE</div>
+          <h3 style="font-size: 1.6rem; margin-bottom: 2rem; color: var(--text-dark-rose); position: relative; z-index: 2;" data-i18n="m_new_title">La Réhabilitation Métabolique</h3>
           
           <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1.25rem; position: relative; z-index: 2;">
             <li style="display: flex; align-items: flex-start; gap: 1rem;">
@@ -2023,6 +2087,42 @@
           <h3 class="program-title" data-i18n="prg_tele_title">Téléconsultation en Ligne</h3>
           <p class="program-desc" data-i18n="prg_tele_desc">Consultations vidéo sécurisées pour les patients en région ou à l'international avec suivi hebdomadaire et plans digitaux.</p>
           <span class="program-link" data-i18n="prg_more">DÉCOUVRIR LE PROTOCOLE <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: L'Équipe du Cabinet -->
+  <section class="content-section" id="team">
+    <div class="container">
+      <span class="section-meta" data-i18n="team_meta">// 05 — EXPERTISE DU CABINET</span>
+      <h2 class="section-title" data-i18n="team_title">L'Équipe du Cabinet</h2>
+      <p class="section-desc" data-i18n="team_desc">Prise en charge professionnelle, personnalisée et bienveillante à Radès.</p>
+
+      <div class="team-grid">
+        <div class="glass-card team-card">
+          <span class="team-role" data-i18n="t1_role">SPÉCIALISTE NUTRITION ENFANTS, SENIORS & FAMILLES</span>
+          <h3 class="team-name" data-i18n="t1_name">Inès Ben Abdennebi</h3>
+          <p class="team-bio" data-i18n="t1_bio">
+            "Spécialiste de la prise en charge nutritionnelle des enfants, adolescents et personnes âgées. Ma mission est de vous accompagner avec bienveillance vers un équilibre alimentaire gourmand, sain et adapté à chaque étape de votre vie."
+          </p>
+
+          <div class="team-langs">
+            <span class="lang-pill">🇫🇷 Français</span>
+            <span class="lang-pill">🇹🇳 العربية</span>
+          </div>
+        </div>
+
+        <div class="glass-card team-card">
+          <span class="team-role" data-i18n="t2_role">COLLABORATRICE MULTILINGUE</span>
+          <h3 class="team-name" data-i18n="t2_name">Hadil Ounissi</h3>
+          <p class="team-bio" data-i18n="t2_bio">
+            "Prise en charge attentionnée et consultations dédiées pour l'accueil des patients locaux et internationaux."
+          </p>
+          <div class="team-langs">
+            <span class="lang-pill">🇬🇧 English</span>
+            <span class="lang-pill">🇪🇸 Español</span>
+          </div>
         </div>
       </div>
     </div>
@@ -2240,8 +2340,8 @@
         m_new_2: "<strong>Équilibre Hormonal :</strong> Régulation fine de l'insuline et de la thyroïde pour débloquer la perte de graisse.",
         m_new_3: "<strong>Santé Intestinale :</strong> Réparation du microbiote pour éliminer définitivement les ballonnements et inflammations.",
         m_new_4: "<strong>Transformation Durable :</strong> Un métabolisme réparé qui brûle l'énergie au lieu de la stocker.",
-        m_new_badge: "NOTRE MÉTHODE SUR-MESURE",
-        m_new_title: "Le Rééquilibrage Naturel",
+        m_new_badge: "NOTRE EXPERTISE CLINIQUE",
+        m_new_title: "La Réhabilitation Métabolique",
         m_old_1: "<strong>Privation & Frustration :</strong> Affamer le corps en comptant chaque calorie, ruinant votre vie sociale.",
         m_old_2: "<strong>Perte Musculaire :</strong> La balance descend, mais vous perdez de l'eau et de la force, pas du gras.",
         m_old_3: "<strong>Alerte Biologique :</strong> Le corps panique, sécrète du cortisol (stress) et verrouille le stockage des graisses.",
@@ -2257,6 +2357,7 @@
         nav_home: "Accueil",
         nav_manifeste: "L'Approche",
         nav_services: "Programmes",
+        nav_team: "L'Équipe",
         opt_s1: "Première Consultation & Bilan Nutritionnel",
         opt_s2: "Nutrition Pédiatrique (Enfants & Adolescents)",
         opt_s3: "Nutrition Gériatrique (Seniors & Longévité)",
@@ -2287,13 +2388,22 @@
         prg_tele_title: "Téléconsultation en Ligne",
         s2_desc: "La prise de poids, l'épuisement ou les troubles digestifs ne sont pas des manques de volonté. Ce sont des signaux d'alarme biologiques. Nous arrêtons de traiter le symptôme pour enfin réparer la cause racine.",
         s2_meta: "// NOTRE APPROCHE",
-        s2_title: "Manger mieux, <br /><span style=\"font-style: italic;\">sans aucune frustration.</span>",
+        s2_title: "Pourquoi 95% des régimes échouent <br /><span style="font-style: italic;">(et notre différence)</span>",
         s3_desc: "Des programmes ciblés élaborés selon vos bilans biologiques et votre cartographie métabolique.",
         s3_meta: "// 04 — NOS PROGRAMMES",
         s3_title: "Protocoles Nutritionnels Sur-Mesure",
         slot_opt1: "Matin (08:30 - 13:00)",
         slot_opt2: "Après-midi (13:00 - 18:30)",
         slot_opt3: "Premier créneau disponible",
+        t1_bio: "\"Spécialiste de la prise en charge nutritionnelle des enfants, adolescents et personnes âgées. Ma mission est de vous accompagner avec bienveillance vers un équilibre alimentaire gourmand, sain et adapté à chaque étape de votre vie.\"",
+        t1_name: "Inès Ben Abdennebi",
+        t1_role: "SPÉCIALISTE NUTRITION ENFANTS, SENIORS & FAMILLES",
+        t2_bio: "\"Prise en charge attentionnée et consultations dédiées pour l'accueil des patients locaux et internationaux.\"",
+        t2_name: "Hadil Ounissi",
+        t2_role: "COLLABORATRICE MULTILINGUE",
+        team_desc: "Prise en charge professionnelle, personnalisée et bienveillante à Radès.",
+        team_meta: "// 05 — EXPERTISE DU CABINET",
+        team_title: "L'Équipe du Cabinet",
         wa_float_aria: "Contactez le cabinet sur WhatsApp"
       },
       ar: {
@@ -2326,8 +2436,8 @@
         faq_q1: "كم تستغرق الاستشارة الأولى؟",
         faq_q2: "هل أحتاج لإجراء تحاليل دم جديدة قبل الموعد؟",
         faq_q3: "هل تقدمون استشارات عن بُعد؟",
-        hero_badge: "<i class=\"fa-solid fa-apple-whole\"></i> عيادة التغذية والرفاهية",
-        hero_headline: "التغذية، الرفاهية والمرافقة الصحية المخصصة <span class=\"hero-subline\" style=\"display: block; font-size: 0.62em; font-style: italic; font-weight: 400; margin-top: 0.35rem;\">عيادة إيناس بن عبد النبي — رادس</span>",
+        hero_badge: "<i class="fa-solid fa-apple-whole"></i> عيادة التغذية والرفاهية",
+        hero_headline: "التغذية، الرفاهية والمرافقة الصحية المخصصة <span class="hero-subline" style="display: block; font-size: 0.62em; font-style: italic; font-weight: 400; margin-top: 0.35rem;">عيادة إيناس بن عبد النبي — رادس</span>",
         hero_paragraph: "مرافقة غذائية موجهة للأطفال، البالغين وكبار السن. استعد الحيوية والتوازن الأيضي برعاية علمية دون حرمان في كل مراحل الحياة.",
         lbl_consent: "أوافق على استخدام بياناتي لتنظيم الموعد الطبي واستلام التعليمات السريرية (حماية البيانات والسر الطبي).",
         lbl_date: "التاريخ المفضل للاستشارة",
@@ -2341,7 +2451,7 @@
         m_new_3: "<strong>ترميم الميكروبيوم:</strong> إصلاح بطانة الأمعاء والتخلص نهائياً من الانتفاخات والالتهابات الهضمية.",
         m_new_4: "<strong>نتائج مستدامة:</strong> أيض نشط يحرق الطاقة بكفاءة بدلاً من تخزينها.",
         m_new_badge: "خبرتنا السريرية الفردية",
-        m_new_title: "إعادة التوازن الطبيعي",
+        m_new_title: "إعادة التأهيل الأيضي",
         m_old_1: "<strong>الحرمان والإحباط:</strong> تجويع الجسم وحساب كل سعرة حرارية، مما يعزل المريض اجتماعياً.",
         m_old_2: "<strong>فقدان الكتلة العضلية:</strong> انخفاض الرقم على الميزان نتيجة خسارة الماء والعضلات وليس الدهون العنيدة.",
         m_old_3: "<strong>إنذار بيولوجي:</strong> دخول الجسم في وضع الطوارئ وإفراز الكورتيزول الذي يقفل حرق الدهون.",
@@ -2355,8 +2465,9 @@
         nav_diagnostic: "التقييم 60 ثانية",
         nav_faq: "الأسئلة الشائعة",
         nav_home: "الرئيسية",
-        nav_manifeste: "الرؤية والمنهج",
+        nav_manifeste: "نهجنا العلاجي",
         nav_services: "البرامج العلاجية",
+        nav_team: "فريق العيادة",
         opt_s1: "استشارة أولى وتقييم غذائي شامل",
         opt_s2: "تغذية الأطفال والمراهقين",
         opt_s3: "تغذية كبار السن والحيوية",
@@ -2386,14 +2497,23 @@
         prg_tele_desc: "استشارات مرئية آمنة ومتابعة دقيقة للمرضى المقيمين خارج رادس أو خارج تونس مع خطة غذائية متكاملة.",
         prg_tele_title: "الاستشارة الطبية عن بُعد",
         s2_desc: "زيادة الوزن أو الخمول أو اضطرابات الهضم ليست نقصاً في الإرادة، بل إشارات بيولوجية دفاعية من جسمك. نتوقف عن معالجة الأعراض لنعالج جذور المشكلة.",
-        s2_meta: "// المنهج الطبي والبيولوجي",
-        s2_title: "تغذية أفضل، <br /><span style=\"font-style: italic;\">دون أي حرمان.</span>",
+        s2_meta: "// نهجنا العلاجي",
+        s2_title: "لماذا تفشل 95% من الحميات التقليدية <br /><span style="font-style: italic;">(وما الذي يميز نهجنا)</span>",
         s3_desc: "بروتوكولات فردية مصممة بناءً على تحاليلك الطبية وقياساتك الأيضية الدقيقة.",
         s3_meta: "// 04 — برامجنا السريرية",
         s3_title: "بروتوكولات علاجية مخصصة",
         slot_opt1: "صباحاً (08:30 - 13:00)",
         slot_opt2: "بعد الظهر (13:00 - 18:30)",
         slot_opt3: "أقرب موعد متاح",
+        t1_bio: "\"أخصائية في الرعاية الغذائية للأطفال والمراهقين وكبار السن. مهمتي مرافقتكم بكل عناية نحو توازن صحي ولذيذ يناسب كل مرحلة من مراحل حياتكم.\"",
+        t1_name: "إيناس بن عبد النبي",
+        t1_role: "أخصائية تغذية الأطفال، كبار السن والعائلات",
+        t2_bio: "\"استقبال ورعاية مخصصة للمرضى المحليين والدوليين بمختلف اللغات.\"",
+        t2_name: "هديل الونيسي",
+        t2_role: "مساعدة متعددة اللغات",
+        team_desc: "رعاية طبية احترافية، فردية ومبنية على الإنصات برادس.",
+        team_meta: "// 05 — الكفاءات السريرية",
+        team_title: "فريق العيادة",
         wa_float_aria: "تواصل مع العيادة عبر واتساب"
       },
       en: {
@@ -2426,8 +2546,8 @@
         faq_q1: "How long does the consultation last?",
         faq_q2: "Do I need new blood tests before visiting?",
         faq_q3: "Do you provide teleconsultations?",
-        hero_badge: "<i class=\"fa-solid fa-apple-whole\"></i> NUTRITION & WELLNESS CENTER",
-        hero_headline: "Nutrition, Wellness & Tailored Guidance <span class=\"hero-subline\" style=\"display: block; font-size: 0.62em; font-style: italic; font-weight: 400; margin-top: 0.35rem;\">Cabinet Inès Ben Abdennebi — Radès</span>",
+        hero_badge: "<i class="fa-solid fa-apple-whole"></i> NUTRITION & WELLNESS CENTER",
+        hero_headline: "Nutrition, Wellness & Tailored Guidance <span class="hero-subline" style="display: block; font-size: 0.62em; font-style: italic; font-weight: 400; margin-top: 0.35rem;">Cabinet Inès Ben Abdennebi — Radès</span>",
         hero_paragraph: "Tailored clinical nutrition care for children, seniors, and adults. Restore vitality, serenity, and metabolic balance through attentive guidance at every stage of life.",
         lbl_consent: "I agree that my contact details will be used to organize my medical consultation and receive pre-visit guidance (Medical confidentiality respected).",
         lbl_date: "Preferred Consultation Date",
@@ -2440,8 +2560,8 @@
         m_new_2: "<strong>Hormonal Harmony:</strong> Fine-tuning insulin and thyroid function to unlock real fat loss.",
         m_new_3: "<strong>Gut Health:</strong> Repairing the microbiome to eliminate bloating and discomfort for good.",
         m_new_4: "<strong>Lasting Transformation:</strong> A repaired metabolism that efficiently burns energy rather than storing it.",
-        m_new_badge: "OUR PERSONALIZED APPROACH",
-        m_new_title: "Natural Rebalancing",
+        m_new_badge: "OUR CLINICAL EXPERTISE",
+        m_new_title: "Metabolic Rehabilitation",
         m_old_1: "<strong>Deprivation & Frustration:</strong> Starving the body by counting every calorie, ruining your social life.",
         m_old_2: "<strong>Muscle Loss:</strong> The scale drops, but you lose water and strength, not stubborn fat.",
         m_old_3: "<strong>Biological Alarm:</strong> The body panics, spikes cortisol (stress), and locks down fat storage.",
@@ -2457,6 +2577,7 @@
         nav_home: "Home",
         nav_manifeste: "Our Approach",
         nav_services: "Programs",
+        nav_team: "The Team",
         opt_s1: "First Consultation & Nutrition Assessment",
         opt_s2: "Pediatric Nutrition (Children & Teens)",
         opt_s3: "Geriatric Nutrition (Seniors & Healthy Aging)",
@@ -2487,13 +2608,22 @@
         prg_tele_title: "Online Teleconsultation",
         s2_desc: "Weight gain, exhaustion, or digestive issues are not failures of willpower. They are biological alarm bells. We stop treating symptoms to heal the root cause.",
         s2_meta: "// OUR APPROACH",
-        s2_title: "Why 95% of Diets Fail <br /><span style=\"font-style: italic;\">(and how we differ)</span>",
+        s2_title: "Why 95% of Diets Fail <br /><span style="font-style: italic;">(and how we differ)</span>",
         s3_desc: "Personalized nutrition programs designed to support your body, vitality, and well-being at every stage of life.",
         s3_meta: "// 04 — OUR PROGRAMS",
         s3_title: "Tailored Nutrition Programs",
         slot_opt1: "Morning (08:30 - 13:00)",
         slot_opt2: "Afternoon (13:00 - 18:30)",
         slot_opt3: "Earliest available slot",
+        t1_bio: "\"Specializing in nutritional guidance for children, adolescents, and seniors. My mission is to support you with care toward an enjoyable, healthy, and tailored dietary balance at every stage of life.\"",
+        t1_name: "Inès Ben Abdennebi",
+        t1_role: "NUTRITION SPECIALIST FOR CHILDREN, SENIORS & FAMILIES",
+        t2_bio: "\"Dedicated care and support for local and international patients.\"",
+        t2_name: "Hadil Ounissi",
+        t2_role: "MULTILINGUAL COLLABORATOR",
+        team_desc: "Professional, personalized, and compassionate care in Radès.",
+        team_meta: "// 05 — CLINICAL EXPERTISE",
+        team_title: "The Practice Team",
         wa_float_aria: "Contact the clinic on WhatsApp"
       },
       es: {
@@ -2526,8 +2656,8 @@
         faq_q1: "¿Cuánto dura la consulta?",
         faq_q2: "¿Es necesario repetir análisis de sangre?",
         faq_q3: "¿Ofrecen teleconsultas?",
-        hero_badge: "<i class=\"fa-solid fa-apple-whole\"></i> CENTRO DE NUTRICIÓN Y BIENESTAR",
-        hero_headline: "Nutrición, Bienestar y Acompañamiento a Medida <span class=\"hero-subline\" style=\"display: block; font-size: 0.62em; font-style: italic; font-weight: 400; margin-top: 0.35rem;\">Gabinete Inès Ben Abdennebi — Radès</span>",
+        hero_badge: "<i class="fa-solid fa-apple-whole"></i> CENTRO DE NUTRICIÓN Y BIENESTAR",
+        hero_headline: "Nutrición, Bienestar y Acompañamiento a Medida <span class="hero-subline" style="display: block; font-size: 0.62em; font-style: italic; font-weight: 400; margin-top: 0.35rem;">Gabinete Inès Ben Abdennebi — Radès</span>",
         hero_paragraph: "Nutrición personalizada basada en análisis metabólico y bienestar integral. Recupere su vitalidad sin dietas estrictamente restrictivas.",
         lbl_consent: "Acepto que mis datos se utilicen para gestionar mi cita médica y recibir instrucciones previas (Confidencialidad médica y RGPD).",
         lbl_date: "Fecha Deseada para la Consulta",
@@ -2540,8 +2670,8 @@
         m_new_2: "<strong>Equilibrio Hormonal:</strong> Regulación precisa de insulina y tiroides para desbloquear la pérdida de grasa.",
         m_new_3: "<strong>Salud Intestinal:</strong> Reparación de la microbiota para eliminar definitivamente la hinchazón e inflamación.",
         m_new_4: "<strong>Transformación Sostenible:</strong> Un metabolismo reparado que quema energía en lugar de almacenarla.",
-        m_new_badge: "NUESTRO MÉTODO A MEDIDA",
-        m_new_title: "El Reequilibrio Natural",
+        m_new_badge: "NUESTRA EXPERIENCIA CLÍNICA",
+        m_new_title: "La Rehabilitación Metabólica",
         m_old_1: "<strong>Privación y Frustración:</strong> Matar de hambre al cuerpo contando cada caloría, arruinando su vida social.",
         m_old_2: "<strong>Pérdida Muscular:</strong> La báscula baja, pero pierde agua y fuerza, no grasa.",
         m_old_3: "<strong>Alarma Biológica:</strong> El cuerpo entra en pánico, segrega cortisol (estrés) y bloquea la quema de grasa.",
@@ -2557,6 +2687,7 @@
         nav_home: "Inicio",
         nav_manifeste: "El Enfoque",
         nav_services: "Programas",
+        nav_team: "El Equipo",
         opt_s1: "Primera Consulta y Evaluación Nutricional",
         opt_s2: "Nutrición Pediátrica (Niños y Adolescentes)",
         opt_s3: "Nutrición Geriátrica (Adultos Mayores)",
@@ -2587,13 +2718,22 @@
         prg_tele_title: "Teleconsulta en Línea",
         s2_desc: "El aumento de peso, el agotamiento o los problemas digestivos no son falta de voluntad. Son alarmas biológicas. Dejamos de tratar los síntomas para reparar la causa raíz.",
         s2_meta: "// NUESTRO ENFOQUE",
-        s2_title: "Por qué el 95% de las dietas fracasan <br /><span style=\"font-style: italic;\">(y nuestra diferencia)</span>",
+        s2_title: "Por qué el 95% de las dietas fracasan <br /><span style="font-style: italic;">(y nuestra diferencia)</span>",
         s3_desc: "Programas personalizados diseñados para potenciar su vitalidad y bienestar en cada etapa de la vida.",
         s3_meta: "// 04 — NUESTROS PROGRAMAS",
         s3_title: "Programas de Nutrición a Medida",
         slot_opt1: "Mañana (08:30 - 13:00)",
         slot_opt2: "Tarde (13:00 - 18:30)",
         slot_opt3: "Primer horario disponible",
+        t1_bio: "\"Especialista en el cuidado nutricional de niños, adolescentes y adultos mayores. Mi misión es acompañarle con dedicación hacia un equilibrio saludable adaptado a cada etapa de la vida.\"",
+        t1_name: "Inès Ben Abdennebi",
+        t1_role: "ESPECIALISTA EN NUTRICIÓN DE NIÑOS, SENIORS Y FAMILIAS",
+        t2_bio: "\"Atención dedicada y consultas adaptadas para la acogida de pacientes locales e internacionales.\"",
+        t2_name: "Hadil Ounissi",
+        t2_role: "COLABORADORA MULTILINGÜE",
+        team_desc: "Atención profesional, personalizada y cercana en Radès.",
+        team_meta: "// 05 — EXPERIENCIA CLÍNICA",
+        team_title: "El Equipo de la Clínica",
         wa_float_aria: "Contacte con la clínica por WhatsApp"
       }
     };
@@ -3050,7 +3190,7 @@
     window.addEventListener('scroll', () => {
       if (!isScrollTicking) {
         window.requestAnimationFrame(() => {
-          const sections = ['hero', 'diagnostic', 'manifeste', 'services', 'contact'];
+          const sections = ['hero', 'diagnostic', 'manifeste', 'services', 'team', 'contact'];
           const dots = document.querySelectorAll('.dot-item');
 
           let current = 'hero';
