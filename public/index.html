@@ -3146,15 +3146,34 @@
         form.reset();
         closeModal('bookingModal');
       } catch (err) {
-        console.warn("Netlify form submission error:", err);
-        const netlifyErrorMessages = {
-          fr: "Une erreur de réseau est survenue lors de l'envoi. Veuillez nous contacter directement via WhatsApp au +216 22 841 841.",
-          ar: "حدث خطأ في شبكة الاتصال أثناء الإرسال. يرجى التواصل معنا مباشرة عبر واتساب على الرقم ‎+216 22 841 841.",
-          en: "A network error occurred while submitting. Please contact us directly via WhatsApp at +216 22 841 841.",
-          es: "Ocurrió un error de red al enviar. Por favor, contáctenos directamente por WhatsApp al +216 22 841 841."
+        console.warn("Netlify form submission error, triggering WhatsApp fallback:", err);
+        const nomVal = form.elements['nom'] ? form.elements['nom'].value : '';
+        const telVal = form.elements['telephone'] ? form.elements['telephone'].value : '';
+        const dateVal = form.elements['date_souhaitee'] ? form.elements['date_souhaitee'].value : '';
+        const creneauVal = form.elements['creneau'] ? form.elements['creneau'].value : '';
+        
+        let fallbackMsg = `Bonjour Cabinet de Nutrition Inès Ben Abdennebi, je souhaite prendre rendez-vous :\n- Nom : ${nomVal}\n- Tél : ${telVal}\n- Date : ${dateVal}\n- Créneau : ${creneauVal}`;
+        if (currentLang === 'ar') {
+          fallbackMsg = `مرحباً عيادة التغذية إيناس بن عبد النبي، أود حجز موعد :\n- الاسم : ${nomVal}\n- الهاتف : ${telVal}\n- التاريخ : ${dateVal}\n- الوقت : ${creneauVal}`;
+        } else if (currentLang === 'en') {
+          fallbackMsg = `Hello Inès Ben Abdennebi Nutrition Clinic, I would like to book an appointment :\n- Name : ${nomVal}\n- Phone : ${telVal}\n- Date : ${dateVal}\n- Slot : ${creneauVal}`;
+        } else if (currentLang === 'es') {
+          fallbackMsg = `Hola Clínica de Nutrición Inès Ben Abdennebi, deseo reservar una cita :\n- Nombre : ${nomVal}\n- Tel : ${telVal}\n- Fecha : ${dateVal}\n- Turno : ${creneauVal}`;
+        }
+        
+        const phone = "21622841841";
+        const waUrl = `https://wa.me/${phone}?text=${encodeURIComponent(fallbackMsg)}`;
+        
+        const redirectAlerts = {
+          fr: "Transmission de votre demande par WhatsApp...",
+          ar: "جاري تحويل طلبك إلى واتساب لإتمام الحجز...",
+          en: "Redirecting to WhatsApp to submit your request...",
+          es: "Redirigiendo a WhatsApp para enviar su solicitud..."
         };
-        const errAlertMsg = netlifyErrorMessages[currentLang] || netlifyErrorMessages.fr;
-        alert(errAlertMsg);
+        alert(redirectAlerts[currentLang] || redirectAlerts.fr);
+        window.open(waUrl, '_blank');
+        form.reset();
+        closeModal('bookingModal');
       } finally {
         isFormSubmitting = false;
         if (submitBtn) {
