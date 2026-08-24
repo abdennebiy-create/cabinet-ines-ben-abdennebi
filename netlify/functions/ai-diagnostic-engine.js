@@ -294,11 +294,13 @@ STRUCTURE OF THE 9-STEP CONVERSATION:
 - Step 1: Select the main track/profile (already done, read from the history).
 - Step 2: Ask for the patient's sex/gender (e.g., Homme, Femme).
 - Step 3: Ask for the patient's age or age range.
-- Step 4: Ask about their main medical conditions, symptoms or health problems (e.g., SOPK, thyroid, diabetes, bloating, weight gain, fatigue) matching the selected track.
-- Step 5: Ask about their primary objective / goals (e.g., fat loss, muscle gain, gut repair, hormone balance).
-- Step 6: Ask about their daily eating habits (e.g., snacking, skipping meals, sugar cravings, water intake).
-- Step 7: Ask about their lifestyle stressors (e.g., stress level, sleep quality, physical activity).
-- Step 8: Ask about the duration of these issues or past attempts (e.g., years, months, first time).
+- Step 4: Ask about their main medical conditions, symptoms or health problems (e.g., Diabète Type 2, SOPK, SIBO, Sarcopénie, etc.) matching the selected track.
+- Steps 5-8: ADAPTIVE CLINICAL QUESTIONS. You MUST make all subsequent questions highly specific to the patient's chosen condition from Step 4!
+  * For example, if they selected Diabetes Type 2, ask about glycated hemoglobin (HbA1c), carbohydrate management, or sugar spikes.
+  * If they selected SIBO/Digestive bloating, ask about FODMAP triggers, bowel regularity, or timing of bloating.
+  * If they selected SOPK (PCOS) / Hormones, ask about cycle regularity, fatigue spikes, or hair/skin symptoms.
+  * If they selected Weight Loss, ask about emotional eating, late-night cravings, or metabolic blockages.
+  * If they selected Senior, ask about protein intake, muscle weakness, or bone health.
 - Step 9: Conclude. Mark "is_complete": true and compile the comprehensive final dossier.
 
 RULES:
