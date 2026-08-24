@@ -2232,22 +2232,26 @@
         </div>
         <div class="form-group">
           <label for="bookingPhone" data-i18n="lbl_phone">Numéro de Téléphone</label>
-          <input type="tel" id="bookingPhone" name="telephone" class="form-control" required placeholder="+216 22 --- ---" data-i18n-placeholder="ph_phone" autocomplete="tel" />
+          <div class="phone-input-wrapper" style="display: flex; align-items: center; background: #ffffff; border: 1.5px solid rgba(232, 198, 200, 0.85); border-radius: 0.85rem; padding: 0 1rem; transition: border-color 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+            <span style="font-weight: 600; color: var(--text-dark-rose); margin-right: 0.75rem; display: flex; align-items: center; gap: 0.35rem; font-size: 0.95rem; border-inline-end: 1px solid rgba(232, 198, 200, 0.6); padding-inline-end: 0.75rem; user-select: none;">
+              🇹🇳 +216
+            </span>
+            <input type="tel" id="bookingPhone" name="telephone" required placeholder="22 841 841" data-i18n-placeholder="ph_phone_short" autocomplete="tel" style="border: none; background: transparent; outline: none; width: 100%; padding: 0.85rem 0; font-size: 0.95rem; font-weight: 500; color: var(--text-dark-rose);" />
+          </div>
         </div>
 
-        <!-- Choix de la Date souhaitée -->
-        <div class="form-group">
-          <label for="bookingDate"><i class="fa-regular fa-calendar" style="color: var(--accent-mauve);"></i> <span data-i18n="lbl_date">Date Souhaitée pour la Consultation</span></label>
-          <input type="date" id="bookingDate" name="date_souhaitee" class="form-control" required />
-        </div>
+        <!-- Hidden Date Input for Netlify Forms schema backward-compatibility -->
+        <input type="hidden" id="bookingDate" name="date_souhaitee" value="Dès que possible" />
 
-        <!-- Choix du Créneau Horaire -->
+        <!-- Choix du Créneau Simplifié -->
         <div class="form-group">
-          <label for="bookingSlot"><i class="fa-regular fa-clock" style="color: var(--accent-mauve);"></i> <span data-i18n="lbl_slot">Créneau Horaire Préféré</span></label>
+          <label for="bookingSlot"><i class="fa-regular fa-calendar-check" style="color: var(--accent-mauve);"></i> <span data-i18n="lbl_slot">Quand souhaitez-vous votre rendez-vous ?</span></label>
           <select class="form-control" name="creneau" id="bookingSlot">
-            <option value="Matin (08:30 - 13:00)" data-i18n="slot_opt1">Matin (08:30 - 13:00)</option>
-            <option value="Après-midi (13:00 - 18:30)" data-i18n="slot_opt2">Après-midi (13:00 - 18:30)</option>
-            <option value="Premier créneau disponible" data-i18n="slot_opt3">Premier créneau disponible</option>
+            <option value="Dès que possible - Matinée (08:30 - 13:00)" data-i18n="slot_opt_asap_morning">🚀 Dès que possible - Matinée (08:30 - 13:00)</option>
+            <option value="Dès que possible - Après-midi (13:00 - 18:30)" data-i18n="slot_opt_asap_afternoon">🚀 Dès que possible - Après-midi (13:00 - 18:30)</option>
+            <option value="Cette semaine - Premier créneau libre" data-i18n="slot_opt_this_week">📅 Cette semaine - Premier créneau libre</option>
+            <option value="Samedi matin (Créneau recherché)" data-i18n="slot_opt_saturday">🗓️ Samedi matin (Créneau recherché)</option>
+            <option value="Téléconsultation à distance (En ligne)" data-i18n="slot_opt_remote">💻 Téléconsultation à distance (En ligne)</option>
           </select>
         </div>
 
@@ -2335,7 +2339,13 @@
         lbl_name: "Nom & Prénom",
         lbl_phone: "Numéro de Téléphone",
         lbl_service: "Motif de Consultation",
-        lbl_slot: "Créneau Horaire Préféré",
+        lbl_slot: "Quand souhaitez-vous votre rendez-vous ?",
+        slot_opt_asap_morning: "🚀 Dès que possible - Matinée (08:30 - 13:00)",
+        slot_opt_asap_afternoon: "🚀 Dès que possible - Après-midi (13:00 - 18:30)",
+        slot_opt_this_week: "📅 Cette semaine - Premier créneau libre",
+        slot_opt_saturday: "🗓️ Samedi matin (Créneau recherché)",
+        slot_opt_remote: "💻 Téléconsultation à distance (En ligne)",
+        ph_phone_short: "22 841 841",
         m_new_1: "<strong>Densité Nutritionnelle :</strong> Manger à votre faim des aliments denses pour éteindre les fringales du soir.",
         m_new_2: "<strong>Équilibre Hormonal :</strong> Régulation fine de l'insuline et de la thyroïde pour débloquer la perte de graisse.",
         m_new_3: "<strong>Santé Intestinale :</strong> Réparation du microbiote pour éliminer définitivement les ballonnements et inflammations.",
@@ -2445,7 +2455,13 @@
         lbl_name: "الاسم واللقب",
         lbl_phone: "رقم الهاتف",
         lbl_service: "سبب الاستشارة",
-        lbl_slot: "الفترة الزمنية المفضلة",
+        lbl_slot: "متى تفضل موعد استشارتك؟",
+        slot_opt_asap_morning: "🚀 في أقرب وقت ممكن - الفترة الصباحية (08:30 - 13:00)",
+        slot_opt_asap_afternoon: "🚀 في أقرب وقت ممكن - فترة بعد الظهر (13:00 - 18:30)",
+        slot_opt_this_week: "📅 هذا الأسبوع - أول موعد متاح",
+        slot_opt_saturday: "🗓️ صباح السبت (طلب مرتفع جداً)",
+        slot_opt_remote: "💻 استشارة طبية عن بعد (عبر الإنترنت)",
+        ph_phone_short: "22 841 841",
         m_new_1: "<strong>كثافة المغذيات:</strong> تناول وجبات مشبعة وكاملة لإطفاء نوبات الشراهة والرغبة في السكر مساءً.",
         m_new_2: "<strong>تناغم الهرمونات:</strong> تنظيم استجابة الأنسولين والغدة الدرقية لتنشيط حرق الدهون العنيدة طبيعياً.",
         m_new_3: "<strong>ترميم الميكروبيوم:</strong> إصلاح بطانة الأمعاء والتخلص نهائياً من الانتفاخات والالتهابات الهضمية.",
@@ -2555,7 +2571,13 @@
         lbl_name: "Full Name",
         lbl_phone: "Phone Number",
         lbl_service: "Consultation Reason",
-        lbl_slot: "Preferred Time Slot",
+        lbl_slot: "When would you like your appointment?",
+        slot_opt_asap_morning: "🚀 As soon as possible - Morning (08:30 - 13:00)",
+        slot_opt_asap_afternoon: "🚀 As soon as possible - Afternoon (13:00 - 18:30)",
+        slot_opt_this_week: "📅 This week - First available slot",
+        slot_opt_saturday: "🗓️ Saturday morning (High demand)",
+        slot_opt_remote: "💻 Online consultation (Remote)",
+        ph_phone_short: "22 841 841",
         m_new_1: "<strong>Nutrient Density:</strong> Eating to satiety with nutrient-rich foods to shut down evening cravings.",
         m_new_2: "<strong>Hormonal Harmony:</strong> Fine-tuning insulin and thyroid function to unlock real fat loss.",
         m_new_3: "<strong>Gut Health:</strong> Repairing the microbiome to eliminate bloating and discomfort for good.",
@@ -2665,7 +2687,13 @@
         lbl_name: "Nombre y Apellidos",
         lbl_phone: "Teléfono",
         lbl_service: "Motivo de Consulta",
-        lbl_slot: "Horario Preferido",
+        lbl_slot: "¿Cuándo desea su cita?",
+        slot_opt_asap_morning: "🚀 Lo antes posible - Por la mañana (08:30 - 13:00)",
+        slot_opt_asap_afternoon: "🚀 Lo antes posible - Por la tarde (13:00 - 18:30)",
+        slot_opt_this_week: "📅 Esta semana - Primer turno libre",
+        slot_opt_saturday: "🗓️ Sábado por la mañana (Muy solicitado)",
+        slot_opt_remote: "💻 Consulta en línea (A distancia)",
+        ph_phone_short: "22 841 841",
         m_new_1: "<strong>Densidad Nutricional:</strong> Comer hasta saciarse alimentos ricos para apagar los antojos nocturnos.",
         m_new_2: "<strong>Equilibrio Hormonal:</strong> Regulación precisa de insulina y tiroides para desbloquear la pérdida de grasa.",
         m_new_3: "<strong>Salud Intestinal:</strong> Reparación de la microbiota para eliminar definitivamente la hinchazón e inflamación.",
@@ -3065,10 +3093,13 @@
       const rawPhone = phoneInput ? phoneInput.value.trim() : '';
       const cleanPhone = rawPhone.replace(/[\s\-\.\(\)]/g, '');
       
+      // Automatically prepend +216 if not already present
+      const fullPhone = (cleanPhone.startsWith('+') || cleanPhone.startsWith('00')) ? cleanPhone : '+216' + cleanPhone;
+      
       // Validation: Tunisian numbers (8 digits, with optional +216 or 00216) or valid international numbers (>= 8 digits)
       const tunisianRegex = /^(\+?216|00216)?[2459]\d{7}$/;
       const generalPhoneRegex = /^\+?[0-9]{8,15}$/;
-      const isValid = tunisianRegex.test(cleanPhone) || (cleanPhone.startsWith('+') && generalPhoneRegex.test(cleanPhone)) || /^\d{8}$/.test(cleanPhone);
+      const isValid = tunisianRegex.test(fullPhone) || (fullPhone.startsWith('+') && generalPhoneRegex.test(fullPhone)) || /^\d{8}$/.test(cleanPhone);
       
       let existingErr = document.getElementById('phoneErrorNotice');
       if (!isValid) {
@@ -3078,10 +3109,10 @@
           phoneInput.focus();
         }
         const errorMessages = {
-          fr: "Veuillez saisir un numéro de téléphone valide (ex : +216 22 841 841 ou 8 chiffres).",
-          ar: "يرجى إدخال رقم هاتف صحيح (مثال: ‎+216 22 841 841 أو 8 أرقام).",
-          en: "Please enter a valid phone number (e.g., +216 22 841 841 or 8 digits).",
-          es: "Por favor, introduzca un número de teléfono válido (ej: +216 22 841 841 o 8 dígitos)."
+          fr: "Veuillez saisir un numéro de téléphone valide à 8 chiffres.",
+          ar: "يرجى إدخال رقم هاتف صحيح متكون من 8 أرقام.",
+          en: "Please enter a valid 8-digit phone number.",
+          es: "Por favor, introduzca un número de teléfono válido de 8 dígitos."
         };
         const errorMsg = errorMessages[currentLang] || errorMessages.fr;
         
@@ -3098,6 +3129,11 @@
           existingErr.textContent = errorMsg;
         }
         return;
+      }
+      
+      // Prepend +216 to the submitted value
+      if (phoneInput) {
+        phoneInput.value = fullPhone;
       }
       
       // Clean up error state if valid
