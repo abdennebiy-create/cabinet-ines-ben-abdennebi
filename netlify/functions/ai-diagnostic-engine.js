@@ -288,34 +288,49 @@ exports.handler = async (event, context) => {
 
   const systemInstruction = `
 You are an expert Clinical Nutritionist at Cabinet Inès Ben Abdennebi in Radès (Tunisia).
-Conduct a multi-profile clinical intake diagnostic supporting ADULTS, CHILDREN/TEENS, SENIORS, and DIGESTIVE HEALTH.
+Conduct a structured clinical intake diagnostic to build a complete patient file ("Dossier Patient Clinique").
+
+STRUCTURE OF THE 9-STEP CONVERSATION:
+- Step 1: Select the main track/profile (already done, read from the history).
+- Step 2: Ask for the patient's sex/gender (e.g., Homme, Femme).
+- Step 3: Ask for the patient's age or age range.
+- Step 4: Ask about their main medical conditions, symptoms or health problems (e.g., SOPK, thyroid, diabetes, bloating, weight gain, fatigue) matching the selected track.
+- Step 5: Ask about their primary objective / goals (e.g., fat loss, muscle gain, gut repair, hormone balance).
+- Step 6: Ask about their daily eating habits (e.g., snacking, skipping meals, sugar cravings, water intake).
+- Step 7: Ask about their lifestyle stressors (e.g., stress level, sleep quality, physical activity).
+- Step 8: Ask about the duration of these issues or past attempts (e.g., years, months, first time).
+- Step 9: Conclude. Mark "is_complete": true and compile the comprehensive final dossier.
 
 RULES:
 1. Speak in warm, empathetic, authoritative ${lang === 'ar' ? 'Arabic (Tunisian/Standard friendly Arabic)' : lang === 'es' ? 'Spanish' : lang === 'en' ? 'English' : 'French'}.
-2. Maintain the target profile selected in Step 1.
-3. NEVER output generic bullet points. Every observation in the final result must reference the patient's specific profile and previous answers.
-4. Keep the user on a tap-only track with 3-4 punchy, realistic tap options.
-5. Conduct 9 steps. When history length reaches 8 or 9 (or isFinalStep is true), set "is_complete": true and generate the comprehensive final dossier.
-
-OUTPUT STRICT JSON ONLY MATCHING THIS SCHEMA:
+2. Keep the user on a tap-only track with 3-4 punchy, realistic tap options for every step.
+3. In the final step (is_complete = true), the generated "whatsapp_message" must be a clean, structured clinical report ("bilan complet comme dossier patient") summarizing the entire patient profile (Sexe, Âge, Problème principal, Objectifs, Habitudes, Synthèse clinique) for Inès.
+4. Output STRICT JSON ONLY matching this schema:
 {
-  "empathy_insight": "1 phrase explicative reliant leur choix à leur métabolisme...",
-  "dynamic_question": "La prochaine question clinique précise...",
+  "empathy_insight": "1-sentence explanation connecting their choice to biochemistry/nutrition...",
+  "dynamic_question": "The next clinical question in the sequence...",
   "tap_options": ["Option A", "Option B", "Option C", "Option D"],
   "current_turn": ${currentTurn},
   "is_complete": ${isFinalStep ? 'true' : 'false'},
   "final_results": ${isFinalStep ? `{
-    "headline": "Titre clair et percutant...",
-    "the_3_realities": ["Réalité 1...", "Réalité 2...", "Réalité 3..."],
+    "headline": "Title of the clinical profile...",
+    "the_3_realities": ["Insight 1...", "Insight 2...", "Insight 3..."],
     "transformation_timeline": {
-      "days_14": "14 premiers jours...",
-      "day_30": "Au bout d'1 mois...",
-      "day_90": "Stabilisation à 90 jours..."
+      "days_14": "Actions and improvements for the first 14 days...",
+      "day_30": "Milestones at 30 days...",
+      "day_90": "Sustainability path at 90 days..."
     },
-    "whatsapp_message": "Bonjour Ines, je viens de terminer mon bilan..."
+    "whatsapp_message": "Structured patient report: Name, Age, Sex, Medical Issue, Objectives, Lifestyle summary, etc."
   }` : 'null'}
 }
 `;
+
+  let historyText = "";
+  if (payload.history && Array.isArray(payload.history)) {
+    historyText = payload.history.map(item => `Step ${item.turn} response: "${item.selection}"`).join("\n");
+  } else {
+    historyText = "No previous responses. This is Step 1.";
+  }
 
   // 1. Attempt using official @google/genai SDK if present and configured
   if (apiKey && GoogleGenAI) {
@@ -323,7 +338,7 @@ OUTPUT STRICT JSON ONLY MATCHING THIS SCHEMA:
       const ai = new GoogleGenAI({ apiKey });
       const response = await ai.models.generateContent({
         model: "gemini-2.5-flash",
-        contents: JSON.stringify(payload.history || payload),
+        contents: `Here is the progress of the patient intake quiz:\n\n${historyText}\n\nLanguage requested: ${lang}. State of the track: ${payload.track || 'not set'}. Please provide the next response matching the JSON schema.`,
         config: {
           systemInstruction,
           responseMimeType: "application/json",
@@ -357,8 +372,8 @@ OUTPUT STRICT JSON ONLY MATCHING THIS SCHEMA:
         body: JSON.stringify({
           contents: [{
             parts: [
-              { text: systemInstruction },
-              { text: `Patient History & Context: ${JSON.stringify(payload)}` }
+              { text: `System Instruction:\n${systemInstruction}` },
+              { text: `Patient History & Context:\n${historyText}\n\nLanguage requested: ${lang}. State of the track: ${payload.track || 'not set'}.` }
             ]
           }],
           generationConfig: {
