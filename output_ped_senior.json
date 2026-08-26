@@ -1,0 +1,1626 @@
+{
+  "deepDive": {
+    "picky_step1": {
+      "fr": {
+        "empathy": "Les repas peuvent devenir une vraie source de stress.",
+        "question": "Depuis quand votre enfant refuse-t-il certains aliments ?",
+        "options": [
+          "🛑 Depuis la diversification",
+          "🛑 Récemment",
+          "🛑 Ça dépend des jours",
+          "🛑 Surtout les légumes"
+        ]
+      },
+      "ar": {
+        "empathy": "قد تصبح الوجبات مصدر توتر.",
+        "question": "منذ متى يرفض طفلك بعض الأطعمة؟",
+        "options": [
+          "🛑 منذ بدء التنوع",
+          "🛑 مؤخرًا",
+          "🛑 يعتمد على اليوم",
+          "🛑 خاصة الخضار"
+        ]
+      },
+      "en": {
+        "empathy": "Meals can become a source of stress.",
+        "question": "Since when does your child refuse certain foods?",
+        "options": [
+          "🛑 Since starting solids",
+          "🛑 Recently",
+          "🛑 Depends on the day",
+          "🛑 Especially vegetables"
+        ]
+      },
+      "es": {
+        "empathy": "Las comidas pueden volverse estresantes.",
+        "question": "¿Desde cuándo su hijo rechaza ciertos alimentos?",
+        "options": [
+          "🛑 Desde el inicio",
+          "🛑 Recientemente",
+          "🛑 Depende del día",
+          "🛑 Especialmente verduras"
+        ]
+      }
+    },
+    "picky_step2": {
+      "fr": {
+        "empathy": "L'aversion aux textures est très fréquente.",
+        "question": "Accepte-t-il au moins un groupe d'aliments de façon systématique ?",
+        "options": [
+          "📉 Oui, les féculents (pâtes, pain)",
+          "📉 Oui, les produits laitiers",
+          "📉 Seulement les aliments sucrés",
+          "📉 Non, c'est très aléatoire"
+        ]
+      },
+      "ar": {
+        "empathy": "النفور من بعض القوام شائع جدا.",
+        "question": "هل يقبل على الأقل مجموعة واحدة من الأطعمة باستمرار؟",
+        "options": [
+          "📉 نعم، النشويات",
+          "📉 نعم، منتجات الألبان",
+          "📉 الأطعمة الحلوة فقط",
+          "📉 لا، الأمر عشوائي جدا"
+        ]
+      },
+      "en": {
+        "empathy": "Aversion to textures is very common.",
+        "question": "Does he systematically accept at least one food group?",
+        "options": [
+          "📉 Yes, starches",
+          "📉 Yes, dairy",
+          "📉 Only sweet foods",
+          "📉 No, very random"
+        ]
+      },
+      "es": {
+        "empathy": "La aversión a las texturas es muy común.",
+        "question": "¿Acepta sistemáticamente al menos un grupo de alimentos?",
+        "options": [
+          "📉 Sí, carbohidratos",
+          "📉 Sí, lácteos",
+          "📉 Solo dulces",
+          "📉 No, es muy aleatorio"
+        ]
+      }
+    },
+    "picky_step3": {
+      "fr": {
+        "empathy": "Le contexte familial joue beaucoup.",
+        "question": "Comment se déroulent les repas à la maison ?",
+        "options": [
+          "🍽️ Il mange devant un écran",
+          "🍽️ Il mange souvent seul",
+          "🍽️ Nous mangeons tous ensemble",
+          "🍽️ C'est souvent un rapport de force"
+        ]
+      },
+      "ar": {
+        "empathy": "السياق العائلي يلعب دورا كبيرا.",
+        "question": "كيف تجري الوجبات في المنزل؟",
+        "options": [
+          "🍽️ يأكل أمام الشاشة",
+          "🍽️ يأكل غالبا بمفرده",
+          "🍽️ نأكل جميعا معا",
+          "🍽️ غالبا ما يكون هناك صراع"
+        ]
+      },
+      "en": {
+        "empathy": "Family context plays a big role.",
+        "question": "How do meals go at home?",
+        "options": [
+          "🍽️ Eats in front of a screen",
+          "🍽️ Often eats alone",
+          "🍽️ We eat together",
+          "🍽️ It's often a power struggle"
+        ]
+      },
+      "es": {
+        "empathy": "El contexto familiar juega un gran papel.",
+        "question": "¿Cómo transcurren las comidas en casa?",
+        "options": [
+          "🍽️ Come frente a una pantalla",
+          "🍽️ A menudo come solo",
+          "🍽️ Comemos todos juntos",
+          "🍽️ A menudo hay conflictos"
+        ]
+      }
+    },
+    "weight_child_step1": {
+      "fr": {
+        "empathy": "La croissance d'un enfant n'est pas linéaire.",
+        "question": "Avez-vous remarqué une prise de poids rapide ?",
+        "options": [
+          "🛑 Récemment",
+          "🛑 Depuis la petite enfance",
+          "🛑 Surtout au niveau du ventre",
+          "🛑 Je ne sais pas"
+        ]
+      },
+      "ar": {
+        "empathy": "نمو الطفل ليس خطياً.",
+        "question": "هل لاحظت زيادة سريعة في الوزن؟",
+        "options": [
+          "🛑 مؤخراً",
+          "🛑 منذ الطفولة المبكرة",
+          "🛑 خاصة في البطن",
+          "🛑 لا أعلم"
+        ]
+      },
+      "en": {
+        "empathy": "A child's growth is not linear.",
+        "question": "Have you noticed rapid weight gain?",
+        "options": [
+          "🛑 Recently",
+          "🛑 Since early childhood",
+          "🛑 Mostly around the belly",
+          "🛑 I don't know"
+        ]
+      },
+      "es": {
+        "empathy": "El crecimiento infantil no es lineal.",
+        "question": "¿Ha notado un aumento rápido de peso?",
+        "options": [
+          "🛑 Recientemente",
+          "🛑 Desde la primera infancia",
+          "🛑 Principalmente en el vientre",
+          "🛑 No sé"
+        ]
+      }
+    },
+    "weight_child_step2": {
+      "fr": {
+        "empathy": "L'environnement alimentaire est clé.",
+        "question": "Consomme-t-il souvent des produits sucrés industriels (jus, biscuits) ?",
+        "options": [
+          "📉 Oui, tous les jours",
+          "📉 Seulement le week-end",
+          "📉 Rarement",
+          "📉 Surtout en cachette"
+        ]
+      },
+      "ar": {
+        "empathy": "البيئة الغذائية أساسية.",
+        "question": "هل يستهلك غالبا منتجات حلوة صناعية؟",
+        "options": [
+          "📉 نعم، كل يوم",
+          "📉 في عطلة نهاية الأسبوع فقط",
+          "📉 نادرا",
+          "📉 في السر غالبا"
+        ]
+      },
+      "en": {
+        "empathy": "Food environment is key.",
+        "question": "Does he often consume processed sugary products?",
+        "options": [
+          "📉 Yes, every day",
+          "📉 Only on weekends",
+          "📉 Rarely",
+          "📉 Mostly secretly"
+        ]
+      },
+      "es": {
+        "empathy": "El entorno alimentario es clave.",
+        "question": "¿Consume a menudo productos azucarados industriales?",
+        "options": [
+          "📉 Sí, todos los días",
+          "📉 Solo los fines de semana",
+          "📉 Raramente",
+          "📉 Mayormente a escondidas"
+        ]
+      }
+    },
+    "weight_child_step3": {
+      "fr": {
+        "empathy": "L'activité physique compte autant que l'assiette.",
+        "question": "Quel est son niveau d'activité physique ?",
+        "options": [
+          "🍽️ Très sédentaire (écrans fréquents)",
+          "🍽️ Fait du sport 1 à 2 fois par semaine",
+          "🍽️ Très actif tout le temps",
+          "🍽️ Réticent à bouger"
+        ]
+      },
+      "ar": {
+        "empathy": "النشاط البدني لا يقل أهمية عن الأكل.",
+        "question": "ما هو مستوى نشاطه البدني؟",
+        "options": [
+          "🍽️ خامل جدا (شاشات)",
+          "🍽️ رياضة 1-2 مرة أسبوعيا",
+          "🍽️ نشيط جدا",
+          "🍽️ يرفض الحركة"
+        ]
+      },
+      "en": {
+        "empathy": "Physical activity matters as much as food.",
+        "question": "What is his physical activity level?",
+        "options": [
+          "🍽️ Very sedentary",
+          "🍽️ Sports 1-2 times/week",
+          "🍽️ Very active",
+          "🍽️ Reluctant to move"
+        ]
+      },
+      "es": {
+        "empathy": "La actividad física importa tanto como la comida.",
+        "question": "¿Cuál es su nivel de actividad física?",
+        "options": [
+          "🍽️ Muy sedentario",
+          "🍽️ Deporte 1-2 veces/semana",
+          "🍽️ Muy activo",
+          "🍽️ Reacio a moverse"
+        ]
+      }
+    },
+    "growth_step1": {
+      "fr": {
+        "empathy": "La courbe de croissance est un indicateur précieux.",
+        "question": "Que dit le pédiatre concernant sa courbe de croissance ?",
+        "options": [
+          "🛑 Cassure de la courbe de poids",
+          "🛑 Cassure de la courbe de taille",
+          "🛑 Stagnation générale",
+          "🛑 Il la trouve normale mais je m'inquiète"
+        ]
+      },
+      "ar": {
+        "empathy": "منحنى النمو مؤشر قيم.",
+        "question": "ماذا يقول طبيب الأطفال عن منحنى نموه؟",
+        "options": [
+          "🛑 توقف في منحنى الوزن",
+          "🛑 توقف في منحنى الطول",
+          "🛑 ركود عام",
+          "🛑 يجده طبيعيا لكنني قلق"
+        ]
+      },
+      "en": {
+        "empathy": "The growth chart is a valuable indicator.",
+        "question": "What does the pediatrician say about his growth chart?",
+        "options": [
+          "🛑 Drop in weight curve",
+          "🛑 Drop in height curve",
+          "🛑 General stagnation",
+          "🛑 Thinks it's normal but I worry"
+        ]
+      },
+      "es": {
+        "empathy": "La curva de crecimiento es un indicador valioso.",
+        "question": "¿Qué dice el pediatra sobre su curva de crecimiento?",
+        "options": [
+          "🛑 Caída en la curva de peso",
+          "🛑 Caída en la curva de altura",
+          "🛑 Estancamiento general",
+          "🛑 Lo ve normal pero me preocupa"
+        ]
+      }
+    },
+    "growth_step2": {
+      "fr": {
+        "empathy": "Certaines périodes sont critiques pour la croissance.",
+        "question": "Avez-vous remarqué des troubles digestifs fréquents (maux de ventre, diarrhées) ?",
+        "options": [
+          "📉 Oui, très souvent",
+          "📉 Parfois après les repas",
+          "📉 Rarement",
+          "📉 Jamais"
+        ]
+      },
+      "ar": {
+        "empathy": "بعض الفترات حرجة للنمو.",
+        "question": "هل لاحظت اضطرابات هضمية متكررة (آلام البطن، إسهال)؟",
+        "options": [
+          "📉 نعم، في كثير من الأحيان",
+          "📉 أحيانا بعد الوجبات",
+          "📉 نادرا",
+          "📉 أبدا"
+        ]
+      },
+      "en": {
+        "empathy": "Certain periods are critical for growth.",
+        "question": "Have you noticed frequent digestive issues (stomach aches, diarrhea)?",
+        "options": [
+          "📉 Yes, very often",
+          "📉 Sometimes after meals",
+          "📉 Rarely",
+          "📉 Never"
+        ]
+      },
+      "es": {
+        "empathy": "Algunos períodos son críticos para el crecimiento.",
+        "question": "¿Ha notado problemas digestivos frecuentes (dolor de barriga, diarrea)?",
+        "options": [
+          "📉 Sí, muy a menudo",
+          "📉 A veces después de las comidas",
+          "📉 Raramente",
+          "📉 Nunca"
+        ]
+      }
+    },
+    "growth_step3": {
+      "fr": {
+        "empathy": "L'énergie de l'enfant nous donne beaucoup d'indices.",
+        "question": "Comment est son niveau d'énergie en général ?",
+        "options": [
+          "🍽️ Très fatigué, manque d'entrain",
+          "🍽️ Fatigué surtout l'après-midi",
+          "🍽️ Normal",
+          "🍽️ Très dynamique"
+        ]
+      },
+      "ar": {
+        "empathy": "طاقة الطفل تعطينا الكثير من الدلائل.",
+        "question": "كيف هو مستوى طاقته بشكل عام؟",
+        "options": [
+          "🍽️ متعب جدا، يفتقر للحماس",
+          "🍽️ متعب خاصة بعد الظهر",
+          "🍽️ طبيعي",
+          "🍽️ حيوي جدا"
+        ]
+      },
+      "en": {
+        "empathy": "A child's energy gives us many clues.",
+        "question": "How is his energy level in general?",
+        "options": [
+          "🍽️ Very tired, lacks drive",
+          "🍽️ Tired mostly in the afternoon",
+          "🍽️ Normal",
+          "🍽️ Very dynamic"
+        ]
+      },
+      "es": {
+        "empathy": "La energía del niño nos da muchas pistas.",
+        "question": "¿Cómo es su nivel de energía en general?",
+        "options": [
+          "🍽️ Muy cansado, sin ganas",
+          "🍽️ Cansado sobre todo por la tarde",
+          "🍽️ Normal",
+          "🍽️ Muy dinámico"
+        ]
+      }
+    },
+    "allergy_step1": {
+      "fr": {
+        "empathy": "Vivre avec une allergie demande une vigilance constante.",
+        "question": "S'agit-il d'allergies diagnostiquées ou de suspicions d'intolérances ?",
+        "options": [
+          "🛑 Allergies sévères diagnostiquées (choc anaphylactique possible)",
+          "🛑 Intolérances digestives confirmées (ex: gluten, lactose)",
+          "🛑 Fortes suspicions, en cours de diagnostic",
+          "🛑 Je ne sais pas trop"
+        ]
+      },
+      "ar": {
+        "empathy": "العيش مع الحساسية يتطلب يقظة مستمرة.",
+        "question": "هل هي حساسيات مشخصة أم اشتباه في عدم تحمل؟",
+        "options": [
+          "🛑 حساسية شديدة مشخصة",
+          "🛑 عدم تحمل هضمي مؤكد (مثل الغلوتين واللاكتوز)",
+          "🛑 شكوك قوية، قيد التشخيص",
+          "🛑 لا أعلم تماما"
+        ]
+      },
+      "en": {
+        "empathy": "Living with an allergy requires constant vigilance.",
+        "question": "Are these diagnosed allergies or suspected intolerances?",
+        "options": [
+          "🛑 Severe diagnosed allergies",
+          "🛑 Confirmed digestive intolerances",
+          "🛑 Strong suspicions, pending diagnosis",
+          "🛑 I'm not entirely sure"
+        ]
+      },
+      "es": {
+        "empathy": "Vivir con una alergia requiere vigilancia constante.",
+        "question": "¿Son alergias diagnosticadas o sospechas de intolerancias?",
+        "options": [
+          "🛑 Alergias graves diagnosticadas",
+          "🛑 Intolerancias digestivas confirmadas",
+          "🛑 Fuertes sospechas, en diagnóstico",
+          "🛑 No estoy muy seguro"
+        ]
+      }
+    },
+    "allergy_step2": {
+      "fr": {
+        "empathy": "L'éviction n'est pas la seule clé.",
+        "question": "Quels sont les principaux symptômes ressentis par l'enfant ?",
+        "options": [
+          "📉 Cutanés (eczéma, urticaire)",
+          "📉 Digestifs (ballonnements, reflux, diarrhées)",
+          "📉 Respiratoires (asthme, toux)",
+          "📉 Un mélange de tout ça"
+        ]
+      },
+      "ar": {
+        "empathy": "الامتناع ليس المفتاح الوحيد.",
+        "question": "ما هي الأعراض الرئيسية التي يعاني منها الطفل؟",
+        "options": [
+          "📉 جلدية (أكزيما، شرى)",
+          "📉 هضمية (انتفاخ، ارتجاع، إسهال)",
+          "📉 تنفسية (ربو، سعال)",
+          "📉 مزيج من كل هذا"
+        ]
+      },
+      "en": {
+        "empathy": "Avoidance is not the only key.",
+        "question": "What are the main symptoms the child experiences?",
+        "options": [
+          "📉 Skin (eczema, hives)",
+          "📉 Digestive (bloating, reflux, diarrhea)",
+          "📉 Respiratory (asthma, cough)",
+          "📉 A mix of everything"
+        ]
+      },
+      "es": {
+        "empathy": "La evitación no es la única clave.",
+        "question": "¿Cuáles son los principales síntomas que experimenta el niño?",
+        "options": [
+          "📉 Piel (eczema, urticaria)",
+          "📉 Digestivos (hinchazón, reflujo, diarrea)",
+          "📉 Respiratorios (asma, tos)",
+          "📉 Una mezcla de todo"
+        ]
+      }
+    },
+    "allergy_step3": {
+      "fr": {
+        "empathy": "Gérer les repas peut être complexe.",
+        "question": "Le régime d'éviction actuel complique-t-il l'équilibre des repas familiaux ?",
+        "options": [
+          "🍽️ Énormément, c'est un casse-tête",
+          "🍽️ Un peu, mais on gère",
+          "🍽️ Pas du tout",
+          "🍽️ L'éviction n'est pas encore stricte"
+        ]
+      },
+      "ar": {
+        "empathy": "إدارة الوجبات قد تكون معقدة.",
+        "question": "هل يعقد النظام الغذائي الحالي توازن الوجبات العائلية؟",
+        "options": [
+          "🍽️ كثيراً، إنه لغز",
+          "🍽️ قليلاً، لكننا نتعامل مع الأمر",
+          "🍽️ لا، أبداً",
+          "🍽️ الامتناع ليس صارماً بعد"
+        ]
+      },
+      "en": {
+        "empathy": "Managing meals can be complex.",
+        "question": "Does the current elimination diet complicate family meal balance?",
+        "options": [
+          "🍽️ Enormously, it's a puzzle",
+          "🍽️ A bit, but we manage",
+          "🍽️ Not at all",
+          "🍽️ Avoidance isn't strict yet"
+        ]
+      },
+      "es": {
+        "empathy": "Manejar las comidas puede ser complejo.",
+        "question": "¿La dieta de eliminación actual complica el equilibrio de las comidas familiares?",
+        "options": [
+          "🍽️ Enormemente, es un rompecabezas",
+          "🍽️ Un poco, pero nos las arreglamos",
+          "🍽️ En absoluto",
+          "🍽️ La evitación aún no es estricta"
+        ]
+      }
+    },
+    "focus_step1": {
+      "fr": {
+        "empathy": "Le lien intestin-cerveau est puissant chez l'enfant.",
+        "question": "Avez-vous remarqué que ces troubles s'aggravent après certains repas ?",
+        "options": [
+          "🛑 Oui, après les repas sucrés",
+          "🛑 Oui, après des produits très transformés",
+          "🛑 Non, c'est tout le temps",
+          "🛑 Je n'ai pas fait attention"
+        ]
+      },
+      "ar": {
+        "empathy": "الرابط بين الأمعاء والدماغ قوي جدا عند الأطفال.",
+        "question": "هل لاحظت أن هذه الاضطرابات تتفاقم بعد وجبات معينة؟",
+        "options": [
+          "🛑 نعم، بعد الوجبات الحلوة",
+          "🛑 نعم، بعد المنتجات المصنعة جدا",
+          "🛑 لا، هذا في كل الأوقات",
+          "🛑 لم ألاحظ"
+        ]
+      },
+      "en": {
+        "empathy": "The gut-brain connection is powerful in children.",
+        "question": "Have you noticed these issues worsen after certain meals?",
+        "options": [
+          "🛑 Yes, after sugary meals",
+          "🛑 Yes, after highly processed foods",
+          "🛑 No, it's all the time",
+          "🛑 I haven't paid attention"
+        ]
+      },
+      "es": {
+        "empathy": "La conexión intestino-cerebro es poderosa en los niños.",
+        "question": "¿Ha notado que estos problemas empeoran después de ciertas comidas?",
+        "options": [
+          "🛑 Sí, después de comidas azucaradas",
+          "🛑 Sí, después de productos muy procesados",
+          "🛑 No, es todo el tiempo",
+          "🛑 No me he fijado"
+        ]
+      }
+    },
+    "focus_step2": {
+      "fr": {
+        "empathy": "Le sucre caché joue aux montagnes russes avec l'humeur.",
+        "question": "Combien de fois par jour consomme-t-il des aliments au goût sucré ?",
+        "options": [
+          "📉 1 fois",
+          "📉 2 à 3 fois",
+          "📉 4 fois ou plus",
+          "📉 Quasiment pas"
+        ]
+      },
+      "ar": {
+        "empathy": "السكر الخفي يلعب دوراً كبيراً في تقلب المزاج.",
+        "question": "كم مرة في اليوم يستهلك أطعمة ذات طعم حلو؟",
+        "options": [
+          "📉 مرة واحدة",
+          "📉 2-3 مرات",
+          "📉 4 مرات أو أكثر",
+          "📉 نادراً جداً"
+        ]
+      },
+      "en": {
+        "empathy": "Hidden sugar acts like a rollercoaster for mood.",
+        "question": "How many times a day does he consume sweet-tasting foods?",
+        "options": [
+          "📉 1 time",
+          "📉 2 to 3 times",
+          "📉 4 or more times",
+          "📉 Almost never"
+        ]
+      },
+      "es": {
+        "empathy": "El azúcar oculto es una montaña rusa para el estado de ánimo.",
+        "question": "¿Cuántas veces al día consume alimentos con sabor dulce?",
+        "options": [
+          "📉 1 vez",
+          "📉 2 a 3 veces",
+          "📉 4 o más veces",
+          "📉 Casi nunca"
+        ]
+      }
+    },
+    "focus_step3": {
+      "fr": {
+        "empathy": "Le microbiote synthétise nos neuromédiateurs.",
+        "question": "L'enfant souffre-t-il de maux de ventre ou de transit irrégulier (constipation/diarrhée) ?",
+        "options": [
+          "🍽️ Oui, très souvent",
+          "🍽️ Parfois",
+          "🍽️ Non, jamais",
+          "🍽️ Il s'en plaint rarement"
+        ]
+      },
+      "ar": {
+        "empathy": "الميكروبيوم يصنع نواقلنا العصبية.",
+        "question": "هل يعاني الطفل من آلام البطن أو عدم انتظام العبور المعوي؟",
+        "options": [
+          "🍽️ نعم، كثيرا",
+          "🍽️ أحيانا",
+          "🍽️ لا أبدا",
+          "🍽️ نادرا ما يشتكي"
+        ]
+      },
+      "en": {
+        "empathy": "The microbiome synthesizes our neurotransmitters.",
+        "question": "Does the child suffer from stomach aches or irregular bowel movements?",
+        "options": [
+          "🍽️ Yes, very often",
+          "🍽️ Sometimes",
+          "🍽️ No, never",
+          "🍽️ Rarely complains"
+        ]
+      },
+      "es": {
+        "empathy": "El microbioma sintetiza nuestros neurotransmisores.",
+        "question": "¿El niño sufre de dolor de barriga o tránsito irregular?",
+        "options": [
+          "🍽️ Sí, muy a menudo",
+          "🍽️ A veces",
+          "🍽️ No, nunca",
+          "🍽️ Rara vez se queja"
+        ]
+      }
+    },
+    "sarcopenia_step1": {
+      "fr": {
+        "empathy": "La perte de force musculaire est le premier facteur de perte d'autonomie.",
+        "question": "Avez-vous remarqué des difficultés pour se lever d'une chaise ou des pertes d'équilibre ?",
+        "options": [
+          "🛑 Oui, c'est de plus en plus fréquent",
+          "🛑 Parfois, selon les jours",
+          "🛑 Non, mais il/elle marche plus lentement",
+          "🛑 Non, il/elle est encore très alerte"
+        ]
+      },
+      "ar": {
+        "empathy": "فقدان القوة العضلية هو العامل الأول في فقدان الاستقلالية.",
+        "question": "هل لاحظت صعوبة في النهوض من الكرسي أو فقدان التوازن؟",
+        "options": [
+          "🛑 نعم، هذا يحدث بشكل متكرر",
+          "🛑 أحيانا، حسب الأيام",
+          "🛑 لا، لكنه يمشي أبطأ",
+          "🛑 لا، لا يزال يقظا جدا"
+        ]
+      },
+      "en": {
+        "empathy": "Loss of muscle strength is the first factor in loss of autonomy.",
+        "question": "Have you noticed difficulties getting up from a chair or loss of balance?",
+        "options": [
+          "🛑 Yes, it's increasingly frequent",
+          "🛑 Sometimes, depending on the day",
+          "🛑 No, but walking is slower",
+          "🛑 No, still very alert"
+        ]
+      },
+      "es": {
+        "empathy": "La pérdida de fuerza muscular es el primer factor de pérdida de autonomía.",
+        "question": "¿Ha notado dificultades para levantarse de una silla o pérdida de equilibrio?",
+        "options": [
+          "🛑 Sí, es cada vez más frecuente",
+          "🛑 A veces, según el día",
+          "🛑 No, pero camina más despacio",
+          "🛑 No, todavía está muy alerta"
+        ]
+      }
+    },
+    "sarcopenia_step2": {
+      "fr": {
+        "empathy": "Après 65 ans, les besoins en protéines augmentent de 50%.",
+        "question": "Quelle est la source principale de protéines dans ses repas ?",
+        "options": [
+          "📉 La viande et le poisson (presque tous les jours)",
+          "📉 Les œufs et laitages",
+          "📉 Très peu de protéines, beaucoup de soupe/pain",
+          "📉 Je ne sais pas"
+        ]
+      },
+      "ar": {
+        "empathy": "بعد سن 65، تزداد الحاجة للبروتين بنسبة 50%.",
+        "question": "ما هو المصدر الرئيسي للبروتين في وجباته؟",
+        "options": [
+          "📉 اللحوم والأسماك (شبه يوميا)",
+          "📉 البيض ومنتجات الألبان",
+          "📉 قليل جدا من البروتين، الكثير من الحساء/الخبز",
+          "📉 لا أعلم"
+        ]
+      },
+      "en": {
+        "empathy": "After 65, protein needs increase by 50%.",
+        "question": "What is the main source of protein in their meals?",
+        "options": [
+          "📉 Meat and fish (almost every day)",
+          "📉 Eggs and dairy",
+          "📉 Very little protein, lots of soup/bread",
+          "📉 I don't know"
+        ]
+      },
+      "es": {
+        "empathy": "Después de los 65, las necesidades de proteínas aumentan un 50%.",
+        "question": "¿Cuál es la principal fuente de proteínas en sus comidas?",
+        "options": [
+          "📉 Carne y pescado (casi todos los días)",
+          "📉 Huevos y lácteos",
+          "📉 Muy poca proteína, mucha sopa/pan",
+          "📉 No lo sé"
+        ]
+      }
+    },
+    "sarcopenia_step3": {
+      "fr": {
+        "empathy": "L'inflammation silencieuse bloque la fabrication des muscles.",
+        "question": "Prend-il/elle des médicaments contre la douleur ou l'inflammation au quotidien ?",
+        "options": [
+          "🍽️ Oui, tous les jours",
+          "🍽️ Régulièrement",
+          "🍽️ Rarement",
+          "🍽️ Jamais"
+        ]
+      },
+      "ar": {
+        "empathy": "الالتهاب الصامت يمنع بناء العضلات.",
+        "question": "هل يأخذ أدوية للألم أو الالتهاب يومياً؟",
+        "options": [
+          "🍽️ نعم، كل يوم",
+          "🍽️ بانتظام",
+          "🍽️ نادراً",
+          "🍽️ أبداً"
+        ]
+      },
+      "en": {
+        "empathy": "Silent inflammation blocks muscle building.",
+        "question": "Does he/she take pain or inflammation medication daily?",
+        "options": [
+          "🍽️ Yes, every day",
+          "🍽️ Regularly",
+          "🍽️ Rarely",
+          "🍽️ Never"
+        ]
+      },
+      "es": {
+        "empathy": "La inflamación silenciosa bloquea la creación de músculo.",
+        "question": "¿Toma medicamentos para el dolor o la inflamación a diario?",
+        "options": [
+          "🍽️ Sí, todos los días",
+          "🍽️ Regularmente",
+          "🍽️ Raramente",
+          "🍽️ Nunca"
+        ]
+      }
+    },
+    "appetite_step1": {
+      "fr": {
+        "empathy": "La perte d'appétit (anorexie du sujet âgé) est très fréquente et inquiétante.",
+        "question": "Saute-t-il/elle souvent des repas complètement ?",
+        "options": [
+          "🛑 Très souvent (notamment le soir)",
+          "🛑 Parfois",
+          "🛑 Non, mais les portions sont minuscules",
+          "🛑 Il/Elle mange mais perd du poids"
+        ]
+      },
+      "ar": {
+        "empathy": "فقدان الشهية لدى كبار السن شائع جدا ومقلق.",
+        "question": "هل يتخطى غالبا وجبات كاملة؟",
+        "options": [
+          "🛑 في كثير من الأحيان (خاصة في المساء)",
+          "🛑 أحيانا",
+          "🛑 لا، لكن الحصص صغيرة جدا",
+          "🛑 يأكل لكنه يفقد الوزن"
+        ]
+      },
+      "en": {
+        "empathy": "Loss of appetite in the elderly is very common and worrying.",
+        "question": "Does he/she often skip meals completely?",
+        "options": [
+          "🛑 Very often (especially evening)",
+          "🛑 Sometimes",
+          "🛑 No, but portions are tiny",
+          "🛑 Eats but loses weight"
+        ]
+      },
+      "es": {
+        "empathy": "La pérdida de apetito en personas mayores es muy común y preocupante.",
+        "question": "¿A menudo se salta las comidas por completo?",
+        "options": [
+          "🛑 Muy a menudo (especialmente por la noche)",
+          "🛑 A veces",
+          "🛑 No, pero las porciones son minúsculas",
+          "🛑 Come pero pierde peso"
+        ]
+      }
+    },
+    "appetite_step2": {
+      "fr": {
+        "empathy": "Le goût et l'odorat changent avec les années.",
+        "question": "Y a-t-il des problèmes de mastication ou de déglutition (dents, fausses routes) ?",
+        "options": [
+          "📉 Oui, cela limite ce qu'il/elle peut manger",
+          "📉 Parfois, il faut adapter les textures",
+          "📉 Non, aucune difficulté de ce côté",
+          "📉 C'est surtout un manque d'envie"
+        ]
+      },
+      "ar": {
+        "empathy": "الذوق والشم يتغيران مع السنين.",
+        "question": "هل هناك مشاكل في المضغ أو البلع؟",
+        "options": [
+          "📉 نعم، هذا يحد مما يمكنه أكله",
+          "📉 أحيانا، يجب تعديل القوام",
+          "📉 لا، لا توجد صعوبة في هذا الجانب",
+          "📉 هو في الأساس نقص في الرغبة"
+        ]
+      },
+      "en": {
+        "empathy": "Taste and smell change over the years.",
+        "question": "Are there chewing or swallowing problems (teeth, choking)?",
+        "options": [
+          "📉 Yes, limits what they can eat",
+          "📉 Sometimes, textures need adapting",
+          "📉 No difficulties here",
+          "📉 Mostly a lack of desire"
+        ]
+      },
+      "es": {
+        "empathy": "El gusto y el olfato cambian con los años.",
+        "question": "¿Hay problemas de masticación o deglución?",
+        "options": [
+          "📉 Sí, limita lo que puede comer",
+          "📉 A veces, hay que adaptar texturas",
+          "📉 No, ninguna dificultad en este aspecto",
+          "📉 Es principalmente falta de deseo"
+        ]
+      }
+    },
+    "appetite_step3": {
+      "fr": {
+        "empathy": "L'hydratation est souvent le grand oublié.",
+        "question": "Boit-il/elle suffisamment d'eau dans la journée ?",
+        "options": [
+          "🍽️ Très peu (moins d'un demi-litre)",
+          "🍽️ Correctement",
+          "🍽️ Seulement du café ou du thé",
+          "🍽️ Il faut toujours lui rappeler"
+        ]
+      },
+      "ar": {
+        "empathy": "غالبا ما يُنسى الترطيب.",
+        "question": "هل يشرب كمية كافية من الماء خلال اليوم؟",
+        "options": [
+          "🍽️ قليل جدا (أقل من نصف لتر)",
+          "🍽️ بشكل مناسب",
+          "🍽️ فقط القهوة أو الشاي",
+          "🍽️ يجب تذكيره دائما"
+        ]
+      },
+      "en": {
+        "empathy": "Hydration is often the great forgotten.",
+        "question": "Does he/she drink enough water during the day?",
+        "options": [
+          "🍽️ Very little (less than half a liter)",
+          "🍽️ Adequately",
+          "🍽️ Only coffee or tea",
+          "🍽️ Always have to remind them"
+        ]
+      },
+      "es": {
+        "empathy": "La hidratación suele ser la gran olvidada.",
+        "question": "¿Bebe suficiente agua durante el día?",
+        "options": [
+          "🍽️ Muy poco (menos de medio litro)",
+          "🍽️ Adecuadamente",
+          "🍽️ Solo café o té",
+          "🍽️ Siempre hay que recordárselo"
+        ]
+      }
+    },
+    "diabetes_s_step1": {
+      "fr": {
+        "empathy": "La gestion du diabète chez le senior nécessite beaucoup de douceur.",
+        "question": "Est-il/elle sous insuline ou sous traitement oral (comprimés) ?",
+        "options": [
+          "🛑 Insuline",
+          "🛑 Comprimés (antidiabétiques oraux)",
+          "🛑 Les deux",
+          "🛑 Seulement un régime / pas de traitement"
+        ]
+      },
+      "ar": {
+        "empathy": "إدارة السكري لدى كبار السن تتطلب الكثير من اللطف.",
+        "question": "هل يتناول الأنسولين أم أدوية عن طريق الفم؟",
+        "options": [
+          "🛑 أنسولين",
+          "🛑 أقراص",
+          "🛑 كلاهما",
+          "🛑 حمية فقط / لا يوجد علاج"
+        ]
+      },
+      "en": {
+        "empathy": "Managing diabetes in seniors requires gentleness.",
+        "question": "Is he/she on insulin or oral medication?",
+        "options": [
+          "🛑 Insulin",
+          "🛑 Pills",
+          "🛑 Both",
+          "🛑 Diet only / no medication"
+        ]
+      },
+      "es": {
+        "empathy": "El manejo del diabetes en personas mayores requiere mucha delicadeza.",
+        "question": "¿Está en insulina o tratamiento oral?",
+        "options": [
+          "🛑 Insulina",
+          "🛑 Pastillas",
+          "🛑 Ambos",
+          "🛑 Solo dieta / sin medicación"
+        ]
+      }
+    },
+    "diabetes_s_step2": {
+      "fr": {
+        "empathy": "L'hypoglycémie est le plus grand risque chez le sujet âgé.",
+        "question": "Fait-il/elle souvent des épisodes d'hypoglycémie (malaise, sueurs, confusion) ?",
+        "options": [
+          "📉 Oui, fréquemment",
+          "📉 Parfois, surtout la nuit ou avant le repas",
+          "📉 Très rarement",
+          "📉 Jamais, la glycémie est plutôt toujours haute"
+        ]
+      },
+      "ar": {
+        "empathy": "نقص السكر في الدم هو الخطر الأكبر لدى كبار السن.",
+        "question": "هل يعاني غالبا من نوبات نقص السكر؟",
+        "options": [
+          "📉 نعم، كثيرا",
+          "📉 أحيانا، خاصة في الليل",
+          "📉 نادرا جدا",
+          "📉 أبدا، السكر دائما مرتفع"
+        ]
+      },
+      "en": {
+        "empathy": "Hypoglycemia is the greatest risk in the elderly.",
+        "question": "Does he/she often have hypoglycemic episodes (dizziness, sweats, confusion)?",
+        "options": [
+          "📉 Yes, frequently",
+          "📉 Sometimes, especially at night",
+          "📉 Very rarely",
+          "📉 Never, blood sugar is usually high"
+        ]
+      },
+      "es": {
+        "empathy": "La hipoglucemia es el mayor riesgo en los ancianos.",
+        "question": "¿Tiene a menudo episodios de hipoglucemia (mareos, sudores)?",
+        "options": [
+          "📉 Sí, frecuentemente",
+          "📉 A veces, sobre todo de noche",
+          "📉 Muy raramente",
+          "📉 Nunca, la glucosa suele estar alta"
+        ]
+      }
+    },
+    "diabetes_s_step3": {
+      "fr": {
+        "empathy": "Les reins et la vue subissent le sucre en excès.",
+        "question": "Y a-t-il des complications liées au diabète (vue, reins, pieds) ?",
+        "options": [
+          "🍽️ Oui, problèmes rénaux",
+          "🍽️ Oui, neuropathie (pieds/jambes)",
+          "🍽️ Oui, vue (rétinopathie)",
+          "🍽️ Non, pas de complications connues"
+        ]
+      },
+      "ar": {
+        "empathy": "الكلى والبصر تعاني من زيادة السكر.",
+        "question": "هل هناك مضاعفات مرتبطة بالسكري (بصر، كلى، قدمين)؟",
+        "options": [
+          "🍽️ نعم، مشاكل في الكلى",
+          "🍽️ نعم، اعتلال الأعصاب (أقدام)",
+          "🍽️ نعم، بصر (اعتلال الشبكية)",
+          "🍽️ لا، لا توجد مضاعفات معروفة"
+        ]
+      },
+      "en": {
+        "empathy": "Kidneys and vision suffer from excess sugar.",
+        "question": "Are there complications related to diabetes (vision, kidneys, feet)?",
+        "options": [
+          "🍽️ Yes, kidney problems",
+          "🍽️ Yes, neuropathy (feet/legs)",
+          "🍽️ Yes, vision (retinopathy)",
+          "🍽️ No known complications"
+        ]
+      },
+      "es": {
+        "empathy": "Los riñones y la vista sufren por el exceso de azúcar.",
+        "question": "¿Hay complicaciones relacionadas con la diabetes (vista, riñones, pies)?",
+        "options": [
+          "🍽️ Sí, problemas renales",
+          "🍽️ Sí, neuropatía (pies/piernas)",
+          "🍽️ Sí, vista (retinopatía)",
+          "🍽️ No hay complicaciones conocidas"
+        ]
+      }
+    },
+    "memory_step1": {
+      "fr": {
+        "empathy": "La nutrition joue un rôle protecteur majeur sur le cerveau.",
+        "question": "Avez-vous remarqué des confusions fréquentes ou des pertes de mémoire récentes ?",
+        "options": [
+          "🛑 Oui, diagnostiqué (Alzheimer / Démence)",
+          "🛑 Des oublis fréquents mais non diagnostiqués",
+          "🛑 Non, c'est surtout préventif",
+          "🛑 Il/Elle répète souvent les mêmes choses"
+        ]
+      },
+      "ar": {
+        "empathy": "التغذية تلعب دورا وقائيا كبيرا للدماغ.",
+        "question": "هل لاحظت ارتباكا متكررا أو فقدانا حديثا للذاكرة؟",
+        "options": [
+          "🛑 نعم، مشخص (زهايمر / خرف)",
+          "🛑 نسيان متكرر غير مشخص",
+          "🛑 لا، هذا كإجراء وقائي",
+          "🛑 يكرر غالبا نفس الأشياء"
+        ]
+      },
+      "en": {
+        "empathy": "Nutrition plays a major protective role for the brain.",
+        "question": "Have you noticed frequent confusion or recent memory loss?",
+        "options": [
+          "🛑 Yes, diagnosed (Alzheimer's / Dementia)",
+          "🛑 Frequent but undiagnosed forgetfulness",
+          "🛑 No, mostly preventive",
+          "🛑 Often repeats the same things"
+        ]
+      },
+      "es": {
+        "empathy": "La nutrición juega un papel protector importante para el cerebro.",
+        "question": "¿Ha notado confusión frecuente o pérdida de memoria reciente?",
+        "options": [
+          "🛑 Sí, diagnosticado (Alzheimer / Demencia)",
+          "🛑 Olvidos frecuentes pero no diagnosticados",
+          "🛑 No, principalmente preventivo",
+          "🛑 A menudo repite las mismas cosas"
+        ]
+      }
+    },
+    "memory_step2": {
+      "fr": {
+        "empathy": "Le cerveau est l'organe le plus gras du corps.",
+        "question": "Consomme-t-il/elle régulièrement des aliments riches en bonnes graisses (poissons gras, huile d'olive, noix) ?",
+        "options": [
+          "📉 Oui, très régulièrement",
+          "📉 Parfois",
+          "📉 Rarement",
+          "📉 Pratiquement jamais (régime sans graisse)"
+        ]
+      },
+      "ar": {
+        "empathy": "الدماغ هو العضو الأكثر دهنية في الجسم.",
+        "question": "هل يستهلك بانتظام الأطعمة الغنية بالدهون الجيدة (الأسماك الدهنية، زيت الزيتون)؟",
+        "options": [
+          "📉 نعم، بانتظام جدا",
+          "📉 أحيانا",
+          "📉 نادرا",
+          "📉 عمليا أبدا (نظام خال من الدهون)"
+        ]
+      },
+      "en": {
+        "empathy": "The brain is the fattiest organ in the body.",
+        "question": "Does he/she regularly consume foods rich in good fats (fatty fish, olive oil, nuts)?",
+        "options": [
+          "📉 Yes, very regularly",
+          "📉 Sometimes",
+          "📉 Rarely",
+          "📉 Almost never (low-fat diet)"
+        ]
+      },
+      "es": {
+        "empathy": "El cerebro es el órgano más graso del cuerpo.",
+        "question": "¿Consume regularmente alimentos ricos en grasas buenas (pescado graso, aceite de oliva)?",
+        "options": [
+          "📉 Sí, muy regularmente",
+          "📉 A veces",
+          "📉 Raramente",
+          "📉 Prácticamente nunca (dieta sin grasa)"
+        ]
+      }
+    },
+    "memory_step3": {
+      "fr": {
+        "empathy": "Un intestin inflammé accélère le déclin cognitif.",
+        "question": "Souffre-t-il/elle de constipation chronique (très fréquent avec l'âge) ?",
+        "options": [
+          "🍽️ Oui, c'est un problème constant",
+          "🍽️ Parfois",
+          "🍽️ Non, transit normal",
+          "🍽️ Prend des laxatifs tous les jours"
+        ]
+      },
+      "ar": {
+        "empathy": "الأمعاء الملتهبة تسرع التدهور المعرفي.",
+        "question": "هل يعاني من إمساك مزمن؟",
+        "options": [
+          "🍽️ نعم، مشكلة مستمرة",
+          "🍽️ أحيانا",
+          "🍽️ لا، عبور طبيعي",
+          "🍽️ يأخذ ملينات كل يوم"
+        ]
+      },
+      "en": {
+        "empathy": "An inflamed gut accelerates cognitive decline.",
+        "question": "Does he/she suffer from chronic constipation?",
+        "options": [
+          "🍽️ Yes, constant problem",
+          "🍽️ Sometimes",
+          "🍽️ No, normal transit",
+          "🍽️ Takes laxatives daily"
+        ]
+      },
+      "es": {
+        "empathy": "Un intestino inflamado acelera el declive cognitivo.",
+        "question": "¿Sufre de estreñimiento crónico?",
+        "options": [
+          "🍽️ Sí, problema constante",
+          "🍽️ A veces",
+          "🍽️ No, tránsito normal",
+          "🍽️ Toma laxantes a diario"
+        ]
+      }
+    }
+  },
+  "dossier": {
+    "picky": {
+      "fr": {
+        "headline": "Sélectivité Alimentaire : Retrouver la Sérénité",
+        "realities": [
+          "Les aversions (néophobie) sont normales, forcer crée des blocages durables.",
+          "C'est souvent une question sensorielle (texture, vue) plus que de goût.",
+          "Le mimétisme familial est le levier le plus puissant pour l'enfant."
+        ],
+        "timeline": {
+          "j14": "Dédramatisation des repas.",
+          "j30": "Premiers essais de nouveaux aliments.",
+          "j90": "Assiette diversifiée sans conflit."
+        }
+      },
+      "ar": {
+        "headline": "الانتقائية الغذائية: استعادة الهدوء",
+        "realities": [
+          "النفور طبيعي، والإجبار يخلق عقبات دائمة.",
+          "غالبًا ما تكون مسألة حسية (ملمس، منظر) وليس طعم.",
+          "التقليد العائلي هو أقوى دافع للطفل."
+        ],
+        "timeline": {
+          "j14": "تقليل التوتر في الوجبات.",
+          "j30": "محاولات أولى لأطعمة جديدة.",
+          "j90": "طبق متنوع بدون صراع."
+        }
+      },
+      "en": {
+        "headline": "Picky Eating: Finding Serenity",
+        "realities": [
+          "Aversions are normal, forcing creates lasting blocks.",
+          "It's often a sensory issue rather than just taste.",
+          "Family mimicking is the most powerful tool."
+        ],
+        "timeline": {
+          "j14": "Reduced mealtime stress.",
+          "j30": "First attempts at new foods.",
+          "j90": "Diversified plate without conflict."
+        }
+      },
+      "es": {
+        "headline": "Selectividad Alimentaria: Encontrar la Serenidad",
+        "realities": [
+          "Las aversiones son normales, forzar crea bloqueos duraderos.",
+          "A menudo es una cuestión sensorial más que de sabor.",
+          "El mimetismo familiar es la herramienta más poderosa."
+        ],
+        "timeline": {
+          "j14": "Reducción de la tensión.",
+          "j30": "Primeros intentos de nuevos alimentos.",
+          "j90": "Plato diversificado sin conflictos."
+        }
+      }
+    },
+    "weight_child": {
+      "fr": {
+        "headline": "Gestion du Poids : Accompagner sans Restreindre",
+        "realities": [
+          "Mettre un enfant au régime strict est contre-productif, il faut ralentir la prise de poids pendant qu'il grandit en taille.",
+          "Le sommeil et la sédentarité (écrans) impactent directement le stockage des graisses.",
+          "Les calories liquides (jus, sodas) trompent la satiété de l'enfant."
+        ],
+        "timeline": {
+          "j14": "Réduction des grignotages sans frustration.",
+          "j30": "Énergie stabilisée tout au long de la journée.",
+          "j90": "Courbe d'IMC normalisée."
+        }
+      },
+      "ar": {
+        "headline": "إدارة الوزن: مرافقة بدون حرمان",
+        "realities": [
+          "النظام الغذائي الصارم للطفل يأتي بنتائج عكسية، يجب إبطاء زيادة الوزن أثناء النمو.",
+          "النوم وقلة الحركة يؤثران على تخزين الدهون.",
+          "السعرات السائلة تخدع الشبع."
+        ],
+        "timeline": {
+          "j14": "تقليل الوجبات الخفيفة بدون حرمان.",
+          "j30": "طاقة مستقرة طوال اليوم.",
+          "j90": "تطبيع منحنى كتلة الجسم."
+        }
+      },
+      "en": {
+        "headline": "Weight Management: Support without Restriction",
+        "realities": [
+          "Strict diets are counterproductive; we aim to slow weight gain while they grow taller.",
+          "Sleep and screen time directly impact fat storage.",
+          "Liquid calories deceive satiety."
+        ],
+        "timeline": {
+          "j14": "Reduced snacking without frustration.",
+          "j30": "Stabilized energy.",
+          "j90": "Normalized BMI curve."
+        }
+      },
+      "es": {
+        "headline": "Manejo del Peso: Apoyo sin Restricciones",
+        "realities": [
+          "Las dietas estrictas son contraproducentes; buscamos frenar el aumento mientras crece.",
+          "El sueño y las pantallas impactan el almacenamiento de grasa.",
+          "Las calorías líquidas engañan la saciedad."
+        ],
+        "timeline": {
+          "j14": "Reducción de picoteos sin frustración.",
+          "j30": "Energía estabilizada.",
+          "j90": "Curva de IMC normalizada."
+        }
+      }
+    },
+    "growth": {
+      "fr": {
+        "headline": "Soutenir la Croissance Harmonieuse",
+        "realities": [
+          "Un retard de croissance peut cacher une malabsorption invisible (comme une intolérance).",
+          "Densifier les assiettes nutritionnellement (pas juste caloriquement) fait la différence.",
+          "Le système digestif de l'enfant doit être apaisé pour bien assimiler."
+        ],
+        "timeline": {
+          "j14": "Digestion améliorée, moins de maux de ventre.",
+          "j30": "Regain de vitalité et d'énergie.",
+          "j90": "Reprise progressive de la courbe de croissance."
+        }
+      },
+      "ar": {
+        "headline": "دعم النمو المتناغم",
+        "realities": [
+          "تأخر النمو قد يخفي سوء امتصاص غير مرئي.",
+          "تكثيف الأطباق غذائياً (وليس فقط بالسعرات) يصنع الفارق.",
+          "يجب تهدئة الجهاز الهضمي للطفل ليتمكن من الامتصاص الجيد."
+        ],
+        "timeline": {
+          "j14": "تحسن الهضم، ألم بطن أقل.",
+          "j30": "استعادة الحيوية والطاقة.",
+          "j90": "استئناف تدريجي لمنحنى النمو."
+        }
+      },
+      "en": {
+        "headline": "Supporting Harmonious Growth",
+        "realities": [
+          "Growth delay can hide invisible malabsorption.",
+          "Nutritionally densifying plates (not just calorically) makes the difference.",
+          "The child's digestive system must be soothed for proper assimilation."
+        ],
+        "timeline": {
+          "j14": "Improved digestion, fewer stomach aches.",
+          "j30": "Regained vitality and energy.",
+          "j90": "Progressive resumption of the growth curve."
+        }
+      },
+      "es": {
+        "headline": "Apoyo al Crecimiento Armonioso",
+        "realities": [
+          "El retraso en el crecimiento puede ocultar mala absorción.",
+          "Densificar los platos nutricionalmente marca la diferencia.",
+          "El sistema digestivo del niño debe estar calmado para asimilar bien."
+        ],
+        "timeline": {
+          "j14": "Digestión mejorada, menos dolor de barriga.",
+          "j30": "Recuperación de vitalidad y energía.",
+          "j90": "Reanudación progresiva de la curva de crecimiento."
+        }
+      }
+    },
+    "allergy": {
+      "fr": {
+        "headline": "Allergies et Intolérances : Gérer Sans Frustration",
+        "realities": [
+          "L'inflammation de l'intestin aggrave les réactions allergiques et l'eczéma.",
+          "Manger sans les allergènes ne suffit pas : il faut cicatriser la muqueuse intestinale.",
+          "Il est tout à fait possible d'offrir des repas gourmands tout en respectant les évictions."
+        ],
+        "timeline": {
+          "j14": "Baisse de l'inflammation visible (peau, digestion).",
+          "j30": "Moins de crises et système immunitaire renforcé.",
+          "j90": "Routines culinaires faciles et sans danger adoptées par toute la famille."
+        }
+      },
+      "ar": {
+        "headline": "الحساسية وعدم التحمل: الإدارة بدون إحباط",
+        "realities": [
+          "التهاب الأمعاء يفاقم ردود الفعل التحسسية والأكزيما.",
+          "الأكل بدون مسببات الحساسية لا يكفي: يجب التئام الغشاء المخاطي المعوي.",
+          "من الممكن تقديم وجبات لذيذة مع احترام الامتناع."
+        ],
+        "timeline": {
+          "j14": "انخفاض ملحوظ في الالتهاب (الجلد، الهضم).",
+          "j30": "أزمات أقل وجهاز مناعي أقوى.",
+          "j90": "روتين طهي سهل وآمن متبنى من العائلة."
+        }
+      },
+      "en": {
+        "headline": "Allergies and Intolerances: Manage Without Frustration",
+        "realities": [
+          "Gut inflammation worsens allergic reactions and eczema.",
+          "Eating without allergens isn't enough: the intestinal lining must heal.",
+          "It's entirely possible to offer tasty meals while respecting eliminations."
+        ],
+        "timeline": {
+          "j14": "Visible reduction in inflammation (skin, digestion).",
+          "j30": "Fewer flare-ups and strengthened immune system.",
+          "j90": "Easy, safe cooking routines adopted by the whole family."
+        }
+      },
+      "es": {
+        "headline": "Alergias e Intolerancias: Manejo sin Frustración",
+        "realities": [
+          "La inflamación intestinal empeora las reacciones alérgicas y el eczema.",
+          "Comer sin alérgenos no es suficiente: la mucosa intestinal debe sanar.",
+          "Es completamente posible ofrecer comidas deliciosas respetando las eliminaciones."
+        ],
+        "timeline": {
+          "j14": "Reducción visible de la inflamación (piel, digestión).",
+          "j30": "Menos crisis y sistema inmunológico fortalecido.",
+          "j90": "Rutinas de cocina fáciles y seguras adoptadas por la familia."
+        }
+      }
+    },
+    "focus": {
+      "fr": {
+        "headline": "Concentration et Apaisement : Le Pouvoir de l'Assiette",
+        "realities": [
+          "L'excès de sucres et additifs provoque des pics d'insuline qui se traduisent par de l'agitation et des baisses d'attention.",
+          "L'intestin est le 2ème cerveau : un microbiote perturbé altère la production de sérotonine (apaisement).",
+          "Les bons gras (Oméga-3) sont le carburant essentiel du cerveau en développement."
+        ],
+        "timeline": {
+          "j14": "Humeur plus stable au cours de la journée, moins de crises.",
+          "j30": "Meilleur endormissement et concentration prolongée.",
+          "j90": "Axe intestin-cerveau apaisé, vraie différence à l'école."
+        }
+      },
+      "ar": {
+        "headline": "التركيز والهدوء: قوة الطبق",
+        "realities": [
+          "كثرة السكر والإضافات تسبب ارتفاع الأنسولين، مما يؤدي إلى فرط الحركة وتشتت الانتباه.",
+          "الأمعاء هي الدماغ الثاني: الميكروبيوم المضطرب يغير إنتاج السيروتونين.",
+          "الدهون الجيدة (أوميغا-3) هي الوقود الأساسي للدماغ النامي."
+        ],
+        "timeline": {
+          "j14": "مزاج أكثر استقراراً، نوبات غضب أقل.",
+          "j30": "نوم أفضل وتركيز أطول.",
+          "j90": "تهدئة محور الأمعاء والدماغ، فرق حقيقي في المدرسة."
+        }
+      },
+      "en": {
+        "headline": "Focus and Calm: The Power of the Plate",
+        "realities": [
+          "Excess sugar and additives cause insulin spikes, leading to restlessness and attention drops.",
+          "The gut is the 2nd brain: a disrupted microbiome alters serotonin (calming) production.",
+          "Good fats (Omega-3s) are the essential fuel for a developing brain."
+        ],
+        "timeline": {
+          "j14": "More stable mood throughout the day, fewer outbursts.",
+          "j30": "Better sleep onset and prolonged focus.",
+          "j90": "Soothed gut-brain axis, real difference at school."
+        }
+      },
+      "es": {
+        "headline": "Enfoque y Calma: El Poder del Plato",
+        "realities": [
+          "El exceso de azúcar y aditivos causa picos de insulina, lo que lleva a la agitación y caídas de atención.",
+          "El intestino es el segundo cerebro: un microbioma alterado altera la producción de serotonina.",
+          "Las grasas buenas (Omega-3) son el combustible esencial para un cerebro en desarrollo."
+        ],
+        "timeline": {
+          "j14": "Estado de ánimo más estable, menos crisis.",
+          "j30": "Mejor sueño y concentración prolongada.",
+          "j90": "Eje intestino-cerebro calmado, verdadera diferencia en la escuela."
+        }
+      }
+    },
+    "sarcopenia": {
+      "fr": {
+        "headline": "Renforcer la Vitalité et l'Autonomie",
+        "realities": [
+          "La sarcopénie (fonte musculaire) n'est pas une fatalité liée à l'âge, c'est souvent un déficit d'assimilation des protéines.",
+          "Plus l'alimentation est pauvre en nutriments, plus le risque de chute et de fracture augmente.",
+          "Il est possible de redensifier le muscle et l'os à tout âge avec le bon dosage protéique et anti-inflammatoire."
+        ],
+        "timeline": {
+          "j14": "Meilleur apport protéique sans surcharger la digestion.",
+          "j30": "Premiers signes de regain d'énergie physique.",
+          "j90": "Amélioration de la mobilité et de la stabilité."
+        }
+      },
+      "ar": {
+        "headline": "تعزيز الحيوية والاستقلالية",
+        "realities": [
+          "الضمور العضلي ليس حتميا مع تقدم العمر، بل غالبا ما يكون نقصا في امتصاص البروتين.",
+          "كلما كان النظام الغذائي فقيرا بالمواد المغذية، زاد خطر السقوط والكسور.",
+          "من الممكن إعادة تكثيف العضلات والعظام في أي عمر بالجرعة المناسبة."
+        ],
+        "timeline": {
+          "j14": "زيادة تناول البروتين دون إرهاق الهضم.",
+          "j30": "العلامات الأولى لاستعادة الطاقة البدنية.",
+          "j90": "تحسن الحركة والاستقرار."
+        }
+      },
+      "en": {
+        "headline": "Strengthening Vitality and Autonomy",
+        "realities": [
+          "Sarcopenia (muscle loss) is not an inevitable part of aging; it's often a protein assimilation deficit.",
+          "The poorer the diet in nutrients, the higher the risk of falls and fractures.",
+          "It is possible to redensify muscle and bone at any age with the right protein and anti-inflammatory dosage."
+        ],
+        "timeline": {
+          "j14": "Better protein intake without overloading digestion.",
+          "j30": "First signs of physical energy regain.",
+          "j90": "Improved mobility and stability."
+        }
+      },
+      "es": {
+        "headline": "Fortalecer la Vitalidad y Autonomía",
+        "realities": [
+          "La sarcopenia (pérdida muscular) no es inevitable con la edad; a menudo es un déficit de asimilación de proteínas.",
+          "Cuanto más pobre en nutrientes sea la dieta, mayor el riesgo de caídas y fracturas.",
+          "Es posible redensificar músculo y hueso a cualquier edad con la dosis adecuada."
+        ],
+        "timeline": {
+          "j14": "Mejor aporte de proteínas sin sobrecargar la digestión.",
+          "j30": "Primeros signos de recuperación de energía física.",
+          "j90": "Mejora de la movilidad y estabilidad."
+        }
+      }
+    },
+    "appetite": {
+      "fr": {
+        "headline": "Dénutrition : Ramener le Plaisir et l'Énergie",
+        "realities": [
+          "L'anorexie liée à l'âge crée un cercle vicieux : moins on mange, plus l'estomac rétrécit et la fatigue s'installe.",
+          "Fractionner l'alimentation et l'enrichir sans augmenter le volume est la clé.",
+          "Le manque d'eau et de nutriments accélère le déclin des fonctions cérébrales."
+        ],
+        "timeline": {
+          "j14": "Enrichissement des petits volumes pour stopper les carences.",
+          "j30": "Retour progressif de l'appétit grâce à l'apport en zinc.",
+          "j90": "Poids stabilisé et fatigue estompée."
+        }
+      },
+      "ar": {
+        "headline": "سوء التغذية: استعادة المتعة والطاقة",
+        "realities": [
+          "فقدان الشهية المرتبط بالعمر يخلق حلقة مفرغة: كلما قل الأكل، تقلصت المعدة واستقر التعب.",
+          "تقسيم الوجبات وإثرائها بدون زيادة الحجم هو المفتاح.",
+          "نقص الماء والمغذيات يسرع تدهور وظائف الدماغ."
+        ],
+        "timeline": {
+          "j14": "إثراء الكميات الصغيرة لوقف النقص.",
+          "j30": "عودة تدريجية للشهية.",
+          "j90": "استقرار الوزن وتلاشي التعب."
+        }
+      },
+      "en": {
+        "headline": "Malnutrition: Bringing Back Pleasure and Energy",
+        "realities": [
+          "Age-related anorexia creates a vicious circle: less eating leads to stomach shrinking and fatigue.",
+          "Fractioning meals and enriching them without increasing volume is key.",
+          "Lack of water and nutrients accelerates cognitive decline."
+        ],
+        "timeline": {
+          "j14": "Enriching small volumes to stop deficiencies.",
+          "j30": "Gradual return of appetite.",
+          "j90": "Stabilized weight and diminished fatigue."
+        }
+      },
+      "es": {
+        "headline": "Desnutrición: Devolver el Placer y la Energía",
+        "realities": [
+          "La anorexia relacionada con la edad crea un círculo vicioso: menos se come, más se encoge el estómago.",
+          "Fraccionar y enriquecer la alimentación sin aumentar el volumen es clave.",
+          "La falta de agua y nutrientes acelera el declive cerebral."
+        ],
+        "timeline": {
+          "j14": "Enriquecimiento de pequeños volúmenes para frenar carencias.",
+          "j30": "Retorno progresivo del apetito.",
+          "j90": "Peso estabilizado y fatiga disminuida."
+        }
+      }
+    },
+    "diabetes_s": {
+      "fr": {
+        "headline": "Diabète Senior : Équilibre Sans Privation",
+        "realities": [
+          "Chez le senior, les objectifs stricts (HBA1C très basse) sont dangereux car l'hypoglycémie favorise les chutes.",
+          "Limiter drastiquement les fruits ou féculents mène à la dénutrition.",
+          "Gérer la glycémie passe par l'ordre des aliments (protéines puis fibres puis féculents) sans ôter le plaisir."
+        ],
+        "timeline": {
+          "j14": "Glycémies plus stables, moins de pics et de coups de fatigue.",
+          "j30": "Meilleure cicatrisation et immunité renforcée.",
+          "j90": "Analyses (HBA1C) apaisées, qualité de vie préservée."
+        }
+      },
+      "ar": {
+        "headline": "سكري كبار السن: توازن بلا حرمان",
+        "realities": [
+          "لدى كبار السن، الأهداف الصارمة خطيرة لأن نقص السكر يعزز السقوط.",
+          "تقييد الفواكه والنشويات بشدة يؤدي لسوء التغذية.",
+          "إدارة السكر تتم بترتيب الأكل دون حرمان من المتعة."
+        ],
+        "timeline": {
+          "j14": "استقرار مستوى السكر، وتعب أقل.",
+          "j30": "التئام أفضل ومناعة أقوى.",
+          "j90": "تحاليل مستقرة وجودة حياة محفوظة."
+        }
+      },
+      "en": {
+        "headline": "Senior Diabetes: Balance Without Deprivation",
+        "realities": [
+          "In seniors, strict targets are dangerous as hypoglycemia promotes falls.",
+          "Drastically limiting fruits or starches leads to malnutrition.",
+          "Managing blood sugar is about food order, not removing pleasure."
+        ],
+        "timeline": {
+          "j14": "More stable blood sugar, fewer fatigue crashes.",
+          "j30": "Better healing and strengthened immunity.",
+          "j90": "Soothed blood tests (HBA1C), preserved quality of life."
+        }
+      },
+      "es": {
+        "headline": "Diabetes Senior: Equilibrio sin Privación",
+        "realities": [
+          "En personas mayores, los objetivos estrictos son peligrosos porque la hipoglucemia favorece las caídas.",
+          "Limitar drásticamente frutas o carbohidratos lleva a la desnutrición.",
+          "Manejar la glucosa se logra con el orden de los alimentos, sin quitar el placer."
+        ],
+        "timeline": {
+          "j14": "Glucemias más estables, menos fatiga.",
+          "j30": "Mejor cicatrización e inmunidad.",
+          "j90": "Análisis estables, calidad de vida preservada."
+        }
+      }
+    },
+    "memory": {
+      "fr": {
+        "headline": "Bouclier Neuro-protecteur par l'Assiette",
+        "realities": [
+          "L'inflammation globale et l'oxydation sont les ennemis des neurones : l'alimentation est notre premier antioxydant.",
+          "La résistance à l'insuline (diabète de type 3) est fortement corrélée à l'Alzheimer.",
+          "Les oméga-3, les vitamines B et l'hydratation sont le carburant essentiel pour ralentir le déclin cognitif."
+        ],
+        "timeline": {
+          "j14": "Apport des nutriments clés pour freiner l'oxydation cellulaire.",
+          "j30": "Meilleure énergie générale et clarté mentale.",
+          "j90": "Ralentissement potentiel de la neurodégénérescence et protection globale."
+        }
+      },
+      "ar": {
+        "headline": "الدرع العصبي الواقي عبر الطبق",
+        "realities": [
+          "الالتهاب والأكسدة هما أعداء الخلايا العصبية: الغذاء هو مضاد الأكسدة الأول.",
+          "مقاومة الأنسولين ترتبط بقوة بمرض الزهايمر.",
+          "أوميغا 3 وفيتامينات ب والترطيب ضرورية لإبطاء التدهور المعرفي."
+        ],
+        "timeline": {
+          "j14": "توفير العناصر الغذائية الرئيسية لإبطاء أكسدة الخلايا.",
+          "j30": "طاقة عامة ووضوح ذهني أفضل.",
+          "j90": "تباطؤ محتمل للتنكس العصبي وحماية شاملة."
+        }
+      },
+      "en": {
+        "headline": "Neuro-protective Shield Through the Plate",
+        "realities": [
+          "Global inflammation and oxidation are enemies of neurons: diet is our first antioxidant.",
+          "Insulin resistance (type 3 diabetes) is strongly correlated with Alzheimer's.",
+          "Omega-3s, B vitamins, and hydration are essential fuel to slow cognitive decline."
+        ],
+        "timeline": {
+          "j14": "Input of key nutrients to slow cellular oxidation.",
+          "j30": "Better general energy and mental clarity.",
+          "j90": "Potential slowdown of neurodegeneration and global protection."
+        }
+      },
+      "es": {
+        "headline": "Escudo Neuroprotector a través del Plato",
+        "realities": [
+          "La inflamación global y la oxidación son enemigos de las neuronas: la dieta es nuestro primer antioxidante.",
+          "La resistencia a la insulina está fuertemente correlacionada con el Alzheimer.",
+          "Omega-3, vitaminas B y la hidratación son combustibles esenciales para frenar el declive cognitivo."
+        ],
+        "timeline": {
+          "j14": "Aporte de nutrientes clave para frenar la oxidación celular.",
+          "j30": "Mejor energía general y claridad mental.",
+          "j90": "Posible ralentización de la neurodegeneración y protección global."
+        }
+      }
+    }
+  }
+}

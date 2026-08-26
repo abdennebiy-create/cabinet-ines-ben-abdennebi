@@ -1,0 +1,1481 @@
+deepDive: {
+  "weightLoss_step1": {
+    "fr": {
+      "empathy": "La perte de poids n'est pas qu'une question de calories in/out.",
+      "question": "Quel est le principal obstacle que vous rencontrez ?",
+      "options": [
+        "🛑 Effet yo-yo constant",
+        "🛑 Je stagne malgré mes efforts",
+        "🛑 Fringales émotionnelles",
+        "🛑 Je ne sais pas par où commencer"
+      ]
+    },
+    "ar": {
+      "empathy": "فقدان الوزن ليس مجرد حساب سعرات.",
+      "question": "ما هو العائق الرئيسي الذي تواجهه؟",
+      "options": [
+        "🛑 تأثير اليويو المستمر",
+        "🛑 ثبات الوزن رغم الجهود",
+        "🛑 الجوع العاطفي",
+        "🛑 لا أعرف من أين أبدأ"
+      ]
+    },
+    "en": {
+      "empathy": "Weight loss isn't just about calories in/out.",
+      "question": "What is the main obstacle you face?",
+      "options": [
+        "🛑 Constant yo-yo effect",
+        "🛑 Plateauing despite efforts",
+        "🛑 Emotional cravings",
+        "🛑 I don't know where to start"
+      ]
+    },
+    "es": {
+      "empathy": "La pérdida de peso no es solo cuestión de calorías.",
+      "question": "¿Cuál es el principal obstáculo que enfrenta?",
+      "options": [
+        "🛑 Efecto yo-yo constante",
+        "🛑 Estancamiento a pesar de los esfuerzos",
+        "🛑 Antojos emocionales",
+        "🛑 No sé por dónde empezar"
+      ]
+    }
+  },
+  "weightLoss_step2": {
+    "fr": {
+      "empathy": "Les régimes restrictifs passés abîment souvent le métabolisme de base.",
+      "question": "Combien de régimes stricts avez-vous suivis dans le passé ?",
+      "options": [
+        "📉 Aucun, c'est ma première fois",
+        "📉 1 à 3 régimes",
+        "📉 4 à 6 régimes",
+        "📉 Je suis toujours au régime"
+      ]
+    },
+    "ar": {
+      "empathy": "الأنظمة القاسية السابقة تضر غالباً بالأيض الأساسي.",
+      "question": "كم عدد الأنظمة الصارمة التي اتبعتها في الماضي؟",
+      "options": [
+        "📉 لا شيء، هذه أول مرة",
+        "📉 1 إلى 3 أنظمة",
+        "📉 4 إلى 6 أنظمة",
+        "📉 أنا دائماً في دايت"
+      ]
+    },
+    "en": {
+      "empathy": "Past restrictive diets often damage basal metabolism.",
+      "question": "How many strict diets have you followed in the past?",
+      "options": [
+        "📉 None, it's my first time",
+        "📉 1 to 3 diets",
+        "📉 4 to 6 diets",
+        "📉 I'm always on a diet"
+      ]
+    },
+    "es": {
+      "empathy": "Las dietas restrictivas pasadas a menudo dañan el metabolismo basal.",
+      "question": "¿Cuántas dietas estrictas ha seguido en el pasado?",
+      "options": [
+        "📉 Ninguna, es mi primera vez",
+        "📉 1 a 3 dietas",
+        "📉 4 a 6 dietas",
+        "📉 Siempre estoy a dieta"
+      ]
+    }
+  },
+  "weightLoss_step3": {
+    "fr": {
+      "empathy": "Votre rythme de vie joue un rôle majeur.",
+      "question": "À quelle fréquence mangez-vous à l'extérieur ou commandez-vous vos repas ?",
+      "options": [
+        "🍽️ Presque jamais (tout est fait maison)",
+        "🍽️ 1 à 2 fois par semaine",
+        "🍽️ 3 à 5 fois par semaine",
+        "🍽️ Presque tous les jours"
+      ]
+    },
+    "ar": {
+      "empathy": "نمط حياتك يلعب دوراً كبيراً.",
+      "question": "كم مرة تأكل في الخارج أو تطلب وجبات؟",
+      "options": [
+        "🍽️ تقريباً أبداً (كل شيء منزلي)",
+        "🍽️ 1 إلى 2 مرات أسبوعياً",
+        "🍽️ 3 إلى 5 مرات أسبوعياً",
+        "🍽️ تقريباً كل يوم"
+      ]
+    },
+    "en": {
+      "empathy": "Your lifestyle plays a major role.",
+      "question": "How often do you eat out or order meals?",
+      "options": [
+        "🍽️ Almost never (all homemade)",
+        "🍽️ 1 to 2 times a week",
+        "🍽️ 3 to 5 times a week",
+        "🍽️ Almost every day"
+      ]
+    },
+    "es": {
+      "empathy": "Su estilo de vida juega un papel importante.",
+      "question": "¿Con qué frecuencia come fuera o pide comida?",
+      "options": [
+        "🍽️ Casi nunca (todo casero)",
+        "🍽️ 1 a 2 veces por semana",
+        "🍽️ 3 a 5 veces por semana",
+        "🍽️ Casi todos los días"
+      ]
+    }
+  },
+  "diabetes_step1": {
+    "fr": {
+      "empathy": "Votre glycémie n'est pas qu'une question de sucre — les graisses viscérales et le stress influencent votre insuline.",
+      "question": "Quel est votre statut médical actuel concernant le sucre ?",
+      "options": [
+        "🩸 Je suis pré-diabétique",
+        "🩸 Diabète de Type 2 (installé)",
+        "🩸 Diabète de Type 1",
+        "🩸 Diabète gestationnel"
+      ]
+    },
+    "ar": {
+      "empathy": "سكر دمك ليس مسألة سكر فقط — الدهون والتوتر يؤثرون على الأنسولين.",
+      "question": "ما هو وضعك الطبي الحالي بخصوص السكر؟",
+      "options": [
+        "🩸 أنا في مرحلة ما قبل السكري",
+        "🩸 سكري النوع الثاني (مستقر)",
+        "🩸 سكري النوع الأول",
+        "🩸 سكري الحمل"
+      ]
+    },
+    "en": {
+      "empathy": "Your blood sugar isn't just about sugar — visceral fat and stress influence your insulin.",
+      "question": "What is your current medical status regarding sugar?",
+      "options": [
+        "🩸 I am pre-diabetic",
+        "🩸 Type 2 Diabetes (established)",
+        "🩸 Type 1 Diabetes",
+        "🩸 Gestational diabetes"
+      ]
+    },
+    "es": {
+      "empathy": "Su glucemia no es solo cuestión de azúcar — la grasa visceral y el estrés influyen en su insulina.",
+      "question": "¿Cuál es su estado médico actual respecto al azúcar?",
+      "options": [
+        "🩸 Soy pre-diabético",
+        "🩸 Diabetes Tipo 2 (establecida)",
+        "🩸 Diabetes Tipo 1",
+        "🩸 Diabetes gestacional"
+      ]
+    }
+  },
+  "diabetes_step2": {
+    "fr": {
+      "empathy": "Le traitement du diabète est très évolutif et doit s'adapter à votre mode de vie.",
+      "question": "Prenez-vous un traitement pour réguler votre glycémie ?",
+      "options": [
+        "💊 Oui, des comprimés oraux (ex: Metformine)",
+        "💉 Oui, de l'insuline",
+        "💊💉 Les deux (comprimés et insuline)",
+        "🚫 Aucun traitement, juste mon alimentation"
+      ]
+    },
+    "ar": {
+      "empathy": "علاج السكري متطور جداً ويجب أن يتكيف مع نمط حياتك.",
+      "question": "هل تتناول علاجاً لتنظيم سكر الدم؟",
+      "options": [
+        "💊 نعم، أقراص فموية (مثل ميتفورمين)",
+        "💉 نعم، أنسولين",
+        "💊💉 كلاهما (أقراص وأنسولين)",
+        "🚫 لا يوجد علاج، فقط نظامي الغذائي"
+      ]
+    },
+    "en": {
+      "empathy": "Diabetes treatment is highly evolving and must adapt to your lifestyle.",
+      "question": "Do you take medication to regulate your blood sugar?",
+      "options": [
+        "💊 Yes, oral tablets (e.g., Metformin)",
+        "💉 Yes, insulin",
+        "💊💉 Both (tablets and insulin)",
+        "🚫 No medication, just my diet"
+      ]
+    },
+    "es": {
+      "empathy": "El tratamiento de la diabetes es muy evolutivo y debe adaptarse a su estilo de vida.",
+      "question": "¿Toma medicación para regular su glucemia?",
+      "options": [
+        "💊 Sí, pastillas orales (ej: Metformina)",
+        "💉 Sí, insulina",
+        "💊💉 Ambas (pastillas e insulina)",
+        "🚫 Ninguna medicación, solo mi dieta"
+      ]
+    }
+  },
+  "diabetes_step3": {
+    "fr": {
+      "empathy": "L'hémoglobine glyquée (HbA1c) est le véritable témoin de votre équilibre sur 3 mois.",
+      "question": "Savez-vous où se situe votre dernière HbA1c ?",
+      "options": [
+        "📉 En dessous de 6%",
+        "📊 Entre 6% et 7%",
+        "📈 Au-dessus de 7%",
+        "🤷‍♂️ Je ne sais pas / Je n'ai pas fait d'analyses récemment"
+      ]
+    },
+    "ar": {
+      "empathy": "الخزان (HbA1c) هو الشاهد الحقيقي على توازنك لمدة 3 أشهر.",
+      "question": "هل تعرف أين يقع مستوى HbA1c الأخير لديك؟",
+      "options": [
+        "📉 أقل من 6%",
+        "📊 بين 6% و 7%",
+        "📈 أعلى من 7%",
+        "🤷‍♂️ لا أعرف / لم أقم بتحاليل مؤخراً"
+      ]
+    },
+    "en": {
+      "empathy": "Glycated hemoglobin (HbA1c) is the true witness of your balance over 3 months.",
+      "question": "Do you know where your last HbA1c stands?",
+      "options": [
+        "📉 Below 6%",
+        "📊 Between 6% and 7%",
+        "📈 Above 7%",
+        "🤷‍♂️ I don't know / I haven't tested recently"
+      ]
+    },
+    "es": {
+      "empathy": "La hemoglobina glicosilada (HbA1c) es el verdadero testigo de su equilibrio en 3 meses.",
+      "question": "¿Sabe dónde se sitúa su última HbA1c?",
+      "options": [
+        "📉 Por debajo del 6%",
+        "📊 Entre el 6% y el 7%",
+        "📈 Por encima del 7%",
+        "🤷‍♂️ No lo sé / No me he hecho análisis recientemente"
+      ]
+    }
+  },
+  "hormonal_step1": {
+    "fr": {
+      "empathy": "Le système endocrinien est un orchestre : insuline, cortisol, œstrogènes s'influencent mutuellement.",
+      "question": "Quel trouble hormonal vous concerne principalement ?",
+      "options": [
+        "🦋 SOPK (Ovaires Polykystiques)",
+        "🦋 Thyroïde (Hypo / Hashimoto)",
+        "🌸 Ménopause / Péri-ménopause",
+        "📅 SPM sévère / Endométriose"
+      ]
+    },
+    "ar": {
+      "empathy": "الجهاز الهرموني أوركسترا: الأنسولين والكورتيزول والإستروجين يؤثرون على بعض.",
+      "question": "أي اضطراب هرموني يخصك أساساً؟",
+      "options": [
+        "🦋 تكيس المبايض (SOPK)",
+        "🦋 الغدة الدرقية (خمول / هاشيموتو)",
+        "🌸 سن اليأس / قبل سن اليأس",
+        "📅 متلازمة ما قبل الحيض / بطانة الرحم المهاجرة"
+      ]
+    },
+    "en": {
+      "empathy": "The endocrine system is an orchestra: insulin, cortisol, estrogens influence each other.",
+      "question": "Which hormonal issue concerns you most?",
+      "options": [
+        "🦋 PCOS (Polycystic Ovaries)",
+        "🦋 Thyroid (Hypo / Hashimoto)",
+        "🌸 Menopause / Peri-menopause",
+        "📅 Severe PMS / Endometriosis"
+      ]
+    },
+    "es": {
+      "empathy": "El sistema endocrino es una orquesta: insulina, cortisol, estrógenos se influyen mutuamente.",
+      "question": "¿Qué trastorno hormonal le preocupa principalmente?",
+      "options": [
+        "🦋 SOP (Ovarios Poliquísticos)",
+        "🦋 Tiroides (Hipo / Hashimoto)",
+        "🌸 Menopausia / Peri-menopausia",
+        "📅 SPM severo / Endometriosis"
+      ]
+    }
+  },
+  "hormonal_step2": {
+    "fr": {
+      "empathy": "Les cycles hormonaux ont une énorme influence sur la rétention d'eau et les compulsions.",
+      "question": "Comment ce trouble se manifeste-t-il au quotidien ?",
+      "options": [
+        "🔥 Prise de poids inexpliquée",
+        "🌊 Rétention d'eau et jambes lourdes",
+        "🍫 Fringales sucrées incontrôlables",
+        "😴 Fatigue intense et chute de cheveux"
+      ]
+    },
+    "ar": {
+      "empathy": "للدورات الهرمونية تأثير كبير على احتباس الماء والشراهة.",
+      "question": "كيف يتجلى هذا الاضطراب يومياً؟",
+      "options": [
+        "🔥 زيادة وزن غير مبررة",
+        "🌊 احتباس ماء وثقل في الساقين",
+        "🍫 رغبة شديدة في السكريات",
+        "😴 تعب شديد وتساقط الشعر"
+      ]
+    },
+    "en": {
+      "empathy": "Hormonal cycles heavily influence water retention and cravings.",
+      "question": "How does this disorder manifest daily?",
+      "options": [
+        "🔥 Unexplained weight gain",
+        "🌊 Water retention and heavy legs",
+        "🍫 Uncontrollable sugar cravings",
+        "😴 Intense fatigue and hair loss"
+      ]
+    },
+    "es": {
+      "empathy": "Los ciclos hormonales influyen enormemente en la retención de líquidos y los antojos.",
+      "question": "¿Cómo se manifiesta este trastorno a diario?",
+      "options": [
+        "🔥 Aumento de peso inexplicable",
+        "🌊 Retención de líquidos y piernas pesadas",
+        "🍫 Antojos incontrolables de azúcar",
+        "😴 Fatiga intensa y caída del cabello"
+      ]
+    }
+  },
+  "hormonal_step3": {
+    "fr": {
+      "empathy": "L'inflammation de bas grade aggrave toujours les dérèglements hormonaux.",
+      "question": "Avez-vous déjà pris un traitement pour cela (pilule, lévothyrox, inositol...) ?",
+      "options": [
+        "💊 Oui, traitement médical (Lévothyrox, etc.)",
+        "💊 Oui, contraceptif hormonal",
+        "🌿 Compléments naturels (Inositol, etc.)",
+        "🚫 Aucun traitement pour l'instant"
+      ]
+    },
+    "ar": {
+      "empathy": "الالتهاب منخفض الدرجة يؤدي دائماً إلى تفاقم الاضطرابات الهرمونية.",
+      "question": "هل أخذت علاجاً لذلك من قبل (حبوب، ليفوثايروكس، إينوزيتول...)؟",
+      "options": [
+        "💊 نعم، علاج طبي (ليفوثايروكس، إلخ)",
+        "💊 نعم، موانع حمل هرمونية",
+        "🌿 مكملات طبيعية (إينوزيتول، إلخ)",
+        "🚫 لا يوجد علاج حالياً"
+      ]
+    },
+    "en": {
+      "empathy": "Low-grade inflammation always worsens hormonal imbalances.",
+      "question": "Have you ever taken treatment for this (pill, levothyroxine, inositol...)?",
+      "options": [
+        "💊 Yes, medical treatment (Levothyroxine, etc.)",
+        "💊 Yes, hormonal contraceptive",
+        "🌿 Natural supplements (Inositol, etc.)",
+        "🚫 No treatment at the moment"
+      ]
+    },
+    "es": {
+      "empathy": "La inflamación de bajo grado siempre agrava los desequilibrios hormonales.",
+      "question": "¿Ha tomado alguna vez tratamiento para esto (píldora, levotiroxina, inositol...)?",
+      "options": [
+        "💊 Sí, tratamiento médico (Levotiroxina, etc.)",
+        "💊 Sí, anticonceptivo hormonal",
+        "🌿 Suplementos naturales (Inositol, etc.)",
+        "🚫 Ningún tratamiento por el momento"
+      ]
+    }
+  },
+  "digestive_step1": {
+    "fr": {
+      "empathy": "Votre intestin est votre 2ème cerveau — chaque symptôme est un message décodable.",
+      "question": "Quel symptôme digestif vous gêne le plus au quotidien ?",
+      "options": [
+        "💨 Ballonnements et gaz (le ventre qui gonfle)",
+        "🔄 Alternance constipation / diarrhée (IBS)",
+        "🔥 Reflux gastrique (RGO) et brûlures",
+        "🤢 Lenteur digestive et nausées"
+      ]
+    },
+    "ar": {
+      "empathy": "أمعاؤك هي دماغك الثاني — كل عرض هو رسالة يمكن فك شفرتها.",
+      "question": "أي عرض هضمي يزعجك أكثر يومياً؟",
+      "options": [
+        "💨 انتفاخ وغازات",
+        "🔄 تناوب إمساك / إسهال (IBS)",
+        "🔥 ارتجاع معدي وحرقة",
+        "🤢 بطء في الهضم وغثيان"
+      ]
+    },
+    "en": {
+      "empathy": "Your gut is your 2nd brain — every symptom is a decodable message.",
+      "question": "Which digestive symptom bothers you most daily?",
+      "options": [
+        "💨 Bloating and gas (belly swelling)",
+        "🔄 Alternating constipation / diarrhea (IBS)",
+        "🔥 Acid reflux (GERD) and heartburn",
+        "🤢 Digestive slowness and nausea"
+      ]
+    },
+    "es": {
+      "empathy": "Su intestino es su 2º cerebro — cada síntoma es un mensaje descifrable.",
+      "question": "¿Qué síntoma digestivo le molesta más a diario?",
+      "options": [
+        "💨 Hinchazón y gases (vientre que se hincha)",
+        "🔄 Alternancia estreñimiento / diarrea (SII)",
+        "🔥 Reflujo gástrico y ardor",
+        "🤢 Lentitud digestiva y náuseas"
+      ]
+    }
+  },
+  "digestive_step2": {
+    "fr": {
+      "empathy": "Les intolérances alimentaires créent une inflammation silencieuse constante.",
+      "question": "Avez-vous identifié des aliments déclencheurs ?",
+      "options": [
+        "🥛 Le lait et les produits laitiers",
+        "🍞 Le pain, les pâtes (Gluten)",
+        "🧅 Certains légumes (FODMAPs)",
+        "❓ Je ne sais pas, ça semble aléatoire"
+      ]
+    },
+    "ar": {
+      "empathy": "عدم تحمل الطعام يخلق التهاباً صامتاً مستمراً.",
+      "question": "هل حددت أطعمة محفزة؟",
+      "options": [
+        "🥛 الحليب ومشتقاته",
+        "🍞 الخبز، المعكرونة (الغلوتين)",
+        "🧅 بعض الخضروات (FODMAPs)",
+        "❓ لا أعرف، يبدو الأمر عشوائياً"
+      ]
+    },
+    "en": {
+      "empathy": "Food intolerances create constant silent inflammation.",
+      "question": "Have you identified trigger foods?",
+      "options": [
+        "🥛 Milk and dairy products",
+        "🍞 Bread, pasta (Gluten)",
+        "🧅 Certain vegetables (FODMAPs)",
+        "❓ I don't know, it seems random"
+      ]
+    },
+    "es": {
+      "empathy": "Las intolerancias alimentarias crean una inflamación silenciosa constante.",
+      "question": "¿Ha identificado alimentos desencadenantes?",
+      "options": [
+        "🥛 Leche y lácteos",
+        "🍞 Pan, pasta (Gluten)",
+        "🧅 Ciertas verduras (FODMAPs)",
+        "❓ No lo sé, parece aleatorio"
+      ]
+    }
+  },
+  "digestive_step3": {
+    "fr": {
+      "empathy": "Le stress modifie la motilité intestinale de manière drastique.",
+      "question": "Vos symptômes s'aggravent-ils avec le stress ou l'anxiété ?",
+      "options": [
+        "📈 Énormément, c'est très lié",
+        "📊 Un petit peu",
+        "⚖️ Non, ça n'a pas de lien",
+        "🤷‍♂️ Je n'ai pas remarqué"
+      ]
+    },
+    "ar": {
+      "empathy": "التوتر يغير حركة الأمعاء بشكل جذري.",
+      "question": "هل تتفاقم أعراضك مع التوتر أو القلق؟",
+      "options": [
+        "📈 كثيراً، مرتبطان جداً",
+        "📊 قليلاً",
+        "⚖️ لا، لا علاقة لهما",
+        "🤷‍♂️ لم ألاحظ"
+      ]
+    },
+    "en": {
+      "empathy": "Stress drastically alters intestinal motility.",
+      "question": "Do your symptoms worsen with stress or anxiety?",
+      "options": [
+        "📈 Enormously, it's very linked",
+        "📊 A little bit",
+        "⚖️ No, there's no link",
+        "🤷‍♂️ I haven't noticed"
+      ]
+    },
+    "es": {
+      "empathy": "El estrés altera drásticamente la motilidad intestinal.",
+      "question": "¿Sus síntomas empeoran con el estrés o la ansiedad?",
+      "options": [
+        "📈 Enormemente, está muy relacionado",
+        "📊 Un poco",
+        "⚖️ No, no hay relación",
+        "🤷‍♂️ No me he fijado"
+      ]
+    }
+  },
+  "tca_step1": {
+    "fr": {
+      "empathy": "Les compulsions sont orchestrées par un déséquilibre (sérotonine/dopamine) — ce n'est pas un manque de volonté.",
+      "question": "Comment se manifestent vos troubles alimentaires ?",
+      "options": [
+        "🌙 Compulsions nocturnes (après 21h)",
+        "😰 Crises de boulimie (avec ou sans vomissements)",
+        "🔁 Hyperphagie / Grignotage continu",
+        "🤐 Restriction stricte (peur de manger)"
+      ]
+    },
+    "ar": {
+      "empathy": "النوبات يحركها اختلال في التوازن (سيروتونين/دوبامين) — ليست نقصاً في الإرادة.",
+      "question": "كيف تتجلى اضطراباتك الغذائية؟",
+      "options": [
+        "🌙 نوبات ليلية (بعد 9 مساءً)",
+        "😰 نوبات شراهة (مع أو بدون تقيؤ)",
+        "🔁 أكل مفرط / نقنقة مستمرة",
+        "🤐 تقييد صارم (خوف من الأكل)"
+      ]
+    },
+    "en": {
+      "empathy": "Compulsions are orchestrated by an imbalance (serotonin/dopamine) — it's not a lack of willpower.",
+      "question": "How do your eating disorders manifest?",
+      "options": [
+        "🌙 Night compulsions (after 9pm)",
+        "😰 Bulimia episodes (with or without vomiting)",
+        "🔁 Binge eating / Continuous snacking",
+        "🤐 Strict restriction (fear of eating)"
+      ]
+    },
+    "es": {
+      "empathy": "Las compulsiones son orquestadas por un desequilibrio (serotonina/dopamina) — no es falta de voluntad.",
+      "question": "¿Cómo se manifiestan sus trastornos alimentarios?",
+      "options": [
+        "🌙 Compulsiones nocturnas (después de las 21h)",
+        "😰 Crisis de bulimia (con o sin vómitos)",
+        "🔁 Hiperfagia / Picoteo continuo",
+        "🤐 Restricción estricta (miedo a comer)"
+      ]
+    }
+  },
+  "tca_step2": {
+    "fr": {
+      "empathy": "Culpabiliser après une crise ne fait que relancer le cycle.",
+      "question": "À quelle fréquence ces crises surviennent-elles ?",
+      "options": [
+        "📅 Plusieurs fois par jour",
+        "📅 Presque tous les jours",
+        "📅 1 à 3 fois par semaine",
+        "📅 Moins d'une fois par semaine"
+      ]
+    },
+    "ar": {
+      "empathy": "الشعور بالذنب بعد النوبة يعيد إطلاق الدورة فقط.",
+      "question": "كم مرة تحدث هذه النوبات؟",
+      "options": [
+        "📅 عدة مرات في اليوم",
+        "📅 تقريباً كل يوم",
+        "📅 1 إلى 3 مرات أسبوعياً",
+        "📅 أقل من مرة أسبوعياً"
+      ]
+    },
+    "en": {
+      "empathy": "Feeling guilty after a crisis only restarts the cycle.",
+      "question": "How often do these crises occur?",
+      "options": [
+        "📅 Several times a day",
+        "📅 Almost every day",
+        "📅 1 to 3 times a week",
+        "📅 Less than once a week"
+      ]
+    },
+    "es": {
+      "empathy": "Sentirse culpable tras una crisis solo reinicia el ciclo.",
+      "question": "¿Con qué frecuencia ocurren estas crisis?",
+      "options": [
+        "📅 Varias veces al día",
+        "📅 Casi todos los días",
+        "📅 1 a 3 veces por semana",
+        "📅 Menos de una vez por semana"
+      ]
+    }
+  },
+  "tca_step3": {
+    "fr": {
+      "empathy": "Identifier l'élément déclencheur est la première étape vers la libération.",
+      "question": "Quel est selon vous le déclencheur principal ?",
+      "options": [
+        "😫 Le stress ou la contrariété",
+        "😞 L'ennui ou la solitude",
+        "😔 Une émotion forte (tristesse, colère)",
+        "🍽️ Après m'être trop restreint(e) (le régime)"
+      ]
+    },
+    "ar": {
+      "empathy": "تحديد المحفز هو الخطوة الأولى نحو التحرر.",
+      "question": "ما هو برأيك المحفز الرئيسي؟",
+      "options": [
+        "😫 التوتر أو الانزعاج",
+        "😞 الملل أو الوحدة",
+        "😔 عاطفة قوية (حزن، غضب)",
+        "🍽️ بعد تقييد نفسي أكثر من اللازم (الدايت)"
+      ]
+    },
+    "en": {
+      "empathy": "Identifying the trigger is the first step towards liberation.",
+      "question": "What do you think is the main trigger?",
+      "options": [
+        "😫 Stress or annoyance",
+        "😞 Boredom or loneliness",
+        "😔 Strong emotion (sadness, anger)",
+        "🍽️ After restricting myself too much (diet)"
+      ]
+    },
+    "es": {
+      "empathy": "Identificar el desencadenante es el primer paso hacia la liberación.",
+      "question": "¿Cuál cree que es el desencadenante principal?",
+      "options": [
+        "😫 Estrés o molestia",
+        "😞 Aburrimiento o soledad",
+        "😔 Una emoción fuerte (tristeza, ira)",
+        "🍽️ Después de restringirme demasiado (dieta)"
+      ]
+    }
+  },
+  "fatigue_step1": {
+    "fr": {
+      "empathy": "La fatigue chronique est un épuisement mesurable de vos réserves cellulaires (fer, magnésium, B12).",
+      "question": "Quand cette fatigue est-elle la plus intense ?",
+      "options": [
+        "☁️ Dès le réveil (sommeil non réparateur)",
+        "💤 Effondrement total après 14h (crash)",
+        "🔋 En fin de journée, épuisement total",
+        "⚖️ C'est permanent, toute la journée"
+      ]
+    },
+    "ar": {
+      "empathy": "التعب المزمن هو استنفاد يمكن قياسه لاحتياطياتك الخلوية (حديد، مغنيسيوم، B12).",
+      "question": "متى يكون هذا التعب أشد؟",
+      "options": [
+        "☁️ منذ الاستيقاظ (نوم غير مريح)",
+        "💤 انهيار تام بعد الثانية ظهراً",
+        "🔋 نهاية اليوم، إنهاك تام",
+        "⚖️ إنه دائم، طوال اليوم"
+      ]
+    },
+    "en": {
+      "empathy": "Chronic fatigue is a measurable depletion of your cellular reserves (iron, magnesium, B12).",
+      "question": "When is this fatigue most intense?",
+      "options": [
+        "☁️ Upon waking up (unrefreshing sleep)",
+        "💤 Total crash after 2pm",
+        "🔋 At the end of the day, total exhaustion",
+        "⚖️ It's permanent, all day long"
+      ]
+    },
+    "es": {
+      "empathy": "La fatiga crónica es un agotamiento medible de sus reservas celulares (hierro, magnesio, B12).",
+      "question": "¿Cuándo es más intensa esta fatiga?",
+      "options": [
+        "☁️ Al despertar (sueño no reparador)",
+        "💤 Colapso total después de las 14h",
+        "🔋 Al final del día, agotamiento total",
+        "⚖️ Es permanente, todo el día"
+      ]
+    }
+  },
+  "fatigue_step2": {
+    "fr": {
+      "empathy": "La qualité de votre sommeil dicte la réparation de votre corps.",
+      "question": "Comment évaluez-vous votre sommeil ?",
+      "options": [
+        "😴 Je dors bien mais je suis toujours fatigué(e)",
+        "⏰ Je me réveille souvent vers 3h du matin",
+        "🛌 J'ai beaucoup de mal à m'endormir",
+        "🥴 Mon sommeil est agité et court"
+      ]
+    },
+    "ar": {
+      "empathy": "جودة نومك تملي عملية ترميم جسمك.",
+      "question": "كيف تقيم نومك؟",
+      "options": [
+        "😴 أنام جيداً لكنني متعب دائماً",
+        "⏰ أستيقظ غالباً حوالي الثالثة فجراً",
+        "🛌 أجد صعوبة كبيرة في النوم",
+        "🥴 نومي مضطرب وقصير"
+      ]
+    },
+    "en": {
+      "empathy": "Your sleep quality dictates your body's repair.",
+      "question": "How do you rate your sleep?",
+      "options": [
+        "😴 I sleep well but am always tired",
+        "⏰ I often wake up around 3 am",
+        "🛌 I have a hard time falling asleep",
+        "🥴 My sleep is restless and short"
+      ]
+    },
+    "es": {
+      "empathy": "La calidad de su sueño dicta la reparación de su cuerpo.",
+      "question": "¿Cómo evalúa su sueño?",
+      "options": [
+        "😴 Duermo bien pero siempre estoy cansado",
+        "⏰ A menudo me despierto sobre las 3 am",
+        "🛌 Me cuesta mucho conciliar el sueño",
+        "🥴 Mi sueño es agitado y corto"
+      ]
+    }
+  },
+  "fatigue_step3": {
+    "fr": {
+      "empathy": "Une carence en vitamine D, fer ou magnésium bloque le moteur cellulaire.",
+      "question": "Prenez-vous des compléments alimentaires ou des vitamines actuellement ?",
+      "options": [
+        "💊 Oui, je me complémente souvent",
+        "💊 J'ai essayé le magnésium/vitamine C mais sans succès",
+        "☕ Non, je compte sur le café pour tenir",
+        "🚫 Non, je ne prends rien"
+      ]
+    },
+    "ar": {
+      "empathy": "نقص فيتامين D أو الحديد أو المغنيسيوم يوقف المحرك الخلوي.",
+      "question": "هل تتناول مكملات غذائية أو فيتامينات حالياً؟",
+      "options": [
+        "💊 نعم، آخذ مكملات غالباً",
+        "💊 جربت المغنيسيوم/فيتامين C لكن بدون نجاح",
+        "☕ لا، أعتمد على القهوة للصمود",
+        "🚫 لا، لا آخذ شيئاً"
+      ]
+    },
+    "en": {
+      "empathy": "A deficiency in vitamin D, iron or magnesium blocks the cellular engine.",
+      "question": "Are you currently taking dietary supplements or vitamins?",
+      "options": [
+        "💊 Yes, I often take supplements",
+        "💊 I tried magnesium/vitamin C but without success",
+        "☕ No, I rely on coffee to keep going",
+        "🚫 No, I take nothing"
+      ]
+    },
+    "es": {
+      "empathy": "Una deficiencia de vitamina D, hierro o magnesio bloquea el motor celular.",
+      "question": "¿Toma actualmente suplementos dietéticos o vitaminas?",
+      "options": [
+        "💊 Sí, me suplemento a menudo",
+        "💊 Probé magnesio/vitamina C pero sin éxito",
+        "☕ No, confío en el café para aguantar",
+        "🚫 No, no tomo nada"
+      ]
+    }
+  },
+  "metabolic_step1": {
+    "fr": {
+      "empathy": "L'inflammation chronique de bas grade est la racine commune de ces troubles, réversible par l'assiette.",
+      "question": "Quelles anomalies ont été détectées dans vos analyses ?",
+      "options": [
+        "📊 Cholestérol élevé (LDL / Triglycérides)",
+        "🫀 Hypertension artérielle",
+        "🔬 Foie gras (Stéatose hépatique / NAFLD)",
+        "🔥 Acide urique (Goutte)"
+      ]
+    },
+    "ar": {
+      "empathy": "الالتهاب المزمن منخفض الدرجة هو الجذر المشترك لهذه الاضطرابات، ويمكن عكسه بالطعام.",
+      "question": "ما هي التشوهات التي تم اكتشافها في تحاليلك؟",
+      "options": [
+        "📊 كوليسترول مرتفع (LDL / دهون ثلاثية)",
+        "🫀 ارتفاع ضغط الدم",
+        "🔬 كبد دهني (NAFLD)",
+        "🔥 حمض اليوريك (النقرس)"
+      ]
+    },
+    "en": {
+      "empathy": "Chronic low-grade inflammation is the common root of these disorders, reversible through diet.",
+      "question": "What abnormalities were detected in your tests?",
+      "options": [
+        "📊 High cholesterol (LDL / Triglycerides)",
+        "🫀 High blood pressure",
+        "🔬 Fatty liver (Steatosis / NAFLD)",
+        "🔥 Uric acid (Gout)"
+      ]
+    },
+    "es": {
+      "empathy": "La inflamación crónica de bajo grado es la raíz común de estos trastornos, reversible con la dieta.",
+      "question": "¿Qué anomalías se detectaron en sus análisis?",
+      "options": [
+        "📊 Colesterol alto (LDL / Triglicéridos)",
+        "🫀 Hipertensión arterial",
+        "🔬 Hígado graso (Esteatosis / NAFLD)",
+        "🔥 Ácido úrico (Gota)"
+      ]
+    }
+  },
+  "metabolic_step2": {
+    "fr": {
+      "empathy": "Beaucoup de personnes prennent des médicaments pour les symptômes sans traiter la cause (l'assiette).",
+      "question": "Prenez-vous des médicaments pour cela (Statines, Antihypertenseurs...) ?",
+      "options": [
+        "💊 Oui, des statines (pour le cholestérol)",
+        "💊 Oui, des médicaments pour la tension",
+        "💊 Les deux (Tension + Cholestérol)",
+        "🚫 Aucun, je veux régler ça naturellement"
+      ]
+    },
+    "ar": {
+      "empathy": "الكثير من الناس يأخذون أدوية للأعراض دون علاج السبب (الطعام).",
+      "question": "هل تأخذ أدوية لذلك (ستاتين، خافضات ضغط...)؟",
+      "options": [
+        "💊 نعم، ستاتين (للكوليسترول)",
+        "💊 نعم، أدوية للضغط",
+        "💊 كلاهما (ضغط + كوليسترول)",
+        "🚫 لا شيء، أريد حل ذلك طبيعياً"
+      ]
+    },
+    "en": {
+      "empathy": "Many people take medications for symptoms without treating the cause (diet).",
+      "question": "Do you take medications for this (Statins, Antihypertensives...)?",
+      "options": [
+        "💊 Yes, statins (for cholesterol)",
+        "💊 Yes, blood pressure medications",
+        "💊 Both (BP + Cholesterol)",
+        "🚫 None, I want to resolve this naturally"
+      ]
+    },
+    "es": {
+      "empathy": "Muchas personas toman medicamentos para los síntomas sin tratar la causa (la dieta).",
+      "question": "¿Toma medicamentos para esto (Estatinas, Antihipertensivos...)?",
+      "options": [
+        "💊 Sí, estatinas (para el colesterol)",
+        "💊 Sí, medicamentos para la tensión",
+        "💊 Ambos (Tensión + Colesterol)",
+        "🚫 Ninguno, quiero resolverlo de forma natural"
+      ]
+    }
+  },
+  "metabolic_step3": {
+    "fr": {
+      "empathy": "Le métabolisme réagit très vite à la répartition des macronutriments dans la journée.",
+      "question": "Avez-vous une sédentarité importante ?",
+      "options": [
+        "🪑 Oui, je suis assis(e) toute la journée",
+        "🚶‍♂️ Non, je marche régulièrement",
+        "🏋️‍♂️ Je fais du sport 2-3 fois par semaine",
+        "🤸‍♂️ Je suis très actif(ve) tous les jours"
+      ]
+    },
+    "ar": {
+      "empathy": "يتفاعل الأيض بسرعة كبيرة مع توزيع المغذيات الكبيرة على مدار اليوم.",
+      "question": "هل لديك خمول بدني كبير؟",
+      "options": [
+        "🪑 نعم، أنا جالس طوال اليوم",
+        "🚶‍♂️ لا، أمشي بانتظام",
+        "🏋️‍♂️ أمارس الرياضة 2-3 مرات في الأسبوع",
+        "🤸‍♂️ أنا نشيط جداً كل يوم"
+      ]
+    },
+    "en": {
+      "empathy": "Metabolism reacts very quickly to the distribution of macronutrients throughout the day.",
+      "question": "Do you have a highly sedentary lifestyle?",
+      "options": [
+        "🪑 Yes, I sit all day",
+        "🚶‍♂️ No, I walk regularly",
+        "🏋️‍♂️ I exercise 2-3 times a week",
+        "🤸‍♂️ I am very active every day"
+      ]
+    },
+    "es": {
+      "empathy": "El metabolismo reacciona muy rápido a la distribución de macronutrientes a lo largo del día.",
+      "question": "¿Tiene un gran sedentarismo?",
+      "options": [
+        "🪑 Sí, estoy sentado todo el día",
+        "🚶‍♂️ No, camino regularmente",
+        "🏋️‍♂️ Hago deporte 2-3 veces por semana",
+        "🤸‍♂️ Soy muy activo(a) todos los días"
+      ]
+    }
+  },
+  "pregnancy_step1": {
+    "fr": {
+      "empathy": "Chaque phase de la maternité a des besoins micronutritionnels critiques (fer, folates, iode).",
+      "question": "À quelle étape précise êtes-vous ?",
+      "options": [
+        "💭 Projet bébé (Préconception / Fertilité)",
+        "🤰 1er trimestre (Nausées, fatigue)",
+        "🤰 2ème ou 3ème trimestre",
+        "🍼 Post-partum ou Allaitement"
+      ]
+    },
+    "ar": {
+      "empathy": "كل مرحلة من الأمومة لها احتياجات دقيقة (حديد، حمض الفوليك، يود).",
+      "question": "في أي مرحلة أنتِ تحديداً؟",
+      "options": [
+        "💭 مشروع حمل (ما قبل الحمل / الخصوبة)",
+        "🤰 الثلث الأول (غثيان، تعب)",
+        "🤰 الثلث الثاني أو الثالث",
+        "🍼 بعد الولادة أو الرضاعة"
+      ]
+    },
+    "en": {
+      "empathy": "Each phase of motherhood has critical micronutritional needs (iron, folates, iodine).",
+      "question": "What specific stage are you at?",
+      "options": [
+        "💭 Trying to conceive (Preconception / Fertility)",
+        "🤰 1st trimester (Nausea, fatigue)",
+        "🤰 2nd or 3rd trimester",
+        "🍼 Postpartum or Breastfeeding"
+      ]
+    },
+    "es": {
+      "empathy": "Cada fase de la maternidad tiene necesidades micronutricionales críticas (hierro, folatos, yodo).",
+      "question": "¿En qué etapa específica está?",
+      "options": [
+        "💭 Buscando embarazo (Preconcepción / Fertilidad)",
+        "🤰 1er trimestre (Náuseas, fatiga)",
+        "🤰 2do o 3er trimestre",
+        "🍼 Postparto o Lactancia"
+      ]
+    }
+  },
+  "pregnancy_step2": {
+    "fr": {
+      "empathy": "La régulation de la glycémie est primordiale pour éviter les complications.",
+      "question": "Faites-vous du diabète gestationnel ?",
+      "options": [
+        "🩸 Oui, sous régime strict",
+        "💉 Oui, sous insuline",
+        "⚖️ Non, ma glycémie est normale",
+        "❓ Je ne sais pas encore, test prévu bientôt"
+      ]
+    },
+    "ar": {
+      "empathy": "تنظيم سكر الدم أمر بالغ الأهمية لتجنب المضاعفات.",
+      "question": "هل تعانين من سكري الحمل؟",
+      "options": [
+        "🩸 نعم، تحت نظام صارم",
+        "💉 نعم، تحت الأنسولين",
+        "⚖️ لا، سكري طبيعي",
+        "❓ لا أعرف بعد، الفحص قريب"
+      ]
+    },
+    "en": {
+      "empathy": "Blood sugar regulation is paramount to avoid complications.",
+      "question": "Do you have gestational diabetes?",
+      "options": [
+        "🩸 Yes, on a strict diet",
+        "💉 Yes, on insulin",
+        "⚖️ No, my blood sugar is normal",
+        "❓ I don't know yet, test scheduled soon"
+      ]
+    },
+    "es": {
+      "empathy": "La regulación de la glucemia es primordial para evitar complicaciones.",
+      "question": "¿Tiene diabetes gestacional?",
+      "options": [
+        "🩸 Sí, con dieta estricta",
+        "💉 Sí, con insulina",
+        "⚖️ No, mi glucemia es normal",
+        "❓ Aún no lo sé, prueba programada pronto"
+      ]
+    }
+  },
+  "pregnancy_step3": {
+    "fr": {
+      "empathy": "Votre digestion est fortement impactée par la progestérone et le volume de l'utérus.",
+      "question": "Avez-vous des inconforts digestifs marqués ?",
+      "options": [
+        "🔥 Énormément de brûlures d'estomac (RGO)",
+        "🔄 Constipation sévère",
+        "🤢 Nausées persistantes",
+        "👌 Non, tout va bien niveau digestif"
+      ]
+    },
+    "ar": {
+      "empathy": "يتأثر هضمك بشدة بالبروجستيرون وحجم الرحم.",
+      "question": "هل تعانين من انزعاج هضمي ملحوظ؟",
+      "options": [
+        "🔥 حرقة معدة شديدة",
+        "🔄 إمساك شديد",
+        "🤢 غثيان مستمر",
+        "👌 لا، كل شيء جيد هضمياً"
+      ]
+    },
+    "en": {
+      "empathy": "Your digestion is heavily impacted by progesterone and uterus volume.",
+      "question": "Do you have marked digestive discomforts?",
+      "options": [
+        "🔥 A lot of heartburn (GERD)",
+        "🔄 Severe constipation",
+        "🤢 Persistent nausea",
+        "👌 No, everything is fine digestively"
+      ]
+    },
+    "es": {
+      "empathy": "Su digestión está fuertemente impactada por la progesterona y el volumen del útero.",
+      "question": "¿Tiene molestias digestivas marcadas?",
+      "options": [
+        "🔥 Mucha acidez estomacal (ERGE)",
+        "🔄 Estreñimiento severo",
+        "🤢 Náuseas persistentes",
+        "👌 No, todo bien a nivel digestivo"
+      ]
+    }
+  },
+  "pediatric_step1": {
+    "fr": {
+      "empathy": "L'alimentation d'un enfant en pleine croissance nécessite une grande diplomatie, pas de restrictions.",
+      "question": "Quel est le comportement de votre enfant face à la nourriture ?",
+      "options": [
+        "🍽️ Très sélectif, refuse les légumes (Néophobie)",
+        "🍬 Attiré exclusivement par le sucre",
+        "🔁 Il/Elle a tout le temps faim et réclame",
+        "🤐 Il/Elle a un très petit appétit"
+      ]
+    },
+    "ar": {
+      "empathy": "تغذية طفل في مرحلة النمو تتطلب دبلوماسية كبيرة، لا قيود.",
+      "question": "كيف هو سلوك طفلك تجاه الطعام؟",
+      "options": [
+        "🍽️ انتقائي جداً، يرفض الخضار",
+        "🍬 ينجذب حصرياً للسكر",
+        "🔁 جائع طوال الوقت ويطلب الأكل",
+        "🤐 شهيته ضعيفة جداً"
+      ]
+    },
+    "en": {
+      "empathy": "Feeding a growing child requires great diplomacy, not restrictions.",
+      "question": "What is your child's behavior towards food?",
+      "options": [
+        "🍽️ Very selective, refuses vegetables",
+        "🍬 Exclusively drawn to sugar",
+        "🔁 Always hungry and asking for food",
+        "🤐 Very small appetite"
+      ]
+    },
+    "es": {
+      "empathy": "La alimentación de un niño en crecimiento requiere gran diplomacia, no restricciones.",
+      "question": "¿Cuál es el comportamiento de su hijo(a) ante la comida?",
+      "options": [
+        "🍽️ Muy selectivo, rechaza las verduras",
+        "🍬 Atraído exclusivamente por el azúcar",
+        "🔁 Siempre tiene hambre y pide comer",
+        "🤐 Tiene muy poco apetito"
+      ]
+    }
+  },
+  "pediatric_step2": {
+    "fr": {
+      "empathy": "L'environnement familial est le premier modèle nutritionnel de l'enfant.",
+      "question": "Comment se passent les repas à la maison ?",
+      "options": [
+        "📺 Souvent devant un écran (TV, tablette)",
+        "⚔️ C'est un combat quotidien, beaucoup de cris",
+        "🍽️ On mange tous ensemble calmement",
+        "🏃‍♂️ Sur le pouce, par manque de temps"
+      ]
+    },
+    "ar": {
+      "empathy": "البيئة الأسرية هي النموذج الغذائي الأول للطفل.",
+      "question": "كيف تمر أوقات الوجبات في المنزل؟",
+      "options": [
+        "📺 غالباً أمام شاشة (تلفاز، تابلت)",
+        "⚔️ صراع يومي، الكثير من الصراخ",
+        "🍽️ نأكل جميعاً معاً بهدوء",
+        "🏃‍♂️ على عجل، لضيق الوقت"
+      ]
+    },
+    "en": {
+      "empathy": "The family environment is the child's first nutritional model.",
+      "question": "How do meals go at home?",
+      "options": [
+        "📺 Often in front of a screen (TV, tablet)",
+        "⚔️ It's a daily battle, lots of yelling",
+        "🍽️ We all eat together calmly",
+        "🏃‍♂️ On the go, due to lack of time"
+      ]
+    },
+    "es": {
+      "empathy": "El entorno familiar es el primer modelo nutricional del niño.",
+      "question": "¿Cómo transcurren las comidas en casa?",
+      "options": [
+        "📺 A menudo frente a una pantalla (TV, tablet)",
+        "⚔️ Es una lucha diaria, muchos gritos",
+        "🍽️ Comemos todos juntos tranquilamente",
+        "🏃‍♂️ Sobre la marcha, por falta de tiempo"
+      ]
+    }
+  },
+  "pediatric_step3": {
+    "fr": {
+      "empathy": "Le suivi de la courbe de croissance est essentiel pour détecter les anomalies.",
+      "question": "Que dit le pédiatre concernant sa courbe de poids ?",
+      "options": [
+        "📈 Surpoids ou risque d'obésité infantile",
+        "📉 Cassure de la courbe (trop mince)",
+        "⚖️ La courbe est parfaitement normale",
+        "🤷‍♂️ Je n'ai pas consulté récemment"
+      ]
+    },
+    "ar": {
+      "empathy": "متابعة منحنى النمو ضرورية لاكتشاف أي خلل.",
+      "question": "ماذا يقول طبيب الأطفال عن منحنى وزنه؟",
+      "options": [
+        "📈 زيادة وزن أو خطر السمنة",
+        "📉 انكسار المنحنى (نحيف جداً)",
+        "⚖️ المنحنى طبيعي تماماً",
+        "🤷‍♂️ لم أستشر مؤخراً"
+      ]
+    },
+    "en": {
+      "empathy": "Monitoring the growth chart is essential to detect abnormalities.",
+      "question": "What does the pediatrician say about their weight curve?",
+      "options": [
+        "📈 Overweight or risk of childhood obesity",
+        "📉 Curve break (too thin)",
+        "⚖️ The curve is perfectly normal",
+        "🤷‍♂️ I haven't consulted recently"
+      ]
+    },
+    "es": {
+      "empathy": "El seguimiento de la curva de crecimiento es esencial para detectar anomalías.",
+      "question": "¿Qué dice el pediatra sobre su curva de peso?",
+      "options": [
+        "📈 Sobrepeso o riesgo de obesidad",
+        "📉 Ruptura de la curva (demasiado delgado)",
+        "⚖️ La curva es perfectamente normal",
+        "🤷‍♂️ No he consultado recientemente"
+      ]
+    }
+  },
+  "senior_step1": {
+    "fr": {
+      "empathy": "L'avancée dans l'âge modifie profondément l'absorption des protéines et des vitamines.",
+      "question": "Avez-vous remarqué l'un de ces changements chez votre parent ?",
+      "options": [
+        "🤐 Perte d'appétit marquée",
+        "💪 Fonte musculaire (sarcopénie) ou perte de force",
+        "🦷 Difficultés à mâcher ou avaler",
+        "⚖️ Aucun de ces signes, très en forme"
+      ]
+    },
+    "ar": {
+      "empathy": "التقدم في العمر يغير بعمق امتصاص البروتينات والفيتامينات.",
+      "question": "هل لاحظت أياً من هذه التغييرات لدى والدك/والدتك؟",
+      "options": [
+        "🤐 فقدان ملحوظ للشهية",
+        "💪 ضمور العضلات أو فقدان القوة",
+        "🦷 صعوبة في المضغ أو البلع",
+        "⚖️ لا شيء من هذا، بصحة جيدة جداً"
+      ]
+    },
+    "en": {
+      "empathy": "Advancing age profoundly changes the absorption of proteins and vitamins.",
+      "question": "Have you noticed any of these changes in your parent?",
+      "options": [
+        "🤐 Marked loss of appetite",
+        "💪 Muscle wasting (sarcopenia) or loss of strength",
+        "🦷 Difficulty chewing or swallowing",
+        "⚖️ None of these signs, very fit"
+      ]
+    },
+    "es": {
+      "empathy": "El avance de la edad modifica profundamente la absorción de proteínas y vitaminas.",
+      "question": "¿Ha notado alguno de estos cambios en su padre/madre?",
+      "options": [
+        "🤐 Pérdida de apetito marcada",
+        "💪 Pérdida de masa muscular (sarcopenia) o fuerza",
+        "🦷 Dificultades para masticar o tragar",
+        "⚖️ Ninguno de estos signos, muy en forma"
+      ]
+    }
+  },
+  "senior_step2": {
+    "fr": {
+      "empathy": "L'hydratation est souvent négligée car la sensation de soif s'estompe avec l'âge.",
+      "question": "Comment s'hydrate-t-il/elle au quotidien ?",
+      "options": [
+        "💧 Très peu, il faut lui rappeler de boire",
+        "☕ Surtout du thé ou du café",
+        "🥤 Assez bien (au moins 1L d'eau)",
+        "🤷‍♂️ Je ne suis pas sûr(e)"
+      ]
+    },
+    "ar": {
+      "empathy": "غالباً ما يُهمل الترطيب لأن الشعور بالعطش يتلاشى مع العمر.",
+      "question": "كيف يترطب يومياً؟",
+      "options": [
+        "💧 قليل جداً، يجب تذكيره بالشرب",
+        "☕ أساساً شاي أو قهوة",
+        "🥤 جيداً (على الأقل 1 لتر ماء)",
+        "🤷‍♂️ لست متأكداً"
+      ]
+    },
+    "en": {
+      "empathy": "Hydration is often neglected as the sensation of thirst fades with age.",
+      "question": "How do they hydrate daily?",
+      "options": [
+        "💧 Very little, they need to be reminded to drink",
+        "☕ Mostly tea or coffee",
+        "🥤 Fairly well (at least 1L of water)",
+        "🤷‍♂️ I'm not sure"
+      ]
+    },
+    "es": {
+      "empathy": "La hidratación a menudo se descuida porque la sensación de sed se desvanece con la edad.",
+      "question": "¿Cómo se hidrata a diario?",
+      "options": [
+        "💧 Muy poco, hay que recordarle que beba",
+        "☕ Sobre todo té o café",
+        "🥤 Bastante bien (al menos 1L de agua)",
+        "🤷‍♂️ No estoy seguro(a)"
+      ]
+    }
+  },
+  "senior_step3": {
+    "fr": {
+      "empathy": "La poly-médication (prise de nombreux médicaments) altère l'absorption des nutriments.",
+      "question": "Prend-il/elle de nombreux médicaments chaque jour ?",
+      "options": [
+        "💊 Oui, plus de 5 médicaments par jour",
+        "💊 Entre 2 et 4 médicaments",
+        "💊 Seulement 1 médicament ciblé",
+        "🚫 Aucun médicament régulier"
+      ]
+    },
+    "ar": {
+      "empathy": "تعدد الأدوية يضعف امتصاص العناصر الغذائية.",
+      "question": "هل يأخذ العديد من الأدوية يومياً؟",
+      "options": [
+        "💊 نعم، أكثر من 5 أدوية يومياً",
+        "💊 بين 2 و 4 أدوية",
+        "💊 دواء واحد فقط",
+        "🚫 لا توجد أدوية منتظمة"
+      ]
+    },
+    "en": {
+      "empathy": "Poly-medication (taking many drugs) alters nutrient absorption.",
+      "question": "Do they take many medications every day?",
+      "options": [
+        "💊 Yes, more than 5 medications a day",
+        "💊 Between 2 and 4 medications",
+        "💊 Only 1 targeted medication",
+        "🚫 No regular medication"
+      ]
+    },
+    "es": {
+      "empathy": "La polimedicación (tomar muchos medicamentos) altera la absorción de nutrientes.",
+      "question": "¿Toma muchos medicamentos cada día?",
+      "options": [
+        "💊 Sí, más de 5 medicamentos al día",
+        "💊 Entre 2 y 4 medicamentos",
+        "💊 Solo 1 medicamento",
+        "🚫 Ningún medicamento regular"
+      ]
+    }
+  }
+},
+
+dossier: {
+  "weight": {
+    "fr": {
+      "headline": "Pourquoi votre corps stocke au lieu de brûler — et comment débloquer votre métabolisme",
+      "realities": [
+        "Vos régimes passés ont ralenti votre métabolisme de base. Votre corps est en mode 'survie' et stocke chaque calorie excédentaire.",
+        "Vos fringales ne sont pas un manque de volonté. C'est un signal biologique de votre cerveau réclamant des nutriments denses.",
+        "L'inflammation de bas grade empêche vos cellules de libérer le gras, même avec du sport."
+      ],
+      "timeline": {
+        "j14": "Disparition des fringales, énergie matinale retrouvée.",
+        "j30": "Déblocage métabolique, les premiers kilos de graisse s'envolent.",
+        "j90": "Métabolisme relancé, autonomie alimentaire sans effet yo-yo."
+      }
+    },
+    "ar": {
+      "headline": "لماذا يخزن جسمك بدلاً من الحرق — وكيف تحرر أيضك",
+      "realities": [
+        "أنظمتك السابقة أبطأت أيضك الأساسي. جسمك في وضع 'بقاء'.",
+        "الجوع العاطفي ليس ضعف إرادة، بل إشارة بيولوجية.",
+        "الالتهاب يمنع خلاياك من حرق الدهون."
+      ],
+      "timeline": {
+        "j14": "اختفاء الرغبة الشديدة في الأكل، طاقة متجددة.",
+        "j30": "تحرر الأيض، فقدان الدهون.",
+        "j90": "أيض نشط، استقلالية بلا يويو."
+      }
+    },
+    "en": {
+      "headline": "Why your body stores instead of burning — and how to unlock your metabolism",
+      "realities": [
+        "Past diets slowed your basal metabolism. Your body is in 'survival' mode.",
+        "Cravings aren't a lack of willpower, but a biological signal.",
+        "Low-grade inflammation prevents fat burning."
+      ],
+      "timeline": {
+        "j14": "Cravings disappear, morning energy returns.",
+        "j30": "Metabolic unlock, initial fat loss.",
+        "j90": "Metabolism restored, sustainable autonomy."
+      }
+    },
+    "es": {
+      "headline": "Por qué su cuerpo almacena en lugar de quemar — y cómo desbloquear su metabolismo",
+      "realities": [
+        "Dietas pasadas ralentizaron su metabolismo basal.",
+        "Los antojos son una señal biológica, no falta de voluntad.",
+        "La inflamación impide la quema de grasa."
+      ],
+      "timeline": {
+        "j14": "Desaparecen los antojos, vuelve la energía.",
+        "j30": "Desbloqueo metabólico, pérdida de grasa.",
+        "j90": "Metabolismo restaurado, autonomía sin yo-yo."
+      }
+    }
+  },
+  "pediatric": {
+    "fr": {
+      "headline": "Croissance optimale et sérénité familiale : le plan nutritionnel pour votre enfant",
+      "realities": [
+        "Les aversions alimentaires (néophobie) sont normales mais réversibles sans conflit avec les bonnes stratégies.",
+        "Un excès de sucres cachés perturbe la concentration, le sommeil et l'humeur de l'enfant bien plus qu'on ne le pense.",
+        "L'immunité et la croissance se construisent aujourd'hui dans l'assiette, sans restriction mais avec intelligence."
+      ],
+      "timeline": {
+        "j14": "Repas plus calmes, rééquilibrage des petits déjeuners et goûters.",
+        "j30": "Introduction réussie de nouveaux aliments, énergie stabilisée (moins de pics de colère).",
+        "j90": "Autonomie de l'enfant, immunité renforcée, courbe de croissance harmonieuse."
+      }
+    },
+    "ar": {
+      "headline": "نمو مثالي وسلام عائلي: الخطة الغذائية لطفلك",
+      "realities": [
+        "النفور من الطعام طبيعي ويمكن عكسه بدون صراع.",
+        "السكر الخفي يزعج تركيز الطفل ونومه ومزاجه.",
+        "المناعة والنمو يبنيان اليوم من خلال الطبق بدون حرمان."
+      ],
+      "timeline": {
+        "j14": "وجبات أهدأ، تعديل الإفطار.",
+        "j30": "إدخال أطعمة جديدة بنجاح، طاقة مستقرة.",
+        "j90": "استقلالية الطفل، مناعة أقوى، منحنى نمو متناغم."
+      }
+    },
+    "en": {
+      "headline": "Optimal growth and family serenity: your child's nutrition plan",
+      "realities": [
+        "Food aversions (neophobia) are normal and reversible without conflict.",
+        "Hidden sugars disrupt concentration, sleep, and mood significantly.",
+        "Immunity and growth are built in the plate today, without restriction."
+      ],
+      "timeline": {
+        "j14": "Calmer meals, balanced breakfast.",
+        "j30": "Successful introduction of new foods, stable energy.",
+        "j90": "Child's autonomy, stronger immunity, harmonious growth."
+      }
+    },
+    "es": {
+      "headline": "Crecimiento óptimo y serenidad familiar: el plan nutricional para su hijo",
+      "realities": [
+        "Las aversiones alimentarias son normales y reversibles sin conflicto.",
+        "Los azúcares ocultos alteran la concentración, el sueño y el humor.",
+        "La inmunidad y el crecimiento se construyen hoy en el plato, sin restricciones."
+      ],
+      "timeline": {
+        "j14": "Comidas más tranquilas, desayunos equilibrados.",
+        "j30": "Introducción exitosa de nuevos alimentos, energía estable.",
+        "j90": "Autonomía del niño, inmunidad fortalecida, crecimiento armonioso."
+      }
+    }
+  },
+  "senior": {
+    "fr": {
+      "headline": "Préserver l'autonomie, la vitalité et la force : le protocole longévité",
+      "realities": [
+        "Après 65 ans, les besoins en protéines augmentent de 50% alors que l'appétit diminue, causant une fonte musculaire silencieuse.",
+        "La dénutrition, même chez une personne en surpoids, épuise l'énergie et fragilise les os.",
+        "L'hydratation et les micronutriments clés peuvent freiner le vieillissement cellulaire et améliorer les fonctions cognitives."
+      ],
+      "timeline": {
+        "j14": "Carences freinées, l'appétit revient progressivement avec des repas adaptés.",
+        "j30": "Stabilisation de la masse musculaire, regain de force et de tonus.",
+        "j90": "Autonomie prolongée, analyses sanguines améliorées, vitalité au quotidien."
+      }
+    },
+    "ar": {
+      "headline": "الحفاظ على الاستقلالية والحيوية والقوة: بروتوكول طول العمر",
+      "realities": [
+        "بعد 65، تزداد الحاجة للبروتين بنسبة 50% رغم ضعف الشهية.",
+        "سوء التغذية يرهق الطاقة ويضعف العظام.",
+        "الترطيب والمغذيات الدقيقة تبطئ الشيخوخة الخلوية."
+      ],
+      "timeline": {
+        "j14": "توقف النقص، عودة الشهية تدريجياً.",
+        "j30": "استقرار العضلات، استعادة القوة.",
+        "j90": "استقلالية طويلة الأمد، حيوية يومية."
+      }
+    },
+    "en": {
+      "headline": "Preserving autonomy, vitality and strength: the longevity protocol",
+      "realities": [
+        "After 65, protein needs increase by 50% while appetite decreases, causing muscle loss.",
+        "Malnutrition exhausts energy and weakens bones.",
+        "Hydration and key micronutrients can slow cellular aging."
+      ],
+      "timeline": {
+        "j14": "Deficiencies halted, appetite slowly returns.",
+        "j30": "Muscle mass stabilized, regained strength.",
+        "j90": "Prolonged autonomy, improved blood tests, daily vitality."
+      }
+    },
+    "es": {
+      "headline": "Preservar autonomía, vitalidad y fuerza: el protocolo de longevidad",
+      "realities": [
+        "Después de 65 años, la necesidad de proteínas sube un 50% mientras baja el apetito.",
+        "La desnutrición agota la energía y debilita los huesos.",
+        "La hidratación y los micronutrientes ralentizan el envejecimiento."
+      ],
+      "timeline": {
+        "j14": "Freno de deficiencias, el apetito vuelve gradualmente.",
+        "j30": "Masa muscular estabilizada, recuperación de fuerza.",
+        "j90": "Autonomía prolongada, análisis mejorados, vitalidad diaria."
+      }
+    }
+  },
+  "general": {
+    "fr": {
+      "headline": "Le protocole nutritionnel ciblé sur votre métabolisme unique",
+      "realities": [
+        "La plupart des maladies chroniques ont pour origine une inflammation de bas grade que l'alimentation moderne entretient.",
+        "Corriger la cause racine (l'assiette) est souvent plus efficace que de masquer les symptômes avec des remèdes temporaires.",
+        "En restaurant votre équilibre (insuline, microbiote, micronutriments), votre corps a une capacité de guérison immense."
+      ],
+      "timeline": {
+        "j14": "Réduction de l'inflammation, sommeil plus profond, digestion apaisée.",
+        "j30": "Les marqueurs sanguins (glycémie, cholestérol) commencent à s'améliorer.",
+        "j90": "Nouvelle hygiène de vie acquise, résultats consolidés et durables."
+      }
+    },
+    "ar": {
+      "headline": "البروتوكول الغذائي الموجه لأيضك الفريد",
+      "realities": [
+        "معظم الأمراض المزمنة أصلها التهاب منخفض الدرجة يغذيه الطعام الحديث.",
+        "تصحيح السبب الجذري أكثر فعالية من إخفاء الأعراض.",
+        "بإعادة التوازن، يمتلك جسمك قدرة هائلة على الشفاء."
+      ],
+      "timeline": {
+        "j14": "تقليل الالتهاب، نوم أعمق، هضم مريح.",
+        "j30": "بدء تحسن المؤشرات الحيوية.",
+        "j90": "أسلوب حياة جديد، نتائج مستدامة."
+      }
+    },
+    "en": {
+      "headline": "The targeted nutrition protocol for your unique metabolism",
+      "realities": [
+        "Most chronic diseases originate from low-grade inflammation sustained by modern diets.",
+        "Correcting the root cause is often more effective than masking symptoms.",
+        "By restoring balance, your body has immense healing capacity."
+      ],
+      "timeline": {
+        "j14": "Reduced inflammation, deeper sleep, calmer digestion.",
+        "j30": "Blood markers begin to improve.",
+        "j90": "New lifestyle acquired, consolidated and lasting results."
+      }
+    },
+    "es": {
+      "headline": "El protocolo nutricional dirigido a su metabolismo único",
+      "realities": [
+        "La mayoría de las enfermedades crónicas provienen de una inflamación de bajo grado.",
+        "Corregir la causa raíz es más eficaz que enmascarar los síntomas.",
+        "Al restaurar el equilibrio, su cuerpo tiene una inmensa capacidad de curación."
+      ],
+      "timeline": {
+        "j14": "Reducción de la inflamación, sueño más profundo.",
+        "j30": "Los marcadores sanguíneos empiezan a mejorar.",
+        "j90": "Nuevo estilo de vida, resultados duraderos."
+      }
+    }
+  }
+}
