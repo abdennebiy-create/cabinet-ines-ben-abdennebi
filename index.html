@@ -18,7 +18,7 @@
   <meta property="og:url" content="https://cabinet-ines-ben-abdennebi.netlify.app" />
   <meta property="og:title" content="Cabinet de Nutrition Inès Ben Abdennebi — Radès | Nutrition & Bien-Être" />
   <meta property="og:description" content="Cabinet de nutrition Inès Ben Abdennebi à Radès (Tunis). Nutrition, bien-être et accompagnement sur-mesure pour enfants, adultes et seniors sans privation." />
-  <meta property="og:image" content="https://cabinet-ines-ben-abdennebi.netlify.app/assets/og-preview.jpg" />
+  <meta property="og:image" content="https://cabinet-ines-ben-abdennebi.netlify.app/assets/cabinet-hd.webp" />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:site_name" content="Cabinet Inès Ben Abdennebi" />
 
@@ -26,7 +26,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Cabinet de Nutrition Inès Ben Abdennebi — Radès | Nutrition & Bien-Être" />
   <meta name="twitter:description" content="Cabinet de nutrition Inès Ben Abdennebi à Radès (Tunis). Nutrition, bien-être et accompagnement sur-mesure pour enfants, adultes et seniors sans privation." />
-  <meta name="twitter:image" content="https://cabinet-ines-ben-abdennebi.netlify.app/assets/og-preview.jpg" />
+  <meta name="twitter:image" content="https://cabinet-ines-ben-abdennebi.netlify.app/assets/cabinet-hd.webp" />
 
   <!-- Favicon & Touch Icons -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -43,7 +43,7 @@
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
     "name": "Cabinet d'Expertise en Nutrition Clinique Inès Ben Abdennebi",
-    "image": "https://cabinet-ines-ben-abdennebi.netlify.app/assets/og-preview.jpg",
+    "image": "https://cabinet-ines-ben-abdennebi.netlify.app/assets/cabinet-hd.webp",
     "url": "https://cabinet-ines-ben-abdennebi.netlify.app",
     "telephone": "+21622841841",
     "priceRange": "$$",
@@ -307,15 +307,14 @@
     .logo-mark {
       width: 38px;
       height: 38px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent-rose), var(--accent-mauve));
-      display: flex;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(232, 198, 200, 0.4) 0%, rgba(201, 138, 144, 0.5) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      color: white;
-      font-family: 'Cinzel', serif;
-      font-weight: 700;
-      font-size: 1.1rem;
+      margin-right: 10px;
+      color: var(--text-dark-rose);
     }
 
     .logo-text {
@@ -985,6 +984,45 @@
     }
 
     @media (max-width: 640px) {
+      header {
+        width: calc(100% - 2rem);
+        top: 1rem;
+      }
+      .nav-inner {
+        padding: 0.6rem 1rem;
+      }
+      .logo-text {
+        font-size: 1rem;
+      }
+      .logo-mark {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+      }
+      .hero-section {
+        padding-top: 7.5rem;
+      }
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .hero-actions .btn-pill {
+        width: 100%;
+        justify-content: center;
+      }
+      .floating-hero-card {
+        padding: 1.5rem;
+        margin-top: 2rem;
+      }
+      .section-title {
+        font-size: 2.2rem;
+      }
+      .impedance-grid {
+        gap: 2rem;
+      }
+      .team-card {
+        padding: 2rem 1.5rem;
+      }
       .programs-grid {
         grid-template-columns: 1fr;
       }
@@ -1004,6 +1042,14 @@
       #bookingModal p {
         font-size: 0.8rem !important;
         margin-bottom: 1rem !important;
+      }
+      .pagination-dots {
+        display: none;
+      }
+      .footer-inner {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
       }
     }
 
@@ -1116,7 +1162,10 @@
       background: rgba(255, 255, 255, 0.8);
       border: 1px solid rgba(232, 198, 200, 0.5);
       border-radius: 1rem;
-      .ai-dossier-card {
+      padding: 1.25rem;
+    }
+
+    .ai-dossier-card {
         background: #ffffff;
         border-radius: 12px;
         padding: 1.25rem;
@@ -1205,7 +1254,27 @@
         padding: 1.5rem 1.25rem;
       }
       .ai-hud-bar {
-        padding: 1.25rem 1rem;
+        padding: 1rem 1.25rem;
+      }
+      .ai-hud-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+      .ai-empathy-box {
+        padding: 1rem 1.25rem;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .ai-empathy-icon {
+        margin-bottom: 0.25rem;
+      }
+      .ai-question-title {
+        font-size: 1.4rem;
+        margin-bottom: 1.25rem;
+      }
+      .ai-dossier-card {
+        padding: 1.25rem !important;
       }
     }
 
@@ -1653,6 +1722,21 @@
       box-shadow: 0 15px 35px rgba(92, 60, 67, 0.1);
     }
 
+    @media (max-width: 640px) {
+      .ai-booking-box {
+        padding: 1.5rem;
+      }
+      .ai-booking-headline {
+        font-size: 1.4rem;
+      }
+      .ai-whatsapp-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 1.5rem;
+        font-size: 0.9rem;
+      }
+    }
+
     .ai-booking-headline {
       font-family: 'Playfair Display', serif;
       font-size: 1.6rem;
@@ -1944,6 +2028,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/airbnb.css">
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
+  <script src="https://npmcdn.com/flatpickr/dist/l10n/ar.js"></script>
+  <script src="https://npmcdn.com/flatpickr/dist/l10n/es.js"></script>
 </head>
 <body>
 
@@ -1951,7 +2037,7 @@
   <header>
     <div class="nav-inner">
       <a href="#hero" class="logo" title="Inès Ben Abdennebi — Accueil">
-        <div class="logo-mark" style="width: 38px; height: 38px; border-radius: 10px; background: linear-gradient(135deg, rgba(232, 198, 200, 0.4) 0%, rgba(201, 138, 144, 0.5) 100%); border: 1px solid rgba(255, 255, 255, 0.8); display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">
+        <div class="logo-mark">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 2C8 6 4 9 4 14C4 18.4 7.6 22 12 22C16.4 22 20 18.4 20 14C20 9 16 6 12 2Z" stroke="#5c3c43" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M12 22V12" stroke="#5c3c43" stroke-width="1.8" stroke-linecap="round"/>
@@ -2009,7 +2095,7 @@
   <!-- Hero Section -->
   <section class="hero-section" id="hero">
     <div class="hero-bg-media">
-      <img src="assets/hero-bg.jpg" alt="Cabinet de Nutrition Inès Ben Abdennebi — Radès" fetchpriority="high" />
+      <img src="assets/hero-nutritionniste.webp" alt="Cabinet de Nutrition Inès Ben Abdennebi — Radès" fetchpriority="high" />
       <div class="hero-bg-overlay"></div>
     </div>
 
@@ -2061,7 +2147,7 @@
         <div class="ai-engine-card">
           
           <!-- Clean Luxury Diagnostic Header & Progress Bar -->
-          <div class="ai-hud-bar" style="padding: 1.25rem 2rem; background: rgba(251, 245, 246, 0.9); border-bottom: 1.5px solid rgba(232, 198, 200, 0.6);">
+          <div class="ai-hud-bar" style="background: rgba(251, 245, 246, 0.9); border-bottom: 1.5px solid rgba(232, 198, 200, 0.6);">
             <div class="ai-hud-header" style="display: flex; align-items: center; justify-content: space-between;">
               <div class="ai-hud-badge" style="display: flex; align-items: center; gap: 0.65rem;">
                 <span class="ai-pulse-dot" style="background: #10b981; box-shadow: 0 0 10px #10b981;"></span>
@@ -2313,7 +2399,7 @@
           
           <p style="text-align: center; font-size: 0.85rem; color: var(--text-muted); margin: 0.25rem 0;" data-i18n="contact_or">OU</p>
           
-          <a id="contactWhatsAppBtn" class="btn-pill" style="width: 100%; font-size: 1rem; padding: 1.1rem; background-color: #25D366; color: white; border: none; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3); text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.6rem;" target="_blank" rel="noopener noreferrer" href="https://wa.me/21622841841?text=Bonjour%20Cabinet%20de%20Nutrition%20In%C3%A8s%20Ben%20Abdennebi%2C%20je%20souhaite%20prendre%20rendez-vous.">
+          <a id="contactWhatsAppBtn" class="btn-pill" style="width: 100%; font-size: 1rem; padding: 1.1rem; background-color: #25D366; color: white; border: none; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3); text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.6rem;" target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send/?phone=21622841841&text=Bonjour%20Cabinet%20de%20Nutrition%20In%C3%A8s%20Ben%20Abdennebi%2C%20je%20souhaite%20prendre%20rendez-vous." onclick="if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){this.href='whatsapp://send?phone=21622841841&text=Bonjour%20Cabinet%20de%20Nutrition%20In%C3%A8s%20Ben%20Abdennebi%2C%20je%20souhaite%20prendre%20rendez-vous.';}">
             <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> <span data-i18n="btn_wa">MESSAGE DIRECT SUR WHATSAPP</span>
           </a>
         </div>
@@ -2325,7 +2411,7 @@
   <footer>
     <div class="container footer-inner" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem;">
       <div class="logo">
-        <div class="logo-mark" style="width: 38px; height: 38px; border-radius: 10px; background: linear-gradient(135deg, rgba(232, 198, 200, 0.4) 0%, rgba(201, 138, 144, 0.5) 100%); border: 1px solid rgba(255, 255, 255, 0.8); display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">
+        <div class="logo-mark">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 2C8 6 4 9 4 14C4 18.4 7.6 22 12 22C16.4 22 20 18.4 20 14C20 9 16 6 12 2Z" stroke="#5c3c43" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M12 22V12" stroke="#5c3c43" stroke-width="1.8" stroke-linecap="round"/>
@@ -2429,6 +2515,15 @@
   <script src="quiz-data.js?v=3.0"></script>
   <!-- JavaScript Code: Multi-Language Switcher, Scroll Engine & Drawers -->
   <script>
+
+    function buildWhatsAppUrl(phone, text) {
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      if (isMobile) {
+        return `whatsapp://send?phone=${phone}&text=${encodeURIComponent(text)}`;
+      }
+      return `https://api.whatsapp.com/send/?phone=${phone}&text=${encodeURIComponent(text)}`;
+    }
+
     /* Complete 4-Language Dictionary (FR, AR with RTL, EN, ES) */
     const translations = {
       fr: {
@@ -2939,7 +3034,9 @@
 
       // Toggle active language button UI
       document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.textContent.toLowerCase().includes(lang));
+        const onClickAttr = btn.getAttribute('onclick') || '';
+        const isMatch = onClickAttr.includes(`setLanguage('${lang}')`);
+        btn.classList.toggle('active', isMatch);
       });
 
       // Handle RTL support for Arabic
@@ -2989,6 +3086,11 @@
       // Re-render diagnostic component in chosen language
       if (typeof renderDiagnostic === 'function') {
         renderDiagnostic();
+      }
+      
+      // Re-initialize calendar language
+      if (typeof initInteractiveScheduler === 'function') {
+        initInteractiveScheduler();
       }
     }
 
@@ -3075,7 +3177,7 @@
 
       // 2. La Magie : Ajouter le résumé complet du Quiz si le patient l'a terminé !
       if (window.AIEngine && window.AIEngine.state.isComplete) {
-        let trackName = window.AIEngine.state.track || 'weight';
+        let trackName = window.AIEngine.state.track || 'general';
         const trackTranslations = {
           fr: { weight: "Perte de Poids", medical: "Suivi Médical", digestive: "Confort Digestif", pediatric: "Pédiatrie" },
           ar: { weight: "خسارة الوزن", medical: "متابعة طبية", digestive: "الجهاز الهضمي", pediatric: "تغذية الأطفال" },
@@ -3127,7 +3229,7 @@
         baseMsg += quizData;
       }
 
-      return `https://wa.me/${phone}?text=${encodeURIComponent(baseMsg)}`;
+      return `${buildWhatsAppUrl(phone, baseMsg)}`;
     }
 
     function updateWhatsAppLinks() {
@@ -3165,7 +3267,7 @@
       if (dossierVal) {
         baseMsg += `\n\n📋 *Dossier Patient & Bilan Clinique :*\n${dossierVal}`;
       } else if (window.AIEngine && window.AIEngine.state && window.AIEngine.state.isComplete) {
-        let trackName = window.AIEngine.state.track || 'weight';
+        let trackName = window.AIEngine.state.track || 'general';
         const trackTranslations = {
           fr: { weight: "Perte de Poids", medical: "Suivi Médical", digestive: "Confort Digestif", pediatric: "Pédiatrie", senior: "Gériatrie" },
           ar: { weight: "خسارة الوزن", medical: "متابعة طبية", digestive: "الجهاز الهضمي", pediatric: "تغذية الأطفال", senior: "تغذية كبار السن" },
@@ -3186,7 +3288,7 @@
         }
       }
 
-      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(baseMsg)}`, '_blank');
+      window.open(`${buildWhatsAppUrl(phone, baseMsg)}`, '_blank');
     }
 
     function openProgramDetails(prgKey) {
@@ -3227,14 +3329,20 @@
       const rawPhone = phoneInput ? phoneInput.value.trim() : '';
       const cleanPhone = rawPhone.replace(/[\s\-\.\(\)]/g, '');
       
-      // Automatically prepend +216 if not already present
-      const fullPhone = (cleanPhone.startsWith('+') || cleanPhone.startsWith('00')) ? cleanPhone : '+216' + cleanPhone;
+      // Smart prepend: only add +216 if it strictly matches a local 8-digit Tunisian number
+      let fullPhone = cleanPhone;
+      if (/^[234579]\d{7}$/.test(cleanPhone)) {
+        fullPhone = '+216' + cleanPhone;
+      }
+
+      // Validation: Any digits string between 8 and 15 chars, allowing leading + or 00
+      const generalPhoneRegex = /^(\+|00)?[0-9]{8,15}$/;
+      const isValid = generalPhoneRegex.test(fullPhone);
       
-      // Validation: Tunisian numbers (8 digits, with optional +216 or 00216) or valid international numbers (>= 8 digits)
-      const tunisianRegex = /^(\+?216|00216)?[2459]\d{7}$/;
-      const generalPhoneRegex = /^\+?[0-9]{8,15}$/;
-      const isValid = tunisianRegex.test(fullPhone) || (fullPhone.startsWith('+') && generalPhoneRegex.test(fullPhone)) || /^\d{8}$/.test(cleanPhone);
-      
+      if (phoneInput && isValid) {
+         phoneInput.value = fullPhone; // ensure the clean number is submitted
+      }
+
       let existingErr = document.getElementById('phoneErrorNotice');
       if (!isValid) {
         if (phoneInput) {
@@ -3322,47 +3430,23 @@
       }
       
       const phone = "21622841841";
-      const waUrl = `https://wa.me/${phone}?text=${encodeURIComponent(fallbackMsg)}`;
+      const waUrl = `${buildWhatsAppUrl(phone, fallbackMsg)}`;
 
       try {
-        // 1. Direct call to server endpoint (handles CallMeBot notification to WhatsApp)
-        const notifyPayload = {
-          nom: nomVal,
-          telephone: telVal,
-          date: dateVal,
-          creneau: creneauVal,
-          service: serviceVal,
-          dossier: dossierVal
-        };
-
-        try {
-          await fetch("/api/notify-booking", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(notifyPayload)
-          });
-        } catch (apiErr) {
-          console.warn("Backend /api/notify-booking call note:", apiErr);
-        }
-
-        // 2. Submit form to static handler / Netlify forms
-        try {
-          const formData = new FormData(form);
-          await fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: new URLSearchParams(formData).toString()
-          });
-        } catch (formErr) {
-          console.warn("Static form post note:", formErr);
-        }
+        const formData = new FormData(form);
+        const response = await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString()
+        });
+        
+        if (!response.ok) throw new Error("Network response was not ok.");
 
         alert(alertMsg);
         form.reset();
         closeModal('bookingModal');
       } catch (err) {
         console.warn("Form submission error, opening WhatsApp directly:", err);
-        
         const redirectAlerts = {
           fr: "Transmission de votre demande par WhatsApp...",
           ar: "جاري تحويل طلبك إلى واتساب لإتمام الحجز...",
@@ -3398,7 +3482,7 @@
         
         // 2. On fait défiler l'écran vers le quiz en douceur
         setTimeout(() => {
-          quizWrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          quizWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 50);
       }
     }
@@ -3432,48 +3516,6 @@
         isScrollTicking = true;
       }
     }, { passive: true });
-
-    /* ==========================================================================
-       3D LOGO REVEAL & INTRO LANGUAGE SELECTOR ENGINE
-       ========================================================================== */
-    let introTimer = null;
-
-    function showLanguageSelector(e) {
-      if (e) e.stopPropagation();
-      if (introTimer) clearTimeout(introTimer);
-      const intro = document.getElementById('introScreen');
-      if (intro) {
-        intro.classList.add('show-langs');
-      }
-    }
-
-    function enterSiteWithLanguage(lang) {
-      if (typeof setLanguage === 'function') {
-        setLanguage(lang || 'fr');
-      }
-      try { sessionStorage.setItem('siteIntroSeen', 'true'); } catch(e){}
-      const intro = document.getElementById('introScreen');
-      if (intro) {
-        intro.style.opacity = '0';
-        intro.style.visibility = 'hidden';
-        setTimeout(() => {
-          intro.style.display = 'none';
-        }, 500);
-      }
-      if (window.AIEngine && typeof window.AIEngine.setLanguage === 'function') {
-        window.AIEngine.setLanguage(lang);
-      }
-      setTimeout(() => {
-        const diagSec = document.getElementById('diagnostic');
-        if (diagSec) {
-          diagSec.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 300);
-    }
-
-    function enterSite(lang) {
-      enterSiteWithLanguage(lang || 'fr');
-    }
 
     /* ==========================================================================
        CONVERSATIONAL AI CLINICAL NUTRITIONIST ENGINE STATE MACHINE
@@ -3662,7 +3704,8 @@
         this.state.history.push({
           turn: this.state.turn,
           selection: optionText,
-          deepDiveKey: this.state.turn === 5 && this.state.deepDiveQueue.length > 0 ? this.state.deepDiveQueue[0] : null
+          deepDiveKey: this.state.turn === 5 && this.state.deepDiveQueue.length > 0 ? this.state.deepDiveQueue[0] : null,
+          queueSnapshot: [...this.state.deepDiveQueue]
         });
 
         // 300ms tactile delay before smooth transition
@@ -3801,7 +3844,8 @@
         this.state.previousSelection = selectionLabel;
         this.state.history.push({
           turn: 3,
-          selection: selectionLabel
+          selection: selectionLabel,
+          queueSnapshot: [...this.state.deepDiveQueue]
         });
 
         const stage = document.getElementById('aiStage');
@@ -3985,7 +4029,7 @@
         if (window.innerWidth < 768) {
           setTimeout(() => {
             const stageEl = document.getElementById('aiStage');
-            if (stageEl) stageEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            if (stageEl) stageEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }, 100);
         }
       },
@@ -4146,74 +4190,41 @@
           is_ai_generated: false
         };
 
-        // Try AI generation from server endpoint
-        try {
-          const res = await fetch('/api/analyze-dossier', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              lang: lang,
-              target: this.state.target,
-              profileAnswer: this.state.profileAnswer,
-              selectedConditions: this.state.selectedConditions,
-              weightGoal: this.state.weightGoal,
-              history: this.state.history,
-              track: dossierTrack
-            })
-          });
 
-          if (res.ok) {
-            const data = await res.json();
-            if (data && (data.headline || data.the_3_realities)) {
-              finalDossier = {
-                headline: data.headline || fallbackHeadline,
-                target_profile_summary: data.target_profile_summary || '',
-                priority_focus: data.priority_focus || '',
-                the_3_realities: Array.isArray(data.the_3_realities) && data.the_3_realities.length ? data.the_3_realities : fallbackRealities,
-                transformation_timeline: data.transformation_timeline || fallbackTimeline,
-                personalized_dietary_keys: Array.isArray(data.personalized_dietary_keys) ? data.personalized_dietary_keys : null,
-                direct_note_from_ines: data.direct_note_from_ines || null,
-                whatsapp_message: data.whatsapp_message || null,
-                whatsapp_message_encoded: data.whatsapp_message || null,
-                track: dossierTrack,
-                is_ai_generated: Boolean(data.is_ai_generated)
-              };
-            }
-          }
-        } catch (e) {
-          console.warn("AI Dossier fetch skipped, using rule-based profile:", e);
+        const trackLabels = {
+          weight: 'Perte de Poids', tca: 'TCA & Compulsions', digestive: 'Confort Digestif',
+          hormonal: 'Équilibre Hormonal', diabetes: 'Diabète & Insuline', fatigue: 'Fatigue & Stress',
+          pregnancy: 'Grossesse', pediatric: 'Nutrition Pédiatrique', senior: 'Senior & Longévité',
+          metabolic: 'Maladies Métaboliques', general: 'Bilan Nutritionnel',
+          picky: 'Sélectivité Alimentaire', weight_child: 'Poids Enfant/Ado', teen_tca: 'TCA & Compulsions Ado',
+          growth: 'Croissance Enfant', digestive_child: 'Digestion Enfant', allergy: 'Allergies & Intolérances',
+          focus: 'Concentration & TDAH', diabetes_child: 'Diabète Enfant', teen_hormonal: 'Hormones & Acné Ado',
+          sarcopenia: 'Masse Musculaire & Sarcopénie', appetite: 'Appétit Senior', diabetes_s: 'Diabète Senior',
+          cardio_s: 'Cœur & Tension Senior', digestive_s: 'Digestion Senior', osteo_s: 'Os & Arthrose Senior',
+          polymed_s: 'Polymédication Senior', memory: 'Mémoire & Cerveau Senior', hydration_s: 'Hydratation Senior'
+        };
+        const trackLabel = trackLabels[dossierTrack] || dossierTrack;
+        let waHeader = lang === 'ar' ? 'مرحباً أستاذة إيناس' : lang === 'en' ? 'Hello Inès' : lang === 'es' ? 'Hola Inès' : 'Bonjour Inès';
+        let waIntro = lang === 'ar' ? `أتممت التقييم السريري (${trackLabel}) على موقعك.` : lang === 'en' ? `I completed the clinical assessment (${trackLabel}) on your website.` : lang === 'es' ? `He completado la evaluación (${trackLabel}) en su sitio web.` : `J'ai complété le bilan clinique (${trackLabel}) sur votre site.`;
+        
+        let waResponses = '';
+        const scoreItem = this.state.history.find(h => h.turn === 1);
+        const pathItem = this.state.history.find(h => h.turn === 3);
+        
+        let vitaliteLabel = lang === 'ar' ? 'الحيوية' : lang === 'en' ? 'Vitality' : lang === 'es' ? 'Vitalidad' : 'Vitalité';
+        let pathoLabel = lang === 'ar' ? 'الحالات' : lang === 'en' ? 'Conditions' : lang === 'es' ? 'Condiciones' : 'Pathologies';
+
+        if (scoreItem) {
+          waResponses += `\n• ${vitaliteLabel}: ${scoreItem.selection}`;
+        }
+        if (pathItem) {
+          waResponses += `\n• ${pathoLabel}: ${pathItem.selection}`;
         }
 
-        // Build WhatsApp message if not provided
-        if (!finalDossier.whatsapp_message) {
-          const trackLabels = {
-            weight: 'Perte de Poids', tca: 'TCA & Compulsions', digestive: 'Confort Digestif',
-            hormonal: 'Équilibre Hormonal', diabetes: 'Diabète & Insuline', fatigue: 'Fatigue & Stress',
-            pregnancy: 'Grossesse', pediatric: 'Nutrition Pédiatrique', senior: 'Senior & Longévité',
-            metabolic: 'Maladies Métaboliques', general: 'Bilan Nutritionnel',
-            picky: 'Sélectivité Alimentaire', weight_child: 'Poids Enfant/Ado', teen_tca: 'TCA & Compulsions Ado',
-            growth: 'Croissance Enfant', digestive_child: 'Digestion Enfant', allergy: 'Allergies & Intolérances',
-            focus: 'Concentration & TDAH', diabetes_child: 'Diabète Enfant', teen_hormonal: 'Hormones & Acné Ado',
-            sarcopenia: 'Masse Musculaire & Sarcopénie', appetite: 'Appétit Senior', diabetes_s: 'Diabète Senior',
-            cardio_s: 'Cœur & Tension Senior', digestive_s: 'Digestion Senior', osteo_s: 'Os & Arthrose Senior',
-            polymed_s: 'Polymédication Senior', memory: 'Mémoire & Cerveau Senior', hydration_s: 'Hydratation Senior'
-          };
-          const trackLabel = trackLabels[dossierTrack] || dossierTrack;
-
-          let waHeader = lang === 'ar' ? 'مرحباً أستاذة إيناس' : lang === 'en' ? 'Hello Inès' : lang === 'es' ? 'Hola Inès' : 'Bonjour Inès';
-          let waIntro = lang === 'ar' ? `أتممت التقييم السريري (${trackLabel}) على موقعك.` : lang === 'en' ? `I completed the clinical assessment (${trackLabel}) on your website.` : lang === 'es' ? `He completado la evaluación (${trackLabel}) en su sitio web.` : `J'ai complété le bilan clinique (${trackLabel}) sur votre site.`;
-
-          let waResponses = '';
-          this.state.history.forEach((item) => {
-            waResponses += `\n• Étape ${item.turn}: ${item.selection}`;
-          });
-
-          let waFooter = lang === 'ar' ? 'أود حجز استشارة في عيادة رادس.' : lang === 'en' ? 'I would like to book a consultation at the Radès clinic.' : lang === 'es' ? 'Deseo reservar una consulta en la clínica de Radès.' : 'Je souhaite prendre rendez-vous au cabinet de Radès.';
-
-          const waMsg = `${waHeader},\n\n${waIntro}\n\n📋 DOSSIER PATIENT:\n• Diagnostic: ${finalDossier.headline}${waResponses}\n\n🏥 ${waFooter}`;
-          finalDossier.whatsapp_message = waMsg;
-          finalDossier.whatsapp_message_encoded = waMsg;
-        }
+        let waFooter = lang === 'ar' ? 'أود حجز استشارة في عيادة رادس.' : lang === 'en' ? 'I would like to book a consultation at the Radès clinic.' : lang === 'es' ? 'Deseo reservar una consulta en la clínica de Radès.' : 'Je souhaite prendre rendez-vous au cabinet de Radès.';
+        const waMsg = `${waHeader},\n\n${waIntro}\n\n📋 DOSSIER PATIENT:\n• Diagnostic: ${finalDossier.headline}${waResponses}\n\n🏥 ${waFooter}`;
+        finalDossier.whatsapp_message = waMsg;
+        finalDossier.whatsapp_message_encoded = waMsg;
 
         this.state.isComplete = true;
         this.state.turn = 6;
@@ -4289,7 +4300,7 @@
         if (window.innerWidth < 768) {
           setTimeout(() => {
             const stageEl = document.getElementById('aiStage');
-            if (stageEl) stageEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            if (stageEl) stageEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }, 100);
         }
       },
@@ -4306,7 +4317,7 @@
         let displayTurn = currentTurn;
 
         if (this.state.originalQueueLength && this.state.originalQueueLength > 0) {
-            totalSteps = 5 + this.state.originalQueueLength;
+            totalSteps = 4 + this.state.originalQueueLength;
             if (currentTurn === 5) {
                 displayTurn = 4 + (this.state.originalQueueLength - this.state.deepDiveQueue.length) + 1;
             } else if (currentTurn >= 6) {
@@ -4756,8 +4767,12 @@
         dossierText += '\n';
 
         dossierText += responsesHeader;
-        this.state.history.forEach(item => {
-          dossierText += `${stepLabel} ${item.turn}: ${item.selection}\n`;
+        this.state.history.forEach((h, idx) => {
+          if(h.turn === 3) {
+             dossierText += `- Q${idx+1}: ${conditionsLabel} -> ${h.selection}\n`;
+          } else {
+             dossierText += `- Q${idx+1}: ${h.selection}\n`;
+          }
         });
 
         if (this.state.finalDossier && this.state.finalDossier.the_3_realities && this.state.finalDossier.the_3_realities.length > 0) {
@@ -4779,7 +4794,7 @@
         if (serviceSelect) {
           const trackToService = {
             'weight': 'Perte de Poids',
-            'tca': 'Perte de Poids', // mapping TCA to Perte de Poids since no specific option
+            'tca': 'Perte de Poids',
             'digestive': 'Confort Digestif',
             'hormonal': 'Équilibre Hormonal',
             'diabetes': 'Maladies Métaboliques',
@@ -4787,7 +4802,25 @@
             'pregnancy': 'Grossesse & Maternité',
             'pediatric': 'Nutrition Pédiatrique',
             'senior': 'Nutrition Gériatrique',
-            'metabolic': 'Maladies Métaboliques'
+            'metabolic': 'Maladies Métaboliques',
+            'picky': 'Nutrition Pédiatrique',
+            'weight_child': 'Nutrition Pédiatrique',
+            'teen_tca': 'Nutrition Pédiatrique',
+            'growth': 'Nutrition Pédiatrique',
+            'digestive_child': 'Nutrition Pédiatrique',
+            'allergy': 'Première Consultation',
+            'focus': 'Nutrition Pédiatrique',
+            'diabetes_child': 'Nutrition Pédiatrique',
+            'teen_hormonal': 'Nutrition Pédiatrique',
+            'sarcopenia': 'Nutrition Gériatrique',
+            'appetite': 'Nutrition Gériatrique',
+            'diabetes_s': 'Nutrition Gériatrique',
+            'cardio_s': 'Nutrition Gériatrique',
+            'digestive_s': 'Nutrition Gériatrique',
+            'osteo_s': 'Nutrition Gériatrique',
+            'polymed_s': 'Nutrition Gériatrique',
+            'memory': 'Nutrition Gériatrique',
+            'hydration_s': 'Nutrition Gériatrique'
           };
           const targetTrack = (this.state.finalDossier && this.state.finalDossier.track) ? this.state.finalDossier.track : track;
           const preferredService = trackToService[targetTrack] || 'Première Consultation';
@@ -4865,8 +4898,11 @@
       if (dateInput) {
         // Init Flatpickr
         if (typeof flatpickr !== 'undefined') {
+          if (dateInput._flatpickr) {
+            dateInput._flatpickr.destroy();
+          }
           flatpickr(dateInput, {
-            locale: (typeof currentLang !== 'undefined' && currentLang === 'ar') ? 'ar' : 'fr',
+            locale: (typeof currentLang !== 'undefined' && currentLang === 'en') ? 'default' : (typeof currentLang !== 'undefined' ? currentLang : 'fr'),
             minDate: "today",
             dateFormat: "Y-m-d",
             altInput: true,
@@ -5083,12 +5119,12 @@
         };
         const msg = encodeURIComponent(infoMessages[currentLang] || infoMessages.fr);
         const phone = typeof WHATSAPP_NUMBER !== 'undefined' ? WHATSAPP_NUMBER : "21622841841";
-        window.open(`https://wa.me/${phone}?text=${msg}`, '_blank');
+        window.open(`${buildWhatsAppUrl(phone, decodeURIComponent(msg))}`, '_blank');
       }
     }
   </script>
   <!-- Bouton WhatsApp Flottant (Bas Gauche) -->
-  <a href="https://wa.me/21622841841?text=Bonjour%20Cabinet%20de%20Nutrition%20In%C3%A8s%20Ben%20Abdennebi%2C%20je%20souhaite%20prendre%20rendez-vous." target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" id="waFloatBtn" aria-label="Contactez le cabinet sur WhatsApp" data-i18n-aria="wa_float_aria">
+  <a href="https://api.whatsapp.com/send/?phone=21622841841&text=Bonjour%20Cabinet%20de%20Nutrition%20In%C3%A8s%20Ben%20Abdennebi%2C%20je%20souhaite%20prendre%20rendez-vous." onclick="if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){this.href='whatsapp://send?phone=21622841841&text=Bonjour%20Cabinet%20de%20Nutrition%20In%C3%A8s%20Ben%20Abdennebi%2C%20je%20souhaite%20prendre%20rendez-vous.';}" target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" id="waFloatBtn" aria-label="Contactez le cabinet sur WhatsApp" data-i18n-aria="wa_float_aria">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 </body>
