@@ -849,9 +849,11 @@
       background: var(--bg-white);
       border: 1px solid var(--glass-border);
       border-radius: var(--radius-lg);
-      padding: 3rem;
+      padding: 2rem;
       max-width: 580px;
       width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
       box-shadow: 0 30px 80px rgba(92, 60, 67, 0.25);
       position: relative;
       transform: translateY(20px);
@@ -880,7 +882,7 @@
     }
 
     .form-group {
-      margin-bottom: 1.25rem;
+      margin-bottom: 0.85rem;
     }
 
     .form-group label {
@@ -893,7 +895,7 @@
 
     .form-control {
       width: 100%;
-      padding: 0.85rem 1.1rem;
+      padding: 0.65rem 0.9rem;
       border-radius: var(--radius-sm);
       border: 1px solid rgba(196, 157, 165, 0.4);
       background: rgba(255, 255, 255, 0.8);
@@ -988,6 +990,20 @@
       }
       .hero-headline {
         font-size: 2.4rem;
+      }
+      .modal-box {
+        padding: 1.25rem;
+      }
+      .form-group label {
+        font-size: 0.75rem;
+        margin-bottom: 0.2rem;
+      }
+      #bookingModal h3 {
+        font-size: 1.3rem !important;
+      }
+      #bookingModal p {
+        font-size: 0.8rem !important;
+        margin-bottom: 1rem !important;
       }
     }
 
@@ -1100,8 +1116,27 @@
       background: rgba(255, 255, 255, 0.8);
       border: 1px solid rgba(232, 198, 200, 0.5);
       border-radius: 1rem;
-      padding: 0.85rem 1rem;
-      box-shadow: 0 4px 15px rgba(92, 60, 67, 0.03);
+      .ai-dossier-card {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+        border: 1px solid rgba(135,169,142,0.2);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+      }
+      .ai-dossier-timeline {
+        border-left: 2px solid #87A98E;
+        padding-left: 1.25rem;
+        margin-left: 0.5rem;
+        margin-top: 1rem;
+      }
+      .timeline-step {
+        position: relative;
+        margin-bottom: 1.25rem;
+      }
+      .timeline-step:last-child {
+        margin-bottom: 0;
+      }
     }
 
     .ai-gauge-info {
@@ -1279,6 +1314,95 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* Compact Archetype Chips (Step 1) */
+    .ai-archetype-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .ai-option-chip {
+      background: #ffffff;
+      border: 1.5px solid rgba(232, 198, 200, 0.85);
+      border-radius: 2rem; /* Fully rounded pill */
+      padding: 0.85rem 1.25rem;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      box-shadow: 0 4px 15px rgba(92, 60, 67, 0.04);
+    }
+    .ai-option-chip:hover {
+      background: #fbf5f6;
+      border-color: var(--accent-mauve);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(92, 60, 67, 0.08);
+    }
+    .ai-option-chip .ai-option-text {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-dark-rose);
+      text-align: center;
+    }
+
+    /* Multi-select conditions grid */
+    .ai-conditions-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .ai-condition-chip {
+      background: #ffffff;
+      border: 1.5px solid rgba(232, 198, 200, 0.85);
+      border-radius: 2rem;
+      padding: 0.75rem 1.15rem;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      user-select: none;
+      box-shadow: 0 4px 15px rgba(92, 60, 67, 0.04);
+      position: relative;
+    }
+    .ai-condition-chip:hover {
+      background: #fbf5f6;
+      border-color: var(--accent-mauve);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(92, 60, 67, 0.08);
+    }
+    .ai-condition-chip .ai-option-text {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-dark-rose);
+    }
+    .ai-condition-chip .ai-chip-check {
+      display: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--text-dark-rose);
+      color: white;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      flex-shrink: 0;
+    }
+    .ai-condition-chip.chip-selected {
+      background: #fbf5f6;
+      border-color: var(--text-dark-rose);
+      box-shadow: 0 6px 20px rgba(92, 60, 67, 0.12);
+    }
+    .ai-condition-chip.chip-selected .ai-chip-check {
+      display: flex;
+    }
+
 
     .ai-option-card {
       background: #ffffff;
@@ -1815,6 +1939,11 @@
       }
     }
   </style>
+  <!-- Flatpickr Datepicker -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/airbnb.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
 </head>
 <body>
 
@@ -2232,23 +2361,27 @@
         </div>
         <div class="form-group">
           <label for="bookingPhone" data-i18n="lbl_phone">Numéro de Téléphone</label>
-          <input type="tel" id="bookingPhone" name="telephone" class="form-control" required placeholder="+216 22 --- ---" data-i18n-placeholder="ph_phone" autocomplete="tel" />
+          <input type="tel" id="bookingPhone" name="telephone" class="form-control" required placeholder="Ex : 22 841 841 ou +216 22..." data-i18n-placeholder="ph_phone" autocomplete="tel" />
         </div>
 
-        <!-- Choix de la Date souhaitée -->
+        <!-- Interactive Date Picker -->
         <div class="form-group">
-          <label for="bookingDate"><i class="fa-regular fa-calendar" style="color: var(--accent-mauve);"></i> <span data-i18n="lbl_date">Date Souhaitée pour la Consultation</span></label>
-          <input type="date" id="bookingDate" name="date_souhaitee" class="form-control" required />
+          <label for="bookingDate" style="font-weight: 600; color: var(--text-dark-rose); margin-bottom: 0.5rem; display: block;">
+            <i class="fa-regular fa-calendar" style="color: var(--accent-mauve);"></i> <span data-i18n="lbl_date">Date Souhaitée pour la Consultation</span>
+          </label>
+          <input type="date" id="bookingDate" name="date_souhaitee" class="form-control" required style="border: 1.5px solid rgba(232, 198, 200, 0.85); border-radius: 0.85rem; padding: 0.85rem 1rem; width: 100%; color: var(--text-dark-rose); font-weight: 500;" />
         </div>
 
-        <!-- Choix du Créneau Horaire -->
-        <div class="form-group">
-          <label for="bookingSlot"><i class="fa-regular fa-clock" style="color: var(--accent-mauve);"></i> <span data-i18n="lbl_slot">Créneau Horaire Préféré</span></label>
-          <select class="form-control" name="creneau" id="bookingSlot">
-            <option value="Matin (08:30 - 13:00)" data-i18n="slot_opt1">Matin (08:30 - 13:00)</option>
-            <option value="Après-midi (13:00 - 18:30)" data-i18n="slot_opt2">Après-midi (13:00 - 18:30)</option>
-            <option value="Premier créneau disponible" data-i18n="slot_opt3">Premier créneau disponible</option>
-          </select>
+        <!-- Interactive Time Slots Grid -->
+        <div class="form-group" id="timeSlotsGroup" style="display: none; margin-top: 1.25rem;">
+          <label style="font-weight: 600; color: var(--text-dark-rose); margin-bottom: 0.75rem; display: block;">
+            <i class="fa-regular fa-clock" style="color: var(--accent-mauve);"></i> <span data-i18n="lbl_slot">Créneau Horaire Souhaité</span>
+          </label>
+          <div id="timeSlotsGrid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem;">
+            <!-- Generated dynamically by JavaScript -->
+          </div>
+          <!-- Hidden input to hold the selected time slot value -->
+          <input type="hidden" id="bookingSlot" name="creneau" required />
         </div>
 
         <div class="form-group">
@@ -2292,6 +2425,8 @@
     </div>
   </div>
 
+  <!-- Clinical Quiz Data Engine (10 Archetypes × 4 Languages) -->
+  <script src="quiz-data.js?v=2.0"></script>
   <!-- JavaScript Code: Multi-Language Switcher, Scroll Engine & Drawers -->
   <script>
     /* Complete 4-Language Dictionary (FR, AR with RTL, EN, ES) */
@@ -2335,7 +2470,13 @@
         lbl_name: "Nom & Prénom",
         lbl_phone: "Numéro de Téléphone",
         lbl_service: "Motif de Consultation",
-        lbl_slot: "Créneau Horaire Préféré",
+        lbl_slot: "Quand souhaitez-vous votre rendez-vous ?",
+        slot_opt_asap_morning: "🚀 Dès que possible - Matinée (08:30 - 13:00)",
+        slot_opt_asap_afternoon: "🚀 Dès que possible - Après-midi (13:00 - 18:30)",
+        slot_opt_this_week: "📅 Cette semaine - Premier créneau libre",
+        slot_opt_saturday: "🗓️ Samedi matin (Créneau recherché)",
+        slot_opt_remote: "💻 Téléconsultation à distance (En ligne)",
+        ph_phone_short: "22 841 841",
         m_new_1: "<strong>Densité Nutritionnelle :</strong> Manger à votre faim des aliments denses pour éteindre les fringales du soir.",
         m_new_2: "<strong>Équilibre Hormonal :</strong> Régulation fine de l'insuline et de la thyroïde pour débloquer la perte de graisse.",
         m_new_3: "<strong>Santé Intestinale :</strong> Réparation du microbiote pour éliminer définitivement les ballonnements et inflammations.",
@@ -2445,7 +2586,13 @@
         lbl_name: "الاسم واللقب",
         lbl_phone: "رقم الهاتف",
         lbl_service: "سبب الاستشارة",
-        lbl_slot: "الفترة الزمنية المفضلة",
+        lbl_slot: "متى تفضل موعد استشارتك؟",
+        slot_opt_asap_morning: "🚀 في أقرب وقت ممكن - الفترة الصباحية (08:30 - 13:00)",
+        slot_opt_asap_afternoon: "🚀 في أقرب وقت ممكن - فترة بعد الظهر (13:00 - 18:30)",
+        slot_opt_this_week: "📅 هذا الأسبوع - أول موعد متاح",
+        slot_opt_saturday: "🗓️ صباح السبت (طلب مرتفع جداً)",
+        slot_opt_remote: "💻 استشارة طبية عن بعد (عبر الإنترنت)",
+        ph_phone_short: "22 841 841",
         m_new_1: "<strong>كثافة المغذيات:</strong> تناول وجبات مشبعة وكاملة لإطفاء نوبات الشراهة والرغبة في السكر مساءً.",
         m_new_2: "<strong>تناغم الهرمونات:</strong> تنظيم استجابة الأنسولين والغدة الدرقية لتنشيط حرق الدهون العنيدة طبيعياً.",
         m_new_3: "<strong>ترميم الميكروبيوم:</strong> إصلاح بطانة الأمعاء والتخلص نهائياً من الانتفاخات والالتهابات الهضمية.",
@@ -2555,7 +2702,13 @@
         lbl_name: "Full Name",
         lbl_phone: "Phone Number",
         lbl_service: "Consultation Reason",
-        lbl_slot: "Preferred Time Slot",
+        lbl_slot: "When would you like your appointment?",
+        slot_opt_asap_morning: "🚀 As soon as possible - Morning (08:30 - 13:00)",
+        slot_opt_asap_afternoon: "🚀 As soon as possible - Afternoon (13:00 - 18:30)",
+        slot_opt_this_week: "📅 This week - First available slot",
+        slot_opt_saturday: "🗓️ Saturday morning (High demand)",
+        slot_opt_remote: "💻 Online consultation (Remote)",
+        ph_phone_short: "22 841 841",
         m_new_1: "<strong>Nutrient Density:</strong> Eating to satiety with nutrient-rich foods to shut down evening cravings.",
         m_new_2: "<strong>Hormonal Harmony:</strong> Fine-tuning insulin and thyroid function to unlock real fat loss.",
         m_new_3: "<strong>Gut Health:</strong> Repairing the microbiome to eliminate bloating and discomfort for good.",
@@ -2665,7 +2818,13 @@
         lbl_name: "Nombre y Apellidos",
         lbl_phone: "Teléfono",
         lbl_service: "Motivo de Consulta",
-        lbl_slot: "Horario Preferido",
+        lbl_slot: "¿Cuándo desea su cita?",
+        slot_opt_asap_morning: "🚀 Lo antes posible - Por la mañana (08:30 - 13:00)",
+        slot_opt_asap_afternoon: "🚀 Lo antes posible - Por la tarde (13:00 - 18:30)",
+        slot_opt_this_week: "📅 Esta semana - Primer turno libre",
+        slot_opt_saturday: "🗓️ Sábado por la mañana (Muy solicitado)",
+        slot_opt_remote: "💻 Consulta en línea (A distancia)",
+        ph_phone_short: "22 841 841",
         m_new_1: "<strong>Densidad Nutricional:</strong> Comer hasta saciarse alimentos ricos para apagar los antojos nocturnos.",
         m_new_2: "<strong>Equilibrio Hormonal:</strong> Regulación precisa de insulina y tiroides para desbloquear la pérdida de grasa.",
         m_new_3: "<strong>Salud Intestinal:</strong> Reparación de la microbiota para eliminar definitivamente la hinchazón e inflamación.",
@@ -3065,10 +3224,13 @@
       const rawPhone = phoneInput ? phoneInput.value.trim() : '';
       const cleanPhone = rawPhone.replace(/[\s\-\.\(\)]/g, '');
       
+      // Automatically prepend +216 if not already present
+      const fullPhone = (cleanPhone.startsWith('+') || cleanPhone.startsWith('00')) ? cleanPhone : '+216' + cleanPhone;
+      
       // Validation: Tunisian numbers (8 digits, with optional +216 or 00216) or valid international numbers (>= 8 digits)
       const tunisianRegex = /^(\+?216|00216)?[2459]\d{7}$/;
       const generalPhoneRegex = /^\+?[0-9]{8,15}$/;
-      const isValid = tunisianRegex.test(cleanPhone) || (cleanPhone.startsWith('+') && generalPhoneRegex.test(cleanPhone)) || /^\d{8}$/.test(cleanPhone);
+      const isValid = tunisianRegex.test(fullPhone) || (fullPhone.startsWith('+') && generalPhoneRegex.test(fullPhone)) || /^\d{8}$/.test(cleanPhone);
       
       let existingErr = document.getElementById('phoneErrorNotice');
       if (!isValid) {
@@ -3078,10 +3240,10 @@
           phoneInput.focus();
         }
         const errorMessages = {
-          fr: "Veuillez saisir un numéro de téléphone valide (ex : +216 22 841 841 ou 8 chiffres).",
-          ar: "يرجى إدخال رقم هاتف صحيح (مثال: ‎+216 22 841 841 أو 8 أرقام).",
-          en: "Please enter a valid phone number (e.g., +216 22 841 841 or 8 digits).",
-          es: "Por favor, introduzca un número de teléfono válido (ej: +216 22 841 841 o 8 dígitos)."
+          fr: "Veuillez saisir un numéro de téléphone valide à 8 chiffres.",
+          ar: "يرجى إدخال رقم هاتف صحيح متكون من 8 أرقام.",
+          en: "Please enter a valid 8-digit phone number.",
+          es: "Por favor, introduzca un número de teléfono válido de 8 dígitos."
         };
         const errorMsg = errorMessages[currentLang] || errorMessages.fr;
         
@@ -3098,6 +3260,11 @@
           existingErr.textContent = errorMsg;
         }
         return;
+      }
+      
+      // Prepend +216 to the submitted value
+      if (phoneInput) {
+        phoneInput.value = fullPhone;
       }
       
       // Clean up error state if valid
@@ -3304,7 +3471,14 @@
         turn: 1,
         history: [],
         previousSelection: '',
-        track: 'adult',
+        target: null, // 'moi', 'enfant', 'parent'
+        track: null,
+        sex: null,
+        age: null,
+        profileAnswer: null,
+        selectedConditions: [], // multi-select condition IDs
+        deepDiveQueue: [], // queue of condition tracks to deep dive into
+        weightGoal: null, // 'lose', 'gain', 'health'
         biometrics: {
           metabolic_score: 42,
           digestive_load: 38,
@@ -3312,28 +3486,59 @@
         },
         isComplete: false,
         finalDossier: null,
-        isLoading: false
+        isLoading: false,
+        lang: null
       },
 
       init() {
         this.renderInitialTurn();
       },
 
+      // ================================================================
+      // CORE: handleOptionClick — routes single-select options
+      // ================================================================
       async handleOptionClick(optionText, cardEl) {
         if (this.state.isLoading) return;
         this.state.isLoading = true;
 
-        if (this.state.turn === 1) {
+        const QD = window.QUIZ_DATA;
+        const lang = this.state.lang || (typeof currentLang !== 'undefined' ? currentLang : 'fr');
+
+        // TURN 1: Detect TARGET (Moi, Enfant, Parent)
+        if (this.state.turn === 1 && QD) {
+          const opts = (QD.targets[lang] || QD.targets.fr).options;
+          const idx = opts.indexOf(optionText);
+          if (idx === 1) this.state.target = 'enfant';
+          else if (idx === 2) this.state.target = 'parent';
+          else this.state.target = 'moi';
+        }
+
+        // TURN 2: Extract sex from profile option
+        if (this.state.turn === 2) {
           let selLower = (optionText || '').toLowerCase();
-          if (selLower.includes('enfant') || selLower.includes('ado') || selLower.includes('pédiatrique') || selLower.includes('طفل') || selLower.includes('أطفال') || selLower.includes('child') || selLower.includes('pediatric') || selLower.includes('niño') || selLower.includes('pediátric')) {
-            this.state.track = 'pediatric';
-          } else if (selLower.includes('médical') || selLower.includes('sopk') || selLower.includes('diabète') || selLower.includes('maladie') || selLower.includes('طبي') || selLower.includes('متابعة طبية') || selLower.includes('medical') || selLower.includes('parent') || selLower.includes('والد') || selLower.includes('enfermedad')) {
-            this.state.track = 'medical';
-          } else if (selLower.includes('digestif') || selLower.includes('côlon') || selLower.includes('ballonnement') || selLower.includes('هضم') || selLower.includes('قولون') || selLower.includes('انتفاخ') || selLower.includes('digestive') || selLower.includes('bloating') || selLower.includes('ibs') || selLower.includes('hinchazón') || selLower.includes('colon')) {
-            this.state.track = 'digestive';
+          if (selLower.includes('femme') || selLower.includes('fille') || selLower.includes('أنثى') || selLower.includes('بنت') || selLower.includes('امرأة') || selLower.includes('female') || selLower.includes('girl') || selLower.includes('mujer') || selLower.includes('niña')) {
+            this.state.sex = 'female';
           } else {
-            this.state.track = 'weight';
+            this.state.sex = 'male';
           }
+          this.state.profileAnswer = optionText;
+        }
+
+        // TURN 4: Detect weight goal
+        if (this.state.turn === 4) {
+          let selLower = (optionText || '').toLowerCase();
+          if (selLower.includes('perdre') || selLower.includes('lose') || selLower.includes('perder') || selLower.includes('إنقاص') || selLower.includes('📉')) {
+            this.state.weightGoal = 'lose';
+          } else if (selLower.includes('prendre') || selLower.includes('gain') || selLower.includes('ganar') || selLower.includes('زيادة') || selLower.includes('📈')) {
+            this.state.weightGoal = 'gain';
+          } else {
+            this.state.weightGoal = 'health';
+          }
+        }
+
+        // TURN 5: Deep dive answer
+        if (this.state.turn === 5) {
+          // just record the answer
         }
 
         // Interactive visual tap feedback
@@ -3341,7 +3546,6 @@
           cardEl.classList.add('selected-tap');
           const arrow = cardEl.querySelector('.ai-option-arrow');
           if (arrow) arrow.innerHTML = '<i class="fa-solid fa-check"></i>';
-
           const siblings = cardEl.parentElement ? cardEl.parentElement.querySelectorAll('.ai-option-card') : [];
           siblings.forEach(sib => {
             if (sib !== cardEl) sib.classList.add('faded-out');
@@ -3351,7 +3555,8 @@
         this.state.previousSelection = optionText;
         this.state.history.push({
           turn: this.state.turn,
-          selection: optionText
+          selection: optionText,
+          deepDiveKey: this.state.turn === 5 && this.state.deepDiveQueue.length > 0 ? this.state.deepDiveQueue[0] : null
         });
 
         // 300ms tactile delay before smooth transition
@@ -3363,453 +3568,588 @@
         await new Promise(r => setTimeout(r, 250));
         this.renderLoadingState();
 
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 8000);
+        // Go to fallback directly (static site, no backend API)
+        await new Promise(r => setTimeout(r, 400));
 
-        try {
-          const response = await fetch('/api/ai-diagnostic-engine', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            signal: controller.signal,
-            body: JSON.stringify({
-              turn: this.state.turn,
-              previous_selection: optionText,
-              history: this.state.history,
-              track: this.state.track,
-              lang: this.state.lang || (typeof currentLang !== 'undefined' ? currentLang : 'fr')
-            })
-          });
-
-          clearTimeout(timeoutId);
-
-          if (!response.ok) {
-            throw new Error('API Response Error ' + response.status);
-          }
-
-          const data = await response.json();
-          this.state.turn = data.current_turn;
-          this.state.biometrics = data.biometric_updates || this.state.biometrics;
-          this.state.isComplete = data.is_complete;
-          this.state.finalDossier = data.final_results || data.final_dossier;
-
-          await new Promise(r => setTimeout(r, 150));
-          
-          this.state.isLoading = false;
-          this.renderTurnData(data);
-        } catch (err) {
-          clearTimeout(timeoutId);
-          console.warn('Backend API fallback triggered (network/timeout):', err);
-          const nextTurn = this.state.turn + 1;
-          const fallbackData = this.getFallbackTurnData(optionText, nextTurn, this.state.track);
-          
-          this.state.turn = fallbackData.current_turn;
-          this.state.biometrics = fallbackData.biometric_updates || this.state.biometrics;
-          this.state.isComplete = fallbackData.is_complete;
-          this.state.finalDossier = fallbackData.final_results || fallbackData.final_dossier;
-          this.state.isLoading = false;
-          
-          this.renderTurnData(fallbackData);
-        }
-      },
-
-      getFallbackTurnData(optionText, turn, currentTrack) {
-        const lang = this.state.lang || (typeof currentLang !== 'undefined' ? currentLang : 'fr');
-        let track = currentTrack || this.state.track || 'weight';
-        let selLower = (optionText || '').toLowerCase();
+        let nextTurn = this.state.turn + 1;
         
-        // Category / Track Detection across FR, AR, EN, ES
-        if (selLower.includes('enfant') || selLower.includes('ado') || selLower.includes('pédiatrique') || selLower.includes('طفل') || selLower.includes('أطفال') || selLower.includes('child') || selLower.includes('pediatric') || selLower.includes('niño') || selLower.includes('pediátric')) {
-          track = 'pediatric';
-        } else if (selLower.includes('médical') || selLower.includes('sopk') || selLower.includes('diabète') || selLower.includes('pathologie') || selLower.includes('طبي') || selLower.includes('متابعة طبية') || selLower.includes('medical') || selLower.includes('diabetes') || selLower.includes('pcos') || selLower.includes('médico') || selLower.includes('tiroides')) {
-          track = 'medical';
-        } else if (selLower.includes('digestif') || selLower.includes('côlon') || selLower.includes('ballonnement') || selLower.includes('هضم') || selLower.includes('قولون') || selLower.includes('انتفاخ') || selLower.includes('digestive') || selLower.includes('bloating') || selLower.includes('ibs') || selLower.includes('hinchazón') || selLower.includes('colon')) {
-          track = 'digestive';
-        } else if (selLower.includes('poids') || selLower.includes('وزن') || selLower.includes('weight') || selLower.includes('pérdida')) {
-          track = 'weight';
-        }
-
-        this.state.track = track;
-
-        // Turn 5: Final Dossier & Clinical Synthesis
-        if (turn >= 5) {
-          let headline = "Rééquilibrage Métabolique & Perte de Poids Durable";
-          let realities = [
-            "Votre métabolisme s'est ralenti (mode survie) à cause des restrictions passées.",
-            "Les fringales sont un signal biologique de manque de nutriments pendant la journée.",
-            "La perte de masse grasse durable nécessite d'équilibrer vos hormones sans aucune privation."
-          ];
-          let timeline = {
-            days_14: "Baisse de l'inflammation, fin des fringales et regain d'énergie.",
-            day_30: "Sensation de légèreté et amorce de la perte de masse grasse.",
-            day_90: "Normalisation métabolique durable et relation apaisée avec l'alimentation."
-          };
-          let waMsg = "Bonjour Inès, j'ai réalisé le bilan Perte de Poids & Rééquilibrage en ligne. Je souhaite planifier ma première consultation.";
-
-          if (lang === 'ar') {
-            if (track === 'medical') {
-              headline = "بروتوكول التغذية العلاجية والتوازن الهرموني";
-              realities = [
-                "الأعراض (التعب، زيادة الوزن) ناتجة عن الاضطراب الهرموني وليست نقصاً في الإرادة.",
-                "الحميات القاسية تؤدي لزيادة مقاومة الأنسولين واضطراب الغدة والتمثيل الغذائي.",
-                "التغذية السريرية الموجهة تضبط التحاليل المخبرية وتستعيد الراحة البدنية والحيوية."
-              ];
-              timeline = {
-                days_14: "تراجع الالتهاب واستقرار مستويات السكر والنشاط الصباحي.",
-                day_30: "تحسن ملحوظ في المؤشرات الحيوية والشعور بالراحة والخفة.",
-                day_90: "توازن أيضي وهرموني دائم واستقرار تام للمؤشرات الصحية."
-              };
-              waMsg = "مرحباً أستاذة إيناس، أتممت التقييم للمتابعة الطبية وأود حجز استشارة بالعيادة برادس.";
-            } else if (track === 'digestive') {
-              headline = "البروتوكول السريري لراحة القولون وترميم الميكروبيوم";
-              realities = [
-                "الانتفاخ المسائي ناتج عن فرط تخمر سكريات محددة (FODMAP) وليس زيادة دهون.",
-                "تهيج بطانة الأمعاء يسبب خمولاً وإرهاقاً عاماً عبر محور الأمعاء والدماغ.",
-                "إعادة التوازن البكتيري تتم بخطة تدريجية واضحة دون حرمان غذائي دائم."
-              ];
-              timeline = {
-                days_14: "بطن مستوٍ ومريح طوال اليوم واختفاء آلام القولون والغازات.",
-                day_30: "استعادة تحمل الجهاز الهضمي والبدء في تنويع الأطعمة بأمان.",
-                day_90: "ميكروبيوم معوي قوي، هضم هادئ وطاقة ممتازة بعد الوجبات."
-              };
-              waMsg = "مرحباً أستاذة إيناس، أتممت تقييم راحة الجهاز الهضمي والقولون وأود حجز موعد استشارة في عيادة رادس.";
-            } else if (track === 'pediatric') {
-              headline = "التحليل السريري لنمو الطفل والتغذية المتوازنة";
-              realities = [
-                "انتقائية الطفل للطعام استجابة حسية وهضمية تتطلب توجيهاً علمياً هادئاً.",
-                "استقرار السكر صباحاً يضمن تركيزاً دراسياً ممتازاً وطاقة متوازنة.",
-                "تنويع الأطعمة خطوة بخطوة يبني مناعة متينة دون ضغط أو توتر."
-              ];
-              timeline = {
-                days_14: "وجبات عائلية هادئة وتراجع التوتر أثناء الأكل.",
-                day_30: "تقبل أطعمة جديدة ومفيدة وتحسن التركيز والنشاط.",
-                day_90: "نمو سليم ومثالي وعلاقة صحية وإيجابية مع الطعام."
-              };
-              waMsg = "مرحباً أستاذة إيناس، قمت بتعبئة التقييم الخاص بطفلي وأرغب في حجز استشارة تغذية أطفال في رادس.";
-            } else {
-              headline = "إعادة التوازن الأيضي وخسارة الوزن المستدامة";
-              realities = [
-                "الأعراض الصحية ناتجة عن بطء الحرق بسبب الحميات السابقة وليس قلة إرادة.",
-                "الرغبة في السكر هي إشارة بيولوجية لحاجة الجسم لمغذيات كافية نهاراً.",
-                "خسارة الدهون الدائمة تتطلب ضبط الهرمونات الطبيعية بدون أي حرمان."
-              ];
-              timeline = {
-                days_14: "تراجع الالتهاب، نهاية نوبات الشراهة واستعادة الحيوية الصباحية.",
-                day_30: "شعور عام بالخفة وبداية نزول الدهون بأمان.",
-                day_90: "توازن أيضي دائم وعلاقة مريحة وسليمة مع الطعام."
-              };
-              waMsg = "مرحباً أستاذة إيناس، لقد أتممت تقييم خسارة الوزن على موقعك وأود حجز موعد استشارة مخصصة في عيادة رادس.";
-            }
-          } else if (lang === 'en') {
-            if (track === 'medical') {
-              headline = "Personalized Nutrition Care & Hormonal Balance Plan";
-              realities = [
-                "Your symptoms (fatigue, weight shifts) are direct physiological signals of your condition, not a lack of willpower.",
-                "Generic restrictive diets often worsen hormonal resistance, thyroid slowdown, and energy drops.",
-                "Targeted nutrition care normalizes blood biomarkers and restores true vitality."
-              ];
-              timeline = {
-                days_14: "Reduction of systemic inflammation, stabilized blood sugar, and steady morning energy.",
-                day_30: "Marked improvement in wellness biomarkers and a lighter, healthier body feel.",
-                day_90: "Lasting hormonal balance, robust metabolic health, and nutritional confidence."
-              };
-              waMsg = "Hello Inès, I completed the online Medical Follow-up assessment. I would like to schedule my consultation at the clinic.";
-            } else if (track === 'digestive') {
-              headline = "Gut Comfort, Microbiome & Digestive Wellness Protocol";
-              realities = [
-                "Evening bloating is caused by sensitive carbohydrate fermentation, not fat accumulation.",
-                "Gut lining irritation sends direct fatigue signals to the central nervous system via the gut-brain axis.",
-                "Methodical dietary balance restores gut comfort and digestion without permanent restrictions."
-              ];
-              timeline = {
-                days_14: "Flat and calm stomach all day long, relief from spasms, cramps, and gas.",
-                day_30: "Restored digestive tolerance and safe reintroduction of diverse favorite foods.",
-                day_90: "Resilient gut microbiota, easy digestion, and consistent energy after meals."
-              };
-              waMsg = "Hello Inès, I completed the Digestive Comfort & Microbiome assessment. I would like to start my personalized protocol at the clinic.";
-            } else if (track === 'pediatric') {
-              headline = "Pediatric Nutrition & Healthy Family Eating";
-              realities = [
-                "Food selectivity in children is a natural sensory and enzymatic protective mechanism.",
-                "Morning glucose spikes disrupt classroom focus and trigger late afternoon fatigue.",
-                "Gentle diversification strengthens the pediatric microbiome without dinner table battles."
-              ];
-              timeline = {
-                days_14: "More peaceful family meals and the end of stressful negotiations.",
-                day_30: "Willing acceptance of new wholesome foods and stable school energy.",
-                day_90: "Optimal growth curve and a joyful, lasting relationship with healthy food."
-              };
-              waMsg = "Hello Inès, I completed the questionnaire for my child. I would like to schedule a pediatric nutrition consultation in Radès.";
-            } else {
-              headline = "Metabolic Reset & Sustainable Weight Management";
-              realities = [
-                "Your metabolism has slowed down (survival mode) due to past restrictive diets.",
-                "Evening sugar cravings are biological distress signals caused by nutrient-deficient daytime meals.",
-                "Sustainable fat loss requires balancing blood glucose and metabolic hormones without starvation."
-              ];
-              timeline = {
-                days_14: "Reduced inflammation, end of sugar cravings, and morning energy boost.",
-                day_30: "Noticeable lightness and initiation of targeted body fat loss.",
-                day_90: "Permanent metabolic normalization and a peaceful relationship with food."
-              };
-              waMsg = "Hello Inès, I completed the online Weight Loss & Metabolic Assessment. I would like to schedule my consultation at the clinic.";
-            }
-          } else if (lang === 'es') {
-            if (track === 'medical') {
-              headline = "Plan de Nutrición y Bienestar Hormonal Personalizado";
-              realities = [
-                "Sus síntomas (fatiga, aumento de peso) son consecuencia directa de desequilibrios metabólicos, no de falta de voluntad.",
-                "Las dietas restrictivas clásicas agravan la resistencia a la insulina y los desequilibrios energéticos.",
-                "Una nutrición adaptada y respetuosa permite regular los marcadores biológicos y recuperar el bienestar integral."
-              ];
-              timeline = {
-                days_14: "Disminución de la inflamación, glucosa estable y recuperación de energía.",
-                day_30: "Mejora notable en los análisis clínicos y confort corporal.",
-                day_90: "Equilibrio hormonal duradero, salud metabólica óptima y nutrición adaptada."
-              };
-              waMsg = "Hola Inès, he completado la evaluación para Seguimiento Médico. Deseo reservar mi consulta en Radès.";
-            } else if (track === 'digestive') {
-              headline = "Protocolo de Bienestar Digestivo y Salud Intestinal";
-              realities = [
-                "La hinchazón nocturna se debe a una fermentación excesiva de azúcares específicos (FODMAP), no a grasa.",
-                "La irritación de la mucosa intestinal envía señales de fatiga directa al cerebro a través del eje intestino-cerebro.",
-                "Una reintroducción metódica de alimentos permite restaurar la microbiota sin restricciones permanentes."
-              ];
-              timeline = {
-                days_14: "Vientre plano y relajado todo el día, desaparición de espasmos y gases.",
-                day_30: "Tolerancia digestiva restaurada y reintroducción progresiva de alimentos clave.",
-                day_90: "Microbiota resistente, digestiones ligeras y energía constante tras comer."
-              };
-              waMsg = "Hola Inès, he completado la evaluación de Confort Digestivo y Microbiota. Deseo iniciar mi protocolo personalizado en Radès.";
-            } else if (track === 'pediatric') {
-              headline = "Acompañamiento Nutricional Infantil y Crecimiento Saludable";
-              realities = [
-                "La selectividad alimentaria en niños es una respuesta sensorial reversible con un enfoque respetuoso.",
-                "Los picos de glucosa matutinos alteran la concentración escolar y provocan bajones de energía por la tarde.",
-                "La diversificación progresiva fortalece la microbiota pediátrica sin discusiones en la mesa."
-              ];
-              timeline = {
-                days_14: "Comidas familiares más tranquilas y fin de las negociaciones en la mesa.",
-                day_30: "Aceptación de nuevos alimentos saludables y energía escolar estable.",
-                day_90: "Curva de crecimiento óptima y relación positiva duradera con la comida."
-              };
-              waMsg = "Hola Inès, he completado el cuestionario para mi hijo/a. Deseo agendar una consulta de nutrición pediátrica en Radès.";
-            } else {
-              headline = "Reequilibrio Metabólico y Pérdida de Peso Sostenible";
-              realities = [
-                "Su metabolismo se ha ralentizado (modo supervivencia) debido a dietas restrictivas del pasado.",
-                "Los antojos de dulce nocturnos son una señal biológica de falta de nutrientes densos durante el día.",
-                "La quema de grasa duradera requiere equilibrar las hormonas sin pasar hambre ni sufrir frustración."
-              ];
-              timeline = {
-                days_14: "Reducción de la inflamación, cese de antojos y mayor vitalidad matutina.",
-                day_30: "Sensación de ligereza e inicio de la pérdida de grasa corporal.",
-                day_90: "Normalización metabólica duradera y relación serena con la comida."
-              };
-              waMsg = "Hola Inès, he completado la evaluación de Pérdida de Peso en línea. Deseo programar mi primera consulta en el gabinete.";
-            }
+        // If we are answering a deep dive question, shift the queue
+        if (this.state.turn === 5) {
+          if (this.state.deepDiveQueue.length > 0) {
+            this.state.deepDiveQueue.shift(); // Remove the one we just answered
           }
-
-          let insightMsg = "Bilan complété avec succès. Votre profil est intégralement modélisé.";
-          if (lang === 'ar') insightMsg = "تم إتمام التقييم السريري بنجاح. ملفك الأيضي جاهز بالكامل.";
-          else if (lang === 'en') insightMsg = "Assessment completed successfully. Your profile is fully modeled.";
-          else if (lang === 'es') insightMsg = "Evaluación completada con éxito. Su perfil está completamente modelado.";
-
-          const currentScore = (this.state.biometrics && this.state.biometrics.metabolic_score) ? this.state.biometrics.metabolic_score : 85;
-          const dynamicFinalScore = Math.min(98, Math.max(76, currentScore + 6));
-
-          return {
-            empathy_insight: insightMsg,
-            dynamic_question: "",
-            tap_options: [],
-            generated_tap_options: [],
-            biometric_updates: { metabolic_score: dynamicFinalScore, digestive_load: 85, endocrine_strain: 90 },
-            current_turn: 5,
-            is_complete: true,
-            final_results: {
-              headline,
-              the_3_realities: realities,
-              transformation_timeline: timeline,
-              whatsapp_message: waMsg,
-              whatsapp_message_encoded: waMsg
-            }
-          };
+          
+          if (this.state.deepDiveQueue.length > 0) {
+            nextTurn = 5; // Stay on deep dive turn for the next condition
+          } else {
+            nextTurn = 6; // Move to dossier
+          }
         }
+        
+        this.state.turn = nextTurn;
+        this.state.isLoading = false;
 
-        // ==========================================
-        // 1. ARABIC QUESTION POOLS (4 Tracks)
-        // ==========================================
-        const arPedTurns = [
-          { empathy: "رفض الطعام عند الطفل ليس عناداً بل استجابة حسية أو هضمية خاصة.", q: "ما هو السلوك الأكثر ملاحظة أثناء وجبات طفلك؟", opts: ["🍟 رفض تام للخضار والتركيز على صنفين أو ثلاثة", "📉 تعب مفاجئ وتقلب في المزاج بعد الأكل", "🤢 شكاوى متكررة من آلام في البطن وثقل هضمي", "⚡ نشاط مفرط يليه هبوط مفاجئ في الطاقة مساءً"] },
-          { empathy: "الانتقائية الغذائية ترتبط بالبيئة الهضمية والحسية للطفل.", q: "كيف تتعاملون مع الوجبات العائلية يومياً؟", opts: ["🥊 الوجبات أصبحت مصدر ضغط وتفاوض دائم", "🍲 أحضر طبقاً مخصصاً منفصلاً لطفلي", "⏳ الوجبة تستغرق أكثر من 45 دقيقة أمام الشاشات", "🤷 ننتظر أن يتحسن الوضع تلقائياً مع النمو"] },
-          { empathy: "السكريات السريعة صباحاً تسبب عدم استقرار في النشاط وتراجع التركيز.", q: "ما هو هدفك الأساسي لصحة طفلك في العيادة؟", opts: ["🍏 تنويع غذائه بكل هدوء وراحة", "⚡ تحسين تركيزه ونشاطه اليومي", "📈 مرافقة نموه السليم وقوته العضلية", "🌿 تهدئة آلام البطن وانتظام الهضم"] }
-        ];
-
-        const arWeightTurns = [
-          { empathy: "زيادة الوزن ليست نقصاً في الإرادة، بل بطء في معدل الحرق وتخزين بيولوجي للدهون.", q: "ما هو التحدي الأكبر الذي واجهته في محاولاتك السابقة لخسارة الوزن؟", opts: ["🔄 استعادة الوزن المفقود بسرعة (تأثير اليويو)", "🥗 الإحباط من الحميات القاسية وحساب السعرات", "🍫 نوبات الشراهة والرغبة في السكريات مساءً", "⚖️ ثبات الميزان تماماً رغم تقليل الأكل والجهد"] },
-          { empathy: "التوازن الغذائي الصحيح يجب أن يتماشى مع نمط حياتك اليومي دون تعقيد.", q: "كيف تصف نمط حياتك ونشاطك اليومي؟", opts: ["🏃 نشيط ومتوتر: أتناول وجبات سريعة وعلى عجل", "💻 خامل (عمل مكتبي، قلة النشاط البدني)", "⏳ أوقات غير منتظمة: أتخطى وجبات وأتعشى متأخراً", "🧘 نمط عادي، لكن ينقصني التنظيم في المطبخ"] },
-          { empathy: "إيناس ستعيد برمجة وتنشيط حرق الدهون لديك بطريقة طبيعية ومستدامة.", q: "ما هي النتيجة المثالية التي ترغب في تحقيقها خلال 3 أشهر؟", opts: ["👗 الوصول لوزني المثالي وثباته على المدى الطويل", "⚡ نحت القوام واستعادة حيويتي ونشاطي", "🧘 تناول الطعام براحة واستمتاع دون حرمان أو ذنب", "💪 الحفاظ على الكتلة العضلية وخسارة الدهون الصافية"] }
-        ];
-
-        const arMedicalTurns = [
-          { empathy: "التغذية العلاجية السريرية هي الركيزة الأساسية للسيطرة على حالتك الصحية.", q: "ما هي الحالة الصحية التي تحتاج لمتابعة دقيقة اليوم؟", opts: ["🦋 اضطراب هرموني: تكيس مبايض، خمول غدة درقية، بطانة الرحم", "🩸 اضطراب أيضي: السكري، مقاومة الأنسولين، ما قبل السكري", "🫀 صحة القلب والشرايين: الكوليسترول، الضغط، الكبد الدهني", "👩‍⚕️ حالة صحية أخرى تتطلب نظاماً غذائياً علاجياً"] },
-          { empathy: "هذه الحالات تسبب تفاعلات متسلسلة في الجسم يمكن تهدئتها غذائياً.", q: "ما هو العَرَض الأكثر إزعاجاً لك في حياتك اليومية؟", opts: ["😴 إرهاق مزمن وهبوط مفاجئ في الطاقة بعد الوجبات", "📈 زيادة وزن غير مبررة أو صعوبة شديدة في نزول الوزن", "🩺 تحاليل مخبرية غير منتظمة أحتاج لضبطها", "🔥 آلام والتهابات أو عدم انتظام في الدورة الشهرية"] },
-          { empathy: "سنقوم بتعديل مدخولك الغذائي بما يريح أعضاءك ويضبط الهرمونات.", q: "ما هو هدفك الأساسي من هذه المتابعة السريرية بالعيادة؟", opts: ["🛡️ تحسين المؤشرات المخبرية بأسلوب غذائي علمي", "✨ تهدئة الأعراض واستعادة حيوية وطاقة مستقرة", "🍏 تعلم التغذية المناسبة لحالتي بدون حرمان", "⚖️ التوفيق بين علاج حالتي الصحية وخسارة الوزن الزائد"] }
-        ];
-
-        const arDigestiveTurns = [
-          { empathy: "الانتفاخ والغازات وآلام القولون ليست أمراً حتمياً، بل علامة على اختلال بكتيريا الأمعاء وفرط التخمر.", q: "ما هي الأعراض الهضمية الأكثر إزعاجاً لك يومياً؟", opts: ["🎈 بطن مستوٍ صباحاً، منتفخ ومؤلم في المساء", "🔄 متلازمة القولون العصبي (تقلب بين الإمساك والإسهال)", "🔥 حرقة المعدة، الارتجاع أو بطء شديد في الهضم", "🍞 انزعاج شديد بعد الخبز أو مشتقات الحليب أو الخضار النيئة"] },
-          { empathy: "محور الأمعاء والدماغ يتفاعل بقوة مع التوتر عبر العصب المبهم مسبباً تقلصات معوية.", q: "كيف يؤثر التوتر وضغوط الحياة على جهازك الهضمي؟", opts: ["⚡ أي توتر أو ضغط يسبب لي تقلصات أو مغصاً فورياً", "⏳ أتناول طعامي بسرعة وتحت ضغط الوقت في العمل", "😴 الانزعاج الهضمي والانتفاخ يؤثران سلباً على نومي", "🧘 لا أشعر بتأثير التوتر، المشكلة تبدو مرتبطة بنوعية الطعام فقط"] },
-          { empathy: "بروتوكول إعادة تأهيل الجهاز الهضمي والـ FODMAP العلمي يعيد ترميم بطانة الأمعاء وتوازن الميكروبيوم.", q: "ما هي أولويتك القصوى عند بدء المتابعة في العيادة؟", opts: ["🌿 بطن مريح وخفيف طوال اليوم بدون انتفاخات", "🍎 إعادة تنويع الأطعمة في غذائي دون خوف من الأزمات", "⚡ استعادة النشاط والطاقة بعد الوجبات بدون خمول", "🛡️ تشخيص دقيق وخطة علاجية تغذوية واضحة ومستدامة"] }
-        ];
-
-        // ==========================================
-        // 2. FRENCH QUESTION POOLS (4 Tracks)
-        // ==========================================
-        const frPedTurns = [
-          { empathy: "Le refus alimentaire chez l'enfant n'est pas un caprice: c'est une réaction de défense sensorielle ou digestive biochimique.", q: "Quel comportement observez-vous le plus fréquemment lors des repas ?", opts: ["🍟 Rejet strict des légumes et fixation sur 2 ou 3 aliments", "📉 Fatigue soudaine et irritabilité 30 min après avoir mangé", "🤢 Plaintes fréquentes de maux de ventre ou digestion lourde", "⚡ Agitation intense suivie d'un coup de fatigue le soir"] },
-          { empathy: "La sélectivité sensorielle est liée à une sensibilité olfactive et à une flore intestinale spécifique chez l'enfant.", q: "Comment gérez-vous les repas en famille au quotidien ?", opts: ["🥊 Les repas sont devenus une source de négociation et de stress", "🍲 Je prépare un plat séparé spécialement pour mon enfant", "⏳ Les repas durent plus de 45 minutes avec distraction écran", "🤷 On laisse faire en espérant que ça passe avec la croissance"] },
-          { empathy: "Le microbiote pédiatrique se rééduque par des micro-stimulations ludiques sans forcer le bras.", q: "Quel est votre objectif prioritaire pour la santé de votre enfant ?", opts: ["🍏 Diversifier son alimentation en toute sérénité", "⚡ Améliorer sa concentration et apaiser son énergie", "📈 Accompagner sa courbe de croissance et son tonus", "🌿 Apaiser ses douleurs de ventre et réguler son transit"] }
-        ];
-
-        const frWeightTurns = [
-          { empathy: "La prise de poids n'est pas un manque de volonté, c'est un blocage métabolique.", q: "Qu'est-ce qui vous a le plus bloqué(e) dans vos précédentes tentatives ?", opts: ["🔄 L'effet Yo-Yo : je reprends toujours les kilos perdus", "🥗 La frustration des régimes stricts et du comptage de calories", "🍫 Les fringales incontrôlables et les envies de sucre le soir", "⚖️ Le métabolisme lent : la balance refuse de bouger malgré mes efforts"] },
-          { empathy: "Un bon équilibre alimentaire doit s'adapter à votre rythme.", q: "Comment décririez-vous votre mode de vie ?", opts: ["🏃‍♀️ Très actif et stressé(e) : je mange souvent vite ou sur le pouce", "💻 Plutôt sédentaire (travail de bureau, manque d'activité physique)", "⏳ Horaires décalés : je saute des repas et dîne très tard", "🧘‍♀️ Rythme classique, mais je manque d'organisation en cuisine"] },
-          { empathy: "Inès va rééquilibrer votre assiette pour relancer la perte de graisse.", q: "Quel serait le résultat idéal pour vous d'ici 3 mois ?", opts: ["👗 Atteindre mon poids de forme de manière durable", "⚡ Affiner ma silhouette tout en retrouvant mon énergie", "🧘‍♀️ Manger sereinement sans culpabilité ni frustration", "💪 Conserver ma masse musculaire tout en perdant de la graisse"] }
-        ];
-
-        const frMedicalTurns = [
-          { empathy: "La nutrition clinique est essentielle pour apaiser vos troubles.", q: "Quelle pathologie nécessite un accompagnement aujourd'hui ?", opts: ["🦋 Troubles Hormonaux : SOPK, Thyroïde, Endométriose", "🩸 Troubles Métaboliques : Diabète, Pré-diabète, Résistance à l'insuline", "🫀 Santé Cardiovasculaire : Cholestérol, Hypertension, Foie gras", "👩‍⚕️ Autre pathologie nécessitant une alimentation thérapeutique"] },
-          { empathy: "Ces pathologies entraînent souvent des réactions en chaîne dans le corps.", q: "Quel est le symptôme qui vous gêne le plus au quotidien ?", opts: ["😴 Une fatigue chronique et des baisses d'énergie intenses", "📈 Une prise de poids inexpliquée ou impossible à perdre", "🩺 Des bilans sanguins perturbés que je dois stabiliser", "🔥 Des douleurs, de l'inflammation ou des cycles très irréguliers"] },
-          { empathy: "Nous allons adapter vos apports pour soulager votre métabolisme.", q: "Quel est votre objectif prioritaire avec ce suivi clinique ?", opts: ["🛡️ Réguler mes bilans médicaux sans médicaments superflus", "✨ Apaiser mes symptômes et retrouver une vitalité stable", "🍏 Apprendre à manger selon ma maladie sans me priver", "⚖️ Associer la gestion de ma pathologie à une perte de poids"] }
-        ];
-
-        const frDigestiveTurns = [
-          { empathy: "Les ballonnements et spasmes intestinaux ne sont pas une fatalité: ils signalent une dysbiose ou une fermentation excessive.", q: "Quels symptômes digestifs perturbent le plus votre quotidien ?", opts: ["🎈 Ventre plat le matin, ballonné et douloureux le soir", "🔄 Alternance constipation / selles molles et inconfort (IBS)", "🔥 Reflux gastrique, acidité ou digestion très lente", "🍞 Réaction inflammatoire après le pain, produits laitiers ou crudités"] },
-          { empathy: "L'axe intestin-cerveau réagit intensément au stress via le nerf vague, provoquant des spasmes.", q: "Comment le stress et votre rythme de vie influencent-ils votre ventre ?", opts: ["⚡ Le stress déclenche immédiatement des crampes ou urgences", "⏳ Je mange trop vite sous pression au travail", "😴 Mon inconfort digestif perturbe la qualité de mon sommeil", "🧘 Pas d'impact direct du stress, le problème est purement alimentaire"] },
-          { empathy: "Le protocole de réhabilitation digestive (FODMAP clinique) répare la muqueuse et rééquilibre le microbiote.", q: "Quel résultat attendez-vous en priorité de votre prise en charge ?", opts: ["🌿 Un ventre plat et apaisé du matin au soir sans douleur", "🍎 Réintroduire une grande variété d'aliments en toute sécurité", "⚡ Retrouver mon énergie sans sensation de lourdeur après les repas", "🛡️ Un diagnostic clair et un protocole clinique structuré"] }
-        ];
-
-        // ==========================================
-        // 3. ENGLISH QUESTION POOLS (4 Tracks)
-        // ==========================================
-        const enPedTurns = [
-          { empathy: "Food refusal in children is a sensory or digestive biochemical defense, not simple stubbornness.", q: "Which behavior do you observe most frequently during meals?", opts: ["🍟 Strict refusal of vegetables, eating only 2-3 specific foods", "📉 Sudden fatigue and irritability 30 min after eating", "🤢 Frequent complaints of stomach aches or heavy digestion", "⚡ High restlessness followed by an evening energy crash"] },
-          { empathy: "Sensory selectivity is linked to a unique childhood gut microbiota and oral sensitivity.", q: "How do family meals usually go at home?", opts: ["🥊 Meals have become a source of daily negotiation and stress", "🍲 I cook a separate dish specifically for my child", "⏳ Meals take over 45 minutes with screens as distraction", "🤷 We let it be, hoping it resolves with age"] },
-          { empathy: "The pediatric microbiome is gently retrained through playful and science-backed nourishment.", q: "What is your top priority for your child's nutrition?", opts: ["🍏 Diversifying their food peacefully without conflict", "⚡ Improving concentration and balanced daily energy", "📈 Supporting optimal growth curves and muscle tone", "🌿 Soothing stomach aches and regulating bowel habits"] }
-        ];
-
-        const enWeightTurns = [
-          { empathy: "Weight gain is not a lack of willpower; it is a metabolic slowdown.", q: "What has been the biggest hurdle in your past weight loss attempts?", opts: ["🔄 The Yo-Yo effect: regaining the lost weight", "🥗 Frustration from strict diets and calorie counting", "🍫 Uncontrollable sugar cravings in the evening", "⚖️ Slow metabolism: the scale won't move despite my efforts"] },
-          { empathy: "A balanced diet must seamlessly adapt to your daily schedule.", q: "How would you describe your current lifestyle?", opts: ["🏃 Very active and stressed: eating quickly on the go", "💻 Sedentary (desk job, lack of physical exercise)", "⏳ Irregular hours: skipping meals and late dinners", "🧘 Standard routine, but lacking meal prep organization"] },
-          { empathy: "Inès will rebalance your nutrition to reactivate natural fat metabolism.", q: "What would be your ideal outcome within 3 months?", opts: ["👗 Reaching my ideal weight and sustaining it long term", "⚡ Toning my body while regaining high daily energy", "🧘 Eating peacefully without guilt or deprivation", "💪 Preserving muscle mass while targeting body fat"] }
-        ];
-
-        const enMedicalTurns = [
-          { empathy: "Personalized nutrition is essential to soothe metabolic and hormonal imbalances.", q: "Which health objective requires dietary guidance today?", opts: ["🦋 Hormonal Balance: PCOS, Thyroid, Endometriosis", "🩸 Metabolic Balance: Blood sugar, Pre-diabetes, Insulin sensitivity", "🫀 Cardiovascular Health: Cholesterol, Blood pressure, Liver wellness", "🌿 Another objective requiring personalized nutrition"] },
-          { empathy: "These conditions trigger metabolic chain reactions throughout the body.", q: "Which symptom bothers you the most on a daily basis?", opts: ["😴 Chronic fatigue and sharp energy drops after meals", "📈 Unexplained weight gain or inability to shed weight", "🩺 Altered blood test results that need stabilization", "🔥 Pain, systemic inflammation, or irregular cycles"] },
-          { empathy: "We will tailor your nutrient intake to relieve metabolic strain.", q: "What is your top priority with this personalized follow-up?", opts: ["🛡️ Regulating my blood markers with science-backed nutrition", "✨ Soothing symptoms and regaining consistent vitality", "🍏 Learning to eat properly for my body without deprivation", "⚖️ Supporting my metabolic health while achieving healthy weight balance"] }
-        ];
-
-        const enDigestiveTurns = [
-          { empathy: "Bloating and digestive spasms are signals of dysbiosis or excessive fermentation.", q: "Which digestive symptoms affect your daily life the most?", opts: ["🎈 Flat stomach in the morning, bloated and uncomfortable by evening", "🔄 Alternating constipation / loose stools (IBS)", "🔥 Acid reflux, heartburn, or sluggish stomach emptying", "🍞 Inflammatory reaction after bread, dairy, or raw veggies"] },
-          { empathy: "The gut-brain axis reacts strongly to stress via the vagus nerve.", q: "How does stress and daily pace influence your digestion?", opts: ["⚡ Stress immediately triggers stomach cramps or urgency", "⏳ I eat too fast under pressure at work", "😴 Digestive discomfort disrupts my sleep quality", "🧘 No direct stress impact; it is purely food-related"] },
-          { empathy: "A structured gut rebalancing restores your microbiome resilience.", q: "What is your main goal from digestive care?", opts: ["🌿 A calm, flat stomach from morning to night", "🍎 Safely reintroducing a wide variety of foods", "⚡ Regaining light, post-meal energy without fatigue", "🛡️ Clear guidance and a structured gut comfort plan"] }
-        ];
-
-        // ==========================================
-        // 4. SPANISH QUESTION POOLS (4 Tracks)
-        // ==========================================
-        const esPedTurns = [
-          { empathy: "El rechazo a la comida en niños es una respuesta sensorial o digestiva natural, no un capricho.", q: "¿Qué comportamiento observa con más frecuencia durante las comidas?", opts: ["🍟 Rechazo estricto a las verduras y fijación en 2 o 3 alimentos", "📉 Cansancio repentino e irritabilidad 30 min tras comer", "🤢 Quejas frecuentes de dolor de barriga o digestión pesada", "⚡ Agitación intensa seguida de un bajón de energía al atardecer"] },
-          { empathy: "La selectividad sensorial está vinculada a una flora intestinal infantil específica.", q: "¿Cómo transcurren habitualmente las comidas familiares en casa?", opts: ["🥊 Las comidas se han convertido en fuente de negociación y estrés", "🍲 Preparo un plato aparte especialmente para mi hijo/a", "⏳ Las comidas duran más de 45 minutos con pantallas de distracción", "🤷 Lo dejamos pasar esperando que mejore con el crecimiento"] },
-          { empathy: "La microbiota pediátrica se reeduca con pautas lúdicas y nutrición equilibrada.", q: "¿Cuál es su objetivo prioritario para la salud de su hijo/a?", opts: ["🍏 Diversificar su alimentación con total serenidad", "⚡ Mejorar su concentración y equilibrar su energía diaria", "📈 Acompañar su curva de crecimiento y tono muscular", "🌿 Aliviar sus dolores de barriga y regular su tránsito"] }
-        ];
-
-        const esWeightTurns = [
-          { empathy: "El aumento de peso no es falta de voluntad: es un bloqueo metabólico.", q: "¿Qué es lo que más le ha frenado en sus intentos anteriores de perder peso?", opts: ["🔄 El efecto rebote (Yo-Yo): recupero siempre los kilos perdidos", "🥗 La frustración de dietas estrictas y contar calorías", "🍫 Antojos incontrolables y ganas de dulce por la noche", "⚖️ Metabolismo lento: la báscula no se mueve pese a mis esfuerzos"] },
-          { empathy: "Un buen equilibrio nutricional debe adaptarse a su ritmo de vida.", q: "¿Cómo describiría su estilo de vida actual?", opts: ["🏃 Muy activo y estresado: como rápido y sobre la marcha", "💻 Sedentario (trabajo de oficina, poca actividad física)", "⏳ Horarios irregulares: me salto comidas y ceno muy tarde", "🧘 Rutina estándar, pero me falta organización en la cocina"] },
-          { empathy: "Inès reequilibrará su plato para reactivar la quema natural de grasa.", q: "¿Cuál sería su resultado ideal en los próximos 3 meses?", opts: ["👗 Alcanzar mi peso ideal y mantenerlo a largo plazo", "⚡ Estilizar mi figura recuperando mi energía vital", "🧘 Comer con tranquilidad sin culpa ni privaciones", "💪 Conservar mi masa muscular mientras pierdo grasa corporal"] }
-        ];
-
-        const esMedicalTurns = [
-          { empathy: "La nutrición clínica es esencial para calmar los desequilibrios orgánicos.", q: "¿Qué patología requiere un acompañamiento nutricional hoy?", opts: ["🦋 Trastornos Hormonales: SOP, Tiroides, Endometriosis", "🩸 Trastornos Metabólicos: Diabetes, Pre-diabetes, Resistencia a insulina", "🫀 Salud Cardiovascular: Colesterol, Hipertensión, Hígado graso", "👩‍⚕️ Otra patología que requiere alimentación terapéutica"] },
-          { empathy: "Estas patologías provocan reacciones en cadena en el organismo.", q: "¿Qué síntoma le incomoda más en su día a día?", opts: ["😴 Fatiga crónica y caídas bruscas de energía tras comer", "📈 Aumento de peso inexplicable o imposible de bajar", "🩺 Análisis de sangre alterados que necesito estabilizar", "🔥 Dolores, inflamación o ciclos menstruales muy irregulares"] },
-          { empathy: "Adaptaremos sus nutrientes para aliviar su metabolismo.", q: "¿Cuál es su objetivo prioritario con este seguimiento clínico?", opts: ["🛡️ Regular mis análisis médicos con nutrición científica", "✨ Calmar mis síntomas y recuperar una vitalidad estable", "🍏 Aprender a comer según mi patología sin pasar hambre", "⚖️ Gestionar mi patología y lograr una pérdida de peso saludable"] }
-        ];
-
-        const esDigestiveTurns = [
-          { empathy: "La hinchazón y los espasmos intestinales indican disbiosis o fermentación excesiva.", q: "¿Qué síntomas digestivos alteran más su día a día?", opts: ["🎈 Vientre plano por la mañana, hinchado y doloroso por la noche", "🔄 Alternancia de estreñimiento / heces blandas (Colon irritable)", "🔥 Reflujo gástrico, acidez o digestiones muy lentas", "🍞 Reacción inflamatoria tras el pan, lácteos o verduras crudas"] },
-          { empathy: "El eje intestino-cerebro reacciona intensamente al estrés mediante el nervio vago.", q: "¿Cómo influyen el estrés y su ritmo de vida en su digestión?", opts: ["⚡ El estrés me desencadena espasmos o urgencias inmediatas", "⏳ Como demasiado rápido y bajo presión en el trabajo", "😴 El malestar digestivo perturba la calidad de mi sueño", "🧘 No noto impacto del estrés; es un problema puramente alimentario"] },
-          { empathy: "Un protocolo de rehabilitación digestiva restaura la barrera de su microbiota.", q: "¿Qué resultado espera prioritariamente de su consulta?", opts: ["🌿 Un vientre plano y relajado de la mañana a la noche", "🍎 Reintroducir una gran variedad de alimentos con total seguridad", "⚡ Recuperar mi energía sin pesadez después de comer", "🛡️ Un diagnóstico claro y un protocolo clínico estructurado"] }
-        ];
-
-        // Assign pool based on language and track
-        let pool = frWeightTurns;
-        if (lang === 'ar') {
-          if (track === 'pediatric') pool = arPedTurns;
-          else if (track === 'medical') pool = arMedicalTurns;
-          else if (track === 'digestive') pool = arDigestiveTurns;
-          else pool = arWeightTurns;
-        } else if (lang === 'en') {
-          if (track === 'pediatric') pool = enPedTurns;
-          else if (track === 'medical') pool = enMedicalTurns;
-          else if (track === 'digestive') pool = enDigestiveTurns;
-          else pool = enWeightTurns;
-        } else if (lang === 'es') {
-          if (track === 'pediatric') pool = esPedTurns;
-          else if (track === 'medical') pool = esMedicalTurns;
-          else if (track === 'digestive') pool = esDigestiveTurns;
-          else pool = esWeightTurns;
-        } else {
-          if (track === 'pediatric') pool = frPedTurns;
-          else if (track === 'medical') pool = frMedicalTurns;
-          else if (track === 'digestive') pool = frDigestiveTurns;
-          else pool = frWeightTurns;
-        }
-
-        const idx = Math.min(turn - 2, pool.length - 1);
-        const curr = pool[Math.max(0, idx)];
-
-        return {
-          empathy_insight: curr.empathy,
-          dynamic_question: curr.q,
-          tap_options: curr.opts,
-          generated_tap_options: curr.opts,
-          biometric_updates: {
-            metabolic_score: Math.min(92, 45 + turn * 10),
-            digestive_load: Math.min(88, 40 + turn * 9),
-            endocrine_strain: Math.min(95, 50 + turn * 8)
-          },
-          current_turn: turn,
-          is_complete: false
-        };
+        this.renderTurnByNumber(nextTurn);
       },
 
+      // ================================================================
+      // MULTI-SELECT: handleConditionToggle — toggles condition chips
+      // ================================================================
+      handleConditionToggle(conditionId, chipEl) {
+        if (conditionId === 'none') {
+          // "Rien de particulier" clears all others
+          this.state.selectedConditions = ['none'];
+          // Update all chips visually
+          const allChips = chipEl.parentElement.querySelectorAll('.ai-condition-chip');
+          allChips.forEach(ch => {
+            if (ch.dataset.conditionId === 'none') {
+              ch.classList.add('chip-selected');
+            } else {
+              ch.classList.remove('chip-selected');
+            }
+          });
+        } else {
+          // Remove 'none' if present
+          this.state.selectedConditions = this.state.selectedConditions.filter(c => c !== 'none');
+          const noneChip = chipEl.parentElement.querySelector('[data-condition-id="none"]');
+          if (noneChip) noneChip.classList.remove('chip-selected');
+
+          // Toggle this condition
+          const idx = this.state.selectedConditions.indexOf(conditionId);
+          if (idx >= 0) {
+            this.state.selectedConditions.splice(idx, 1);
+            chipEl.classList.remove('chip-selected');
+          } else {
+            this.state.selectedConditions.push(conditionId);
+            chipEl.classList.add('chip-selected');
+          }
+        }
+
+        // Update counter
+        const counter = document.getElementById('aiConditionCounter');
+        const lang = this.state.lang || (typeof currentLang !== 'undefined' ? currentLang : 'fr');
+        const labels = (window.QUIZ_DATA && window.QUIZ_DATA.multiSelectLabels) ? (window.QUIZ_DATA.multiSelectLabels[lang] || window.QUIZ_DATA.multiSelectLabels.fr) : { selected: 'sélectionné(s)' };
+        if (counter) {
+          counter.textContent = this.state.selectedConditions.length > 0
+            ? `${this.state.selectedConditions.length} ${labels.selected}`
+            : '';
+        }
+
+        // Enable/disable validate button
+        const validateBtn = document.getElementById('aiValidateConditions');
+        if (validateBtn) {
+          validateBtn.disabled = this.state.selectedConditions.length === 0;
+          validateBtn.style.opacity = this.state.selectedConditions.length === 0 ? '0.5' : '1';
+        }
+      },
+
+      // ================================================================
+      // MULTI-SELECT: validateConditions — confirms multi-select
+      // ================================================================
+      async validateConditions() {
+        if (this.state.selectedConditions.length === 0 || this.state.isLoading) return;
+        this.state.isLoading = true;
+
+        const QD = window.QUIZ_DATA;
+        const lang = this.state.lang || (typeof currentLang !== 'undefined' ? currentLang : 'fr');
+
+        // Determine primary track and populate deepDiveQueue
+        const condKey = this.state.target === 'enfant' ? 'conditionsPediatric' :
+                        this.state.target === 'parent' ? 'conditionsSenior' : 'conditions';
+        const condData = QD && QD[condKey] ? (QD[condKey][lang] || QD[condKey].fr) : null;
+
+        this.state.deepDiveQueue = [];
+
+        if (condData && this.state.selectedConditions[0] !== 'none') {
+          // Set primary track from the first condition
+          const firstCondition = condData.options.find(o => o.id === this.state.selectedConditions[0]);
+          if (firstCondition && firstCondition.track) {
+            this.state.track = firstCondition.track;
+          }
+
+          // Populate deep dive queue with tracks from all selected conditions
+          this.state.selectedConditions.forEach(id => {
+            const cond = condData.options.find(o => o.id === id);
+            if (cond && cond.track && !this.state.deepDiveQueue.includes(cond.track + '_step1')) {
+              this.state.deepDiveQueue.push(cond.track + '_step1');
+              this.state.deepDiveQueue.push(cond.track + '_step2');
+              this.state.deepDiveQueue.push(cond.track + '_step3');
+            }
+          });
+        }
+        
+        this.state.originalQueueLength = this.state.deepDiveQueue.length || 0;
+
+        // Build label for history
+        let selectionLabel = '';
+        if (condData) {
+          selectionLabel = this.state.selectedConditions
+            .map(id => {
+              const opt = condData.options.find(o => o.id === id);
+              return opt ? opt.label : id;
+            })
+            .join(' + ');
+        }
+
+        this.state.previousSelection = selectionLabel;
+        this.state.history.push({
+          turn: 3,
+          selection: selectionLabel
+        });
+
+        const stage = document.getElementById('aiStage');
+        if (stage) stage.classList.add('stage-fade-out');
+        await new Promise(r => setTimeout(r, 250));
+        this.renderLoadingState();
+        await new Promise(r => setTimeout(r, 400));
+
+        this.state.turn = 4;
+        this.state.isLoading = false;
+        this.renderTurnByNumber(4);
+      },
+
+      // ================================================================
+      // TURN ROUTER: renderTurnByNumber — decides what to show per turn
+      // ================================================================
+      renderTurnByNumber(turn) {
+        const QD = window.QUIZ_DATA;
+        const lang = this.state.lang || (typeof currentLang !== 'undefined' ? currentLang : 'fr');
+
+        if (turn <= 1) {
+          this.renderInitialTurn();
+          return;
+        }
+
+        if (turn === 2) {
+          this.renderProfileTurn();
+          return;
+        }
+
+        if (turn === 3) {
+          this.renderConditionsTurn();
+          return;
+        }
+
+        if (turn === 4) {
+          this.renderWeightTurn();
+          return;
+        }
+
+        if (turn === 5) {
+          this.renderDeepDiveTurn();
+          return;
+        }
+
+        if (turn >= 6) {
+          this.renderFinalDossier();
+          return;
+        }
+      },
+
+      // ================================================================
+      // TURN 1: Target (Moi / Enfant / Parent)
+      // ================================================================
+      renderInitialTurn() {
+        const QD = window.QUIZ_DATA;
+        const lang = this.state.lang || (typeof currentLang !== 'undefined' ? currentLang : 'fr');
+        const stage = document.getElementById('aiStage');
+        if (!stage) return;
+
+        const tData = (QD && QD.targets) ? (QD.targets[lang] || QD.targets.fr) : null;
+        const insight = tData ? tData.insight : "Bienvenue au Cabinet de Nutrition Inès Ben Abdennebi.";
+        const q = tData ? tData.question : "Pour qui souhaitez-vous réaliser ce bilan ?";
+        const allOpts = tData ? tData.options : ["👤 Pour moi-même", "🧒 Pour mon enfant", "👵 Pour un parent"];
+
+        const chipsHtml = allOpts.map(opt => {
+          const escapedOpt = opt.replace(/'/g, "\\'");
+          return `<div class="ai-option-chip" role="button" tabindex="0" onclick="AIEngine.handleOptionClick('${escapedOpt}', this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();AIEngine.handleOptionClick('${escapedOpt}', this);}">
+            <span class="ai-option-text">${opt}</span>
+          </div>`;
+        }).join('');
+
+        this.updateHUD(this.state.biometrics, 1);
+        stage.className = 'ai-stage stage-slide-in';
+        stage.innerHTML = `
+          <div class="ai-empathy-box">
+            <div class="ai-empathy-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            <div class="ai-empathy-text">${insight}</div>
+          </div>
+          <h2 class="ai-question-title">${q}</h2>
+          <div class="ai-archetype-chips">${chipsHtml}</div>
+        `;
+      },
+
+      // ================================================================
+      // TURN 2: Profile (Sex + Age)
+      // ================================================================
+      renderProfileTurn() {
+        const QD = window.QUIZ_DATA;
+        const lang = this.state.lang || (typeof currentLang !== 'undefined' ? currentLang : 'fr');
+
+        let profileKey = 'adult';
+        if (this.state.target === 'enfant') profileKey = 'pediatric';
+        if (this.state.target === 'parent') profileKey = 'senior';
+
+        const data = QD && QD.profiles && QD.profiles[profileKey]
+          ? (QD.profiles[profileKey][lang] || QD.profiles[profileKey].fr)
+          : null;
+
+        if (data) {
+          this.renderStandardTurn({
+            empathy_insight: data.empathy,
+            dynamic_question: data.question,
+            tap_options: data.options,
+            current_turn: 2,
+            is_complete: false
+          });
+        }
+      },
+
+      // ================================================================
+      // TURN 3: Conditions (Multi-Select Chips)
+      // ================================================================
+      renderConditionsTurn() {
+        const QD = window.QUIZ_DATA;
+        const lang = this.state.lang || (typeof currentLang !== 'undefined' ? currentLang : 'fr');
+        const stage = document.getElementById('aiStage');
+        if (!stage) return;
+
+        // Choose the right condition set
+        let condKey = 'conditions';
+        if (this.state.target === 'enfant') condKey = 'conditionsPediatric';
+        if (this.state.target === 'parent') condKey = 'conditionsSenior';
+
+        const condData = QD && QD[condKey] ? (QD[condKey][lang] || QD[condKey].fr) : null;
+        if (!condData) return;
+
+        const labels = (QD && QD.multiSelectLabels) ? (QD.multiSelectLabels[lang] || QD.multiSelectLabels.fr) : { validate: 'Valider', hint: 'Sélectionnez tout ce qui s\'applique', selected: 'sélectionné(s)' };
+        const isRtl = lang === 'ar';
+        const backIcon = isRtl ? 'fa-arrow-right' : 'fa-arrow-left';
+        let backText = lang === 'ar' ? 'السؤال السابق' : lang === 'en' ? 'Previous question' : lang === 'es' ? 'Pregunta anterior' : 'Question précédente';
+
+        // Reset selected conditions when rendering fresh
+        this.state.selectedConditions = [];
+
+        const chipsHtml = condData.options.map(opt => {
+          return `<div class="ai-condition-chip" data-condition-id="${opt.id}" role="button" tabindex="0"
+            onclick="AIEngine.handleConditionToggle('${opt.id}', this)"
+            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();AIEngine.handleConditionToggle('${opt.id}', this);}">
+            <span class="ai-option-text">${opt.label}</span>
+            <div class="ai-chip-check"><i class="fa-solid fa-check"></i></div>
+          </div>`;
+        }).join('');
+
+        this.updateHUD(this.state.biometrics, 3);
+        stage.className = 'ai-stage stage-slide-in';
+        stage.innerHTML = `
+          <div style="display: flex; justify-content: flex-start; margin-bottom: 1.25rem;">
+            <button class="ai-back-btn" onclick="AIEngine.goBack()" style="background: rgba(244, 227, 229, 0.6); border: 1.5px solid var(--accent-mauve); border-radius: var(--radius-pill); padding: 0.45rem 1.1rem; font-size: 0.84rem; font-weight: 600; color: var(--text-dark-rose); cursor: pointer; display: inline-flex; align-items: center; gap: 0.45rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(92, 60, 67, 0.05);">
+              <i class="fa-solid ${backIcon}"></i> ${backText}
+            </button>
+          </div>
+          <div class="ai-empathy-box">
+            <div class="ai-empathy-icon"><i class="fa-solid fa-stethoscope"></i></div>
+            <div class="ai-empathy-text">${condData.empathy}</div>
+          </div>
+          <h2 class="ai-question-title">${condData.question}</h2>
+          <p style="text-align: center; color: var(--text-dark-rose); font-size: 0.88rem; font-weight: 600; margin-bottom: 1rem; opacity: 0.8;">
+            <i class="fa-solid fa-hand-pointer" style="margin-right: 0.3rem;"></i> ${labels.hint}
+          </p>
+          <div class="ai-conditions-grid">${chipsHtml}</div>
+          <div style="text-align: center; margin-top: 1rem;">
+            <span id="aiConditionCounter" style="font-size: 0.85rem; font-weight: 600; color: var(--text-dark-rose);"></span>
+          </div>
+          <div style="text-align: center; margin-top: 1.25rem;">
+            <button id="aiValidateConditions" onclick="AIEngine.validateConditions()" disabled style="opacity: 0.5; background: linear-gradient(135deg, var(--text-dark-rose) 0%, var(--accent-mauve) 100%); color: white; border: none; border-radius: var(--radius-pill); padding: 0.85rem 2.5rem; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 6px 20px rgba(92, 60, 67, 0.2);">
+              <i class="fa-solid fa-check-double" style="margin-right: 0.5rem;"></i> ${labels.validate}
+            </button>
+          </div>
+          <div style="text-align: center; margin-top: 1rem;">
+            <button class="ai-restart-btn" onclick="AIEngine.reset()">
+              <i class="fa-solid fa-rotate-left"></i> ${lang === 'ar' ? 'إعادة التقييم' : lang === 'en' ? 'Restart' : lang === 'es' ? 'Reiniciar' : 'Recommencer'}
+            </button>
+          </div>
+        `;
+
+        if (window.innerWidth < 768) {
+          setTimeout(() => {
+            const stageEl = document.getElementById('aiStage');
+            if (stageEl) stageEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 100);
+        }
+      },
+
+      // ================================================================
+      // TURN 4: Weight Goal
+      // ================================================================
+      renderWeightTurn() {
+        const QD = window.QUIZ_DATA;
+        const lang = this.state.lang || (typeof currentLang !== 'undefined' ? currentLang : 'fr');
+
+        let dataKey = 'weightGoal';
+        if (this.state.target === 'enfant') dataKey = 'weightGoalPediatric';
+        if (this.state.target === 'parent') dataKey = 'weightGoalSenior';
+
+        const data = QD && QD[dataKey] ? (QD[dataKey][lang] || QD[dataKey].fr) : null;
+
+        if (data) {
+          this.renderStandardTurn({
+            empathy_insight: data.empathy,
+            dynamic_question: data.question,
+            tap_options: data.options,
+            current_turn: 4,
+            is_complete: false
+          });
+        }
+      },
+
+      // ================================================================
+      // TURN 5: Deep Dive (based on conditions + weight)
+      // ================================================================
+      renderDeepDiveTurn() {
+        const QD = window.QUIZ_DATA;
+        const lang = this.state.lang || (typeof currentLang !== 'undefined' ? currentLang : 'fr');
+
+        let deepDiveKey = null;
+
+        // Get the current condition to deep dive into from the queue
+        if (this.state.deepDiveQueue.length > 0) {
+          deepDiveKey = this.state.deepDiveQueue[0];
+        } else if (this.state.weightGoal === 'lose') {
+          // Initialize weight loss deep dive if queue is empty but user chose to lose weight
+          if (!this.state.deepDiveQueue.includes('weightLoss_step1')) {
+            this.state.deepDiveQueue.push('weightLoss_step1');
+            this.state.deepDiveQueue.push('weightLoss_step2');
+            this.state.deepDiveQueue.push('weightLoss_step3');
+          }
+          deepDiveKey = this.state.deepDiveQueue[0];
+          this.state.track = this.state.track || 'weight';
+        } else {
+          deepDiveKey = 'general';
+        }
+
+        // Set main track to the current deep dive key to contextualize the answer
+        if (this.state.deepDiveQueue.length > 0) {
+           // extract track prefix from step identifier (e.g. 'diabetes_step1' -> 'diabetes', 'weight_child_step1' -> 'weight_child')
+           this.state.track = this.state.deepDiveQueue[0].replace(/_step[123]$/, '');
+           if (this.state.track === 'weightLoss') this.state.track = 'weight';
+        } else if (!this.state.track) {
+          if (this.state.target === 'enfant') this.state.track = 'pediatric';
+          else if (this.state.target === 'parent') this.state.track = 'senior';
+          else if (this.state.weightGoal === 'lose') this.state.track = 'weight';
+          else this.state.track = 'general';
+        }
+
+        const deepDiveData = QD && QD.deepDive && QD.deepDive[deepDiveKey]
+          ? (QD.deepDive[deepDiveKey][lang] || QD.deepDive[deepDiveKey].fr)
+          : null;
+
+        if (deepDiveData) {
+          this.renderStandardTurn({
+            empathy_insight: deepDiveData.empathy,
+            dynamic_question: deepDiveData.question,
+            tap_options: deepDiveData.options,
+            current_turn: 5,
+            is_complete: false
+          });
+        } else {
+          // Fallback if no deep dive data found
+          const fallback = QD && QD.deepDive && QD.deepDive.general
+            ? (QD.deepDive.general[lang] || QD.deepDive.general.fr) : null;
+          if (fallback) {
+            this.renderStandardTurn({
+              empathy_insight: fallback.empathy,
+              dynamic_question: fallback.question,
+              tap_options: fallback.options,
+              current_turn: 5,
+              is_complete: false
+            });
+          }
+        }
+      },
+
+      // ================================================================
+      // TURN 6: Final Dossier
+      // ================================================================
+      renderFinalDossier() {
+        const QD = window.QUIZ_DATA;
+        const lang = this.state.lang || (typeof currentLang !== 'undefined' ? currentLang : 'fr');
+        const track = this.state.track || 'general';
+
+        // Adapt discourse based on the selected target only if a specific track isn't selected
+        let dossierTrack = track;
+        if (track === 'general') {
+          if (this.state.target === 'enfant') dossierTrack = 'pediatric';
+          else if (this.state.target === 'parent') dossierTrack = 'senior';
+        }
+
+        const dossierData = QD && QD.dossier && QD.dossier[dossierTrack]
+          ? (QD.dossier[dossierTrack][lang] || QD.dossier[dossierTrack].fr)
+          : null;
+
+        let headline, realities, timeline;
+        if (dossierData) {
+          headline = dossierData.headline;
+          realities = dossierData.realities;
+          timeline = { days_14: dossierData.timeline.j14, day_30: dossierData.timeline.j30, day_90: dossierData.timeline.j90 };
+        } else {
+          headline = "Votre bilan clinique personnalisé est prêt";
+          realities = [
+            "Votre métabolisme s'est adapté aux restrictions passées — il est temps de le relancer.",
+            "Vos symptômes reflètent des déséquilibres précis identifiables et corrigibles.",
+            "La nutrition clinique ciblée est votre levier le plus puissant."
+          ];
+          timeline = { days_14: "Premiers signes d'amélioration.", day_30: "Stabilisation biologique.", day_90: "Transformation durable." };
+        }
+
+        // Build WhatsApp message with FULL patient dossier
+        const trackLabels = {
+          weight: 'Perte de Poids', tca: 'TCA & Compulsions', digestive: 'Confort Digestif',
+          hormonal: 'Équilibre Hormonal', diabetes: 'Diabète & Insuline', fatigue: 'Fatigue & Stress',
+          pregnancy: 'Grossesse', pediatric: 'Nutrition Pédiatrique', senior: 'Senior & Longévité',
+          metabolic: 'Maladies Métaboliques', general: 'Bilan Nutritionnel'
+        };
+        const trackLabel = trackLabels[track] || track;
+
+        let waHeader = lang === 'ar' ? 'مرحباً أستاذة إيناس' : lang === 'en' ? 'Hello Inès' : lang === 'es' ? 'Hola Inès' : 'Bonjour Inès';
+        let waIntro = lang === 'ar' ? `أتممت التقييم السريري (${trackLabel}) على موقعك.` : lang === 'en' ? `I completed the clinical assessment (${trackLabel}) on your website.` : lang === 'es' ? `He completado la evaluación (${trackLabel}) en su sitio web.` : `J'ai complété le bilan clinique (${trackLabel}) sur votre site.`;
+
+        let waResponses = '';
+        this.state.history.forEach((item) => {
+          waResponses += `\n• Étape ${item.turn}: ${item.selection}`;
+        });
+
+        let waFooter = lang === 'ar' ? 'أود حجز استشارة في عيادة رادس.' : lang === 'en' ? 'I would like to book a consultation at the Radès clinic.' : lang === 'es' ? 'Deseo reservar una consulta en la clínica de Radès.' : 'Je souhaite prendre rendez-vous au cabinet de Radès.';
+
+        const waMsg = `${waHeader},\n\n${waIntro}\n\n📋 DOSSIER PATIENT:${waResponses}\n\n🏥 ${waFooter}`;
+
+        this.state.isComplete = true;
+        this.state.turn = 6;
+        this.state.finalDossier = {
+          headline,
+          the_3_realities: realities,
+          transformation_timeline: timeline,
+          whatsapp_message: waMsg,
+          whatsapp_message_encoded: waMsg,
+          track: dossierTrack
+        };
+
+        this.updateHUD(this.state.biometrics, 6);
+        this.renderDossier(this.state.finalDossier);
+      },
+
+      // ================================================================
+      // Standard Turn Renderer (single-select options)
+      // ================================================================
+      renderStandardTurn(data) {
+        this.updateHUD(data.biometric_updates || this.state.biometrics, data.current_turn);
+
+        const stage = document.getElementById('aiStage');
+        if (!stage) return;
+        const lang = this.state.lang || (typeof currentLang !== 'undefined' ? currentLang : 'fr');
+
+        let backText = "Question précédente";
+        if (lang === 'ar') backText = "السؤال السابق";
+        else if (lang === 'en') backText = "Previous question";
+        else if (lang === 'es') backText = "Pregunta anterior";
+
+        const isRtl = lang === 'ar';
+        const backIcon = isRtl ? 'fa-arrow-right' : 'fa-arrow-left';
+
+        let backButtonHtml = '';
+        if (data.current_turn > 1) {
+          backButtonHtml = `
+            <div style="display: flex; justify-content: flex-start; margin-bottom: 1.25rem;">
+              <button class="ai-back-btn" onclick="AIEngine.goBack()" style="background: rgba(244, 227, 229, 0.6); border: 1.5px solid var(--accent-mauve); border-radius: var(--radius-pill); padding: 0.45rem 1.1rem; font-size: 0.84rem; font-weight: 600; color: var(--text-dark-rose); cursor: pointer; display: inline-flex; align-items: center; gap: 0.45rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(92, 60, 67, 0.05);">
+                <i class="fa-solid ${backIcon}"></i> ${backText}
+              </button>
+            </div>
+          `;
+        }
+
+        const options = data.tap_options || [];
+        let optionsHtml = '';
+        options.forEach(opt => {
+          const escapedOpt = opt.replace(/'/g, "\\'");
+          optionsHtml += `
+            <div class="ai-option-card" role="button" tabindex="0" onclick="AIEngine.handleOptionClick('${escapedOpt}', this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();AIEngine.handleOptionClick('${escapedOpt}', this);}">
+              <span class="ai-option-text">${opt}</span>
+              <div class="ai-option-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+          `;
+        });
+
+        let restartText = lang === 'ar' ? "إعادة التقييم" : lang === 'en' ? "Restart" : lang === 'es' ? "Reiniciar" : "Recommencer";
+
+        stage.className = 'ai-stage stage-slide-in';
+        stage.innerHTML = `
+          ${backButtonHtml}
+          <div class="ai-empathy-box">
+            <div class="ai-empathy-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            <div class="ai-empathy-text">${data.empathy_insight || ""}</div>
+          </div>
+
+          <h2 class="ai-question-title">${data.dynamic_question}</h2>
+
+          <div class="ai-options-grid">
+            ${optionsHtml}
+          </div>
+
+          <div style="text-align: center;">
+            <button class="ai-restart-btn" onclick="AIEngine.reset()">
+              <i class="fa-solid fa-rotate-left"></i> ${restartText}
+            </button>
+          </div>
+        `;
+
+        if (window.innerWidth < 768) {
+          setTimeout(() => {
+            const stageEl = document.getElementById('aiStage');
+            if (stageEl) stageEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 100);
+        }
+      },
+
+      // ================================================================
+      // HUD Update
+      // ================================================================
       updateHUD(biometrics, turn) {
         const turnText = document.getElementById('aiTurnText') || document.getElementById('aiTurnBadge');
         const progressFill = document.getElementById('aiProgressFill');
         const lang = this.state.lang || (typeof currentLang !== 'undefined' ? currentLang : 'fr');
+        let totalSteps = 6;
+        let currentTurn = turn || 1;
+        let displayTurn = currentTurn;
 
-        const currentTurn = turn || 1;
-        const percent = Math.min(100, Math.round((currentTurn / 5) * 100));
+        if (this.state.originalQueueLength && this.state.originalQueueLength > 0) {
+            totalSteps = 5 + this.state.originalQueueLength;
+            if (currentTurn === 5) {
+                // If queue length is 3, original is 3. We are on step 1 of 3 (displayTurn = 5).
+                displayTurn = 4 + (this.state.originalQueueLength - this.state.deepDiveQueue.length) + 1;
+            } else if (currentTurn >= 6) {
+                displayTurn = totalSteps;
+            }
+        }
+
+        const percent = Math.min(100, Math.round((displayTurn / totalSteps) * 100));
 
         if (turnText) {
           if (lang === 'ar') {
-            turnText.textContent = currentTurn >= 5 
-              ? 'المرحلة 5 من 5 • تقييمك المخصص جاهز!' 
-              : `المرحلة ${currentTurn} من 5 • يتم إعداد تقييمك المخصص`;
+            turnText.textContent = displayTurn >= totalSteps
+              ? `المرحلة ${totalSteps} من ${totalSteps} • تقييمك المخصص جاهز!`
+              : `المرحلة ${displayTurn} من ${totalSteps} • يتم إعداد تقييمك المخصص`;
           } else if (lang === 'en') {
-            turnText.textContent = currentTurn >= 5 
-              ? 'Step 5 of 5 • Your personalized assessment is ready!' 
-              : `Step ${currentTurn} of 5 • Preparing your personalized assessment`;
+            turnText.textContent = displayTurn >= totalSteps
+              ? `Step ${totalSteps} of ${totalSteps} • Your personalized assessment is ready!`
+              : `Step ${displayTurn} of ${totalSteps} • Preparing your personalized assessment`;
           } else if (lang === 'es') {
-            turnText.textContent = currentTurn >= 5 
-              ? 'Paso 5 de 5 • ¡Su evaluación personalizada está lista!' 
-              : `Paso ${currentTurn} de 5 • Preparando su evaluación personalizada`;
+            turnText.textContent = displayTurn >= totalSteps
+              ? `Paso ${totalSteps} de ${totalSteps} • ¡Su evaluación personalizada está lista!`
+              : `Paso ${displayTurn} de ${totalSteps} • Preparando su evaluación personalizada`;
           } else {
-            turnText.textContent = currentTurn >= 5 
-              ? 'Étape 5 sur 5 • Votre bilan personnalisé est prêt !' 
-              : `Étape ${currentTurn} sur 5 • Votre bilan personnalisé se prépare`;
+            turnText.textContent = displayTurn >= totalSteps
+              ? `Étape ${totalSteps} sur ${totalSteps} • Votre bilan personnalisé est prêt !`
+              : `Étape ${displayTurn} sur ${totalSteps} • Votre bilan personnalisé se prépare`;
           }
         }
         if (progressFill) {
@@ -3817,70 +4157,23 @@
         }
       },
 
+      // ================================================================
+      // setLanguage
+      // ================================================================
       setLanguage(lang) {
         this.state.lang = lang || 'fr';
         if (this.state.turn <= 1 && this.state.history.length === 0) {
           this.renderInitialTurn();
         } else if (!this.state.isComplete) {
-          // Recharge la question actuelle dans la nouvelle langue sans perdre le fil du quiz
-          const data = this.getFallbackTurnData(this.state.previousSelection, this.state.turn, this.state.track);
-          this.renderTurnData(data);
-        } else if (this.state.isComplete) {
-          const data = this.getFallbackTurnData(this.state.previousSelection, 5, this.state.track);
-          this.renderDossier(data.final_results || this.state.finalDossier || this.state.finalResults);
+          this.renderTurnByNumber(this.state.turn);
+        } else {
+          this.renderDossier(this.state.finalDossier);
         }
       },
 
-      renderInitialTurn() {
-        const lang = this.state.lang || (typeof currentLang !== 'undefined' ? currentLang : 'fr');
-        let insight = "Bienvenue au Cabinet de Nutrition Inès Ben Abdennebi. Établissons ensemble votre bilan personnalisé.";
-        let q = "Pour qui souhaitez-vous établir ce diagnostic nutritionnel ?";
-        let opts = [
-          "⚖️ Perte de Poids (Homme, Femme, Âge...)",
-          "🩺 Suivi Médical (Diabète, SOPK, Maladies, ou pour un parent...)",
-          "🌿 Confort Digestif (Ballonnements, Côlon Irritable)",
-          "🧒 Mon Enfant (Nutrition Pédiatrique & Adolescent)"
-        ];
-
-        if (lang === 'ar') {
-          insight = "مرحباً بكم في عيادة التغذية إيناس بن عبد النبي. دعنا نحدد تقييمك الغذائي بدقة.";
-          q = "لمن تريد إجراء هذا التقييم الغذائي المخصص؟";
-          opts = [
-            "⚖️ خسارة الوزن (رجل، امرأة، سن...)",
-            "🩺 متابعة طبية (سكري، تكيس مبايض، أمراض، أو لأحد الوالدين...)",
-            "🌿 راحة الجهاز الهضمي (انتفاخ، قولون عصبي)",
-            "🧒 طفلي (تغذية الأطفال والمراهقين)"
-          ];
-        } else if (lang === 'en') {
-          insight = "Welcome to Cabinet de Nutrition Inès Ben Abdennebi. Let's establish your personalized diagnostic.";
-          q = "Who is this nutritional diagnostic for?";
-          opts = [
-            "⚖️ Weight Loss (Man, Woman, Age...)",
-            "🩺 Medical Follow-up (Diabetes, PCOS, Illness, or for a parent...)",
-            "🌿 Digestive Comfort (Bloating, IBS)",
-            "🧒 My Child (Pediatric Nutrition & Teens)"
-          ];
-        } else if (lang === 'es') {
-          insight = "Bienvenido al Gabinete de Nutrición Inès Ben Abdennebi. Establezcamos su evaluación personalizada.";
-          q = "¿Para quién desea establecer este diagnóstico nutricional?";
-          opts = [
-            "⚖️ Pérdida de Peso (Hombre, Mujer, Edad...)",
-            "🩺 Seguimiento Médico (Diabetes, SOP, Enfermedad, o para un padre...)",
-            "🌿 Confort Digestivo (Hinchazón, Colon Irritable)",
-            "🧒 Mi Hijo/a (Nutrición Pediátrica y Adolescentes)"
-          ];
-        }
-
-        const initialData = {
-          empathy_insight: insight,
-          dynamic_question: q,
-          generated_tap_options: opts,
-          current_turn: 1,
-          is_complete: false
-        };
-        this.renderTurnData(initialData);
-      },
-
+      // ================================================================
+      // Loading State
+      // ================================================================
       renderLoadingState() {
         const stage = document.getElementById('aiStage');
         if (!stage) return;
@@ -3901,111 +4194,62 @@
         `;
       },
 
+      // ================================================================
+      // GO BACK — Fixed navigation
+      // ================================================================
       goBack() {
-        if (this.state.history.length > 0) {
-          this.state.history.pop();
-          this.state.turn = Math.max(1, this.state.turn - 1);
-          this.state.isComplete = false;
-          this.state.finalDossier = null;
-          
-          if (this.state.turn === 1 || this.state.history.length === 0) {
-            this.state.history = [];
-            this.state.turn = 1;
-            this.state.previousSelection = '';
-            this.renderInitialTurn();
-          } else {
-            const lastEntry = this.state.history[this.state.history.length - 1];
-            this.state.previousSelection = lastEntry ? lastEntry.selection : '';
-            const data = this.getFallbackTurnData(this.state.previousSelection, this.state.turn, this.state.track);
-            this.renderTurnData(data);
-          }
-        }
-      },
+        if (this.state.history.length === 0) return;
 
-      renderTurnData(data) {
-        this.updateHUD(data.biometric_updates || this.state.biometrics, data.current_turn);
+        // Pop last history entry (the step we are going back TO)
+        const lastEntry = this.state.history.pop();
+        this.state.isComplete = false;
+        this.state.finalDossier = null;
 
-        const finalDossier = data.final_results || data.final_dossier;
-        if (data.is_complete && finalDossier) {
-          this.renderDossier(finalDossier);
+        // Determine which turn to go back to based on the popped history
+        const prevTurn = lastEntry.turn;
+        this.state.turn = prevTurn;
+
+        // Restore state based on the turn we are going back to
+        if (prevTurn === 1) {
+          // Reset everything to start
+          this.state.history = [];
+          this.state.turn = 1;
+          this.state.target = null;
+          this.state.previousSelection = '';
+          this.state.selectedConditions = [];
+          this.state.weightGoal = null;
+          this.state.track = null;
+          this.state.deepDiveQueue = [];
+          this.renderInitialTurn();
           return;
         }
 
-        const stage = document.getElementById('aiStage');
-        if (!stage) return;
-        const lang = this.state.lang || (typeof currentLang !== 'undefined' ? currentLang : 'fr');
-
-        let restartText = "Recommencer le diagnostic";
-        let backText = "Question précédente";
-        if (lang === 'ar') {
-          restartText = "إعادة التقييم من البداية";
-          backText = "السؤال السابق";
-        } else if (lang === 'en') {
-          restartText = "Restart assessment";
-          backText = "Previous question";
-        } else if (lang === 'es') {
-          restartText = "Reiniciar diagnóstico";
-          backText = "Pregunta anterior";
+        if (prevTurn === 2) {
+          this.state.sex = null;
+          this.state.profileAnswer = null;
+        } else if (prevTurn === 3) {
+          this.state.selectedConditions = [];
+          this.state.track = null;
+        } else if (prevTurn === 4) {
+          this.state.weightGoal = null;
+        } else if (prevTurn === 5) {
+          // If we are going back to a deep dive turn, restore the key to the front of the queue
+          if (lastEntry.deepDiveKey) {
+            this.state.deepDiveQueue.unshift(lastEntry.deepDiveKey);
+          }
         }
 
-        const isRtl = lang === 'ar';
-        const backIcon = isRtl ? 'fa-arrow-right' : 'fa-arrow-left';
+        // Update previousSelection from the NEW last item in history (the one before the turn we are now on)
+        const previousHistoryEntry = this.state.history[this.state.history.length - 1];
+        this.state.previousSelection = previousHistoryEntry ? previousHistoryEntry.selection : '';
 
-        let backButtonHtml = '';
-        if (data.current_turn > 1) {
-          backButtonHtml = `
-            <div style="display: flex; justify-content: flex-start; margin-bottom: 1.25rem;">
-              <button class="ai-back-btn" onclick="AIEngine.goBack()" style="background: rgba(244, 227, 229, 0.6); border: 1.5px solid var(--accent-mauve); border-radius: var(--radius-pill); padding: 0.45rem 1.1rem; font-size: 0.84rem; font-weight: 600; color: var(--text-dark-rose); cursor: pointer; display: inline-flex; align-items: center; gap: 0.45rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(92, 60, 67, 0.05);">
-                <i class="fa-solid ${backIcon}"></i> ${backText}
-              </button>
-            </div>
-          `;
-        }
-
-        const options = data.tap_options || data.generated_tap_options || [];
-        let optionsHtml = '';
-        options.forEach(opt => {
-          const escapedOpt = opt.replace(/'/g, "\\'");
-          optionsHtml += `
-            <div class="ai-option-card" role="button" tabindex="0" onclick="AIEngine.handleOptionClick('${escapedOpt}', this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();AIEngine.handleOptionClick('${escapedOpt}', this);}">
-              <span class="ai-option-text">${opt}</span>
-              <div class="ai-option-arrow"><i class="fa-solid fa-chevron-right"></i></div>
-            </div>
-          `;
-        });
-
-        stage.className = 'ai-stage stage-slide-in';
-        stage.innerHTML = `
-          ${backButtonHtml}
-          <div class="ai-empathy-box">
-            <div class="ai-empathy-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-            <div class="ai-empathy-text">${data.empathy_insight || "Votre biologie métabolique réagit précisément."}</div>
-          </div>
-
-          <h2 class="ai-question-title">${data.dynamic_question}</h2>
-
-          <div class="ai-options-grid">
-            ${optionsHtml}
-          </div>
-
-          <div style="text-align: center;">
-            <button class="ai-restart-btn" onclick="AIEngine.reset()">
-              <i class="fa-solid fa-rotate-left"></i> ${restartText}
-            </button>
-          </div>
-        `;
-
-        // Smooth mobile auto-centering on active question
-        if (window.innerWidth < 768) {
-          setTimeout(() => {
-            const stageEl = document.getElementById('aiStage');
-            if (stageEl) {
-              stageEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-          }, 100);
-        }
+        // Re-render the correct turn
+        this.renderTurnByNumber(prevTurn);
       },
 
+      // ================================================================
+      // Render Dossier (Final Results Page)
+      // ================================================================
       renderDossier(dossier) {
         const stage = document.getElementById('aiStage');
         if (!stage) return;
@@ -4044,6 +4288,7 @@
         let bookingSub = "Votre bilan personnalisé est prêt. Transmettez-le au cabinet pour finaliser votre rendez-vous.";
         let bookingBtn = "ENVOYER MON BILAN & PRENDRE RENDEZ-VOUS";
         let restartBtn = "Recommencer le test";
+        let noteTitle = "Note du Cabinet";
 
         if (lang === 'ar') {
           badgeLabel = "تقرير التقييم الغذائي والخطة السريرية";
@@ -4057,6 +4302,7 @@
           bookingSub = "تم إعداد تقييمك المخصص. أرسله إلى العيادة لتأكيد موعد استشارتك.";
           bookingBtn = "إرسال التقرير وتأكيد الموعد بالعيادة";
           restartBtn = "إعادة التقييم";
+          noteTitle = "ملاحظة العيادة";
         } else if (lang === 'en') {
           badgeLabel = "YOUR CLINICAL NUTRITION ASSESSMENT";
           realitiesTitle = "The 3 Key Insights Identified for Your Body";
@@ -4069,6 +4315,7 @@
           bookingSub = "Your personalized assessment is ready. Submit it to the clinic to finalize your consultation.";
           bookingBtn = "SUBMIT MY ASSESSMENT & BOOK CONSULTATION";
           restartBtn = "Restart assessment";
+          noteTitle = "Clinic Note";
         } else if (lang === 'es') {
           badgeLabel = "SU EVALUACIÓN NUTRICIONAL Y SÍNTESIS";
           realitiesTitle = "Las 3 Claves Identificadas para su Cuerpo";
@@ -4081,17 +4328,24 @@
           bookingSub = "Su evaluación personalizada está lista. Envíela a la clínica para finalizar su cita.";
           bookingBtn = "ENVIAR MI EVALUACIÓN Y RESERVAR CITA";
           restartBtn = "Reiniciar evaluación";
+          noteTitle = "Nota de la Clínica";
+        }
+
+        // Build conditions summary for the note
+        let conditionsSummary = '';
+        if (this.state.selectedConditions.length > 0 && this.state.selectedConditions[0] !== 'none') {
+          conditionsSummary = this.state.selectedConditions.join(', ');
         }
 
         let realitiesHtml = '';
         realities.forEach((real, idx) => {
           realitiesHtml += `
-            <div style="background: #ffffff; border: 1.5px solid rgba(232, 198, 200, 0.85); border-radius: 1.25rem; padding: 1.5rem; box-shadow: 0 8px 25px rgba(92, 60, 67, 0.05); display: flex; flex-direction: column; justify-content: space-between;">
+            <div style="background: #ffffff; border: 1.5px solid rgba(232, 198, 200, 0.85); border-radius: 0.8rem; padding: 0.6rem; box-shadow: 0 2px 10px rgba(92, 60, 67, 0.05); display: flex; flex-direction: column; justify-content: space-between;">
               <div>
-                <div style="font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 700; color: var(--text-dark-rose); text-transform: uppercase; margin-bottom: 0.6rem;">
+                <div style="font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 700; color: var(--text-dark-rose); text-transform: uppercase; margin-bottom: 0.3rem;">
                   <i class="fa-solid fa-circle-dot" style="color: var(--accent-mauve); margin-right: 0.4rem;"></i> ${realityPrefix}${idx + 1}
                 </div>
-                <p style="font-size: 0.95rem; color: var(--text-main); line-height: 1.55; font-weight: 500;">
+                <p style="font-size: 0.8rem; color: var(--text-main); line-height: 1.3; font-weight: 500; margin: 0;">
                   "${real}"
                 </p>
               </div>
@@ -4101,74 +4355,86 @@
 
         stage.className = 'ai-stage stage-slide-in';
         stage.innerHTML = `
-          <div class="ai-dossier-card">
-            <div class="ai-dossier-header" style="background: linear-gradient(135deg, #fbf5f6 0%, #f4e3e5 100%); border: 1.5px solid #c49da5; border-radius: 1.5rem; padding: 2.25rem 1.75rem; text-align: center; margin-bottom: 2rem;">
-              <span class="ai-dossier-badge" style="background: rgba(196, 157, 165, 0.25); border: 1px solid #c49da5; color: var(--text-dark-rose);"><i class="fa-solid fa-clipboard-check"></i> ${badgeLabel}</span>
-              <h2 class="ai-dossier-archetype" style="font-family: 'Playfair Display', serif; font-size: 1.9rem; color: var(--text-dark-rose); font-weight: 600; margin-top: 0.75rem; line-height: 1.3;">${headline}</h2>
+          <div class="ai-dossier-card" style="padding-bottom: 0;">
+            <div class="ai-dossier-header" style="background: linear-gradient(135deg, #fbf5f6 0%, #f4e3e5 100%); border: 1.5px solid #c49da5; border-radius: 1rem; padding: 1rem 0.5rem; text-align: center; margin-bottom: 1rem;">
+              <span class="ai-dossier-badge" style="background: rgba(196, 157, 165, 0.25); border: 1px solid #c49da5; color: var(--text-dark-rose); font-size: 0.7rem; padding: 0.2rem 0.6rem;"><i class="fa-solid fa-clipboard-check"></i> ${badgeLabel}</span>
+              <h2 class="ai-dossier-archetype" style="font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--text-dark-rose); font-weight: 600; margin-top: 0.5rem; line-height: 1.2;">${headline}</h2>
             </div>
 
             <!-- Les 3 Réalités Biologiques -->
-            <div style="margin-bottom: 2.5rem;">
-              <h3 style="font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--text-dark-rose); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.6rem;">
+            <div style="margin-bottom: 1rem;">
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--text-dark-rose); margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.5rem;">
                 <i class="fa-solid fa-dna" style="color: var(--accent-mauve);"></i>
                 ${realitiesTitle}
               </h3>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem;">
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.4rem;">
                 ${realitiesHtml}
               </div>
             </div>
 
             <!-- Chronologie de Transformation -->
-            <div style="background: #ffffff; border: 1.5px solid rgba(232, 198, 200, 0.85); border-radius: 1.5rem; padding: 2rem; margin-bottom: 2.5rem; box-shadow: 0 10px 30px rgba(92, 60, 67, 0.05);">
-              <h3 style="font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--text-dark-rose); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.6rem;">
+            <div style="background: #ffffff; border: 1.5px solid rgba(232, 198, 200, 0.85); border-radius: 1rem; padding: 0.8rem; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(92, 60, 67, 0.05);">
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--text-dark-rose); margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.5rem;">
                 <i class="fa-solid fa-arrow-trend-up" style="color: var(--accent-mauve);"></i>
                 ${timelineTitle}
               </h3>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
-                <div style="background: #fbf5f6; border-inline-start: 4px solid #c49da5; border-radius: 1rem; padding: 1.25rem;">
-                  <div style="font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--text-dark-rose); text-transform: uppercase;">${day14Label}</div>
-                  <p style="font-size: 0.93rem; color: var(--text-main); margin-top: 0.5rem; line-height: 1.5;">${timeline.days_14}</p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.4rem;">
+                <div style="background: #fbf5f6; border-inline-start: 3px solid #c49da5; border-radius: 0.6rem; padding: 0.5rem;">
+                  <div style="font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 700; color: var(--text-dark-rose); text-transform: uppercase;">${day14Label}</div>
+                  <p style="font-size: 0.8rem; color: var(--text-main); margin-top: 0.3rem; margin-bottom: 0; line-height: 1.3;">${timeline.days_14 || timeline.j14 || ""}</p>
                 </div>
-                <div style="background: #fbf5f6; border-inline-start: 4px solid #e8c6c8; border-radius: 1rem; padding: 1.25rem;">
-                  <div style="font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--text-dark-rose); text-transform: uppercase;">${day30Label}</div>
-                  <p style="font-size: 0.93rem; color: var(--text-main); margin-top: 0.5rem; line-height: 1.5;">${timeline.day_30}</p>
+                <div style="background: #fbf5f6; border-inline-start: 3px solid #e8c6c8; border-radius: 0.6rem; padding: 0.5rem;">
+                  <div style="font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 700; color: var(--text-dark-rose); text-transform: uppercase;">${day30Label}</div>
+                  <p style="font-size: 0.8rem; color: var(--text-main); margin-top: 0.3rem; margin-bottom: 0; line-height: 1.3;">${timeline.day_30 || timeline.j30 || ""}</p>
                 </div>
-                <div style="background: #fbf5f6; border-inline-start: 4px solid #5c3c43; border-radius: 1rem; padding: 1.25rem;">
-                  <div style="font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--text-dark-rose); text-transform: uppercase;">${day90Label}</div>
-                  <p style="font-size: 0.93rem; color: var(--text-main); margin-top: 0.5rem; line-height: 1.5;">${timeline.day_90}</p>
+                <div style="background: #fbf5f6; border-inline-start: 3px solid #5c3c43; border-radius: 0.6rem; padding: 0.5rem;">
+                  <div style="font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 700; color: var(--text-dark-rose); text-transform: uppercase;">${day90Label}</div>
+                  <p style="font-size: 0.8rem; color: var(--text-main); margin-top: 0.3rem; margin-bottom: 0; line-height: 1.3;">${timeline.day_90 || timeline.j90 || ""}</p>
                 </div>
               </div>
             </div>
 
+            <!-- Note du Cabinet -->
+            <div style="background: #ffffff; border-radius: 1rem; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid rgba(196, 157, 165, 0.4); box-shadow: 0 2px 10px rgba(92, 60, 67, 0.05);">
+              <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.6rem;">
+                <div style="width: 35px; height: 35px; border-radius: 50%; background: linear-gradient(135deg, var(--text-dark-rose) 0%, var(--accent-mauve) 100%); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-family: 'Playfair Display', serif; font-size: 1.1rem;">
+                  I
+                </div>
+                <div>
+                  <h4 style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--text-dark-rose); margin: 0; font-weight: 700;">${noteTitle}</h4>
+                  <span style="font-size: 0.7rem; color: #7f8c8d;">Inès Ben Abdennebi - Diététicienne</span>
+                </div>
+              </div>
+              <p style="font-size: 0.8rem; color: var(--text-main); line-height: 1.3; font-style: italic; margin-bottom: 0;">
+                « Votre profil indique une réelle détresse métabolique, mais la <strong>bonne nouvelle</strong> est qu'elle est parfaitement réversible. Ce n'est pas un manque de volonté de votre part, mais une chimie interne qui demande à être rééquilibrée. Je suis là pour vous accompagner pas à pas vers votre guérison. »
+              </p>
+            </div>
+
             <!-- The Patient File CTA -->
-            <div class="ai-booking-box">
-              <h3 class="ai-booking-headline">${bookingTitle}</h3>
-              <p class="ai-booking-sub">${bookingSub}</p>
-              
-              <button onclick="AIEngine.transferDossierToForm()" class="btn-pill btn-rose" style="width: 100%; font-size: 1.1rem; padding: 1.2rem; cursor: pointer;">
+            <div class="ai-booking-box" style="background: var(--text-dark-rose); color: white; border-radius: 1.2rem; padding: 1rem; text-align: center; box-shadow: 0 -5px 20px rgba(92, 60, 67, 0.15); position: sticky; bottom: 0.5rem; z-index: 99; border: 1px solid rgba(255,255,255,0.2);">
+              <h3 class="ai-booking-headline" style="color: white; font-size: 1.1rem; margin-bottom: 0.3rem;">${bookingTitle}</h3>
+              <p class="ai-booking-sub" style="color: rgba(255,255,255,0.85); font-size: 0.8rem; margin-bottom: 0.8rem; line-height: 1.2;">${bookingSub}</p>
+
+              <button onclick="AIEngine.transferDossierToForm()" class="btn-pill" style="width: 100%; font-size: 0.95rem; padding: 0.8rem; cursor: pointer; background: white; color: var(--text-dark-rose); font-weight: 700;">
                 <i class="fa-solid fa-clipboard-check"></i> ${bookingBtn}
               </button>
             </div>
 
-            <div style="text-align: center; margin-top: 1.5rem;">
-              <button class="ai-restart-btn" onclick="AIEngine.reset()">
+            <div style="text-align: center; margin-top: 1rem; margin-bottom: 0.5rem;">
+              <button class="ai-restart-btn" onclick="AIEngine.reset()" style="font-size: 0.85rem;">
                 <i class="fa-solid fa-rotate-left"></i> ${restartBtn}
               </button>
             </div>
           </div>
         `;
 
-        // Smooth mobile auto-centering on final dossier
         if (window.innerWidth < 768) {
           setTimeout(() => {
             const stageEl = document.getElementById('aiStage');
-            if (stageEl) {
-              stageEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
+            if (stageEl) stageEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }, 100);
         }
 
-        // Update WhatsApp message with clinical synthesis
         if (typeof updateWhatsAppLinks === 'function') {
           updateWhatsAppLinks();
         }
@@ -4182,6 +4448,7 @@
         let langLabel = "Langue";
         let profileLabel = "Profil identifié";
         let scoreLabel = "Score de Vitalité";
+        let conditionsLabel = "Conditions sélectionnées";
 
         if (lang === 'ar') {
           dossierHeader = "--- تقرير التقييم الغذائي والأهداف ---\n\n";
@@ -4190,6 +4457,7 @@
           langLabel = "اللغة";
           profileLabel = "الملف المحدد";
           scoreLabel = "نقاط الحيوية";
+          conditionsLabel = "الحالات المحددة";
         } else if (lang === 'en') {
           dossierHeader = "--- NUTRITIONAL ASSESSMENT & GOALS ---\n\n";
           responsesHeader = "YOUR ASSESSMENT RESPONSES:\n";
@@ -4197,6 +4465,7 @@
           langLabel = "Language";
           profileLabel = "Identified Profile";
           scoreLabel = "Vitality Score";
+          conditionsLabel = "Selected Conditions";
         } else if (lang === 'es') {
           dossierHeader = "--- EVALUACIÓN NUTRICIONAL Y OBJETIVOS ---\n\n";
           responsesHeader = "SUS RESPUESTAS A LA EVALUACIÓN:\n";
@@ -4204,15 +4473,21 @@
           langLabel = "Idioma";
           profileLabel = "Perfil Identificado";
           scoreLabel = "Puntuación de Vitalidad";
+          conditionsLabel = "Condiciones Seleccionadas";
         }
 
         const metabolicScore = (this.state.biometrics && this.state.biometrics.metabolic_score) ? this.state.biometrics.metabolic_score : 85;
+        const track = this.state.track || 'general';
 
         let dossierText = dossierHeader;
         dossierText += `${langLabel} : ${lang.toUpperCase()}\n`;
-        dossierText += `${profileLabel} : ${this.state.track.toUpperCase()}\n`;
-        dossierText += `${scoreLabel} : ${metabolicScore}/100\n\n`;
-        
+        dossierText += `${profileLabel} : ${track.toUpperCase()}\n`;
+        dossierText += `${scoreLabel} : ${metabolicScore}/100\n`;
+        if (this.state.selectedConditions.length > 0) {
+          dossierText += `${conditionsLabel} : ${this.state.selectedConditions.join(', ')}\n`;
+        }
+        dossierText += '\n';
+
         dossierText += responsesHeader;
         this.state.history.forEach(item => {
           dossierText += `${stepLabel} ${item.turn}: ${item.selection}\n`;
@@ -4221,20 +4496,30 @@
         const dossierInput = document.getElementById('bookingDossier');
         const dossierContainer = document.getElementById('dossierContainer');
         const serviceSelect = document.getElementById('serviceSelect');
-        
+
         if (dossierInput && dossierContainer) {
           dossierInput.value = dossierText;
-          dossierContainer.style.display = 'block'; 
+          dossierContainer.style.display = 'block';
         }
 
         if (serviceSelect) {
-          if (this.state.track === 'pediatric') serviceSelect.value = "Nutrition Pédiatrique";
-          else if (this.state.track === 'digestive') serviceSelect.value = "Confort Digestif";
-          else if (this.state.track === 'medical') {
-            serviceSelect.value = serviceSelect.querySelector('option[value="Suivi Médical"]') ? "Suivi Médical" : "Maladies Métaboliques";
-          }
-          else if (this.state.track === 'weight') serviceSelect.value = "Perte de Poids";
-          else serviceSelect.value = "Première Consultation";
+          const trackToService = {
+            'weight': 'Perte de Poids',
+            'tca': 'Perte de Poids', // mapping TCA to Perte de Poids since no specific option
+            'digestive': 'Confort Digestif',
+            'hormonal': 'Équilibre Hormonal',
+            'diabetes': 'Maladies Métaboliques',
+            'fatigue': 'Première Consultation',
+            'pregnancy': 'Grossesse & Maternité',
+            'pediatric': 'Nutrition Pédiatrique',
+            'senior': 'Nutrition Gériatrique',
+            'metabolic': 'Maladies Métaboliques'
+          };
+          const targetTrack = (this.state.finalDossier && this.state.finalDossier.track) ? this.state.finalDossier.track : track;
+          const preferredService = trackToService[targetTrack] || 'Première Consultation';
+          const foundOption = Array.from(serviceSelect.options).find(o => o.value === preferredService || o.text.includes(preferredService));
+          if (foundOption) serviceSelect.value = foundOption.value;
+          else serviceSelect.value = serviceSelect.options[0].value;
         }
 
         openModal('bookingModal');
@@ -4273,11 +4558,19 @@
           turn: 1,
           history: [],
           previousSelection: '',
-          track: 'adult',
+          target: null,
+          track: null,
+          sex: null,
+          age: null,
+          profileAnswer: null,
+          selectedConditions: [],
+          deepDiveQueue: [],
+          weightGoal: null,
           biometrics: { metabolic_score: 42, digestive_load: 38, endocrine_strain: 45 },
           isComplete: false,
           finalDossier: null,
-          isLoading: false
+          isLoading: false,
+          lang: this.state.lang
         };
         this.renderInitialTurn();
         if (typeof updateWhatsAppLinks === 'function') {
@@ -4287,11 +4580,141 @@
     };
     window.AIEngine = AIEngine;
 
+
     // Direct website & AI intake engine initialization
+    function initInteractiveScheduler() {
+      const dateInput = document.getElementById('bookingDate');
+      const timeSlotsGroup = document.getElementById('timeSlotsGroup');
+      const timeSlotsGrid = document.getElementById('timeSlotsGrid');
+      const slotInput = document.getElementById('bookingSlot');
+
+      if (dateInput) {
+        // Init Flatpickr
+        if (typeof flatpickr !== 'undefined') {
+          flatpickr(dateInput, {
+            locale: (typeof currentLang !== 'undefined' && currentLang === 'ar') ? 'ar' : 'fr',
+            minDate: "today",
+            dateFormat: "Y-m-d",
+            altInput: true,
+            altFormat: "j F Y",
+            disable: [
+              function(date) {
+                return (date.getDay() === 0); // Disable Sundays
+              }
+            ],
+            onChange: function(selectedDates, dateStr, instance) {
+              // Trigger the native change event for the existing logic
+              dateInput.dispatchEvent(new Event('change'));
+            }
+          });
+        } else {
+          const todayStr = new Date().toISOString().split('T')[0];
+          dateInput.min = todayStr;
+        }
+
+        dateInput.addEventListener('change', () => {
+          const selectedDate = dateInput.value;
+          if (!selectedDate) {
+            timeSlotsGroup.style.display = 'none';
+            return;
+          }
+
+          // Show time slots section
+          timeSlotsGroup.style.display = 'block';
+          timeSlotsGrid.innerHTML = '';
+          slotInput.value = ''; // Reset slot selection
+
+          const dateObj = new Date(selectedDate);
+          const dayOfWeek = dateObj.getDay(); // 0 = Sunday, 6 = Saturday
+
+          // If Sunday, show closed message
+          if (dayOfWeek === 0) {
+            timeSlotsGrid.innerHTML = `
+              <div style="grid-column: span 4; text-align: center; color: #ef4444; font-weight: 600; padding: 1.25rem 1rem; background: #fef2f2; border-radius: 0.85rem; border: 1.5px solid #fca5a5; font-size: 0.88rem; width: 100%;">
+                <i class="fa-solid fa-store-slash"></i> Le cabinet est fermé le dimanche. Veuillez choisir un autre jour.
+              </div>
+            `;
+            return;
+          }
+
+          // 8 standard slot hours
+          const hours = ["08:30", "09:30", "10:30", "11:30", "14:00", "15:00", "16:00", "17:00"];
+          
+          // Deterministic availability hash based on chosen date
+          let hash = 0;
+          for (let i = 0; i < selectedDate.length; i++) {
+            hash = selectedDate.charCodeAt(i) + ((hash << 5) - hash);
+          }
+
+          hours.forEach((hr, index) => {
+            // Predictably mark some hours as taken (e.g. index-based modulo)
+            const isTaken = (Math.abs(hash + index * 37) % 3) === 0;
+
+            const card = document.createElement('div');
+            card.textContent = hr;
+            card.style.textAlign = 'center';
+            card.style.padding = '0.75rem 0.5rem';
+            card.style.borderRadius = '0.5rem';
+            card.style.fontWeight = '600';
+            card.style.fontSize = '0.9rem';
+            card.style.transition = 'all 0.2s ease';
+            card.style.userSelect = 'none';
+
+            if (isTaken) {
+              card.style.background = '#f3f4f6';
+              card.style.border = '1px solid #e5e7eb';
+              card.style.color = '#9ca3af';
+              card.style.cursor = 'not-allowed';
+              card.title = "Créneau réservé";
+            } else {
+              card.style.background = '#ffffff';
+              card.style.border = '1.5px solid #10b981';
+              card.style.color = '#10b981';
+              card.style.cursor = 'pointer';
+              card.style.boxShadow = '0 2px 5px rgba(16, 185, 129, 0.1)';
+
+              card.addEventListener('mouseenter', () => {
+                if (slotInput.value !== hr) {
+                  card.style.background = '#ecfdf5';
+                }
+              });
+
+              card.addEventListener('mouseleave', () => {
+                if (slotInput.value !== hr) {
+                  card.style.background = '#ffffff';
+                }
+              });
+
+              card.addEventListener('click', () => {
+                // Clear other active selections
+                const siblings = timeSlotsGrid.children;
+                for (let i = 0; i < siblings.length; i++) {
+                  if (siblings[i].style.cursor === 'pointer') {
+                    siblings[i].style.background = '#ffffff';
+                    siblings[i].style.color = '#10b981';
+                  }
+                }
+                // Highlight clicked slot
+                card.style.background = '#10b981';
+                card.style.color = '#ffffff';
+                slotInput.value = hr;
+              });
+            }
+
+            timeSlotsGrid.appendChild(card);
+          });
+        });
+      }
+    }
+
     if (document.readyState === 'loading') {
-      window.addEventListener('DOMContentLoaded', () => AIEngine.init());
+      window.addEventListener('DOMContentLoaded', () => {
+        AIEngine.init();
+        initInteractiveScheduler();
+      });
     } else {
       AIEngine.init();
+      initInteractiveScheduler();
     }
   </script>
 

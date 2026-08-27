@@ -1,0 +1,6 @@
+{
+  "name": "Cabinet de Nutrition Inès Ben Abdennebi",
+  "description": "Cabinet de nutrition et diététique clinique Inès Ben Abdennebi à Radès. Diagnostic nutritionnel IA, prise de rendez-vous et suivi sur-mesure.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
