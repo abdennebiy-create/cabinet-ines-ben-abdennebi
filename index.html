@@ -16,8 +16,8 @@
   <!-- Open Graph / Social Sharing Meta Tags -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cabinet-ines-ben-abdennebi.netlify.app" />
-  <meta property="og:title" content="Cabinet de Nutrition Inès Ben Abdennebi — Radès | Nutrition & Bien-Être" />
-  <meta property="og:description" content="Cabinet de nutrition Inès Ben Abdennebi à Radès (Tunis). Nutrition, bien-être et accompagnement sur-mesure pour enfants, adultes et seniors sans privation." />
+  <meta property="og:title" content="Cabinet Inès Ben Abdennebi - Nutrition & Diététique">
+  <meta property="og:description" content="Réalisez votre pré-diagnostic clinique en ligne gratuitement.">
   <meta property="og:image" content="https://cabinet-ines-ben-abdennebi.netlify.app/assets/cabinet-hd.webp" />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:site_name" content="Cabinet Inès Ben Abdennebi" />
@@ -3001,9 +3001,9 @@ body.rtl .food-search-icon {
           
           <p style="text-align: center; font-size: 0.85rem; color: var(--text-muted); margin: 0.25rem 0;" data-i18n="contact_or">OU</p>
           
-          <a id="contactWhatsAppBtn" class="btn-pill" style="width: 100%; font-size: 1rem; padding: 1.1rem; background-color: #25D366; color: white; border: none; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3); text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.6rem;" target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send/?phone=21655211116&text=Bonjour%20Cabinet%20de%20Nutrition%20In%C3%A8s%20Ben%20Abdennebi%2C%20je%20souhaite%20prendre%20rendez-vous." onclick="localStorage.setItem('wa_contacted', 'true'); if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){this.href='whatsapp://send?phone=21655211116&text=Bonjour%20Cabinet%20de%20Nutrition%20In%C3%A8s%20Ben%20Abdennebi%2C%20je%20souhaite%20prendre%20rendez-vous.';}">
-            <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> <span data-i18n="btn_wa">MESSAGE DIRECT SUR WHATSAPP</span>
-          </a>
+          <button id="contactWhatsAppBtn" class="btn-pill" style="width: 100%; font-size: 1rem; padding: 1.1rem; background-color: #0088cc; color: white; border: none; box-shadow: 0 8px 20px rgba(0, 136, 204, 0.3); text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.6rem; cursor: pointer;" onclick="openModal('bookingModal')">
+            <i class="fa-brands fa-telegram" style="font-size: 1.2rem;"></i> <span data-i18n="btn_wa">MESSAGE DIRECT SUR TELEGRAM</span>
+          </button>
         </div>
     </div>
     </div>
@@ -3032,16 +3032,48 @@ body.rtl .food-search-icon {
   <div class="modal-overlay" id="bookingModal" onclick="handleModalBackdropClick(event, 'bookingModal')">
     <div class="modal-box" onclick="event.stopPropagation()">
       <button class="modal-close" onclick="closeModal('bookingModal')" aria-label="Fermer la fenêtre"><i class="fa-solid fa-xmark"></i></button>
-      <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;" data-i18n="m_title">Réserver une Consultation</h3>
-      <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.75rem;" data-i18n="m_sub">L'équipe vous recontacte sous 24h pour valider votre créneau.</p>
+      
+      <div id="bookingSuccessBox" style="display: none; text-align: center; padding: 2rem 0.5rem;">
+        <div style="font-size: 3.5rem; color: #10b981; margin-bottom: 1.25rem;"><i class="fa-solid fa-circle-check"></i></div>
+        <h3 style="font-size: 1.5rem; color: var(--text-dark-rose); margin-bottom: 1rem;">Dossier transmis avec succès !</h3>
+        <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;">
+          ✨ Inès a bien reçu votre pré-diagnostic. Elle l'analysera personnellement et vous recontactera sous 24h sur votre numéro WhatsApp pour fixer votre première consultation.
+        </p>
+        <button type="button" class="btn-pill" style="width: 100%; background-color: var(--primary); color: white;" onclick="closeModal('bookingModal')">FERMER</button>
+      </div>
 
-      <form name="rendez-vous" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleFormSubmit(event)">
+      <div id="bookingFormWrapper">
+        <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;" data-i18n="m_title">Réserver une Consultation</h3>
+        <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.75rem;" data-i18n="m_sub">L'équipe vous recontacte sous 24h pour valider votre créneau.</p>
+
+        <form name="rendez-vous" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleFormSubmit(event)">
         <input type="hidden" name="form-name" value="rendez-vous" />
         
         <!-- Accessibility Fix for Spam Trap -->
         <p class="visually-hidden-honeypot" aria-hidden="true" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; display: none !important;">
           <label>Ne pas remplir si vous êtes humain : <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
         </p>
+
+        <div class="form-group">
+          <label for="bookingAge" data-i18n="lbl_age" style="font-weight: 600; color: var(--text-dark-rose);">Profil du patient</label>
+          <select class="form-control" name="tranche_age" id="bookingAge" onchange="toggleInfantPathologies(this.value)">
+            <option value="Adulte">Adulte (18 - 64 ans)</option>
+            <option value="Enfant">Enfant / Adolescent (Moins de 18 ans)</option>
+            <option value="Senior">Senior (65+ ans)</option>
+          </select>
+        </div>
+        
+        <div class="form-group hidden" id="infantPathologiesBlock" style="display: none; padding: 1rem; background: rgba(255,230,235,0.5); border-radius: 0.85rem;">
+          <label style="font-weight: 600; color: var(--text-dark-rose); margin-bottom: 0.5rem; display: block;" data-i18n="lbl_infant_patho"><i class="fa-solid fa-child-reaching" style="color: var(--accent-mauve);"></i> Pathologies Infantiles</label>
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; color: var(--text-dark-rose); font-size: 0.9rem;">
+              <input type="checkbox" name="pathologies_infantiles" value="Diabète" style="accent-color: var(--accent-mauve);"> Diabète Infantile
+            </label>
+            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; color: var(--text-dark-rose); font-size: 0.9rem;">
+              <input type="checkbox" name="pathologies_infantiles" value="Cœliaque" style="accent-color: var(--accent-mauve);"> Maladie Cœliaque
+            </label>
+          </div>
+        </div>
 
         <div class="form-group">
           <label for="bookingName" data-i18n="lbl_name">Nom & Prénom</label>
@@ -3100,22 +3132,19 @@ body.rtl .food-search-icon {
         </div>
 
         <div class="form-group" style="margin-top: 0.85rem; margin-bottom: 0.25rem;">
-          <label style="display: flex; align-items: flex-start; gap: 0.65rem; font-size: 0.82rem; color: var(--text-muted); cursor: pointer; line-height: 1.45;">
-            <input type="checkbox" name="medical_consent" required style="margin-top: 0.15rem; accent-color: var(--accent-mauve); cursor: pointer;" />
-            <span data-i18n="lbl_consent">J'accepte que mes données soient traitées pour organiser mon rendez-vous (Secret médical & RGPD).</span>
+          <label class="consent-box" style="display: flex; align-items: flex-start; gap: 0.65rem; font-size: 0.82rem; color: var(--text-muted); cursor: pointer; line-height: 1.45;">
+            <input type="checkbox" id="consentement-medical" required style="margin-top: 0.15rem; accent-color: var(--accent-mauve); cursor: pointer;">
+            <span>Je consens à transmettre ces informations au cabinet d'Inès Ben Abdennebi pour mon pré-diagnostic.</span>
           </label>
         </div>
 
-        <!-- Double Choix : Formulaire Netlify ou WhatsApp Direct avec Créneau -->
         <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.25rem;">
           <button type="submit" id="bookingSubmitBtn" class="btn-pill btn-rose" style="width: 100%;">
-            <span data-i18n="btn_send">CONFIRMER LA DEMANDE (FORMULAIRE)</span>
-          </button>
-          <button type="button" class="btn-pill" style="width: 100%; background-color: #25D366; color: #ffffff; border: none; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35); cursor: pointer;" onclick="openWhatsAppWithSlot()">
-            <i class="fa-brands fa-whatsapp"></i> <span data-i18n="btn_wa_slot">ENVOYER CE CHOIX SUR WHATSAPP</span>
+            <i class="fa-solid fa-paper-plane"></i> <span data-i18n="btn_send">CONFIRMER LA DEMANDE</span>
           </button>
         </div>
       </form>
+      </div> <!-- End bookingFormWrapper -->
     </div>
   </div>
 
@@ -3124,13 +3153,6 @@ body.rtl .food-search-icon {
   <!-- JavaScript Code: Multi-Language Switcher, Scroll Engine & Drawers -->
   <script>
 
-    function buildWhatsAppUrl(phone, text) {
-      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-      if (isMobile) {
-        return `whatsapp://send?phone=${phone}&text=${encodeURIComponent(text)}`;
-      }
-      return `https://api.whatsapp.com/send/?phone=${phone}&text=${encodeURIComponent(text)}`;
-    }
 
     /* Complete 4-Language Dictionary (FR, AR with RTL, EN, ES) */
     const translations = {
@@ -3730,6 +3752,12 @@ body.rtl .food-search-icon {
     function openModal(id) {
       const modal = document.getElementById(id);
       if (modal) {
+        if (id === 'bookingModal') {
+          const formWrapper = document.getElementById('bookingFormWrapper');
+          const successBox = document.getElementById('bookingSuccessBox');
+          if (formWrapper) formWrapper.style.display = 'block';
+          if (successBox) successBox.style.display = 'none';
+        }
         modal.style.display = 'flex';
         // force reflow
         void modal.offsetWidth;
@@ -3796,162 +3824,14 @@ body.rtl .food-search-icon {
       }
     });
 
-    function getWhatsAppUrl() {
-      const phone = typeof WHATSAPP_NUMBER !== 'undefined' ? WHATSAPP_NUMBER : "21655211116";
-      
-      // 1. Message de base selon la langue
-      let baseMsg = "Bonjour Cabinet de Nutrition Inès Ben Abdennebi, je souhaite prendre rendez-vous.";
-      if (currentLang === 'ar') baseMsg = "مرحباً عيادة التغذية إيناس بن عبد النبي، أود حجز موعد.";
-      if (currentLang === 'en') baseMsg = "Hello Inès Ben Abdennebi Nutrition Clinic, I would like to book an appointment.";
-      if (currentLang === 'es') baseMsg = "Hola Clínica de Nutrición Inès Ben Abdennebi, deseo reservar una cita.";
-
-      // 2. La Magie : Ajouter le résumé complet du Quiz si le patient l'a terminé !
-      if (window.AIEngine && window.AIEngine.state.isComplete) {
-        let trackName = window.AIEngine.state.track || 'general';
-        const trackTranslations = {
-          fr: { weight: "Perte de Poids", medical: "Suivi Médical", digestive: "Confort Digestif", pediatric: "Pédiatrie" },
-          ar: { weight: "خسارة الوزن", medical: "متابعة طبية", digestive: "الجهاز الهضمي", pediatric: "تغذية الأطفال" },
-          en: { weight: "Weight Loss", medical: "Medical Support", digestive: "Gut Health", pediatric: "Pediatrics" },
-          es: { weight: "Pérdida de Peso", medical: "Seguimiento Médico", digestive: "Salud Digestiva", pediatric: "Pediatría" }
-        };
-        let translatedTrack = (trackTranslations[currentLang] && trackTranslations[currentLang][trackName]) || (trackTranslations.fr && trackTranslations.fr[trackName]) || trackName.toUpperCase();
-        let score = (window.AIEngine.state.biometrics && window.AIEngine.state.biometrics.metabolic_score) ? window.AIEngine.state.biometrics.metabolic_score : 85;
-        
-        let answersSummary = '';
-        if (window.AIEngine.state.history && window.AIEngine.state.history.length > 0) {
-          answersSummary = window.AIEngine.state.history.map((h, i) => `   • Étape ${i + 1} : ${h.selection}`).join('\n');
-        }
-
-        let quizData = `\n\n🎯 *SYNTHÈSE DU BILAN EN LIGNE* :\n• *Profil détecté* : ${translatedTrack}\n• *Score de vitalité* : ${score}/100`;
-        if (answersSummary) {
-          quizData += `\n• *Détail des réponses* :\n${answersSummary}`;
-        }
-
-        if (currentLang === 'ar') {
-          let arSummary = '';
-          if (window.AIEngine.state.history && window.AIEngine.state.history.length > 0) {
-            arSummary = window.AIEngine.state.history.map((h, i) => `   • المرحلة ${i + 1} : ${h.selection}`).join('\n');
-          }
-          quizData = `\n\n🎯 *تقرير التقييم الغذائي عبر الموقع* :\n• *الملف* : ${translatedTrack}\n• *نقاط الحيوية* : ${score}/100`;
-          if (arSummary) {
-            quizData += `\n• *تفاصيل الإجابات* :\n${arSummary}`;
-          }
-        } else if (currentLang === 'en') {
-          let enSummary = '';
-          if (window.AIEngine.state.history && window.AIEngine.state.history.length > 0) {
-            enSummary = window.AIEngine.state.history.map((h, i) => `   • Step ${i + 1}: ${h.selection}`).join('\n');
-          }
-          quizData = `\n\n🎯 *ONLINE ASSESSMENT SUMMARY* :\n• *Detected Profile*: ${translatedTrack}\n• *Vitality Score*: ${score}/100`;
-          if (enSummary) {
-            quizData += `\n• *Responses Summary*:\n${enSummary}`;
-          }
-        } else if (currentLang === 'es') {
-          let esSummary = '';
-          if (window.AIEngine.state.history && window.AIEngine.state.history.length > 0) {
-            esSummary = window.AIEngine.state.history.map((h, i) => `   • Paso ${i + 1}: ${h.selection}`).join('\n');
-          }
-          quizData = `\n\n🎯 *SÍNTESIS DE LA EVALUACIÓN EN LÍNEA* :\n• *Perfil detectado*: ${translatedTrack}\n• *Puntuación de vitalidad*: ${score}/100`;
-          if (esSummary) {
-            quizData += `\n• *Detalle de respuestas*:\n${esSummary}`;
-          }
-        }
-        
-        baseMsg += quizData;
-      }
-
-      return `${buildWhatsAppUrl(phone, baseMsg)}`;
-    }
 
     function updateWhatsAppLinks() {
-      const url = getWhatsAppUrl();
+      // Intentionally empty. No longer using WhatsApp links for these elements.
       const waFloat = document.getElementById('waFloatBtn');
       const contactWa = document.getElementById('contactWhatsAppBtn');
-      if (waFloat) waFloat.href = url;
-      if (contactWa) contactWa.href = url;
+      if (waFloat) waFloat.onclick = (e) => { e.preventDefault(); openModal('bookingModal'); };
+      if (contactWa) contactWa.onclick = (e) => { e.preventDefault(); openModal('bookingModal'); };
     }
-
-    function openWhatsAppModal() {
-      localStorage.setItem('wa_contacted', 'true');
-      const url = getWhatsAppUrl();
-      window.open(url, '_blank');
-    }
-
-    function openWhatsAppWithSlot() {
-      localStorage.setItem('wa_contacted', 'true');
-      const phone = typeof WHATSAPP_NUMBER !== 'undefined' ? WHATSAPP_NUMBER : "21655211116";
-      const nameInput = (document.getElementById('bookingName') && document.getElementById('bookingName').value.trim()) || "Patient(e)";
-      const dateInput = (document.getElementById('bookingDate') && document.getElementById('bookingDate').value) || "Date à convenir";
-      const slotSelect = (document.getElementById('bookingSlot') && document.getElementById('bookingSlot').value) || "Premier créneau disponible";
-      const serviceSelect = (document.getElementById('serviceSelect') && document.getElementById('serviceSelect').value) || "Première Consultation";
-      const dossierInput = document.getElementById('bookingDossier');
-      const dossierVal = (dossierInput && dossierInput.value) || '';
-
-      let baseMsg = `Bonjour Cabinet Inès Ben Abdennebi,\n\nJe souhaite réserver un rendez-vous :\n👤 Nom : ${nameInput}\n📅 Date souhaitée : ${dateInput}\n⏰ Créneau : ${slotSelect}\n🎯 Motif : ${serviceSelect}`;
-
-      if (currentLang === 'ar') {
-        baseMsg = `مرحباً عيادة الأخصائية إيناس بن عبد النبي،\n\nأود حجز موعد استشارة :\n👤 الاسم : ${nameInput}\n📅 التاريخ المفضل : ${dateInput}\n⏰ الفترة الزمنية : ${slotSelect}\n🎯 سبب الاستشارة : ${serviceSelect}`;
-      } else if (currentLang === 'en') {
-        baseMsg = `Hello Cabinet Inès Ben Abdennebi,\n\nI would like to book a consultation:\n👤 Name: ${nameInput}\n📅 Preferred Date: ${dateInput}\n⏰ Time Slot: ${slotSelect}\n🎯 Reason: ${serviceSelect}`;
-      } else if (currentLang === 'es') {
-        baseMsg = `Hola Gabinete Inès Ben Abdennebi,\n\nDeseo reservar una cita:\n👤 Nombre: ${nameInput}\n📅 Fecha deseada: ${dateInput}\n⏰ Horario preferido: ${slotSelect}\n🎯 Motivo: ${serviceSelect}`;
-      }
-
-      if (dossierVal) {
-        baseMsg += `\n\n📋 *Dossier Patient & Bilan Clinique :*\n${dossierVal}`;
-      } else if (window.AIEngine && window.AIEngine.state && window.AIEngine.state.isComplete) {
-        let trackName = window.AIEngine.state.track || 'general';
-        const trackTranslations = {
-          fr: { weight: "Perte de Poids", medical: "Suivi Médical", digestive: "Confort Digestif", pediatric: "Pédiatrie", senior: "Gériatrie" },
-          ar: { weight: "خسارة الوزن", medical: "متابعة طبية", digestive: "الجهاز الهضمي", pediatric: "تغذية الأطفال", senior: "تغذية كبار السن" },
-          en: { weight: "Weight Loss", medical: "Medical Support", digestive: "Gut Health", pediatric: "Pediatrics", senior: "Geriatrics" },
-          es: { weight: "Pérdida de Peso", medical: "Seguimiento Médico", digestive: "Salud Digestiva", pediatric: "Pediatría", senior: "Geriatría" }
-        };
-        let translatedTrack = (trackTranslations[currentLang] && trackTranslations[currentLang][trackName]) || (trackTranslations.fr && trackTranslations.fr[trackName]) || trackName.toUpperCase();
-        let score = (window.AIEngine.state.biometrics && window.AIEngine.state.biometrics.metabolic_score) ? window.AIEngine.state.biometrics.metabolic_score : 85;
-
-        if (currentLang === 'ar') {
-          baseMsg += `\n\n📊 تقرير التقييم عبر الموقع :\n• الملف : ${translatedTrack}\n• نقاط الحيوية : ${score}/100`;
-        } else if (currentLang === 'en') {
-          baseMsg += `\n\n📊 Online Assessment Summary:\n• Profile: ${translatedTrack}\n• Vitality Score: ${score}/100`;
-        } else if (currentLang === 'es') {
-          baseMsg += `\n\n📊 Resumen de Evaluación en Línea:\n• Perfil: ${translatedTrack}\n• Puntuación de Vitalidad: ${score}/100`;
-        } else {
-          baseMsg += `\n\n📊 Bilan en ligne :\n• Profil : ${translatedTrack}\n• Score de vitalité : ${score}/100`;
-        }
-      }
-
-      window.open(`${buildWhatsAppUrl(phone, baseMsg)}`, '_blank');
-    }
-
-    function openProgramDetails(prgKey) {
-      const select = document.getElementById('serviceSelect');
-      if (select) {
-        const programMap = {
-          'p_pediatric': 'Nutrition Pédiatrique',
-          'p_kids': 'Nutrition Pédiatrique',
-          'p_digestive': 'Confort Digestif',
-          'p_gut': 'Confort Digestif',
-          'p_medical': 'Maladies Métaboliques',
-          'p_metabolic': 'Maladies Métaboliques',
-          'p_weight': 'Perte de Poids',
-          'p_seniors': 'Nutrition Gériatrique',
-          'p_hormonal': 'Équilibre Hormonal',
-          'p_pregnancy': 'Grossesse & Maternité',
-          'p_tele': 'Téléconsultation en Ligne'
-        };
-        if (programMap[prgKey]) {
-          select.value = programMap[prgKey];
-        } else {
-          select.value = 'Première Consultation';
-        }
-      }
-      openModal('bookingModal');
-    }
-
-    
-
-let isFormSubmitting = false;
-
     async function handleFormSubmit(e) {
       e.preventDefault();
       if (isFormSubmitting) return;
@@ -4064,7 +3944,15 @@ let isFormSubmitting = false;
       const serviceVal = form.elements['service'] ? form.elements['service'].value : (document.getElementById('serviceSelect') ? document.getElementById('serviceSelect').value : '');
       const dossierVal = form.elements['dossier_patient_ia'] ? form.elements['dossier_patient_ia'].value : (document.getElementById('bookingDossier') ? document.getElementById('bookingDossier').value : '');
       
-      let fallbackMsg = `Bonjour Cabinet de Nutrition Inès Ben Abdennebi, je souhaite prendre rendez-vous :\n- Nom : ${nomVal}\n- Tél : ${telVal}\n- Date : ${dateVal}\n- Créneau : ${creneauVal}\n- Motif : ${serviceVal}`;
+      const ageVal = form.elements['tranche_age'] ? form.elements['tranche_age'].value : 'Adulte';
+      let infantPathos = [];
+      const checkboxes = form.querySelectorAll('input[name="pathologies_infantiles"]:checked');
+      checkboxes.forEach(cb => infantPathos.push(cb.value));
+      
+      let fallbackMsg = `Nouvelle demande de rendez-vous :\n- Profil : ${ageVal}\n- Nom : ${nomVal}\n- Tél : ${telVal}\n- Date : ${dateVal}\n- Créneau : ${creneauVal}\n- Motif : ${serviceVal}`;
+      if (ageVal === 'Enfant' && infantPathos.length > 0) {
+        fallbackMsg += `\n- Pathologies infantiles : ${infantPathos.join(', ')}`;
+      }
       if (currentLang === 'ar') {
         fallbackMsg = `مرحباً عيادة التغذية إيناس بن عبد النبي، أود حجز موعد :\n- الاسم : ${nomVal}\n- الهاتف : ${telVal}\n- التاريخ : ${dateVal}\n- الوقت : ${creneauVal}\n- السبب : ${serviceVal}`;
       } else if (currentLang === 'en') {
@@ -4076,39 +3964,41 @@ let isFormSubmitting = false;
         fallbackMsg += `\n\n📋 *Dossier Patient :*\n${dossierVal}`;
       }
       
-      const phone = "21655211116";
-      const waUrl = `${buildWhatsAppUrl(phone, fallbackMsg)}`;
-
       try {
-        const formData = new FormData(form);
-        const response = await fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams(formData).toString()
+        const response = await fetch('/api/send-telegram', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: fallbackMsg })
         });
+        const data = await response.json();
         
-        if (!response.ok) throw new Error("Network response was not ok.");
+        if (!response.ok || (!data.success && !data.warning)) {
+          throw new Error(data.error || "Erreur Telegram");
+        }
 
-        alert(alertMsg);
+        // Show success box instead of alert
+        const formWrapper = document.getElementById('bookingFormWrapper');
+        const successBox = document.getElementById('bookingSuccessBox');
+        if (formWrapper && successBox) {
+            formWrapper.style.display = 'none';
+            successBox.style.display = 'block';
+        }
         form.reset();
-        closeModal('bookingModal');
+        if (typeof checkUnlockStatus === 'function') checkUnlockStatus();
       } catch (err) {
-        console.warn("Form submission error, opening WhatsApp directly:", err);
-        const redirectAlerts = {
-          fr: "Transmission de votre demande par WhatsApp...",
-          ar: "جاري تحويل طلبك إلى واتساب لإتمام الحجز...",
-          en: "Redirecting to WhatsApp to submit your request...",
-          es: "Redirigiendo a WhatsApp para enviar su solicitud..."
+        console.error("Form submission error:", err);
+        const errorAlerts = {
+          fr: "Erreur lors de la transmission. Veuillez réessayer plus tard.",
+          ar: "حدث خطأ أثناء الإرسال. يرجى المحاولة لاحقاً.",
+          en: "Error during submission. Please try again later.",
+          es: "Error durante el envío. Por favor, inténtelo de nuevo más tarde."
         };
-        alert(redirectAlerts[currentLang] || redirectAlerts.fr);
-        window.open(waUrl, '_blank');
-        form.reset();
-        closeModal('bookingModal');
+        alert(errorAlerts[typeof currentLang !== 'undefined' ? currentLang : 'fr']);
       } finally {
         isFormSubmitting = false;
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.innerHTML = originalText;
+          submitBtn.innerHTML = originalText || '<i class="fa-solid fa-paper-plane"></i> <span data-i18n="btn_send">CONFIRMER LA DEMANDE</span>';
         }
       }
     }
@@ -6005,22 +5895,14 @@ document.getElementById('send-chat').addEventListener('click', () => envoyerMess
 
 function handleChipClick(type) {
     if (type === 'whatsapp') {
-    const infoMessages = {
-        fr: "Bonjour, je souhaite des informations sur les consultations au cabinet de nutrition.",
-        ar: "مرحباً، أود الحصول على معلومات حول الاستشارات في عيادة التغذية.",
-        en: "Hello, I would like more information regarding consultations at the nutrition clinic.",
-        es: "Hola, deseo más información sobre las consultas en la clínica de nutrición."
-    };
-    const msg = encodeURIComponent(infoMessages[currentLang] || infoMessages.fr);
-    const phone = typeof WHATSAPP_NUMBER !== 'undefined' ? WHATSAPP_NUMBER : "21655211116";
-    window.open(`${buildWhatsAppUrl(phone, decodeURIComponent(msg))}`, '_blank');
+      openModal('bookingModal');
     }
 }
 </script>
-  <!-- Bouton WhatsApp Flottant (Bas Gauche) -->
-  <a href="https://api.whatsapp.com/send/?phone=21655211116&text=Bonjour%20Cabinet%20de%20Nutrition%20In%C3%A8s%20Ben%20Abdennebi%2C%20je%20souhaite%20prendre%20rendez-vous." onclick="localStorage.setItem('wa_contacted', 'true'); if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){this.href='whatsapp://send?phone=21655211116&text=Bonjour%20Cabinet%20de%20Nutrition%20In%C3%A8s%20Ben%20Abdennebi%2C%20je%20souhaite%20prendre%20rendez-vous.';}" target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" id="waFloatBtn" aria-label="Contactez le cabinet sur WhatsApp" data-i18n-aria="wa_float_aria">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
+  <!-- Bouton de Contact Flottant -->
+  <button onclick="openModal('bookingModal')" class="whatsapp-float-btn" style="background-color: var(--primary); border: none; cursor: pointer; color: white; display: flex; align-items: center; justify-content: center;" id="waFloatBtn" aria-label="Prendre rendez-vous" data-i18n-aria="wa_float_aria">
+    <i class="fa-solid fa-calendar-check"></i>
+  </button>
 
   <script type="text/babel">
     const { PieChart, Pie, Cell, ResponsiveContainer, Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Tooltip } = window.Recharts;
@@ -6276,5 +6158,6 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 <!-- Searchable Nutrient Database & Daily Food Log Controller -->
 <script src="assets/food-database.js"></script>
+  <script type="module" src="firebase-init.js"></script>
 </body>
 </html>
