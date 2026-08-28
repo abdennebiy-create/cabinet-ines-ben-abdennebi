@@ -1,0 +1,21 @@
+{
+  "name": "Cabinet Inès Ben Abdennebi",
+  "short_name": "Nutri Inès",
+  "description": "Cabinet de nutrition Inès Ben Abdennebi à Radès (Tunis)",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fcfbf9",
+  "theme_color": "#fcfbf9",
+  "icons": [
+    {
+      "src": "assets/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
