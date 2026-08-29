@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang="fr" class="scroll-smooth" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -939,14 +939,21 @@
       }
       .hero-section {
         padding-top: 7.5rem;
+        padding-bottom: 3.5rem;
       }
       .hero-actions {
         flex-direction: column;
         align-items: stretch;
+        gap: 0.85rem;
       }
       .hero-actions .btn-pill {
         width: 100%;
         justify-content: center;
+        padding: 0.85rem 1rem;
+        font-size: 0.82rem;
+        white-space: normal;
+        text-align: center;
+        line-height: 1.3;
       }
       .floating-hero-card {
         padding: 1.5rem;
@@ -2421,6 +2428,22 @@ body.rtl .food-search-icon {
   box-shadow: 0 16px 35px rgba(92, 60, 67, 0.12);
   border-color: var(--accent-mauve);
 }
+    @media (max-width: 480px) {
+      .hero-section .hero-actions {
+        gap: 0 !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 0 1rem !important;
+      }
+      .hero-section .hero-actions .btn-pill {
+        margin-bottom: 1.25rem !important;
+        width: 100% !important;
+        justify-content: center !important;
+      }
+      .hero-section .hero-actions .btn-pill:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
 </style>
   <!-- Flatpickr Datepicker -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -2488,7 +2511,6 @@ body.rtl .food-search-icon {
         <li><a href="#services" onclick="closeMobileMenu()" data-i18n="nav_services">Programmes</a></li>
         <li><a href="#food-tracker" onclick="closeMobileMenu()" data-i18n="nav_food_tracker">Nutrithèque & Journal</a></li>
         <li><a href="#team" onclick="closeMobileMenu()" data-i18n="nav_team">L'Équipe</a></li>
-        <li><a href="javascript:void(0)" onclick="toggleAIDrawer(); closeMobileMenu();" data-i18n="nav_faq">FAQ</a></li>
         <li><a href="#contact" onclick="closeMobileMenu()" data-i18n="nav_contact">Contact</a></li>
         <li class="mobile-nav-actions" style="display: none; flex-direction: column; gap: 0.85rem; padding-top: 0.85rem; border-top: 1px solid rgba(232, 198, 200, 0.5); margin-top: 0.5rem;">
           <div class="lang-switcher" style="display: flex; justify-content: center; width: 100%;">
@@ -2797,6 +2819,62 @@ body.rtl .food-search-icon {
 
         <!-- Right: Daily Food Log & Macronutrient HUD -->
         <div>
+          <!-- Nouveau module : Objectifs Métaboliques (Synchronisé IA) -->
+          <div id="metabolicGoalsCard" style="display: none; background: linear-gradient(135deg, #ffffff 0%, #fbf5f6 100%); border: 1.5px solid #10b981; border-radius: 24px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 10px 30px rgba(16, 185, 129, 0.08); transition: all 0.3s ease;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+              <h3 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--text-dark-rose); margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                <i class="fa-solid fa-bolt" style="color: #10b981;"></i> Objectif Métabolique
+              </h3>
+              <span style="background: rgba(16, 185, 129, 0.15); color: #10b981; padding: 0.3rem 0.6rem; border-radius: 8px; font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; gap: 0.3rem;">
+                <i class="fa-solid fa-link"></i> Synchronisé IA
+              </span>
+            </div>
+            
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem; line-height: 1.4;">
+              Ces besoins ont été calculés et répartis automatiquement d'après votre Bilan Métabolique.
+            </p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0.5rem;">
+              <div style="background: white; border: 1px solid rgba(232, 198, 200, 0.5); border-radius: 16px; padding: 1rem; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase; margin-bottom: 0.4rem;">Énergie Cible</div>
+                <div style="font-size: 1.8rem; font-weight: 800; color: var(--text-dark-rose); line-height: 1;">
+                  <span id="mgc_kcal_consumed">0</span> <span style="font-size: 1rem; color: #7a5c64; font-weight: 600;">/ <span id="mgc_kcal">2000</span></span>
+                </div>
+                <div style="font-size: 0.75rem; color: #7a5c64; font-weight: 600; margin-top: 0.3rem;">kcal</div>
+              </div>
+              <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 0.4rem;">
+                 <div style="background: white; border: 1px solid rgba(232, 198, 200, 0.5); border-radius: 12px; padding: 0.6rem;">
+                   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                     <span style="font-size: 0.75rem; font-weight: 700; color: #c0392b;">Protéines</span>
+                     <span style="font-size: 0.75rem; font-weight: 800; color: var(--text-dark-rose);"><span id="mgc_prot_consumed">0</span> / <span id="mgc_prot">0</span>g</span>
+                   </div>
+                   <div style="width: 100%; height: 6px; background: rgba(192, 57, 43, 0.15); border-radius: 4px; overflow: hidden;">
+                     <div id="mgc_prot_bar" style="width: 0%; height: 100%; background: #c0392b; border-radius: 4px; transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);"></div>
+                   </div>
+                 </div>
+                 <div style="background: white; border: 1px solid rgba(232, 198, 200, 0.5); border-radius: 12px; padding: 0.6rem;">
+                   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                     <span style="font-size: 0.75rem; font-weight: 700; color: #d35400;">Glucides</span>
+                     <span style="font-size: 0.75rem; font-weight: 800; color: var(--text-dark-rose);"><span id="mgc_carb_consumed">0</span> / <span id="mgc_carb">0</span>g</span>
+                   </div>
+                   <div style="width: 100%; height: 6px; background: rgba(211, 84, 0, 0.15); border-radius: 4px; overflow: hidden;">
+                     <div id="mgc_carb_bar" style="width: 0%; height: 100%; background: #d35400; border-radius: 4px; transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);"></div>
+                   </div>
+                 </div>
+                 <div style="background: white; border: 1px solid rgba(232, 198, 200, 0.5); border-radius: 12px; padding: 0.6rem;">
+                   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                     <span style="font-size: 0.75rem; font-weight: 700; color: #27ae60;">Lipides</span>
+                     <span style="font-size: 0.75rem; font-weight: 800; color: var(--text-dark-rose);"><span id="mgc_fat_consumed">0</span> / <span id="mgc_fat">0</span>g</span>
+                   </div>
+                   <div style="width: 100%; height: 6px; background: rgba(39, 174, 96, 0.15); border-radius: 4px; overflow: hidden;">
+                     <div id="mgc_fat_bar" style="width: 0%; height: 100%; background: #27ae60; border-radius: 4px; transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);"></div>
+                   </div>
+                 </div>
+              </div>
+            </div>
+            <div id="metabolicChartRoot" style="height: 250px; margin-top: 1rem; display: none;"></div>
+          </div>
+          
           <div id="dailyFoodLogContainer">
             <!-- Rendered by DailyFoodLog.renderHUD() -->
           </div>
@@ -2897,10 +2975,10 @@ body.rtl .food-search-icon {
       <div style="margin-bottom: 1.5rem;">
         <label for="modalMealSelect" style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-dark-rose); margin-bottom: 0.5rem;">Repas cible :</label>
         <select id="modalMealSelect" class="form-control" style="width: 100%; padding: 0.75rem 1rem; border-radius: 12px; border: 1.5px solid rgba(232,198,200,0.85); background: white; color: var(--text-dark-rose); font-weight: 600; outline: none;">
-          <option value="breakfast">🌅 Petit-déjeuner (Ftour)</option>
-          <option value="lunch" selected>☀️ Déjeuner (Ghada)</option>
+          <option value="breakfast">🌅 Petit-déjeuner</option>
+          <option value="lunch" selected>☀️ Déjeuner</option>
           <option value="snack">🍎 Collation / Goûter</option>
-          <option value="dinner">🌙 Dîner (Acha)</option>
+          <option value="dinner">🌙 Dîner</option>
         </select>
       </div>
 
@@ -2989,6 +3067,7 @@ body.rtl .food-search-icon {
                 <p data-i18n="c3_text">Lundi – Samedi : 08:30 – 18:30 (Sur RDV)</p>
               </div>
             </div>
+            <div id="metabolicChartRoot" style="height: 250px; margin-top: 1rem; display: none;"></div>
           </div>
         </div>
 
@@ -3001,9 +3080,9 @@ body.rtl .food-search-icon {
           
           <p style="text-align: center; font-size: 0.85rem; color: var(--text-muted); margin: 0.25rem 0;" data-i18n="contact_or">OU</p>
           
-          <button id="contactWhatsAppBtn" class="btn-pill" style="width: 100%; font-size: 1rem; padding: 1.1rem; background-color: #0088cc; color: white; border: none; box-shadow: 0 8px 20px rgba(0, 136, 204, 0.3); text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.6rem; cursor: pointer;" onclick="openModal('bookingModal')">
-            <i class="fa-brands fa-telegram" style="font-size: 1.2rem;"></i> <span data-i18n="btn_wa">MESSAGE DIRECT SUR TELEGRAM</span>
-          </button>
+          <a id="contactWhatsAppBtn" class="btn-pill" style="width: 100%; font-size: 1rem; padding: 1.1rem; background-color: #25D366; color: white; border: none; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3); text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.6rem;" target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send/?phone=21655211116&text=Bonjour%20Cabinet%20de%20Nutrition%20In%C3%A8s%20Ben%20Abdennebi%2C%20je%20souhaite%20prendre%20rendez-vous." onclick="localStorage.setItem('wa_contacted', 'true'); if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){this.href='whatsapp://send?phone=21655211116&text=Bonjour%20Cabinet%20de%20Nutrition%20In%C3%A8s%20Ben%20Abdennebi%2C%20je%20souhaite%20prendre%20rendez-vous.';}">
+            <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> <span data-i18n="btn_wa">MESSAGE DIRECT SUR WHATSAPP</span>
+          </a>
         </div>
     </div>
     </div>
@@ -3036,10 +3115,15 @@ body.rtl .food-search-icon {
       <div id="bookingSuccessBox" style="display: none; text-align: center; padding: 2rem 0.5rem;">
         <div style="font-size: 3.5rem; color: #10b981; margin-bottom: 1.25rem;"><i class="fa-solid fa-circle-check"></i></div>
         <h3 style="font-size: 1.5rem; color: var(--text-dark-rose); margin-bottom: 1rem;">Dossier transmis avec succès !</h3>
-        <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;">
+        <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem;">
           ✨ Inès a bien reçu votre pré-diagnostic. Elle l'analysera personnellement et vous recontactera sous 24h sur votre numéro WhatsApp pour fixer votre première consultation.
         </p>
-        <button type="button" class="btn-pill" style="width: 100%; background-color: var(--primary); color: white;" onclick="closeModal('bookingModal')">FERMER</button>
+        
+        <a href="https://calendly.com/" target="_blank" rel="noopener noreferrer" class="btn-pill" style="width: 100%; margin-bottom: 0.8rem; font-size: 1rem; padding: 1.1rem; background-color: var(--accent-mauve); color: white; border: none; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.6rem;">
+          <i class="fa-regular fa-calendar"></i> Prendre mon 1er rendez-vous
+        </a>
+
+        <button type="button" class="btn-pill" style="width: 100%; background-color: transparent; color: var(--text-muted); border: 1px solid var(--text-muted); padding: 0.8rem;" onclick="closeModal('bookingModal')">Fermer</button>
       </div>
 
       <div id="bookingFormWrapper">
@@ -3049,9 +3133,10 @@ body.rtl .food-search-icon {
         <form name="rendez-vous" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleFormSubmit(event)">
         <input type="hidden" name="form-name" value="rendez-vous" />
         
-        <!-- Accessibility Fix for Spam Trap -->
+        <!-- Accessibility Fix for Spam Trap & Custom Honeypot -->
         <p class="visually-hidden-honeypot" aria-hidden="true" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; display: none !important;">
           <label>Ne pas remplir si vous êtes humain : <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+          <input type="text" name="website_url" id="honeypot" tabindex="-1" autocomplete="off">
         </p>
 
         <div class="form-group">
@@ -3826,11 +3911,7 @@ body.rtl .food-search-icon {
 
 
     function updateWhatsAppLinks() {
-      // Intentionally empty. No longer using WhatsApp links for these elements.
-      const waFloat = document.getElementById('waFloatBtn');
-      const contactWa = document.getElementById('contactWhatsAppBtn');
-      if (waFloat) waFloat.onclick = (e) => { e.preventDefault(); openModal('bookingModal'); };
-      if (contactWa) contactWa.onclick = (e) => { e.preventDefault(); openModal('bookingModal'); };
+      // Let the WhatsApp buttons act as normal links now!
     }
     async function handleFormSubmit(e) {
       e.preventDefault();
@@ -3965,14 +4046,22 @@ body.rtl .food-search-icon {
       }
       
       try {
+        const websiteUrl = form.elements['website_url'] ? form.elements['website_url'].value : '';
+        
+        const patientData = {
+            nom: nomVal || "Non renseigné",
+            age: ageVal || "Adulte",
+            resume: fallbackMsg
+        };
+
         const response = await fetch('/api/send-telegram', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ message: fallbackMsg })
+          body: JSON.stringify(patientData)
         });
         const data = await response.json();
         
-        if (!response.ok || (!data.success && !data.warning)) {
+        if (!response.ok) {
           throw new Error(data.error || "Erreur Telegram");
         }
 
@@ -4057,6 +4146,82 @@ body.rtl .food-search-icon {
     /* ==========================================================================
        CONVERSATIONAL AI CLINICAL NUTRITIONIST ENGINE STATE MACHINE
        ========================================================================== */
+    window.updateMetabolicGoalsCard = (tdee) => {
+        const card = document.getElementById('metabolicGoalsCard');
+        if (!card) return;
+        
+        document.getElementById('mgc_kcal').textContent = tdee;
+        
+        const prot = Math.round((tdee * 0.25) / 4);
+        const carb = Math.round((tdee * 0.45) / 4);
+        const fat = Math.round((tdee * 0.30) / 9);
+        
+        document.getElementById('mgc_prot').textContent = prot;
+        document.getElementById('mgc_carb').textContent = carb;
+        document.getElementById('mgc_fat').textContent = fat;
+        
+        card.style.display = 'block';
+    };
+
+    window.calculateMetabolism = () => {
+      const p = parseFloat(document.getElementById('calcPoids').value);
+      const t = parseFloat(document.getElementById('calcTaille').value);
+      const a = parseFloat(document.getElementById('calcAge').value);
+      const s = document.getElementById('calcSexe').value;
+      
+      if (!p || !t || !a) {
+          alert("Veuillez remplir le poids, la taille et l'âge.");
+          return;
+      }
+      
+      let bmr = (10 * p) + (6.25 * t) - (5 * a);
+      if (s === 'M') {
+          bmr += 5;
+      } else {
+          bmr -= 161;
+      }
+      
+      const tdee = Math.round(bmr * 1.3);
+      
+      const resBox = document.getElementById('metabolismResult');
+      const resVal = document.getElementById('metabolismVal');
+      resVal.textContent = tdee + " kcal";
+      resBox.style.display = 'block';
+      
+      localStorage.setItem('cabinet_nutrition_daily_goal_v1', tdee.toString());
+      if (window.DailyFoodLog && window.DailyFoodLog.state) {
+          window.DailyFoodLog.state.dailyCalorieGoal = tdee;
+          if (typeof window.DailyFoodLog.renderDailyLogHUD === 'function') {
+              window.DailyFoodLog.renderDailyLogHUD();
+          }
+      }
+      
+      // Update Metabolic Goals Card
+      window.updateMetabolicGoalsCard(tdee);
+      
+      // Auto-scroll to Nutrithèque to show the synced connection
+      setTimeout(() => {
+          const tracker = document.getElementById('food-tracker');
+          if (tracker) {
+              tracker.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              
+              // Highlight the goal box to show connection
+              setTimeout(() => {
+                  const goalBox = document.getElementById('dailyLogGoalKcal');
+                  if (goalBox) {
+                      goalBox.style.transition = 'all 0.5s ease';
+                      goalBox.style.color = '#10b981';
+                      goalBox.style.transform = 'scale(1.3)';
+                      setTimeout(() => {
+                          goalBox.style.color = '';
+                          goalBox.style.transform = 'scale(1)';
+                      }, 1500);
+                  }
+              }, 800);
+          }
+      }, 1500);
+    };
+
     const AIEngine = {
       state: {
         turn: 1,
@@ -4815,50 +4980,13 @@ body.rtl .food-search-icon {
         let waHeader = lang === 'ar' ? 'مرحباً أستاذة إيناس' : lang === 'en' ? 'Hello Inès' : lang === 'es' ? 'Hola Inès' : 'Bonjour Inès';
         let waIntro = lang === 'ar' ? `أتممت التقييم السريري (${trackLabel}) على موقعك.` : lang === 'en' ? `I completed the clinical assessment (${trackLabel}) on your website.` : lang === 'es' ? `He completado la evaluación (${trackLabel}) en su sitio web.` : `J'ai complété le bilan clinique (${trackLabel}) sur votre site.`;
         
-        let waResponses = '';
-        const scoreItem = this.state.history.find(h => h.turn === 1);
-        const pathItem = this.state.history.find(h => h.turn === 3);
-        
-        let vitaliteLabel = lang === 'ar' ? 'الحيوية' : lang === 'en' ? 'Vitality' : lang === 'es' ? 'Vitalidad' : 'Vitalité';
-        let pathoLabel = lang === 'ar' ? 'الحالات' : lang === 'en' ? 'Conditions' : lang === 'es' ? 'Condiciones' : 'Pathologies';
-
-        // TENTATIVE IA DE RÉSUMÉ AVEC TIMEOUT STRICT (1s) POUR NE JAMAIS BLOQUER SUR MOBILE
-        try {
-            const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
-            const timeoutId = controller ? setTimeout(() => controller.abort(), 1200) : null;
-            const summaryRes = await fetch('/api/ai-summarize', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                signal: controller ? controller.signal : undefined,
-                body: JSON.stringify({
-                    target: this.state.target,
-                    history: this.state.history,
-                    lang: lang
-                })
-            });
-            if (timeoutId) clearTimeout(timeoutId);
-            if (summaryRes && summaryRes.ok) {
-                const summaryData = await summaryRes.json();
-                if (summaryData && summaryData.summary) {
-                    waResponses = '\n\n' + summaryData.summary;
-                }
-            }
-        } catch (e) {
-            // Instant fallback without blocking
-        }
-
-        // FALLBACK STRUCTURE SI L'IA ECHOUE OU RETOURNE VIDE
-        if (!waResponses) {
-            if (scoreItem) {
-              waResponses += `\n• ${vitaliteLabel}: ${scoreItem.selection}`;
-            }
-            if (pathItem) {
-              waResponses += `\n• ${pathoLabel}: ${pathItem.selection}`;
-            }
-        }
+        let waResponses = '\n\n📋 DOSSIER PATIENT (Réponses du bilan) :\n';
+        this.state.history.forEach((h, idx) => {
+            waResponses += `• Q${idx+1}: ${h.selection}\n`;
+        });
 
         let waFooter = lang === 'ar' ? 'أود حجز استشارة في عيادة رادس.' : lang === 'en' ? 'I would like to book a consultation at the Radès clinic.' : lang === 'es' ? 'Deseo reservar una consulta en la clínica de Radès.' : 'Je souhaite prendre rendez-vous au cabinet de Radès.';
-        const waMsg = `${waHeader},\n\n${waIntro}\n\n📋 DOSSIER PATIENT:\n• Diagnostic: ${finalDossier.headline}${waResponses}\n\n🏥 ${waFooter}`;
+        const waMsg = `${waHeader},\n\n${waIntro}${waResponses}\n🏥 ${waFooter}`;
         finalDossier.whatsapp_message = waMsg;
         finalDossier.whatsapp_message_encoded = waMsg;
 
@@ -5304,8 +5432,63 @@ body.rtl .food-search-icon {
               </div>
             </div>
 
-            <!-- Metabolic Trends Chart Container -->
-            <div id="ai-metabolic-chart-container"></div>
+            <!-- Résumé Clinique Patient -->
+            <div style="background: #ffffff; border: 1.5px solid rgba(232, 198, 200, 0.85); border-radius: 1rem; padding: 0.8rem; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(92, 60, 67, 0.05); text-align: start;">
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--text-dark-rose); margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.5rem;">
+                <i class="fa-solid fa-file-medical" style="color: var(--accent-mauve);"></i>
+                ${lang === 'ar' ? 'البيانات السريرية' : lang === 'en' ? 'Clinical Data' : lang === 'es' ? 'Datos Clínicos' : 'Vos Données Cliniques'}
+              </h3>
+              <div style="font-size: 0.85rem; color: var(--text-main); line-height: 1.4;">
+                <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0;">
+                  ${this.state.history.map((h, i) => `<li style="margin-bottom: 0.4rem; border-bottom: 1px solid #f4e3e5; padding-bottom: 0.4rem;"><strong style="color: var(--text-dark-rose);">Q${i+1}:</strong> ${h.selection}</li>`).join('')}
+                </ul>
+              </div>
+            </div>
+
+            <!-- Calculateur Métabolique -->
+            <div style="background: linear-gradient(135deg, #ffffff 0%, #fbf5f6 100%); border: 1.5px solid rgba(196, 157, 165, 0.4); border-radius: 1rem; padding: 1rem; margin-bottom: 1rem; box-shadow: 0 4px 15px rgba(92, 60, 67, 0.08); text-align: start;">
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--text-dark-rose); margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
+                <i class="fa-solid fa-calculator" style="color: var(--accent-mauve);"></i>
+                ${lang === 'ar' ? 'حساب الاحتياج الأيضي' : lang === 'en' ? 'Metabolic Calculator' : lang === 'es' ? 'Calculadora Metabólica' : 'Calculateur Métabolique'}
+              </h3>
+              <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.4;">
+                ${lang === 'ar' ? 'قم بحساب السعرات الحرارية اليومية المطلوبة لبرنامجك. سيتم ربطها تلقائياً بمفكرة التغذية الخاصة بك.' : lang === 'en' ? 'Calculate your daily calorie needs for your program. It will be automatically synced with your Food Tracker.' : lang === 'es' ? 'Calcule sus necesidades calóricas diarias para su programa. Se sincronizará automáticamente con su Diario de Nutrición.' : 'Calculez vos besoins caloriques journaliers pour votre programme. Ils seront automatiquement synchronisés avec votre Nutrithèque.'}
+              </p>
+              
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.85rem;">
+                <div>
+                  <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-dark-rose); margin-bottom: 0.2rem; display: block;">${lang === 'ar' ? 'الوزن (كغ)' : 'Poids (kg)'}</label>
+                  <input type="number" id="calcPoids" placeholder="Ex: 70" style="width: 100%; padding: 0.6rem; border: 1px solid #e8c6c8; border-radius: 8px; font-size: 0.9rem; outline: none; background: white; color: var(--text-dark-rose);" />
+                </div>
+                <div>
+                  <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-dark-rose); margin-bottom: 0.2rem; display: block;">${lang === 'ar' ? 'الطول (سم)' : 'Taille (cm)'}</label>
+                  <input type="number" id="calcTaille" placeholder="Ex: 165" style="width: 100%; padding: 0.6rem; border: 1px solid #e8c6c8; border-radius: 8px; font-size: 0.9rem; outline: none; background: white; color: var(--text-dark-rose);" />
+                </div>
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem;">
+                <div>
+                  <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-dark-rose); margin-bottom: 0.2rem; display: block;">${lang === 'ar' ? 'العمر' : 'Âge'}</label>
+                  <input type="number" id="calcAge" placeholder="Ex: 35" style="width: 100%; padding: 0.6rem; border: 1px solid #e8c6c8; border-radius: 8px; font-size: 0.9rem; outline: none; background: white; color: var(--text-dark-rose);" />
+                </div>
+                <div>
+                  <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-dark-rose); margin-bottom: 0.2rem; display: block;">${lang === 'ar' ? 'الجنس' : 'Sexe'}</label>
+                  <select id="calcSexe" style="width: 100%; padding: 0.6rem; border: 1px solid #e8c6c8; border-radius: 8px; font-size: 0.9rem; outline: none; background: white; color: var(--text-dark-rose);">
+                    <option value="F">${lang === 'ar' ? 'أنثى' : 'Femme'}</option>
+                    <option value="M">${lang === 'ar' ? 'ذكر' : 'Homme'}</option>
+                  </select>
+                </div>
+              </div>
+              
+              <button onclick="window.calculateMetabolism()" class="btn-pill btn-rose" style="width: 100%; padding: 0.7rem; justify-content: center; font-size: 0.85rem; border-radius: 8px;">
+                <i class="fa-solid fa-bolt"></i> ${lang === 'ar' ? 'حساب الاحتياج اليومي' : 'Calculer mon besoin journalier'}
+              </button>
+              
+              <div id="metabolismResult" style="display: none; margin-top: 1rem; padding-top: 0.85rem; border-top: 1px dashed rgba(196, 157, 165, 0.4); text-align: center;">
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 0.3rem;">Votre Cible Calorique</div>
+                <div id="metabolismVal" style="font-size: 1.8rem; font-weight: 800; color: var(--text-dark-rose); line-height: 1; margin-bottom: 0.3rem;">0 kcal</div>
+                <div style="font-size: 0.75rem; color: #10b981; font-weight: 600;"><i class="fa-solid fa-check-circle"></i> Synchronisé avec la Nutrithèque</div>
+              </div>
+            </div>
 
             <!-- Note du Cabinet -->
             <div style="background: #ffffff; border-radius: 1rem; padding: 0.85rem; margin-bottom: 1rem; border: 1px solid rgba(196, 157, 165, 0.4); box-shadow: 0 2px 10px rgba(92, 60, 67, 0.05); text-align: start;">
@@ -5327,10 +5510,16 @@ body.rtl .food-search-icon {
             <div class="ai-booking-box" style="background: var(--text-dark-rose); color: white; border-radius: 1.2rem; padding: 1rem; text-align: center; box-shadow: 0 -5px 20px rgba(92, 60, 67, 0.15); position: sticky; bottom: 0.5rem; z-index: 99; border: 1px solid rgba(255,255,255,0.2);">
               <h3 class="ai-booking-headline" style="color: white; font-size: 1.1rem; margin-bottom: 0.3rem;">${bookingTitle}</h3>
               <p class="ai-booking-sub" style="color: rgba(255,255,255,0.85); font-size: 0.8rem; margin-bottom: 0.8rem; line-height: 1.2;">${bookingSub}</p>
+              
+              <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <a href="https://api.whatsapp.com/send/?phone=21655211116&text=${waMsg}" target="_blank" rel="noopener noreferrer" class="btn-pill" style="width: 100%; font-size: 0.95rem; padding: 0.8rem; cursor: pointer; background: #25D366; color: white; font-weight: 700; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.5rem;" onclick="if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){this.href='whatsapp://send?phone=21655211116&text=${waMsg}';}">
+                  <i class="fa-brands fa-whatsapp" style="font-size: 1.1rem;"></i> ENVOYER VIA WHATSAPP
+                </a>
 
-              <button onclick="AIEngine.transferDossierToForm()" class="btn-pill" style="width: 100%; font-size: 0.95rem; padding: 0.8rem; cursor: pointer; background: white; color: var(--text-dark-rose); font-weight: 700;">
-                <i class="fa-solid fa-clipboard-check"></i> ${bookingBtn}
-              </button>
+                <button onclick="AIEngine.transferDossierToForm()" class="btn-pill" style="width: 100%; font-size: 0.95rem; padding: 0.8rem; cursor: pointer; background: white; color: var(--text-dark-rose); font-weight: 700;">
+                  <i class="fa-solid fa-calendar-check"></i> VALIDER MON RDV AU CABINET
+                </button>
+              </div>
             </div>
 
             <div style="text-align: center; margin-top: 1.5rem; margin-bottom: 0.5rem; display: flex; flex-direction: column; gap: 0.8rem; align-items: center;">
@@ -5425,12 +5614,7 @@ body.rtl .food-search-icon {
           }
         });
 
-        if (this.state.finalDossier && this.state.finalDossier.the_3_realities && this.state.finalDossier.the_3_realities.length > 0) {
-          dossierText += '\n--- ANALYSE BIOLOGIQUE ---\n';
-          this.state.finalDossier.the_3_realities.forEach((r, i) => {
-            dossierText += `• Clé ${i + 1}: ${r}\n`;
-          });
-        }
+
 
         const dossierInput = document.getElementById('bookingDossier');
         const dossierContainer = document.getElementById('dossierContainer');
@@ -5718,7 +5902,6 @@ body.rtl .food-search-icon {
 
       <!-- Le carrousel horizontal des boutons rapides -->
       <div class="chat-suggestions-scroll" id="aiChatSuggestions">
-          <button onclick="envoyerMessageChat('💡 J\'ai une question sur les consultations (FAQ)')"><i class="fa-solid fa-circle-question" style="color:var(--accent-mauve); margin-right:4px;"></i> Questions (FAQ)</button>
           <button onclick="envoyerMessageChat('💡 Quel est le conseil médical du jour ?')"><i class="fa-solid fa-lightbulb" style="color:var(--accent-mauve); margin-right:4px;"></i> Conseil du jour</button>
           <button onclick="envoyerMessageChat('Comment calculer mon IMC ?')"><i class="fa-solid fa-chart-pie" style="color:var(--accent-mauve); margin-right:4px;"></i> Mon IMC</button>
           <button onclick="envoyerMessageChat('Où se trouve le cabinet précisément sur Google Maps ?')"><i class="fa-solid fa-location-dot" style="color:var(--accent-mauve); margin-right:4px;"></i> Localisation</button>
@@ -5900,9 +6083,9 @@ function handleChipClick(type) {
 }
 </script>
   <!-- Bouton de Contact Flottant -->
-  <button onclick="openModal('bookingModal')" class="whatsapp-float-btn" style="background-color: var(--primary); border: none; cursor: pointer; color: white; display: flex; align-items: center; justify-content: center;" id="waFloatBtn" aria-label="Prendre rendez-vous" data-i18n-aria="wa_float_aria">
-    <i class="fa-solid fa-calendar-check"></i>
-  </button>
+  <a href="https://api.whatsapp.com/send/?phone=21655211116&text=Bonjour%20Cabinet%20de%20Nutrition%20In%C3%A8s%20Ben%20Abdennebi%2C%20je%20souhaite%20prendre%20rendez-vous." target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" style="background-color: #25D366; color: white; display: flex; align-items: center; justify-content: center; text-decoration: none;" id="waFloatBtn" aria-label="Contactez le cabinet sur WhatsApp" data-i18n-aria="wa_float_aria" onclick="if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){this.href='whatsapp://send?phone=21655211116&text=Bonjour%20Cabinet%20de%20Nutrition%20In%C3%A8s%20Ben%20Abdennebi%2C%20je%20souhaite%20prendre%20rendez-vous.';}">
+    <i class="fa-brands fa-whatsapp" style="font-size: 2rem;"></i>
+  </a>
 
   <script type="text/babel">
     const { PieChart, Pie, Cell, ResponsiveContainer, Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Tooltip } = window.Recharts;
@@ -6159,5 +6342,90 @@ document.addEventListener('DOMContentLoaded', () => {
 <!-- Searchable Nutrient Database & Daily Food Log Controller -->
 <script src="assets/food-database.js"></script>
   <script type="module" src="firebase-init.js"></script>
+  <script type="text/babel">
+    const { BarChart, Bar, XAxis, YAxis, CartesianGrid, Legend, ReferenceLine, Cell, ResponsiveContainer, Tooltip } = window.Recharts;
+    
+    const MetabolicProgressChart = ({ totals, goals }) => {
+      const data = [
+        { name: 'Énergie', consome: totals.calories, cible: goals.kcal, fill: '#10b981' },
+        { name: 'Prot.', consome: totals.proteins, cible: goals.prot, fill: '#c0392b' },
+        { name: 'Gluc.', consome: totals.carbs, cible: goals.carb, fill: '#d35400' },
+        { name: 'Lip.', consome: totals.fats, cible: goals.fat, fill: '#27ae60' }
+      ];
+
+      return (
+        <div style={{ width: '100%', height: '100%' }}>
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart
+              data={data}
+              margin={{ top: 20, right: 30, left: -20, bottom: 5 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e5e7eb" />
+              <XAxis dataKey="name" tick={{fill: '#7a5c64', fontSize: 12}} axisLine={false} tickLine={false} />
+              <YAxis tick={{fill: '#7a5c64', fontSize: 12}} axisLine={false} tickLine={false} />
+              <Tooltip 
+                cursor={{fill: 'rgba(232, 198, 200, 0.2)'}}
+                contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 15px rgba(0,0,0,0.1)' }}
+              />
+              <Legend wrapperStyle={{ fontSize: '0.8rem', color: '#7a5c64' }} />
+              <Bar dataKey="consome" name="Consommé" radius={[4, 4, 0, 0]}>
+                {data.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={entry.fill} />
+                ))}
+              </Bar>
+              <Bar dataKey="cible" name="Cible" fill="#e5e7eb" radius={[4, 4, 0, 0]} />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+      );
+    };
+
+    window.updateMetabolicChart = (totals, goals) => {
+      const container = document.getElementById('metabolicChartRoot');
+      if (container) {
+        container.style.display = 'block';
+        if (!container._reactRoot) {
+            container._reactRoot = ReactDOM.createRoot(container);
+        }
+        container._reactRoot.render(<MetabolicProgressChart totals={totals} goals={goals} />);
+      }
+      
+      // Mettre à jour les valeurs consommées et les barres de progression
+      const calcRawPct = (val, max) => max > 0 ? Math.round((val / max) * 100) : 0;
+      
+      const el = (id) => document.getElementById(id);
+      
+      const updateNutrientVisuals = (val, max, valId, targetId, barId, defaultColor) => {
+        const valEl = el(valId);
+        const targetEl = el(targetId);
+        const barEl = el(barId);
+        
+        if (valEl) {
+           valEl.textContent = val;
+           valEl.style.color = val > max ? '#e74c3c' : '';
+        }
+        
+        if (targetEl) {
+           targetEl.textContent = max;
+        }
+        
+        if (barEl) {
+           const rawPct = calcRawPct(val, max);
+           const pct = Math.min(100, rawPct);
+           
+           // Apply a small delay so the CSS transition smoothly animates from 0% on initial load
+           setTimeout(() => {
+               barEl.style.width = `${pct}%`;
+               barEl.style.backgroundColor = rawPct > 100 ? '#e74c3c' : defaultColor;
+           }, 50);
+        }
+      };
+
+      updateNutrientVisuals(totals.calories, goals.kcal, 'mgc_kcal_consumed', 'mgc_kcal', null, null);
+      updateNutrientVisuals(totals.proteins, goals.prot, 'mgc_prot_consumed', 'mgc_prot', 'mgc_prot_bar', '#c0392b');
+      updateNutrientVisuals(totals.carbs, goals.carb, 'mgc_carb_consumed', 'mgc_carb', 'mgc_carb_bar', '#d35400');
+      updateNutrientVisuals(totals.fats, goals.fat, 'mgc_fat_consumed', 'mgc_fat', 'mgc_fat_bar', '#27ae60');
+    };
+  </script>
 </body>
 </html>

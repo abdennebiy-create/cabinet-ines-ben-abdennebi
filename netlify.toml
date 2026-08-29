@@ -1,9 +1,5 @@
 [build]
-  publish = "."
   functions = "api"
-
-[functions]
-  node_bundler = "esbuild"
 
 [[redirects]]
   from = "/api/*"
