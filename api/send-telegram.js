@@ -1,41 +1,36 @@
 exports.handler = async function(event, context) {
-    // N'accepte que les requêtes POST
-    if (event.httpMethod !== "POST") {
-        return { statusCode: 405, body: "Method Not Allowed" };
-    }
+    if (event.httpMethod !== "POST") return { statusCode: 405, body: "Méthode non autorisée" };
 
     try {
-        const data = JSON.parse(event.body);
+        // Sécurité : Vérifie si le format est déjà un objet ou doit être converti
+        const data = typeof event.body === 'string' ? JSON.parse(event.body) : event.body;
+        
         const botToken = process.env.TELEGRAM_BOT_TOKEN;
         const chatId = process.env.TELEGRAM_CHAT_ID;
 
-        // Construction du message envoyé sur ton téléphone
-        const messageText = `🩺 NOUVEAU PATIENT\n\nNom: ${data.nom}\nÂge: ${data.age}\n\nRésumé du Quiz:\n${data.resume}`;
-
-        const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
-
-        const response = await fetch(telegramUrl, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                chat_id: chatId,
-                text: messageText
-            })
-        });
-
-        if (!response.ok) {
-            throw new Error(`Erreur Telegram: ${response.statusText}`);
+        // Sécurité : Vérifie si Netlify lit bien les clés
+        if (!botToken || !chatId) {
+            return { statusCode: 500, body: JSON.stringify({ error: "Clés Telegram manquantes" }) };
         }
 
-        return {
-            statusCode: 200,
-            body: JSON.stringify({ message: "Dossier envoyé avec succès" })
-        };
+        const messageText = `🩺 NOUVEAU PATIENT\n\nNom: ${data.nom || 'Non précisé'}\nÂge: ${data.age || 'Non précisé'}\nRésumé: ${data.resume || 'Aucun'}`;
+
+        const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ chat_id: chatId, text: messageText })
+        });
+
+        const telegramResponse = await response.json();
+
+        if (!response.ok) {
+            return { statusCode: 502, body: JSON.stringify({ error: "Telegram a refusé le message", details: telegramResponse }) };
+        }
+
+        return { statusCode: 200, body: JSON.stringify({ message: "Succès" }) };
+        
     } catch (error) {
-        console.error("Erreur d'envoi:", error);
-        return {
-            statusCode: 500,
-            body: JSON.stringify({ error: "Erreur interne du serveur" })
-        };
+        // Sécurité : Empêche le plantage 502 en renvoyant une vraie erreur lisible
+        return { statusCode: 500, body: JSON.stringify({ error: error.message || "Erreur inconnue" }) };
     }
 };
