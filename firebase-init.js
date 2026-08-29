@@ -16,15 +16,4 @@ export const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app, "ai-studio-cabinetinesbenab-5873b9bd-6efc-4ede-b05f-776288fc4245");
 export const auth = getAuth(app);
 
-// Test Connection
-async function testConnection() {
-  try {
-    await getDocFromServer(doc(db, 'test', 'connection'));
-    console.log("Firebase initialized successfully.");
-  } catch (error) {
-    if(error instanceof Error && error.message.includes('the client is offline')) {
-      console.error("Please check your Firebase configuration.");
-    }
-  }
-}
-testConnection();
+
