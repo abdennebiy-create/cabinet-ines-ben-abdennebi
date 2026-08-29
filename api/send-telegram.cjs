@@ -1,4 +1,4 @@
-export const handler = async function(event, context) {
+exports.handler = async function(event, context) {
     if (event.httpMethod !== "POST") return { statusCode: 405, body: "Méthode non autorisée" };
 
     try {
@@ -28,6 +28,6 @@ export const handler = async function(event, context) {
         return { statusCode: 200, body: JSON.stringify({ message: "Succès" }) };
         
     } catch (error) {
-        return { statusCode: 500, body: JSON.stringify({ error: error.message || "Erreur inconnue" }) };
+        return { statusCode: 500, body: JSON.stringify({ error: error.message || "Erreur interne" }) };
     }
 };
