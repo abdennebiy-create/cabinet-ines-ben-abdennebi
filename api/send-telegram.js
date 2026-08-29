@@ -1,14 +1,12 @@
-exports.handler = async function(event, context) {
+export const handler = async function(event, context) {
     if (event.httpMethod !== "POST") return { statusCode: 405, body: "Méthode non autorisée" };
 
     try {
-        // Sécurité : Vérifie si le format est déjà un objet ou doit être converti
         const data = typeof event.body === 'string' ? JSON.parse(event.body) : event.body;
         
         const botToken = process.env.TELEGRAM_BOT_TOKEN;
         const chatId = process.env.TELEGRAM_CHAT_ID;
 
-        // Sécurité : Vérifie si Netlify lit bien les clés
         if (!botToken || !chatId) {
             return { statusCode: 500, body: JSON.stringify({ error: "Clés Telegram manquantes" }) };
         }
@@ -30,7 +28,6 @@ exports.handler = async function(event, context) {
         return { statusCode: 200, body: JSON.stringify({ message: "Succès" }) };
         
     } catch (error) {
-        // Sécurité : Empêche le plantage 502 en renvoyant une vraie erreur lisible
         return { statusCode: 500, body: JSON.stringify({ error: error.message || "Erreur inconnue" }) };
     }
 };
